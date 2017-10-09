@@ -1,7 +1,7 @@
 ---
 title: "Gohuge Setup"
 date: 2017-10-09T23:30:04+08:00
-draft: true
+draft: false
 ---
 
 # [Install GoHugo on Linux](https://gohugo.io/getting-started/quick-start/)
