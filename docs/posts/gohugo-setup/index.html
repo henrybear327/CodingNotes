@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Coding Notes  | Gohugo Setup</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.29" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://henrybear327.github.io/CodingNotes/dist/main.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Gohugo Setup" />
+<meta property="og:description" content="Install GoHugo on Linux The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version: sudo snap install hugo Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
+cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme. echo &#39;theme = &quot;ananke&quot;&#39; &gt;&gt; config." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://henrybear327.github.io/CodingNotes/posts/gohugo-setup/" />
+
+
+
+<meta property="article:published_time" content="2017-10-09T23:30:04&#43;08:00"/>
+<meta property="article:modified_time" content="2017-10-09T23:30:04&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="Gohugo Setup">
+<meta itemprop="description" content="Install GoHugo on Linux The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version: sudo snap install hugo Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
+cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme. echo &#39;theme = &quot;ananke&quot;&#39; &gt;&gt; config.">
+
+
+<meta itemprop="dateModified" content="2017-10-09T23:30:04&#43;08:00" />
+<meta itemprop="wordCount" content="172">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Gohugo Setup"/>
+<meta name="twitter:description" content="Install GoHugo on Linux The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version: sudo snap install hugo Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
+cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme. echo &#39;theme = &quot;ananke&quot;&#39; &gt;&gt; config."/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://henrybear327.github.io/CodingNotes/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Coding Notes
+    </a>
+    <div class="flex-l items-center">
+      
+      
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          POSTS
+        </p>
+        <h1 class="f1">
+          Gohugo Setup
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        
+
+<h1 id="install-gohugo-on-linux-https-gohugo-io-getting-started-quick-start"><a href="https://gohugo.io/getting-started/quick-start/">Install GoHugo on Linux</a></h1>
+
+<p>The quickstart guide on Hugo is pretty comprehensive. Please check it out!</p>
+
+<ol>
+<li>Install latest hugo version: <code>sudo snap install hugo</code></li>
+<li>Create a hugo site: <code>hugo new site [sitename]</code></li>
+
+<li><p>By default, no theme is installed, so you need to install one on your own!</p>
+
+<pre><code class="language-bash">cd [sitename];\
+git init;\
+git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\
+
+# Edit your config.toml configuration file and add the Ananke theme.
+echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
+</code></pre>
+
+<p>One good thing about Hugo is that the config file is very clean!</p></li>
+
+<li><p>Add some content: <code>hugo new posts/my-first-post.md</code>. Notice that the draft mode by default is true, so it won&rsquo;t be published unless you change it to false.</p></li>
+
+<li><p>Start the development server: <code>hugo server -D</code></p></li>
+
+<li><p>In <code>config.toml</code>, customize the site URL, title, etc.</p></li>
+
+<li><p>In order to let Github Pages to parse from <a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-via-docs-folder-on-master-branch"><code>docs</code> folder</a>:</p>
+
+<ul>
+<li>add <code>publishDir = &quot;docs&quot;</code> to <code>config.toml</code></li>
+<li>add <code>publishDir: docs</code> to <code>config.yaml</code></li>
+</ul></li>
+
+<li><p>Run <code>hugo</code> to build it!</p></li>
+
+<li><p>Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It&rsquo;s that easy!</p></li>
+</ol>
+
+      </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://henrybear327.github.io/CodingNotes/" >
+    &copy; 2017 Coding Notes
+  </a>
+  
+
+
+
+
+
+
+
+
+  </div>
+</footer>
+
+    <script src="https://henrybear327.github.io/CodingNotes/dist/app.bundle.js" async></script>
+
+  </body>
+</html>
