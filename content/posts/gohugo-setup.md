@@ -4,9 +4,11 @@ date: 2017-10-09T23:30:04+08:00
 draft: false
 ---
 
-# [Install GoHugo](https://gohugo.io/getting-started/quick-start/)
+[GoHugo](https://gohugo.io) is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
 
-The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+# Install GoHugo
+
+The [quickstart guide](https://gohugo.io/getting-started/quick-start/) on Hugo is pretty comprehensive. Please check it out!
 
 1. Install latest hugo version
     * On Linux: `sudo snap install hugo`
@@ -23,7 +25,7 @@ The quickstart guide on Hugo is pretty comprehensive. Please check it out!
     echo 'theme = "ananke"' >> config.toml
     ```
 
-    One good thing about Hugo is that the config file is very clean!
+    Using [git submodule](https://git-scm.com/book/zh-tw/v1/Git-工具-子模組-Submodules) is a very good idea since we can keep track of the separate projects version controlled by git easily.
 
 4. Add some content: `hugo new posts/my-first-post.md`. Notice that the draft mode by default is true, so it won't be published unless you change it to false.
 5. Start the development server: `hugo server -D`

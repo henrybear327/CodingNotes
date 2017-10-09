@@ -23,9 +23,9 @@
     
 
     <meta property="og:title" content="Gohugo Setup" />
-<meta property="og:description" content="Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
- Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
-cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme." />
+<meta property="og:description" content="GoHugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
+Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://henrybear327.github.io/CodingNotes/posts/gohugo-setup/" />
 
@@ -45,21 +45,21 @@ cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-t
 
 
 <meta itemprop="name" content="Gohugo Setup">
-<meta itemprop="description" content="Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
- Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
-cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme.">
+<meta itemprop="description" content="GoHugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
+Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!">
 
 
 <meta itemprop="dateModified" content="2017-10-09T23:30:04&#43;08:00" />
-<meta itemprop="wordCount" content="224">
+<meta itemprop="wordCount" content="281">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Gohugo Setup"/>
-<meta name="twitter:description" content="Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
- Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
-cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme."/>
+<meta name="twitter:description" content="GoHugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
+Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!"/>
 
   </head>
 
@@ -108,9 +108,11 @@ cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-t
       <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         
 
-<h1 id="install-gohugo-https-gohugo-io-getting-started-quick-start"><a href="https://gohugo.io/getting-started/quick-start/">Install GoHugo</a></h1>
+<p><a href="https://gohugo.io">GoHugo</a> is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.</p>
 
-<p>The quickstart guide on Hugo is pretty comprehensive. Please check it out!</p>
+<h1 id="install-gohugo">Install GoHugo</h1>
+
+<p>The <a href="https://gohugo.io/getting-started/quick-start/">quickstart guide</a> on Hugo is pretty comprehensive. Please check it out!</p>
 
 <ol>
 <li>Install latest hugo version
@@ -131,7 +133,7 @@ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/anan
 echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
 </code></pre>
 
-<p>One good thing about Hugo is that the config file is very clean!</p></li>
+<p>Using <a href="https://git-scm.com/book/zh-tw/v1/Git-工具-子模組-Submodules">git submodule</a> is a very good idea since we can keep track of the separate projects version controlled by git easily.</p></li>
 
 <li><p>Add some content: <code>hugo new posts/my-first-post.md</code>. Notice that the draft mode by default is true, so it won&rsquo;t be published unless you change it to false.</p></li>
 
