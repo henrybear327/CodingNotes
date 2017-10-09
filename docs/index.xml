@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Coding Notes</title>
+    <link>https://henrybear327.github.io/CodingNotes/</link>
+    <description>Recent content on Coding Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://henrybear327.github.io/CodingNotes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>
