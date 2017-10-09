@@ -4,11 +4,13 @@ date: 2017-10-09T23:30:04+08:00
 draft: false
 ---
 
-# [Install GoHugo on Linux](https://gohugo.io/getting-started/quick-start/)
+# [Install GoHugo](https://gohugo.io/getting-started/quick-start/)
 
 The quickstart guide on Hugo is pretty comprehensive. Please check it out!
 
-1. Install latest hugo version: `sudo snap install hugo`
+1. Install latest hugo version
+    * On Linux: `sudo snap install hugo`
+    * On Mac: `brew install hugo`
 2. Create a hugo site: `hugo new site [sitename]`
 3. By default, no theme is installed, so you need to install one on your own!
 
@@ -31,3 +33,10 @@ The quickstart guide on Hugo is pretty comprehensive. Please check it out!
     * add `publishDir: docs` to `config.yaml`
 8. Run `hugo` to build it!
 9. Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It's that easy!
+
+# Cloning Hugo Site from Github
+
+1. Make sure you have hugo installed. Installation can be checked by running `hugo help`
+2. Clone the repo
+3. Run `git submodule init` on project root and then run `git submodule update` to get the theme
+4. Run `hugo server`! You are done setting up!

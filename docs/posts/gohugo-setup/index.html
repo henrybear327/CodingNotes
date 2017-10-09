@@ -23,9 +23,9 @@
     
 
     <meta property="og:title" content="Gohugo Setup" />
-<meta property="og:description" content="Install GoHugo on Linux The quickstart guide on Hugo is pretty comprehensive. Please check it out!
- Install latest hugo version: sudo snap install hugo Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
-cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme. echo &#39;theme = &quot;ananke&quot;&#39; &gt;&gt; config." />
+<meta property="og:description" content="Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
+cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://henrybear327.github.io/CodingNotes/posts/gohugo-setup/" />
 
@@ -45,21 +45,21 @@ cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-t
 
 
 <meta itemprop="name" content="Gohugo Setup">
-<meta itemprop="description" content="Install GoHugo on Linux The quickstart guide on Hugo is pretty comprehensive. Please check it out!
- Install latest hugo version: sudo snap install hugo Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
-cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme. echo &#39;theme = &quot;ananke&quot;&#39; &gt;&gt; config.">
+<meta itemprop="description" content="Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
+cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme.">
 
 
 <meta itemprop="dateModified" content="2017-10-09T23:30:04&#43;08:00" />
-<meta itemprop="wordCount" content="172">
+<meta itemprop="wordCount" content="224">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Gohugo Setup"/>
-<meta name="twitter:description" content="Install GoHugo on Linux The quickstart guide on Hugo is pretty comprehensive. Please check it out!
- Install latest hugo version: sudo snap install hugo Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
-cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme. echo &#39;theme = &quot;ananke&quot;&#39; &gt;&gt; config."/>
+<meta name="twitter:description" content="Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
+ Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!
+cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\ # Edit your config.toml configuration file and add the Ananke theme."/>
 
   </head>
 
@@ -108,12 +108,17 @@ cd [sitename];\ git init;\ git submodule add https://github.com/budparr/gohugo-t
       <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         
 
-<h1 id="install-gohugo-on-linux-https-gohugo-io-getting-started-quick-start"><a href="https://gohugo.io/getting-started/quick-start/">Install GoHugo on Linux</a></h1>
+<h1 id="install-gohugo-https-gohugo-io-getting-started-quick-start"><a href="https://gohugo.io/getting-started/quick-start/">Install GoHugo</a></h1>
 
 <p>The quickstart guide on Hugo is pretty comprehensive. Please check it out!</p>
 
 <ol>
-<li>Install latest hugo version: <code>sudo snap install hugo</code></li>
+<li>Install latest hugo version
+
+<ul>
+<li>On Linux: <code>sudo snap install hugo</code></li>
+<li>On Mac: <code>brew install hugo</code></li>
+</ul></li>
 <li>Create a hugo site: <code>hugo new site [sitename]</code></li>
 
 <li><p>By default, no theme is installed, so you need to install one on your own!</p>
@@ -144,6 +149,15 @@ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
 <li><p>Run <code>hugo</code> to build it!</p></li>
 
 <li><p>Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It&rsquo;s that easy!</p></li>
+</ol>
+
+<h1 id="cloning-hugo-site-from-github">Cloning Hugo Site from Github</h1>
+
+<ol>
+<li>Make sure you have hugo installed. Installation can be checked by running <code>hugo help</code></li>
+<li>Clone the repo</li>
+<li>Run <code>git submodule init</code> on project root and then run <code>git submodule update</code> to get the theme</li>
+<li>Run <code>hugo server</code>! You are done setting up!</li>
 </ol>
 
       </div>
