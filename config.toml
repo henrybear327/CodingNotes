@@ -1,0 +1,4 @@
+baseURL = "https://henrybear327.github.io/CodingNotes/"
+languageCode = "en-us"
+title = "Coding Notes"
+theme = "ananke"
