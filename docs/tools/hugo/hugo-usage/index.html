@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="generator" content="Hugo 0.29" />
-    <meta name="description" content="">
+    <meta name="description" content="My Hugo handy refernece">
 
 
     <title>Hugo Usage :: Docdock</title>
@@ -53,7 +53,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
     <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
   <div id="header-wrapper">
     <div id="header"> 
-	<p><a href="https://henrybear327.github.io/CodingNotes/">Coding Notes</a></p>
+	<p><i class='fa fa-home'></i> <a href="https://henrybear327.github.io/CodingNotes/">Coding Notes</a></p>
  
 
 
@@ -149,7 +149,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 
 
- <a href='/CodingNotes/'></a> > <a href='/CodingNotes/tools/'>Tools</a> > <a href='/CodingNotes/tools/hugo/'>Hugo</a> > Hugo Usage
+ <a href='/CodingNotes/'>Coding Blog</a> > <a href='/CodingNotes/tools/'>Tools</a> > <a href='/CodingNotes/tools/hugo/'>Hugo</a> > Hugo Usage
 
  
 
@@ -170,7 +170,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 <li><a href="#creating-a-new-chapter">Creating a New Chapter</a></li>
 <li><a href="#creating-a-new-article">Creating a New Article</a></li>
 <li><a href="#content-organization-http-docdock-netlify-com-content-organisation"><a href="http://docdock.netlify.com/content-organisation/">Content Organization</a></a></li>
-<li><a href="#tips-for-writing-markdown">Tips for Writing Markdown</a></li>
+<li><a href="#tips-for-writing-markdown-https-learn-netlify-com-en-cont-markdown"><a href="https://learn.netlify.com/en/cont/markdown/">Tips for Writing Markdown </a></a></li>
 </ul></li>
 </ul>
 </nav>
@@ -256,12 +256,132 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 <li><p>Make sure that <code>_index.md</code> is present!</p></li>
 </ul>
 
-<h2 id="tips-for-writing-markdown">Tips for Writing Markdown</h2>
+<h2 id="tips-for-writing-markdown-https-learn-netlify-com-en-cont-markdown"><a href="https://learn.netlify.com/en/cont/markdown/">Tips for Writing Markdown </a></h2>
 
 <p>Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:</p>
 
 <ul>
-<li>To be continued&hellip;</li>
+<li><p><a href="http://docdock.netlify.com/shortcodes/alert/">Alerts</a></p>
+
+<pre><code>{{% alert theme=&quot;info&quot; %}}**info**{{% /alert %}}
+{{% alert theme=&quot;success&quot; %}}**success**{{% /alert %}}
+{{% alert theme=&quot;warning&quot; %}}**warning**{{% /alert %}}
+{{% alert theme=&quot;danger&quot; %}}**danger**{{% /alert %}}
+</code></pre>
+
+<p><div class="alert 
+alert-info"
+ 
+role="alert"><strong>info</strong></div>
+
+<div class="alert 
+alert-success"
+ 
+role="alert"><strong>success</strong></div>
+
+<div class="alert 
+alert-warning"
+ 
+role="alert"><strong>warning</strong></div>
+
+<div class="alert 
+alert-danger"
+ 
+role="alert"><strong>danger</strong></div>
+</p></li>
+
+<li><p><a href="http://docdock.netlify.com/shortcodes/attachments/">Attachment</a></p>
+
+<ul>
+<li>markdown file: attachements must be place in a folder named like your page and ending with <code>.files</code></li>
+<li>folder: attachements must be place in a nested <code>files</code> folder.</li>
+
+<li><p>Usage:</p>
+
+<pre><code>{{%attachments title=&quot;Related files&quot; pattern=&quot;.*(pdf|mp4)&quot;/%}}
+</code></pre></li>
+</ul></li>
+
+<li><p><a href="http://docdock.netlify.com/shortcodes/expand/">Expand</a></p>
+
+<pre><code>{{% expand &quot;Hint ?&quot; %}}Here you go!{{% /expand%}}
+</code></pre>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Hint
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+Here you go!
+    </div>
+</div>
+
+</li>
+
+<li><p><a href="http://docdock.netlify.com/shortcodes/notice/">Notice</a></p>
+
+<ul>
+<li>Must be padded to the left for the title to show up!</li>
+</ul>
+
+<pre><code>{{% notice note %}}
+Note 
+{{% /notice %}}
+</code></pre>
+
+<div class="notices note" ><p>Note</p>
+</div>
+
+
+<pre><code>{{% notice info %}}
+Info 
+{{% /notice %}}
+</code></pre>
+
+<div class="notices info" ><p>Info</p>
+</div>
+
+
+<pre><code>{{% notice tip %}}
+Tip 
+{{% /notice %}}
+</code></pre>
+
+<div class="notices tip" ><p>Tip</p>
+</div>
+
+
+<pre><code>{{% notice warning %}}
+Warning
+{{% /notice %}}
+</code></pre>
+
+<div class="notices warning" ><p>Warning</p>
+</div>
+</li>
+
+<li><p><a href="http://docdock.netlify.com/shortcodes/panel/">panel</a></p>
+
+<ul>
+<li>success, default, primary, info, warning, danger</li>
+</ul>
+
+<pre><code>{{% panel theme=&quot;success&quot; header=&quot;Title&quot; %}}content{{% /panel %}}
+</code></pre>
+
+<div class="panel panel-success">
+	<div class="panel-heading">Title</div>
+	<div class="panel-body">content</div>
+	
+</div>
+</li>
+
+<li><p><a href="http://docdock.netlify.com/shortcodes/revealjs/">revealjs</a></p></li>
 </ul>
 
 

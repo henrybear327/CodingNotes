@@ -1,5 +1,6 @@
 ---
 title: "Hugo Usage"
+description: "My Hugo handy refernece"
 date: 2017-10-10T19:23:58+08:00
 tags: ["Hugo", "Setup"]
 categories: ["Hugo"]
@@ -55,8 +56,82 @@ weight: 10
     ```
 * Make sure that `_index.md` is present!
 
-## Tips for Writing Markdown 
+## [Tips for Writing Markdown ](https://learn.netlify.com/en/cont/markdown/)
 
 Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:
 
-* To be continued...
+* [Alerts](http://docdock.netlify.com/shortcodes/alert/)
+
+    ```
+    {{%/* alert theme="info" */%}}**info**{{%/* /alert */%}}
+    {{%/* alert theme="success" */%}}**success**{{%/* /alert */%}}
+    {{%/* alert theme="warning" */%}}**warning**{{%/* /alert */%}}
+    {{%/* alert theme="danger" */%}}**danger**{{%/* /alert */%}}
+    ```
+    {{% alert theme="info" %}}**info**{{% /alert %}}
+    {{% alert theme="success" %}}**success**{{% /alert %}}
+    {{% alert theme="warning" %}}**warning**{{% /alert %}}
+    {{% alert theme="danger" %}}**danger**{{% /alert %}}
+* [Attachment](http://docdock.netlify.com/shortcodes/attachments/)
+    * markdown file: attachements must be place in a folder named like your page and ending with `.files`
+    * folder: attachements must be place in a nested `files` folder.
+    * Usage:
+
+        ```
+        {{%/*attachments title="Related files" pattern=".*(pdf|mp4)"/*/%}}
+        ```
+* [Expand](http://docdock.netlify.com/shortcodes/expand/)
+
+    ```
+    {{%/* expand "Hint ?" */%}}Here you go!{{%/* /expand*/%}}
+    ```
+
+    {{% expand "Hint" %}}Here you go!{{% /expand %}}
+* [Notice](http://docdock.netlify.com/shortcodes/notice/)
+    * Must be padded to the left for the title to show up!
+
+    ```
+    {{%/* notice note */%}}
+    Note 
+    {{%/* /notice */%}}
+    ```
+{{% notice note %}} 
+Note
+{{% /notice %}}
+
+    ```
+    {{%/* notice info */%}}
+    Info 
+    {{%/* /notice */%}}
+    ```
+{{% notice info %}} 
+Info
+{{% /notice %}}
+
+    ```
+    {{%/* notice tip */%}}
+    Tip 
+    {{%/* /notice */%}}
+    ```
+{{% notice tip %}} 
+Tip
+{{% /notice %}}
+
+    ```
+    {{%/* notice warning */%}}
+    Warning
+    {{%/* /notice */%}}
+    ```
+{{% notice warning %}}
+Warning
+{{% /notice %}}
+
+* [panel](http://docdock.netlify.com/shortcodes/panel/)
+    * success, default, primary, info, warning, danger
+
+    ```
+    {{%/* panel theme="success" header="Title" */%}}content{{%/* /panel */%}}
+    ```
+{{% panel theme="success" header="Title" %}}content{{% /panel %}}
+
+* [revealjs](http://docdock.netlify.com/shortcodes/revealjs/)

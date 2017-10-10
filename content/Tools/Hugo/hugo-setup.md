@@ -1,5 +1,6 @@
 ---
 title: "Hugo Setup"
+description: "My setup notes for Hugo"
 date: 2017-10-09T23:30:04+08:00
 draft: false
 tags: ["Hugo", "Setup"]

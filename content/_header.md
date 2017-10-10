@@ -1,1 +1,1 @@
-[Coding Notes](https://henrybear327.github.io/CodingNotes/)
+<i class='fa fa-home'></i> [Coding Notes](https://henrybear327.github.io/CodingNotes/)
