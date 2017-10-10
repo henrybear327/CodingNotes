@@ -4,6 +4,7 @@ date: 2017-10-09T23:30:04+08:00
 draft: false
 tags: ["Hugo", "Setup"]
 categories: ["Hugo"]
+weight: 5
 ---
 
 [Hugo](https://gohugo.io) is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
@@ -50,7 +51,7 @@ The [quickstart guide](https://gohugo.io/getting-started/quick-start/) on Hugo i
 3. Run `git submodule init` on project root and then run `git submodule update` to get the theme
 4. Run `hugo server`! You are done setting up!
 
-# Switch to [DocDock Theme](http://docdock.netlify.com/getting-start/installation/)
+# Switch to [DocDock Theme] and my personal tweaks(http://docdock.netlify.com/getting-start/installation/)
 
 This theme provides searching, tagging, and lot's of shortcodes out-of-the-box. Worth a try!
 
@@ -60,7 +61,12 @@ This theme provides searching, tagging, and lot's of shortcodes out-of-the-box. 
 3. Open `config.toml`:
     * Set `theme = "docdock"`
     * Comment out `themesdir = "../.."`
-4. Create an `_index.md` document in the content folder
+4. Create a `_index.md` document in the content folder
+    * [Don't forget to create](http://docdock.netlify.com/content-organisation/) a `_index.md` with `title:` and `head:` front matter!
+5. Update files in `archetypes` folder:
+    * Check [front matter](https://gohugo.io/content-management/front-matter/) format
+    * Tweak and add your own files! It's will be very handy to have some of your own!
+6. Create a `_header.md` page in content folder. Its content is what you get in the logo placeholder (top left of the screen).
 
 # MathJax support
 

@@ -1,5 +1,40 @@
 [
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tools/",
+	"title": "Tools",
+	"tags": [],
+	"description": "",
+	"content": "PR is welcomed! Feel free to create some if you want to :)\nCheers~\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-setup/",
+	"title": "Hugo Setup",
+	"tags": ["Hugo", "Setup"],
+	"description": "",
+	"content": "Hugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.\n\nInstall and Setup Hugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!\n Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!\ncd [sitename];\\ git init;\\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\\ # Edit your config.toml configuration file and add the Ananke theme. echo 'theme = \u0026quot;ananke\u0026quot;' \u0026gt;\u0026gt; config.toml  Using git submodule is a very good idea since we can keep track of the separate projects version controlled by git easily.\n Add some content: hugo new posts/my-first-post.md. Notice that the draft mode by default is true, so it won\u0026rsquo;t be published unless you change it to false.\n .rst will work!  Start the development server: hugo server -D\n Open config.toml\n customize the site URL, title, etc. .toml reference  In order to let Github Pages to parse from docs folder:\n add publishDir = \u0026quot;docs\u0026quot; to config.toml add publishDir: docs to config.yaml  Run hugo to build it!\n Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It\u0026rsquo;s that easy!\n  Cloning Hugo Site from Github  Make sure you have hugo installed. Installation can be checked by running hugo help Clone the repo Run git submodule init on project root and then run git submodule update to get the theme Run hugo server! You are done setting up!  Switch to [DocDock Theme] and my personal tweaks(http://docdock.netlify.com/getting-start/installation/) This theme provides searching, tagging, and lot\u0026rsquo;s of shortcodes out-of-the-box. Worth a try!\n Get the theme code: git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock Use the theme\u0026rsquo;s config file: cp themes/docdock/exampleSite/config.toml .:  Better run cp config.toml config.toml.bak first  Open config.toml:  Set theme = \u0026quot;docdock\u0026quot; Comment out themesdir = \u0026quot;../..\u0026quot;  Create a _index.md document in the content folder  Don\u0026rsquo;t forget to create a _index.md with title: and head: front matter!  Update files in archetypes folder:  Check front matter format Tweak and add your own files! It\u0026rsquo;s will be very handy to have some of your own!  Create a _header.md page in content folder. Its content is what you get in the logo placeholder (top left of the screen).  MathJax support  Create a custom-head.html into a layouts/partials folder next to the content folder, this is where we should add the javascript code in every \u0026lt;head\u0026gt;. Paste the following code in to the file in order for MathJax and inline latex to work!\n\u0026lt;!-- Partial intended to be overwritten to add CSS --\u0026gt; \u0026lt;script type=\u0026quot;text/x-mathjax-config\u0026quot;\u0026gt; MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]} }); \u0026lt;/script\u0026gt; \u0026lt;script type=\u0026quot;text/javascript\u0026quot; async src=\u0026quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML\u0026quot;\u0026gt; \u0026lt;/script\u0026gt;  Also, if you have Google Analytics tracking code, you can add it here.\n Check out the result $e = mc^2$ :)\n "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-usage/",
+	"title": "Hugo Usage",
+	"tags": [],
+	"description": "",
+	"content": " Useful Commands  hugo help: get Hugo documentation! hugo: generates the site to the destination folder hugo --cleanDestinationDir: remove files from destination not found in static directories  Creating a New Chapter  hugo new --kind chapter [path to file]/_index.md  Creating a New Article  Creater your own archetypes first! hugo new [path to post]/[post name].md: create a new post The one with the lower weight shows up first  Contest Organization  All posts are contained in the content folder The folder hierarchy is the shape of the website\ncontent ├── level-one │ ├── level-two │ │ ├── level-three │ │ │ ├── level-four │ │ │ │ ├── _index.md │ │ │ │ ├── page-4-a.md │ │ │ │ ├── page-4-b.md │ │ │ │ └── page-4-c.md │ │ │ ├── _index.md │ │ │ ├── page-3-a.md │ │ │ ├── page-3-b.md │ │ │ └── page-3-c.md │ │ ├── _index.md │ │ ├── page-2-a.md │ │ ├── page-2-b.md │ │ └── page-2-c.md │ ├── _index.md │ ├── page-1-a.md │ ├── page-1-b.md │ └── page-1-c.md ├── _index.md └── page-top.md  Make sure that _index.md is present!\n  Tips for Writing Markdown Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:\n To be continued\u0026hellip;  "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/_header/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "Coding Notes\n"
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/",
 	"title": "",
 	"tags": [],
@@ -7,29 +42,8 @@
 	"content": " Coding Blog 歡迎來到我的程式隨筆～\n"
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/posts/hugo-usage/",
-	"title": "Hugo Usage",
-	"tags": [],
-	"description": "",
-	"content": " Useful Commands  hugo help: get Hugo documentation! hugo: generates the site to the destination folder hugo --cleanDestinationDir: remove files from destination not found in static directories  Tips for Markdown Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:\n To be continued\u0026hellip;  "
-},
-{
-	"uri": "https://henrybear327.github.io/CodingNotes/posts/hugo-setup/",
-	"title": "Hugo Setup",
-	"tags": ["Hugo", "Setup"],
-	"description": "",
-	"content": "Hugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.\n\nInstall and Setup Hugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!\n Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!\ncd [sitename];\\ git init;\\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\\ # Edit your config.toml configuration file and add the Ananke theme. echo 'theme = \u0026quot;ananke\u0026quot;' \u0026gt;\u0026gt; config.toml  Using git submodule is a very good idea since we can keep track of the separate projects version controlled by git easily.\n Add some content: hugo new posts/my-first-post.md. Notice that the draft mode by default is true, so it won\u0026rsquo;t be published unless you change it to false.\n .rst will work!  Start the development server: hugo server -D\n Open config.toml\n customize the site URL, title, etc. .toml reference  In order to let Github Pages to parse from docs folder:\n add publishDir = \u0026quot;docs\u0026quot; to config.toml add publishDir: docs to config.yaml  Run hugo to build it!\n Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It\u0026rsquo;s that easy!\n  Cloning Hugo Site from Github  Make sure you have hugo installed. Installation can be checked by running hugo help Clone the repo Run git submodule init on project root and then run git submodule update to get the theme Run hugo server! You are done setting up!  Switch to DocDock Theme This theme provides searching, tagging, and lot\u0026rsquo;s of shortcodes out-of-the-box. Worth a try!\n Get the theme code: git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock Use the theme\u0026rsquo;s config file: cp themes/docdock/exampleSite/config.toml .:  Better run cp config.toml config.toml.bak first  Open config.toml:  Set theme = \u0026quot;docdock\u0026quot; Comment out themesdir = \u0026quot;../..\u0026quot;  Create an _index.md document in the content folder  MathJax support  Create a custom-head.html into a layouts/partials folder next to the content folder, this is where we should add the javascript code in every \u0026lt;head\u0026gt;. Paste the following code in to the file in order for MathJax and inline latex to work!\n\u0026lt;!-- Partial intended to be overwritten to add CSS --\u0026gt; \u0026lt;script type=\u0026quot;text/x-mathjax-config\u0026quot;\u0026gt; MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]} }); \u0026lt;/script\u0026gt; \u0026lt;script type=\u0026quot;text/javascript\u0026quot; async src=\u0026quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML\u0026quot;\u0026gt; \u0026lt;/script\u0026gt;  Also, if you have Google Analytics tracking code, you can add it here.\n Check out the result $e = mc^2$ :)\n "
-},
-{
 	"uri": "https://henrybear327.github.io/CodingNotes/categories/",
 	"title": "Categories",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
-	"title": "Hugo",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -42,8 +56,8 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/posts/",
-	"title": "Posts",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
+	"title": "Hugo",
 	"tags": [],
 	"description": "",
 	"content": ""

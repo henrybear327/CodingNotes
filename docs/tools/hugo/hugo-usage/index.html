@@ -7,7 +7,7 @@
     <meta name="description" content="">
 
 
-    <title>Hugo :: Docdock</title>
+    <title>Hugo Usage :: Docdock</title>
     <link rel="shortcut icon" href="/CodingNotes/images/favicon.png" type="image/x-icon" />
     <link href="/CodingNotes/css/nucleus.css" rel="stylesheet">
     <link href="/CodingNotes/css/font-awesome.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </script>
 
   </head>
-  <body class="" data-url="/CodingNotes/tags/hugo/">
+  <body class="" data-url="/CodingNotes/tools/hugo/hugo-usage/">
     <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
   <div id="header-wrapper">
     <div id="header"> 
@@ -73,14 +73,16 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 
     <ul class="topics">
-    <li data-nav-id="/CodingNotes/tools/" class="dd-item">
+    <li data-nav-id="/CodingNotes/tools/" class="dd-item parent">
       <a href="/CodingNotes/tools/">
-        <span><i class='fa fa-edit'></i> Tools</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span><i class='fa fa-edit'></i> Tools</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-    <li data-nav-id="/CodingNotes/tools/hugo/" class="dd-item">
+    <li data-nav-id="/CodingNotes/tools/hugo/" class="dd-item parent">
       <a href="/CodingNotes/tools/hugo/">
-        <span><i class='fa fa-edit'></i> Hugo</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span><i class='fa fa-edit'></i> Hugo</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
       <li data-nav-id="/CodingNotes/tools/hugo/hugo-setup/" class="dd-item">
@@ -88,7 +90,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
           <span>Hugo Setup</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/CodingNotes/tools/hugo/hugo-usage/" class="dd-item">
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-usage/" class="dd-item active">
         <a href="/CodingNotes/tools/hugo/hugo-usage/">
           <span>Hugo Usage</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -119,7 +121,16 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
         <div class="padding highlightable">
         
           <div id="top-bar">
-            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/henrybear327/CodingNotes/tree/master/content/Tools/Hugo/hugo-usage.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                 <span id="sidebar-toggle-span">
                   <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
                     <i class="fa fa-bars"></i>
@@ -129,14 +140,37 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
                 <span class="links">
                 
 
- Hugo
+
+
+
+
+
+
+
+
+
+ <a href='/CodingNotes/'></a> > <a href='/CodingNotes/tools/'>Tools</a> > <a href='/CodingNotes/tools/hugo/'>Hugo</a> > Hugo Usage
+
+ 
+
+ 
+
+ 
 
    
                 </span>
             </div>
             <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li><a href="#useful-commands">Useful Commands</a></li>
+<li><a href="#creating-a-new-chapter">Creating a New Chapter</a></li>
+<li><a href="#creating-a-new-article">Creating a New Article</a></li>
+<li><a href="#contest-organization-http-docdock-netlify-com-content-organisation"><a href="http://docdock.netlify.com/content-organisation/">Contest Organization</a></a></li>
+<li><a href="#tips-for-writing-markdown">Tips for Writing Markdown</a></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -145,70 +179,84 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
         
         <div id="body-inner">
           
-            <h1>Hugo</h1>
+            <h1>Hugo Usage</h1>
           
 
 
 
 
+
+
+<h1 id="useful-commands">Useful Commands</h1>
+
+<ul>
+<li><code>hugo help</code>: get Hugo documentation!</li>
+<li><code>hugo</code>: generates the site to the destination folder</li>
+<li><code>hugo --cleanDestinationDir</code>: remove files from destination not found in static directories</li>
+</ul>
+
+<h1 id="creating-a-new-chapter">Creating a New Chapter</h1>
+
+<ul>
+<li><code>hugo new --kind chapter [path to file]/_index.md</code></li>
+</ul>
+
+<h1 id="creating-a-new-article">Creating a New Article</h1>
+
+<ul>
+<li>Creater your own archetypes first!</li>
+<li><code>hugo new [path to post]/[post name].md</code>: create a new post</li>
+<li>The one with the lower weight shows up first</li>
+</ul>
+
+<h1 id="contest-organization-http-docdock-netlify-com-content-organisation"><a href="http://docdock.netlify.com/content-organisation/">Contest Organization</a></h1>
+
+<ul>
+<li>All posts are contained in the <code>content</code> folder</li>
+
+<li><p>The folder hierarchy is the shape of the website</p>
+
+<pre><code>content
+├── level-one
+│   ├── level-two
+│   │   ├── level-three
+│   │   │   ├── level-four
+│   │   │   │   ├── _index.md
+│   │   │   │   ├── page-4-a.md
+│   │   │   │   ├── page-4-b.md
+│   │   │   │   └── page-4-c.md
+│   │   │   ├── _index.md
+│   │   │   ├── page-3-a.md
+│   │   │   ├── page-3-b.md
+│   │   │   └── page-3-c.md
+│   │   ├── _index.md
+│   │   ├── page-2-a.md
+│   │   ├── page-2-b.md
+│   │   └── page-2-c.md
+│   ├── _index.md
+│   ├── page-1-a.md
+│   ├── page-1-b.md
+│   └── page-1-c.md
+├── _index.md
+└── page-top.md
+
+</code></pre></li>
+
+<li><p>Make sure that <code>_index.md</code> is present!</p></li>
+</ul>
+
+<h1 id="tips-for-writing-markdown">Tips for Writing Markdown</h1>
+
+<p>Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:</p>
+
+<ul>
+<li>To be continued&hellip;</li>
+</ul>
 
 
 <footer class=" footline" >
 	
 </footer>
-
-
-
-	
-
-	<div class="extra-pagination inner">
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
-	</div>
-
-	
-	   <article class="post Tools">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/CodingNotes/tools/hugo/hugo-setup/">Hugo Setup</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p><p><a href="https://gohugo.io">Hugo</a> is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.</p>
-
-<p></p> <a class="read-more" href="/CodingNotes/tools/hugo/hugo-setup/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/hugo/">Hugo</a>
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/setup/">Setup</a>
-            
-        
-
-    </footer>
-</article>
-
-
-
-
-	
-
-	<div style="margin-bottom:2rem"></div>
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
 
 
 
@@ -223,7 +271,8 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
     
 
     <div id="navigation">
-        <a class="nav nav-next" href="/CodingNotes/tools/" title="Tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="/CodingNotes/tools/hugo/hugo-setup/" title="Hugo Setup"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/CodingNotes/tools/hugo/hugo-setup/" title="Hugo Setup" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>
@@ -248,3 +297,4 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
   </body>
 </html>
+
