@@ -3,12 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/posts/hugo-setup/</loc>
-    <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+    <loc>https://henrybear327.github.io/CodingNotes/</loc>
+    <lastmod>2017-10-10T19:23:58+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/</loc>
+    <loc>https://henrybear327.github.io/CodingNotes/posts/hugo-usage/</loc>
+    <lastmod>2017-10-10T19:23:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/posts/hugo-setup/</loc>
     <lastmod>2017-10-09T23:30:04+08:00</lastmod>
   </url>
   
@@ -31,7 +36,7 @@
   
   <url>
     <loc>https://henrybear327.github.io/CodingNotes/posts/</loc>
-    <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+    <lastmod>2017-10-10T19:23:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -6,10 +6,20 @@
     <description>Recent content on Docdock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 09 Oct 2017 23:30:04 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 10 Oct 2017 19:23:58 +0800</lastBuildDate>
     
 	<atom:link href="https://henrybear327.github.io/CodingNotes/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo Usage</title>
+      <link>https://henrybear327.github.io/CodingNotes/posts/hugo-usage/</link>
+      <pubDate>Tue, 10 Oct 2017 19:23:58 +0800</pubDate>
+      
+      <guid>https://henrybear327.github.io/CodingNotes/posts/hugo-usage/</guid>
+      <description> Useful Commands  hugo help: get Hugo documentation! hugo: generates the site to the destination folder hugo --cleanDestinationDir: remove files from destination not found in static directories  Tips for Markdown Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:
+ To be continued&amp;hellip;  </description>
+    </item>
     
     <item>
       <title>Hugo Setup</title>
