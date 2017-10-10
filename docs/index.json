@@ -11,7 +11,7 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     Note Info Tip Warning\n "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n"
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-setup/",
@@ -49,14 +49,14 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
