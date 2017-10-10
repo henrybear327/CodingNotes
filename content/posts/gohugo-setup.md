@@ -2,11 +2,15 @@
 title: "Gohugo Setup"
 date: 2017-10-09T23:30:04+08:00
 draft: false
+tags: ["Hugo", "Setup"]
+categories: ["Hugo"]
 ---
 
 [GoHugo](https://gohugo.io) is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
 
-# Install GoHugo
+<!--more-->
+
+# Install and Setup GoHugo
 
 The [quickstart guide](https://gohugo.io/getting-started/quick-start/) on Hugo is pretty comprehensive. Please check it out!
 
@@ -28,8 +32,11 @@ The [quickstart guide](https://gohugo.io/getting-started/quick-start/) on Hugo i
     Using [git submodule](https://git-scm.com/book/zh-tw/v1/Git-工具-子模組-Submodules) is a very good idea since we can keep track of the separate projects version controlled by git easily.
 
 4. Add some content: `hugo new posts/my-first-post.md`. Notice that the draft mode by default is true, so it won't be published unless you change it to false.
+    * [`.rst`](http://docutils.sourceforge.net/docs/user/rst/quickref.html) will [work](https://gohugo.io/content-management/formats/#additional-formats-through-external-helpers)!
 5. Start the development server: `hugo server -D`
-6. In `config.toml`, customize the site URL, title, etc.
+6. Open `config.toml`
+    * customize the site URL, title, etc.
+    * `.toml` [reference](https://github.com/toml-lang/toml)
 7. In order to let Github Pages to parse from [`docs` folder](https://gohugo.io/hosting-and-deployment/hosting-on-github/#deployment-via-docs-folder-on-master-branch):
     * add `publishDir = "docs"` to `config.toml`
     * add `publishDir: docs` to `config.yaml`
@@ -42,3 +49,33 @@ The [quickstart guide](https://gohugo.io/getting-started/quick-start/) on Hugo i
 2. Clone the repo
 3. Run `git submodule init` on project root and then run `git submodule update` to get the theme
 4. Run `hugo server`! You are done setting up!
+
+# Switch to [DocDock Theme](http://docdock.netlify.com/getting-start/installation/)
+
+This theme provides searching, tagging, and lot's of shortcodes out-of-the-box. Worth a try!
+
+1. Get the theme code: `git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock`
+2. Use the theme's config file: `cp themes/docdock/exampleSite/config.toml .`:
+    * Better run `cp config.toml config.toml.bak` first
+3. Open `config.toml`:
+    * Set `theme = "docdock"`
+    * Comment out `themesdir = "../.."`
+4. Create an `_index.md` document in the content folder
+
+# Latex support
+
+1. Open `themes/docdock/layouts/partials/custom-head.html`, this is where we [should add](themes/docdock/layouts/partials/custom-head.html) the javascript code to every `<head>`. Paste the [following code](http://docs.mathjax.org/en/latest/start.html) in to the file in order for MathJax and inline latex to work!
+
+    ```javascript
+    <!-- Partial intended to be overwritten to add CSS -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+        });
+    </script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    ```
+    Also, if you have Google Analytics tracking code, you can add it here.
+2. Check out the result $e = mc^2$ :)
