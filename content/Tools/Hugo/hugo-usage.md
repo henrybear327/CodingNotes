@@ -1,26 +1,28 @@
 ---
 title: "Hugo Usage"
 date: 2017-10-10T19:23:58+08:00
+tags: ["Hugo", "Setup"]
+categories: ["Hugo"]
 weight: 10
 ---
 
-# Useful Commands
+## Useful Commands
 
 * `hugo help`: get Hugo documentation!
 * `hugo`: generates the site to the destination folder
 * `hugo --cleanDestinationDir`: remove files from destination not found in static directories
 
-# Creating a New Chapter
+## Creating a New Chapter
 
 * `hugo new --kind chapter [path to file]/_index.md`
 
-# Creating a New Article
+## Creating a New Article
 
 * Creater your own archetypes first!
 * `hugo new [path to post]/[post name].md`: create a new post
 * The one with the lower weight shows up first
 
-# [Contest Organization](http://docdock.netlify.com/content-organisation/)
+## [Content Organization](http://docdock.netlify.com/content-organisation/)
 
 * All posts are contained in the `content` folder
 * The folder hierarchy is the shape of the website
@@ -53,7 +55,7 @@ weight: 10
     ```
 * Make sure that `_index.md` is present!
 
-# Tips for Writing Markdown 
+## Tips for Writing Markdown 
 
 Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:
 

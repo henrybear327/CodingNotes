@@ -22,7 +22,7 @@ home = [ "HTML", "RSS", "JSON"]
 
 
 [[menu.shortcuts]]
-pre = "<h3>More</h3>"
+pre = "<h3>About me</h3>" # note the pre param which allows you to insert HTML code and used here to separate content’s menu from this “static” menu
 name = "<i class='fa fa-github'></i> Github repo"
 identifier = "ds"
 url = "https://github.com/henrybear327?tab=repositories"
@@ -34,12 +34,13 @@ url = "https://itunes.apple.com/tw/app/cculife/id1091437125?l=zh&mt=8"
 weight = 11
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-bullhorn'></i> amoshyc 題解網站"
-url = "https://amoshyc.github.io/CPsolution/"
+name = "<i class='fa fa-bookmark'></i> Hugo Official Site"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
 weight = 20
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-bookmark'></i> Hugo"
-identifier = "hugodoc"
-url = "https://gohugo.io/"
-weight = 30
+pre = "<h3>題解網站</h3>"
+name = "<i class='fa fa-bullhorn'></i> amoshyc 題解網站"
+url = "https://amoshyc.github.io/CPsolution/"
+weight = 100

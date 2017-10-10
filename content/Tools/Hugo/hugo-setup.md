@@ -7,11 +7,11 @@ categories: ["Hugo"]
 weight: 5
 ---
 
-[Hugo](https://gohugo.io) is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
+[Hugo](https://gohugo.io) is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy, version controlling it is quite simple, and it's easy to share the source code and let people create post PR!
 
 <!--more-->
 
-# Install and Setup Hugo
+## Install and Setup Hugo
 
 The [quickstart guide](https://gohugo.io/getting-started/quick-start/) on Hugo is pretty comprehensive. Please check it out!
 
@@ -44,14 +44,14 @@ The [quickstart guide](https://gohugo.io/getting-started/quick-start/) on Hugo i
 8. Run `hugo` to build it!
 9. Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It's that easy!
 
-# Cloning Hugo Site from Github
+## Cloning Hugo Site from Github
 
 1. Make sure you have hugo installed. Installation can be checked by running `hugo help`
 2. Clone the repo
 3. Run `git submodule init` on project root and then run `git submodule update` to get the theme
 4. Run `hugo server`! You are done setting up!
 
-# Switch to [DocDock Theme] and my personal tweaks(http://docdock.netlify.com/getting-start/installation/)
+## Switching to [DocDock Theme](http://docdock.netlify.com/getting-start/installation/) + My Personal Tweaks
 
 This theme provides searching, tagging, and lot's of shortcodes out-of-the-box. Worth a try!
 
@@ -68,7 +68,7 @@ This theme provides searching, tagging, and lot's of shortcodes out-of-the-box. 
     * Tweak and add your own files! It's will be very handy to have some of your own!
 6. Create a `_header.md` page in content folder. Its content is what you get in the logo placeholder (top left of the screen).
 
-# MathJax support
+## MathJax support
 
 1. Create a `custom-head.html` into a `layouts/partials` folder next to the content folder, this is where we [should add](http://docdock.netlify.com/content-organisation/customize-style/) the javascript code in every `<head>`. Paste the [following code](http://docs.mathjax.org/en/latest/start.html) in to the file in order for MathJax and inline latex to work!
 

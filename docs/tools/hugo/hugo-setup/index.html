@@ -100,10 +100,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
         </ul>
     </li>
         <section id="shortcuts">
-                <li class="" role=""><h3>More</h3><a href="https://github.com/henrybear327?tab=repositories" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+                <li class="" role=""><h3>About me</h3><a href="https://github.com/henrybear327?tab=repositories" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
                 <li class="" role=""><a href="https://itunes.apple.com/tw/app/cculife/id1091437125?l=zh&amp;mt=8" target="_blank" rel="noopener"><i class='fa fa-camera'></i> CCULife</a></li>
-                <li class="" role=""><a href="https://amoshyc.github.io/CPsolution/" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> amoshyc 題解網站</a></li>
-                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo</a></li>
+                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Official Site</a></li>
+                <li class="" role=""><h3>題解網站</h3><a href="https://amoshyc.github.io/CPsolution/" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> amoshyc 題解網站</a></li>
         </section>
             <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
     </ul>
@@ -164,10 +164,13 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
 <li><a href="#install-and-setup-hugo">Install and Setup Hugo</a></li>
 <li><a href="#cloning-hugo-site-from-github">Cloning Hugo Site from Github</a></li>
-<li><a href="#switch-to-docdock-theme-and-my-personal-tweaks-http-docdock-netlify-com-getting-start-installation">Switch to [DocDock Theme] and my personal tweaks(<a href="http://docdock.netlify.com/getting-start/installation/">http://docdock.netlify.com/getting-start/installation/</a>)</a></li>
+<li><a href="#switching-to-docdock-theme-http-docdock-netlify-com-getting-start-installation-my-personal-tweaks">Switching to <a href="http://docdock.netlify.com/getting-start/installation/">DocDock Theme</a> + My Personal Tweaks</a></li>
 <li><a href="#mathjax-support">MathJax support</a></li>
+</ul></li>
 </ul>
 </nav>
     </div>
@@ -192,11 +195,11 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 
 
-<p><a href="https://gohugo.io">Hugo</a> is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.</p>
+<p><a href="https://gohugo.io">Hugo</a> is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy, version controlling it is quite simple, and it&rsquo;s easy to share the source code and let people create post PR!</p>
 
 <p></p>
 
-<h1 id="install-and-setup-hugo">Install and Setup Hugo</h1>
+<h2 id="install-and-setup-hugo">Install and Setup Hugo</h2>
 
 <p>The <a href="https://gohugo.io/getting-started/quick-start/">quickstart guide</a> on Hugo is pretty comprehensive. Please check it out!</p>
 
@@ -248,7 +251,7 @@ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
 <li><p>Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It&rsquo;s that easy!</p></li>
 </ol>
 
-<h1 id="cloning-hugo-site-from-github">Cloning Hugo Site from Github</h1>
+<h2 id="cloning-hugo-site-from-github">Cloning Hugo Site from Github</h2>
 
 <ol>
 <li>Make sure you have hugo installed. Installation can be checked by running <code>hugo help</code></li>
@@ -257,7 +260,7 @@ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
 <li>Run <code>hugo server</code>! You are done setting up!</li>
 </ol>
 
-<h1 id="switch-to-docdock-theme-and-my-personal-tweaks-http-docdock-netlify-com-getting-start-installation">Switch to [DocDock Theme] and my personal tweaks(<a href="http://docdock.netlify.com/getting-start/installation/">http://docdock.netlify.com/getting-start/installation/</a>)</h1>
+<h2 id="switching-to-docdock-theme-http-docdock-netlify-com-getting-start-installation-my-personal-tweaks">Switching to <a href="http://docdock.netlify.com/getting-start/installation/">DocDock Theme</a> + My Personal Tweaks</h2>
 
 <p>This theme provides searching, tagging, and lot&rsquo;s of shortcodes out-of-the-box. Worth a try!</p>
 
@@ -288,7 +291,7 @@ echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
 <li>Create a <code>_header.md</code> page in content folder. Its content is what you get in the logo placeholder (top left of the screen).</li>
 </ol>
 
-<h1 id="mathjax-support">MathJax support</h1>
+<h2 id="mathjax-support">MathJax support</h2>
 
 <ol>
 <li><p>Create a <code>custom-head.html</code> into a <code>layouts/partials</code> folder next to the content folder, this is where we <a href="http://docdock.netlify.com/content-organisation/customize-style/">should add</a> the javascript code in every <code>&lt;head&gt;</code>. Paste the <a href="http://docs.mathjax.org/en/latest/start.html">following code</a> in to the file in order for MathJax and inline latex to work!</p>
