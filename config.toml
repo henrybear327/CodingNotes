@@ -6,6 +6,8 @@ title = "Docdock"
 theme = "docdock"
 # themesdir = "../.."
 
+publishDir = "docs"
+
 [params]
 editURL = "https://github.com/henrybear327/CodingNotes/tree/master/content/"
 noHomeIcon = true # default is false

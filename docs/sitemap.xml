@@ -8,12 +8,23 @@
   </url>
   
   <url>
+    <loc>https://henrybear327.github.io/CodingNotes/</loc>
+    <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://henrybear327.github.io/CodingNotes/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/</loc>
+    <loc>https://henrybear327.github.io/CodingNotes/tags/hugo/</loc>
+    <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/categories/hugo/</loc>
     <lastmod>2017-10-09T23:30:04+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -25,7 +36,14 @@
   </url>
   
   <url>
+    <loc>https://henrybear327.github.io/CodingNotes/tags/setup/</loc>
+    <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://henrybear327.github.io/CodingNotes/tags/</loc>
+    <lastmod>2017-10-09T23:30:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   

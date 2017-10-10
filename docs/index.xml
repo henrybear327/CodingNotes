@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Coding Notes</title>
+    <title>Docdock</title>
     <link>https://henrybear327.github.io/CodingNotes/</link>
-    <description>Recent content on Coding Notes</description>
+    <description>Recent content on Docdock</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 09 Oct 2017 23:30:04 +0800</lastBuildDate>
@@ -17,9 +17,9 @@
       <pubDate>Mon, 09 Oct 2017 23:30:04 +0800</pubDate>
       
       <guid>https://henrybear327.github.io/CodingNotes/posts/gohugo-setup/</guid>
-      <description>GoHugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
-Install GoHugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!
- Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;GoHugo&lt;/a&gt; is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
