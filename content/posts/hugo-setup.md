@@ -1,16 +1,16 @@
 ---
-title: "Gohugo Setup"
+title: "Hugo Setup"
 date: 2017-10-09T23:30:04+08:00
 draft: false
 tags: ["Hugo", "Setup"]
 categories: ["Hugo"]
 ---
 
-[GoHugo](https://gohugo.io) is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
+[Hugo](https://gohugo.io) is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.
 
 <!--more-->
 
-# Install and Setup GoHugo
+# Install and Setup Hugo
 
 The [quickstart guide](https://gohugo.io/getting-started/quick-start/) on Hugo is pretty comprehensive. Please check it out!
 
@@ -62,9 +62,9 @@ This theme provides searching, tagging, and lot's of shortcodes out-of-the-box. 
     * Comment out `themesdir = "../.."`
 4. Create an `_index.md` document in the content folder
 
-# Latex support
+# MathJax support
 
-1. Open `themes/docdock/layouts/partials/custom-head.html`, this is where we [should add](themes/docdock/layouts/partials/custom-head.html) the javascript code to every `<head>`. Paste the [following code](http://docs.mathjax.org/en/latest/start.html) in to the file in order for MathJax and inline latex to work!
+1. Create a `custom-head.html` into a `layouts/partials` folder next to the content folder, this is where we [should add](http://docdock.netlify.com/content-organisation/customize-style/) the javascript code in every `<head>`. Paste the [following code](http://docs.mathjax.org/en/latest/start.html) in to the file in order for MathJax and inline latex to work!
 
     ```javascript
     <!-- Partial intended to be overwritten to add CSS -->
