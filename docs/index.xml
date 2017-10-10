@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Gohugo Setup</title>
-      <link>https://henrybear327.github.io/CodingNotes/posts/gohugo-setup/</link>
+      <title>Hugo Setup</title>
+      <link>https://henrybear327.github.io/CodingNotes/posts/hugo-setup/</link>
       <pubDate>Mon, 09 Oct 2017 23:30:04 +0800</pubDate>
       
-      <guid>https://henrybear327.github.io/CodingNotes/posts/gohugo-setup/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;GoHugo&lt;/a&gt; is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.&lt;/p&gt;
+      <guid>https://henrybear327.github.io/CodingNotes/posts/hugo-setup/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy and version controlling it is quite simple.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
     </item>
