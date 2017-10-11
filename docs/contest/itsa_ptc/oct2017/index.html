@@ -183,6 +183,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
     <div class="wrapper">
 <nav id="TableOfContents">
 <ul>
+<li>
+<ul>
+<li><a href="#心得">心得</a></li>
 <li><a href="#itsa">ITSA</a>
 <ul>
 <li><a href="#a">A</a></li>
@@ -196,6 +199,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 <li><a href="#a-1">A</a></li>
 <li><a href="#b-1">B</a></li>
 <li><a href="#c-1">C</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -223,9 +227,17 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 
 
-<h1 id="itsa">ITSA</h1>
+<h2 id="心得">心得</h2>
 
-<h2 id="a">A</h2>
+<p>新隊伍一起的第一場正式練習，表現還算可以啦。只是很久沒三人共用一台電腦，實在有點卡卡的。</p>
+
+<p>討論熱烈，希望可以維持。</p>
+
+<h2 id="itsa">ITSA</h2>
+
+<h3 id="a">A</h3>
+
+<p>線性掃過去，遇到三的倍數就累加。</p>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="">
@@ -256,7 +268,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span><span style=""></span><span style="">}</span></code></pre>
 </div>
 
-<h2 id="b">B</h2>
+<h3 id="b">B</h3>
+
+<p>問問隊友 <em>黃鈺程</em> <em>陳煒杰</em></p>
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">1</span><span style="">m</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">int</span><span style="">(</span><span style="">input</span><span style="">())</span><span style="">
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">2</span><span style=""></span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">_</span><span style=""> </span><span style="color:#f92672">in</span><span style=""> </span><span style="">range</span><span style="">(</span><span style="">m</span><span style="">):</span><span style="">
@@ -269,7 +283,16 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">9</span><span style="">    </span><span style="color:#66d9ef">print</span><span style="">(</span><span style="">sum</span><span style="">(</span><span style="">data</span><span style="">))</span></code></pre>
 </div></p>
 
-<h2 id="c">C</h2>
+<h3 id="c">C</h3>
+
+<p>基本上掌握對於 1-based 的 complete binary tree index 的性質即可:</p>
+
+<ul>
+<li>left child index = parent index * 2</li>
+<li>right child index = parent index * 2 + 1</li>
+</ul>
+
+<p>IO有點麻煩，各自實現吧！</p>
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="">
@@ -345,7 +368,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">72</span><span style=""></span><span style="">}</span></code></pre>
 </div></p>
 
-<h2 id="d">D</h2>
+<h3 id="d">D</h3>
+
+<p>問問隊友 <em>黃鈺程</em> <em>陳煒杰</em></p>
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
@@ -409,7 +434,28 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">60</span><span style=""></span><span style="">}</span></code></pre>
 </div></p>
 
-<h2 id="e">E</h2>
+<h3 id="e">E</h3>
+
+<p>比賽時想不出數學解，只好暴力去做，畢竟 $m, n$ 都至多 15而已。</p>
+
+<p>枚舉所有的可能放的數量，且只要枚舉 non-decreasing order 的數列來做排列組合即可。</p>
+
+<p>舉例而言，$m = 4, n = 2$的話，我們枚舉</p>
+
+<ul>
+<li>1, 3</li>
+<li>2, 2</li>
+</ul>
+
+<p>但是 $3, 1$ 等等不枚舉，因為這個數列不是 non-decreasing order。</p>
+
+<p>有了數列 $a_1, a_2, &hellip;, a_n$，之後就&hellip;</p>
+
+<p>$C(m, a_1) * C(m - a_1, a_2) * &hellip; * C(m - a_1 - a_2 - &hellip; - a_{n - 1}, a_n)$</p>
+
+<p>記得，如果有多於一個相同的 $a_i$ 值，要除上 $(相同a_i個數)!$ ，因為我們不管排列方式。</p>
+
+<p>對於全部數列都累加上述算式即可。</p>
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
@@ -519,9 +565,11 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">106</span><span style=""></span><span style="">}</span></code></pre>
 </div></p>
 
-<h1 id="ptc">PTC</h1>
+<h2 id="ptc">PTC</h2>
 
-<h2 id="a-1">A</h2>
+<h3 id="a-1">A</h3>
+
+<p>問問隊友 _陳煒杰_，聽說範測看完就解了！</p>
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
@@ -538,7 +586,13 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span><span style=""></span><span style="">}</span></code></pre>
 </div></p>
 
-<h2 id="b-1">B</h2>
+<h3 id="b-1">B</h3>
+
+<p>y值其實完全沒有意義&hellip;..</p>
+
+<p>主要的觀察是，最早結束的區間一定要釘釘子。所以，就 greedy 的找切點啦！</p>
+
+<p>對結尾排序後，線性掃過去，如果下個線段起點比目前的切點小，不處理; 反之，切點向後移且切點總數+1</p>
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
@@ -602,7 +656,9 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">60</span><span style=""></span><span style="">}</span></code></pre>
 </div></p>
 
-<h2 id="c-1">C</h2>
+<h3 id="c-1">C</h3>
+
+<p>問問隊友 <em>黃鈺程</em> <em>陳煒杰</em></p>
 
 <p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
 </span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
