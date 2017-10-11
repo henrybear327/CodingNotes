@@ -17,14 +17,13 @@
       <pubDate>Wed, 11 Oct 2017 20:42:17 +0800</pubDate>
       
       <guid>https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/</guid>
-      <description>心得 新隊伍一起的第一場正式練習，表現還算可以啦。只是很久沒三人共用一台電腦，實在有點卡卡的。
-討論熱烈，希望可以維持。
-比賽題目   Attachments   ITSA.pdf  (222 kB)   PTC.pdf  (312 kB)     ITSA A 線性掃過去，遇到三的倍數就累加。
-1#include&amp;lt;bits/stdc++.h&amp;gt;23usingnamespacestd;45typedeflonglongll;67voidsolve()8{9intn;10scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);1112llans=0;13for(inti=1;i&amp;lt;=n;i++)14if(i%3==0)15ans+=i;16printf(&amp;#34;%lld\n&amp;#34;,ans);17}1819intmain()20{21intncase;22scanf(&amp;#34;%d&amp;#34;,&amp;amp;ncase);23while(ncase--)24solve();2526return0;27}  B 問問隊友 黃鈺程 陳煒杰
-1m=int(input())2for_inrange(m):3data=[0for_inrange(10001)]4n=int(input())5for_inrange(n):6a,b=map(int,input().split())7foriinrange(a,b):8data[i]=19print(sum(data)) 
-C 基本上掌握對於 1-based 的 complete binary tree index 的性質即可:
- left child index = parent index * 2 right child index = parent index * 2 + 1  IO有點麻煩，各自實現吧！
-1#include&amp;lt;bits/stdc++.h&amp;gt;23usingnamespacestd;45typedeflonglongll;67#define lc(i) (i*2) 8#define rc(i) (i*2+1) 910voidsolve()11{12intC;13scanf(&amp;#34;%d&amp;#34;,&amp;amp;C);1415charinp[111];16scanf(&amp;#34;%s&amp;#34;,inp);1718intlen=strlen(inp);19// printf(&amp;#34;%s\n&amp;#34;, inp); 2021inttree[111],idx=1;22for(inti=0;i&amp;lt;len;i++){23if(inp[i]==&amp;#39;(&amp;#39;){24intnum;25sscanf(inp+i+3,&amp;#34;%d&amp;#34;,&amp;amp;num);26// printf(&amp;#34;%s\n&amp;#34;, inp + i); 2728tree[idx]=num;29idx++;30}31}3233/* 34for(int i = 1; i &amp;lt; idx; i++) 35printf(&amp;#34;%d %d\n&amp;#34;, i, tree[i]); 36*/3738vector&amp;lt;string&amp;gt;ans;39for(inti=1;i&amp;lt;idx;i++){40if(lc(i)&amp;lt;idx&amp;amp;&amp;amp;abs(tree[i]-tree[lc(i)])&amp;lt;=C){41stringtmp=&amp;#34;&amp;#34;;42tmp+=&amp;#39;A&amp;#39;+(i-1);43tmp+=&amp;#39;A&amp;#39;+(lc(i)-1);4445ans.</description>
+      <description>&lt;h2 id=&#34;心得&#34;&gt;心得&lt;/h2&gt;
+
+&lt;p&gt;新隊伍一起的第一場正式練習，表現還算可以啦。只是很久沒三人共用一台電腦，實在有點卡卡的。&lt;/p&gt;
+
+&lt;p&gt;討論熱烈，希望可以維持。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
