@@ -60,7 +60,7 @@ weight: 10
 
 Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:
 
-* Codeblocks with line number
+* [Codeblocks with line number](https://gohugo.io/content-management/syntax-highlighting/)
     * Use the following snippet
         ```
         {{</* highlight cpp "linenos=inline" */>}}
