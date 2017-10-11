@@ -19,7 +19,7 @@
       <guid>https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/</guid>
       <description>心得 新隊伍一起的第一場正式練習，表現還算可以啦。只是很久沒三人共用一台電腦，實在有點卡卡的。
 討論熱烈，希望可以維持。
-ITSA A 線性掃過去，遇到三的倍數就累加。
+比賽題目   Attachments   ITSA.pdf  (222 kB)   PTC.pdf  (312 kB)     ITSA A 線性掃過去，遇到三的倍數就累加。
 1#include&amp;lt;bits/stdc++.h&amp;gt;23usingnamespacestd;45typedeflonglongll;67voidsolve()8{9intn;10scanf(&amp;#34;%d&amp;#34;,&amp;amp;n);1112llans=0;13for(inti=1;i&amp;lt;=n;i++)14if(i%3==0)15ans+=i;16printf(&amp;#34;%lld\n&amp;#34;,ans);17}1819intmain()20{21intncase;22scanf(&amp;#34;%d&amp;#34;,&amp;amp;ncase);23while(ncase--)24solve();2526return0;27}  B 問問隊友 黃鈺程 陳煒杰
 1m=int(input())2for_inrange(m):3data=[0for_inrange(10001)]4n=int(input())5for_inrange(n):6a,b=map(int,input().split())7foriinrange(a,b):8data[i]=19print(sum(data)) 
 C 基本上掌握對於 1-based 的 complete binary tree index 的性質即可:
