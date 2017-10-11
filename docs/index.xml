@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>October 11, 2017</title>
+      <link>https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/</link>
+      <pubDate>Wed, 11 Oct 2017 20:42:17 +0800</pubDate>
+      
+      <guid>https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/</guid>
+      <description>ITSA A #include &amp;lt;bits/stdc++.h&amp;gt; using namespace std; typedef long long ll; void solve() { int n; scanf(&amp;quot;%d&amp;quot;, &amp;amp;n); ll ans = 0; for(int i = 1; i &amp;lt;= n; i++) if(i % 3 == 0) ans += i; printf(&amp;quot;%lld\n&amp;quot;, ans); } int main() { int ncase; scanf(&amp;quot;%d&amp;quot;, &amp;amp;ncase); while(ncase--) solve(); return 0; }  B m = int(input()) for _ in range(m): data = [0 for _ in range(10001)] n = int(input()) for _ in range(n): a, b = map(int, input().</description>
+    </item>
+    
+    <item>
       <title>Hugo Setup</title>
       <link>https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-setup/</link>
       <pubDate>Mon, 09 Oct 2017 23:30:04 +0800</pubDate>

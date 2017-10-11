@@ -13,6 +13,21 @@
   </url>
   
   <url>
+    <loc>https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/</loc>
+    <lastmod>2017-10-11T20:51:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/contest/</loc>
+    <lastmod>2017-10-11T20:51:00+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/</loc>
+    <lastmod>2017-10-11T20:42:17+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-setup/</loc>
     <lastmod>2017-10-09T23:30:04+08:00</lastmod>
   </url>
@@ -37,14 +52,32 @@
   </url>
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/categories/hugo/</loc>
-    <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+    <loc>https://henrybear327.github.io/CodingNotes/categories/competitive-programming/</loc>
+    <lastmod>2017-10-11T20:42:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://henrybear327.github.io/CodingNotes/tags/hugo/</loc>
     <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/categories/hugo/</loc>
+    <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/tags/itsa/</loc>
+    <lastmod>2017-10-11T20:42:17+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/tags/ptc/</loc>
+    <lastmod>2017-10-11T20:42:17+08:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -11,7 +11,28 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/",
+	"title": "ITSA/PTC",
+	"tags": [],
+	"description": "Monthly cotest",
+	"content": "  October 11, 2017 October 11, 2017 ITSA PTC contest\n   "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/",
+	"title": "Contest",
+	"tags": [],
+	"description": "Programming contest",
+	"content": "  ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
+	"title": "October 11, 2017",
+	"tags": ["ITSA", "PTC"],
+	"description": "October 11, 2017 ITSA PTC contest",
+	"content": " ITSA A #include \u0026lt;bits/stdc++.h\u0026gt; using namespace std; typedef long long ll; void solve() { int n; scanf(\u0026quot;%d\u0026quot;, \u0026amp;n); ll ans = 0; for(int i = 1; i \u0026lt;= n; i++) if(i % 3 == 0) ans += i; printf(\u0026quot;%lld\\n\u0026quot;, ans); } int main() { int ncase; scanf(\u0026quot;%d\u0026quot;, \u0026amp;ncase); while(ncase--) solve(); return 0; }  B m = int(input()) for _ in range(m): data = [0 for _ in range(10001)] n = int(input()) for _ in range(n): a, b = map(int, input().split()) for i in range(a, b): data[i] = 1 print(sum(data))  C #include \u0026lt;bits/stdc++.h\u0026gt; using namespace std; typedef long long ll; #define lc(i) (i*2) #define rc(i) (i*2+1) void solve() { int C; scanf(\u0026quot;%d\u0026quot;, \u0026amp;C); char inp[111]; scanf(\u0026quot;%s\u0026quot;, inp); int len = strlen(inp); // printf(\u0026quot;%s\\n\u0026quot;, inp); int tree[111], idx = 1; for(int i = 0; i \u0026lt; len; i++) { if(inp[i] == '(') { int num; sscanf(inp + i + 3, \u0026quot;%d\u0026quot;, \u0026amp;num); // printf(\u0026quot;%s\\n\u0026quot;, inp + i); tree[idx] = num; idx++; } } /* for(int i = 1; i \u0026lt; idx; i++) printf(\u0026quot;%d %d\\n\u0026quot;, i, tree[i]); */ vector\u0026lt;string\u0026gt; ans; for(int i = 1; i \u0026lt; idx; i++) { if(lc(i) \u0026lt; idx \u0026amp;\u0026amp; abs(tree[i] - tree[lc(i)]) \u0026lt;= C) { string tmp = \u0026quot;\u0026quot;; tmp += 'A' + (i - 1); tmp += 'A' + (lc(i) - 1); ans.push_back(tmp); } if(rc(i) \u0026lt; idx \u0026amp;\u0026amp; abs(tree[i] - tree[rc(i)]) \u0026lt;= C) { string tmp = \u0026quot;\u0026quot;; tmp += 'A' + (i - 1); tmp += 'A' + (rc(i) - 1); ans.push_back(tmp); } } sort(ans.begin(), ans.end()); for(int i = 0; i \u0026lt; (int)ans.size(); i++) { printf(\u0026quot;%s%c\u0026quot;, ans[i].c_str(), i == (int)ans.size() - 1 ? '\\n' : ' '); } } int main() { int ncase; scanf(\u0026quot;%d\u0026quot;, \u0026amp;ncase); while(ncase--) solve(); return 0; }  D #include \u0026lt;bits/stdc++.h\u0026gt; using namespace std; #define st first #define nd second typedef pair\u0026lt;int, int\u0026gt; pii; // \u0026lt;d, v\u0026gt; struct Edge { int to, w; }; const int MAX_V = 1000; const int INF = 0x3f3f3f3f; int V; // V, Source vector\u0026lt;Edge\u0026gt; g[MAX_V]; int d[MAX_V][MAX_V]; void dijkstra(int S) { fill(d[S], d[S] + V, INF); priority_queue\u0026lt; pii, vector\u0026lt;pii\u0026gt;, greater\u0026lt;pii\u0026gt; \u0026gt; pq; d[S][S] = 0; pq.push(pii(0, S)); while (!pq.empty()) { pii top = pq.top(); pq.pop(); int u = top.nd; if (d[S][u] \u0026lt; top.st) continue; // for (const Edge\u0026amp; e : g[u]) { for (size_t i = 0; i \u0026lt; g[u].size(); i++) { const Edge\u0026amp; e = g[u][i]; if (d[S][e.to] \u0026gt; d[S][u] + e.w) { d[S][e.to] = d[S][u] + e.w; pq.push(pii(d[S][e.to], e.to)); } } } } int main() { int N, M; scanf(\u0026quot;%d\u0026quot;, \u0026amp;N); scanf(\u0026quot;%d\u0026quot;, \u0026amp;M); for (int u = 0; u \u0026lt; M; u++) { for (int v = 0; v \u0026lt; M; v++) { int w; scanf(\u0026quot;%d\u0026quot;, \u0026amp;w); g[u].push_back(Edge{v, w}); } } V = M; for (int i = 0; i \u0026lt; N; i++) { int p, q; scanf(\u0026quot;%d %d\u0026quot;, \u0026amp;p, \u0026amp;q); dijkstra(p); printf(\u0026quot;%d\\n\u0026quot;, d[p][q]); } return 0; }  E #include \u0026lt;bits/stdc++.h\u0026gt; using namespace std; typedef long long ll; ll dp[16][16]; ll C(ll a, ll b) { if(dp[a][b] != -1) return dp[a][b]; ll ans = 1; for (int i = 1; i \u0026lt;= b; i++) { ans = ans * (a - i + 1); ans = ans / i; } return dp[a][b] = ans; } ll ans = 0; ll factorial[16]; int sz[16]; int total = 0; void dfs(int partition, int depth, int rem) { if(rem \u0026lt;= 0) return; if(depth == partition - 1) { // get last partition if(depth != 0 \u0026amp;\u0026amp; rem \u0026lt; sz[depth - 1]) return; sz[depth] = rem; // for(int i = 0; i \u0026lt; partition; i++) // printf(\u0026quot;%d%c\u0026quot;, sz[i], i == partition - 1 ? '\\n' : ' '); // get ans int sum = total; ll tmp = 1; int acc[16] = {0}; for(int i = 0; i \u0026lt; partition; i++) { tmp *= C(sum, sz[i]); acc[sz[i]]++; sum -= sz[i]; } // printf(\u0026quot;tmp = %lld\\n\u0026quot;, tmp); for(int i = 0; i \u0026lt; 16; i++) { if(acc[i] \u0026gt; 1) tmp /= factorial[acc[i]]; } // printf(\u0026quot;tmp = %lld\\n\u0026quot;, tmp); ans += tmp; return; } int i; if(depth == 0) { i = 1; } else { i = sz[depth - 1]; } for(; i \u0026lt;= rem; i++) { if(depth != 0 \u0026amp;\u0026amp; i \u0026lt; sz[depth - 1]) continue; sz[depth] = i; dfs(partition, depth + 1, rem - i); } } void solve(int num_cnt, int partition) { // printf(\u0026quot;%d %d\\n\u0026quot;, num_cnt, partition); ans = 0; total = num_cnt; dfs(partition, 0, num_cnt); // printf(\u0026quot;ans = %lld\\n\u0026quot;, ans); printf(\u0026quot;%lld\\n\u0026quot;, ans); }\tint main() { int TC; scanf(\u0026quot;%d\u0026quot;, \u0026amp;TC); memset(dp, -1, sizeof(dp)); factorial[1] = 1; for(int i = 2; i \u0026lt;= 15; i++) { factorial[i] = factorial[i - 1] * i; } while (TC--) { int m, n; scanf(\u0026quot;%d,%d\u0026quot;, \u0026amp;m, \u0026amp;n); solve(m, n); } return 0; }  PTC A #include \u0026lt;bits/stdc++.h\u0026gt; using namespace std; int main(){ int n; scanf(\u0026quot; %d\u0026quot;, \u0026amp;n); for (int i = 0; i \u0026lt; n; i++){ int x; scanf(\u0026quot; %d\u0026quot;, \u0026amp;x); printf(\u0026quot;%d\\n\u0026quot;, x * 6 + (x - 1) * 2); } return 0; }  B #include \u0026lt;bits/stdc++.h\u0026gt; using namespace std; inline int getint() { int inp; scanf(\u0026quot;%d\u0026quot;, \u0026amp;inp); return inp; } struct Edge { int to, cap, rev; Edge(int a, int b, int c) { to = a; cap = b; rev = c; } }; const int INF = 0x3f3f3f3f; const int MAX_V = 400; vector\u0026lt;Edge\u0026gt; g[MAX_V]; int level[MAX_V]; int iter[MAX_V]; void add_edge(int u, int v, int cap) { g[u].push_back((Edge){v, cap, (int)g[v].size()}); g[v].push_back((Edge){u, 0, (int)g[u].size() - 1}); } void bfs(int s) { memset(level, -1, sizeof(level)); queue\u0026lt;int\u0026gt; q; level[s] = 0; q.push(s); while (!q.empty()) { int v = q.front(); q.pop(); for (int i = 0; i \u0026lt; int(g[v].size()); i++) { const Edge\u0026amp; e = g[v][i]; if (e.cap \u0026gt; 0 \u0026amp;\u0026amp; level[e.to] \u0026lt; 0) { level[e.to] = level[v] + 1; q.push(e.to); } } } } int dfs(int v, int t, int f) { if (v == t) return f; for (int\u0026amp; i = iter[v]; i \u0026lt; int(g[v].size()); i++) { Edge\u0026amp; e = g[v][i]; if (e.cap \u0026gt; 0 \u0026amp;\u0026amp; level[v] \u0026lt; level[e.to]) { int d = dfs(e.to, t, min(f, e.cap)); if (d \u0026gt; 0) { e.cap -= d; g[e.to][e.rev].cap += d; return d; } } } return 0; } int max_flow(int s, int t) { // dinic int flow = 0; for (;;) { bfs(s); if (level[t] \u0026lt; 0) return flow; memset(iter, 0, sizeof(iter)); int f; while ((f = dfs(s, t, INF)) \u0026gt; 0) { flow += f; } } } int cnt[5]; int main() { int TC = getint(); while (TC--) { for (int u = 0; u \u0026lt; MAX_V; u++) { g[u].clear(); } for (int i = 0; i \u0026lt; 5; i++) { cnt[i] = getint(); } int N = getint(); int s_super = N + 10; int t_super = N + 11; for (int i = 0; i \u0026lt; 5; i++) { add_edge(s_super, i, cnt[i]); } for (int i = 0; i \u0026lt; N; i++) { char s1[5], s2[5]; scanf(\u0026quot;%s %s\u0026quot;, s1, s2); int c1 = s1[0] - 'A'; int c2 = s2[0] - 'A'; add_edge(c1, i + 5, 1); add_edge(c2, i + 5, 1); add_edge(i + 5, t_super, 1); } int f = max_flow(s_super, t_super); if (f == N) { puts(\u0026quot;YES\u0026quot;); } else { puts(\u0026quot;NO\u0026quot;); } } return 0; }  C #include \u0026lt;bits/stdc++.h\u0026gt; using namespace std; #define sz(x) (int(x.size())) inline int getint() { int inp; scanf(\u0026quot;%d\u0026quot;, \u0026amp;inp); return inp; } struct Seg { int s, t; bool operator \u0026lt; (const Seg\u0026amp; k) const { return t \u0026lt; k.t; } }; vector\u0026lt;Seg\u0026gt; segs; int solve() { // sort(segs.begin(), segs.end(), [\u0026amp;](const Seg\u0026amp; a, const Seg\u0026amp; b) { // if (a.t == b.t) { // return a.s \u0026lt; b.s; // } // return a.t \u0026lt; b.t; // }); sort(segs.begin(), segs.end()); int ans = 1; Seg cur = segs[0]; for (int i = 1; i \u0026lt; sz(segs); i++) { // printf(\u0026quot;(%d, %d): \u0026quot;, segs[i].s, segs[i].t); if (segs[i].s \u0026lt; cur.t) { // puts(\u0026quot;c\u0026quot;); continue; } else { ans++; // printf(\u0026quot;%d\\n\u0026quot;, ans); cur = segs[i]; } } return ans; } int main() { int TC = getint(); while (TC--) { segs.clear(); int N = getint(); for (int i = 0; i \u0026lt; N; i++) { int l = getint(); int x = getint(); int y = getint(); segs.push_back(Seg {x, x + l}); } printf(\u0026quot;%d\\n\u0026quot;, solve()); } return 0; }  "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-setup/",
@@ -49,8 +70,8 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
-	"title": "Hugo",
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/competitive-programming/",
+	"title": "Competitive Programming",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -58,6 +79,27 @@
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
 	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/itsa/",
+	"title": "Itsa",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/ptc/",
+	"title": "Ptc",
 	"tags": [],
 	"description": "",
 	"content": ""

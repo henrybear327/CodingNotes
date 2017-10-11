@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.29" />
+    <meta name="description" content="October 11, 2017 ITSA PTC contest">
+
+
+    <title>October 11, 2017 :: Docdock</title>
+    <link rel="shortcut icon" href="/CodingNotes/images/favicon.png" type="image/x-icon" />
+    <link href="/CodingNotes/css/nucleus.css" rel="stylesheet">
+    <link href="/CodingNotes/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/CodingNotes/css/hybrid.css" rel="stylesheet">
+    <link href="/CodingNotes/css/featherlight.min.css" rel="stylesheet">
+    <link href="/CodingNotes/css/auto-complete.css" rel="stylesheet">
+    
+    <link href="/CodingNotes/css/theme.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/CodingNotes/css/bootstrap.min.css">
+    <script src="/CodingNotes/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107858184-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107858184-1');
+</script>
+
+  </head>
+  <body class="" data-url="/CodingNotes/contest/itsa_ptc/oct2017/">
+    <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header"> 
+	<p><i class='fa fa-home'></i> <a href="https://henrybear327.github.io/CodingNotes/">Coding Notes</a></p>
+ 
+
+
+    </div><div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/CodingNotes/js/lunr.min.js"></script>
+<script type="text/javascript" src="/CodingNotes/js/auto-complete.js"></script>
+<script type="text/javascript">
+    var baseurl = "https:\/\/henrybear327.github.io\/CodingNotes\/";
+</script>
+<script type="text/javascript" src="/CodingNotes/js/search.js"></script>
+
+  </div>
+
+
+    <ul class="topics">
+    <li data-nav-id="/CodingNotes/contest/" class="dd-item parent">
+      <a href="/CodingNotes/contest/">
+        <span><i class='fa fa-edit'></i> Contest</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/contest/itsa_ptc/" class="dd-item parent">
+      <a href="/CodingNotes/contest/itsa_ptc/">
+        <span><i class='fa fa-edit'></i> ITSA/PTC</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/itsa_ptc/oct2017/" class="dd-item active">
+        <a href="/CodingNotes/contest/itsa_ptc/oct2017/">
+          <span>October 11, 2017</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/tools/" class="dd-item">
+      <a href="/CodingNotes/tools/">
+        <span><i class='fa fa-edit'></i> Tools</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/tools/hugo/" class="dd-item">
+      <a href="/CodingNotes/tools/hugo/">
+        <span><i class='fa fa-edit'></i> Hugo</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-setup/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-setup/">
+          <span>Hugo Setup</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-usage/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-usage/">
+          <span>Hugo Usage</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        <section id="shortcuts">
+                <li class="" role=""><h3>About me</h3><a href="https://github.com/henrybear327?tab=repositories" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+                <li class="" role=""><a href="https://itunes.apple.com/tw/app/cculife/id1091437125?l=zh&amp;mt=8" target="_blank" rel="noopener"><i class='fa fa-camera'></i> CCULife</a></li>
+                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Official Site</a></li>
+                <li class="" role=""><h3>題解網站</h3><a href="https://amoshyc.github.io/CPsolution/" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> amoshyc 題解網站</a></li>
+        </section>
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+    </ul>
+
+
+    <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/henrybear327/CodingNotes/tree/master/content/contest/ITSA_PTC/Oct2017.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+
+
+
+ <a href='/CodingNotes/'>Coding Blog</a> > <a href='/CodingNotes/contest/'>Contest</a> > <a href='/CodingNotes/contest/itsa_ptc/'>ITSA/PTC</a> > October 11, 2017
+
+ 
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li><a href="#itsa">ITSA</a>
+<ul>
+<li><a href="#a">A</a></li>
+<li><a href="#b">B</a></li>
+<li><a href="#c">C</a></li>
+<li><a href="#d">D</a></li>
+<li><a href="#e">E</a></li>
+</ul></li>
+<li><a href="#ptc">PTC</a>
+<ul>
+<li><a href="#a-1">A</a></li>
+<li><a href="#b-1">B</a></li>
+<li><a href="#c-1">C</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+          <div id="tags">
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/itsa">ITSA</a>
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/ptc">PTC</a>
+            
+          </div>
+        
+        <div id="body-inner">
+          
+            <h1>October 11, 2017</h1>
+          
+
+
+
+
+
+
+<h1 id="itsa">ITSA</h1>
+
+<h2 id="a">A</h2>
+
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+typedef long long ll;
+
+void solve()
+{
+	int n;
+	scanf(&quot;%d&quot;, &amp;n);
+	
+	ll ans = 0;
+	for(int i = 1; i &lt;= n; i++)
+		if(i % 3 == 0)
+			ans += i;
+	printf(&quot;%lld\n&quot;, ans);
+}
+
+int main()
+{
+	int ncase;
+	scanf(&quot;%d&quot;, &amp;ncase);
+	while(ncase--)
+		solve();
+
+	return 0;
+}
+
+</code></pre>
+
+<h2 id="b">B</h2>
+
+<pre><code class="language-python">m = int(input())
+for _ in range(m):
+    data = [0 for _ in range(10001)]
+    n = int(input())
+    for _ in range(n):
+        a, b = map(int, input().split())
+        for i in range(a, b):
+            data[i] = 1
+    print(sum(data))
+</code></pre>
+
+<h2 id="c">C</h2>
+
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+typedef long long ll;
+
+#define lc(i) (i*2)
+#define rc(i) (i*2+1)
+
+void solve()
+{
+	int C;
+	scanf(&quot;%d&quot;, &amp;C);
+
+	char inp[111];
+	scanf(&quot;%s&quot;, inp);
+	
+	int len = strlen(inp);
+	// printf(&quot;%s\n&quot;, inp);
+	
+	int tree[111], idx = 1;
+	for(int i = 0; i &lt; len; i++) {
+		if(inp[i] == '(') {
+			int num;
+			sscanf(inp + i + 3, &quot;%d&quot;, &amp;num);
+			// printf(&quot;%s\n&quot;, inp + i);
+
+			tree[idx] = num;
+			idx++;
+		}
+	}
+
+	/*
+	for(int i = 1; i &lt; idx; i++)
+		printf(&quot;%d %d\n&quot;, i, tree[i]); 
+	*/
+	
+	vector&lt;string&gt; ans;
+	for(int i = 1; i &lt; idx; i++) {
+		if(lc(i) &lt; idx &amp;&amp; abs(tree[i] - tree[lc(i)]) &lt;= C) {
+			string tmp = &quot;&quot;;
+			tmp += 'A' + (i - 1);
+			tmp += 'A' + (lc(i) - 1);
+
+			ans.push_back(tmp);
+		}
+		
+		if(rc(i) &lt; idx &amp;&amp; abs(tree[i] - tree[rc(i)]) &lt;= C) {
+			string tmp = &quot;&quot;;
+			tmp += 'A' + (i - 1);
+			tmp += 'A' + (rc(i) - 1);
+
+			ans.push_back(tmp);
+		}
+
+	}
+
+	sort(ans.begin(), ans.end());
+	for(int i = 0; i &lt; (int)ans.size(); i++) {
+		printf(&quot;%s%c&quot;, ans[i].c_str(), i == (int)ans.size() - 1 ? '\n' : ' ');
+	}
+}
+
+int main()
+{
+	int ncase;
+	scanf(&quot;%d&quot;, &amp;ncase);
+	while(ncase--)
+		solve();
+
+	return 0;
+}
+
+</code></pre>
+
+<h2 id="d">D</h2>
+
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define st first
+#define nd second
+
+typedef pair&lt;int, int&gt; pii; // &lt;d, v&gt;
+struct Edge {
+    int to, w;
+};
+
+const int MAX_V = 1000;
+const int INF = 0x3f3f3f3f;
+
+int V; // V, Source
+vector&lt;Edge&gt; g[MAX_V];
+int d[MAX_V][MAX_V];
+
+void dijkstra(int S) {
+    fill(d[S], d[S] + V, INF);
+    priority_queue&lt; pii, vector&lt;pii&gt;, greater&lt;pii&gt; &gt; pq;
+
+    d[S][S] = 0;
+    pq.push(pii(0, S));
+
+    while (!pq.empty()) {
+        pii top = pq.top(); pq.pop();
+        int u = top.nd;
+
+        if (d[S][u] &lt; top.st) continue;
+
+        // for (const Edge&amp; e : g[u]) {
+        for (size_t i = 0; i &lt; g[u].size(); i++) {
+            const Edge&amp; e = g[u][i];
+            if (d[S][e.to] &gt; d[S][u] + e.w) {
+                d[S][e.to] = d[S][u] + e.w;
+                pq.push(pii(d[S][e.to], e.to));
+            }
+        }
+    }
+}
+
+int main() {
+    int N, M;
+    scanf(&quot;%d&quot;, &amp;N);        
+    scanf(&quot;%d&quot;, &amp;M);
+    for (int u = 0; u &lt; M; u++) {
+        for (int v = 0; v &lt; M; v++) {
+            int w; scanf(&quot;%d&quot;, &amp;w);
+            g[u].push_back(Edge{v, w});
+        }
+    }
+    V = M;
+    for (int i = 0; i &lt; N; i++) {
+        int p, q; scanf(&quot;%d %d&quot;, &amp;p, &amp;q);
+        dijkstra(p);
+        printf(&quot;%d\n&quot;, d[p][q]);
+    }
+    return 0;
+}
+</code></pre>
+
+<h2 id="e">E</h2>
+
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+typedef long long ll;
+
+ll dp[16][16];
+ll C(ll a, ll b) {
+	if(dp[a][b] != -1)
+		return dp[a][b];
+    ll ans = 1;
+    for (int i = 1; i &lt;= b; i++) {
+        ans = ans * (a - i + 1);
+        ans = ans / i;
+    }
+    return dp[a][b] = ans;
+}
+
+ll ans = 0;
+
+ll factorial[16];
+
+int sz[16];
+
+int total = 0;
+void dfs(int partition, int depth, int rem)
+{
+	if(rem &lt;= 0)
+		return;
+
+	if(depth == partition - 1) {
+		// get last partition 
+		if(depth != 0 &amp;&amp; rem &lt; sz[depth - 1])
+			return;
+		
+		sz[depth] = rem;
+		
+		// for(int i = 0; i &lt; partition; i++)
+			// printf(&quot;%d%c&quot;, sz[i], i == partition - 1 ? '\n' : ' ');
+		// get ans 
+		int sum = total;
+		ll tmp = 1;
+
+		int acc[16] = {0};
+		for(int i = 0; i &lt; partition; i++) {
+			tmp *= C(sum, sz[i]);
+			acc[sz[i]]++;
+			sum -= sz[i];
+		}
+		// printf(&quot;tmp = %lld\n&quot;, tmp);
+
+		for(int i = 0; i &lt; 16; i++) {
+			if(acc[i] &gt; 1)
+				tmp /= factorial[acc[i]];
+		}
+		// printf(&quot;tmp = %lld\n&quot;, tmp);
+
+		ans += tmp;
+		
+		return;
+	}
+	
+	int i;
+	if(depth == 0) {
+		i = 1;
+	} else {
+		i = sz[depth - 1];
+	}
+
+	for(; i &lt;= rem; i++) {
+		if(depth != 0 &amp;&amp; i &lt; sz[depth - 1])
+			continue;
+		sz[depth] = i;
+		dfs(partition, depth + 1, rem - i);
+	}
+}
+
+void solve(int num_cnt, int partition)
+{
+	// printf(&quot;%d %d\n&quot;, num_cnt, partition);
+	ans = 0;
+	
+	total = num_cnt;
+	dfs(partition, 0, num_cnt);
+
+	// printf(&quot;ans = %lld\n&quot;, ans);
+	printf(&quot;%lld\n&quot;, ans);
+}		
+
+int main() {
+    int TC; scanf(&quot;%d&quot;, &amp;TC);
+	memset(dp, -1, sizeof(dp));
+	
+	factorial[1] = 1;
+	for(int i = 2; i &lt;= 15; i++) {
+		factorial[i] = factorial[i - 1] * i;
+	}
+
+    while (TC--) {
+        int m, n;
+		scanf(&quot;%d,%d&quot;, &amp;m, &amp;n);
+		
+		solve(m, n);
+    }
+
+    return 0;
+}
+
+</code></pre>
+
+<h1 id="ptc">PTC</h1>
+
+<h2 id="a-1">A</h2>
+
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main(){
+	int n;
+	scanf(&quot; %d&quot;, &amp;n);
+	for (int i = 0; i &lt; n; i++){
+		int x;
+		scanf(&quot; %d&quot;, &amp;x);
+		printf(&quot;%d\n&quot;, x * 6 + (x - 1) * 2);
+	}
+	return 0;
+}
+</code></pre>
+
+<h2 id="b-1">B</h2>
+
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+inline int getint() {
+    int inp; scanf(&quot;%d&quot;, &amp;inp); return inp;
+}
+
+struct Edge {
+    int to, cap, rev;
+    Edge(int a, int b, int c) {
+        to = a;
+        cap = b;
+        rev = c;
+    }
+};
+
+const int INF = 0x3f3f3f3f;
+const int MAX_V = 400;
+vector&lt;Edge&gt; g[MAX_V];
+int level[MAX_V];
+int iter[MAX_V];
+
+void add_edge(int u, int v, int cap) {
+    g[u].push_back((Edge){v, cap, (int)g[v].size()});
+    g[v].push_back((Edge){u, 0, (int)g[u].size() - 1});
+}
+
+void bfs(int s) {
+    memset(level, -1, sizeof(level));
+    queue&lt;int&gt; q;
+
+    level[s] = 0;
+    q.push(s);
+
+    while (!q.empty()) {
+        int v = q.front(); q.pop();
+        for (int i = 0; i &lt; int(g[v].size()); i++) {
+            const Edge&amp; e = g[v][i];
+            if (e.cap &gt; 0 &amp;&amp; level[e.to] &lt; 0) {
+                level[e.to] = level[v] + 1;
+                q.push(e.to);
+            }
+        }
+    }
+}
+
+int dfs(int v, int t, int f) {
+    if (v == t) return f;
+    for (int&amp; i = iter[v]; i &lt; int(g[v].size()); i++) {
+        Edge&amp; e = g[v][i];
+        if (e.cap &gt; 0 &amp;&amp; level[v] &lt; level[e.to]) {
+            int d = dfs(e.to, t, min(f, e.cap));
+            if (d &gt; 0) {
+                e.cap -= d;
+                g[e.to][e.rev].cap += d;
+                return d;
+            }
+        }
+    }
+    return 0;
+}
+
+int max_flow(int s, int t) { // dinic
+    int flow = 0;
+    for (;;) {
+        bfs(s);
+        if (level[t] &lt; 0) return flow;
+        memset(iter, 0, sizeof(iter));
+        int f;
+        while ((f = dfs(s, t, INF)) &gt; 0) {
+            flow += f;
+        }
+    }
+}
+
+int cnt[5];
+
+int main() {
+    int TC = getint();
+    while (TC--) {
+        for (int u = 0; u &lt; MAX_V; u++) {
+            g[u].clear();
+        }
+
+        for (int i = 0; i &lt; 5; i++) {
+            cnt[i] = getint();
+        }
+
+        int N = getint();
+        int s_super = N + 10;
+        int t_super = N + 11;
+        for (int i = 0; i &lt; 5; i++) {
+            add_edge(s_super, i, cnt[i]);
+        }
+
+        for (int i = 0; i &lt; N; i++) {
+            char s1[5], s2[5];
+            scanf(&quot;%s %s&quot;, s1, s2);
+            int c1 = s1[0] - 'A';
+            int c2 = s2[0] - 'A';
+
+            add_edge(c1, i + 5, 1);
+            add_edge(c2, i + 5, 1);
+            add_edge(i + 5, t_super, 1);
+        }
+
+        int f = max_flow(s_super, t_super);
+        if (f == N) {
+            puts(&quot;YES&quot;);
+        }
+        else {
+            puts(&quot;NO&quot;);
+        }
+    }
+    return 0;
+}
+</code></pre>
+
+<h2 id="c-1">C</h2>
+
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define sz(x) (int(x.size()))
+
+inline int getint() {
+    int inp; scanf(&quot;%d&quot;, &amp;inp); return inp;
+}
+
+struct Seg {
+    int s, t;
+    bool operator &lt; (const Seg&amp; k) const {
+        return t &lt; k.t;
+    }
+};
+vector&lt;Seg&gt; segs;
+
+int solve() {
+    // sort(segs.begin(), segs.end(), [&amp;](const Seg&amp; a, const Seg&amp; b) {
+    //     if (a.t == b.t) {
+    //         return a.s &lt; b.s;
+    //     }
+    //     return a.t &lt; b.t;
+    // });
+    sort(segs.begin(), segs.end());
+
+    int ans = 1;
+    Seg cur = segs[0];
+    for (int i = 1; i &lt; sz(segs); i++) {
+        // printf(&quot;(%d, %d): &quot;, segs[i].s, segs[i].t);
+        if (segs[i].s &lt; cur.t) {
+            // puts(&quot;c&quot;);
+            continue;
+        }
+        else {
+            ans++;
+            // printf(&quot;%d\n&quot;, ans);
+            cur = segs[i];
+        }
+    }
+    return ans;
+}
+
+int main() {
+    int TC = getint();
+    while (TC--) {
+        segs.clear();
+
+        int N = getint();
+        for (int i = 0; i &lt; N; i++) {
+            int l = getint();
+            int x = getint();
+            int y = getint();
+
+            segs.push_back(Seg {x, x + l});
+        }
+        printf(&quot;%d\n&quot;, solve());
+    }
+    return 0;
+}
+</code></pre>
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+
+        
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        <a class="nav nav-prev" href="/CodingNotes/contest/itsa_ptc/" title="ITSA/PTC"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/CodingNotes/tools/" title="Tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>    
+
+    <script src="/CodingNotes/js/clipboard.min.js"></script>
+<script src="/CodingNotes/js/featherlight.min.js"></script>
+<script src="/CodingNotes/js/html5shiv-printshiv.min.js"></script>
+<script src="/CodingNotes/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/CodingNotes/js/modernizr.custom.71422.js"></script>
+<script src="/CodingNotes/js/learn.js"></script>
+<script src="/CodingNotes/js/hugo-learn.js"></script>
+
+
+<link href="/CodingNotes/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script src="/CodingNotes/mermaid/mermaid.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+  </body>
+</html>
+
