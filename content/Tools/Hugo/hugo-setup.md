@@ -68,6 +68,7 @@ This theme provides searching, tagging, and lot's of shortcodes out-of-the-box. 
     * Check [front matter](https://gohugo.io/content-management/front-matter/) format
     * Tweak and add your own files! It's will be very handy to have some of your own!
 6. Create a `_header.md` page in content folder. Its content is what you get in the logo placeholder (top left of the screen).
+7. Add a custon `terms.html` file to `layouts/_default`, for the `tags` and `categories` summary page to [be rendered](https://gohugo.io/templates/taxonomy-templates/#taxonomy-terms-template)
 
 ## MathJax support
 
