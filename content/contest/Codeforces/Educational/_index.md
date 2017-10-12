@@ -1,18 +1,18 @@
 ---
-title: "ITSA/PTC"
+title: "Educational Rounds"
 pre: "<i class='fa fa-edit'></i> "
 # head ="<label>  </label>  # content header
-description: "Monthly cotest"
+description: "Basic stuff, but still can't solve it QQ"
 
-date: 2017-10-11T20:51:08+08:00
+date: 2017-10-13T00:20:00+08:00
 
 creatordisplayname: "Henry Tseng"
 creatoremail: ""
 lastmodifierdisplayname: "Henry Tseng"
 lastmodifieremail: ""
 
-weight: 10
+weight: 5
 # alwaysopen: true
 ---
 
-{{% children description="true" depth="5"%}}
+{{% children description="false" depth="5"%}}

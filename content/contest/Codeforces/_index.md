@@ -1,17 +1,17 @@
 ---
-title: "ITSA/PTC"
+title: "Codeforces"
 pre: "<i class='fa fa-edit'></i> "
 # head ="<label>  </label>  # content header
-description: "Monthly cotest"
+description: "Codeforces, where my passion nurtures"
 
-date: 2017-10-11T20:51:08+08:00
+date: 2017-10-13T00:19:54+08:00
 
 creatordisplayname: "Henry Tseng"
 creatoremail: ""
 lastmodifierdisplayname: "Henry Tseng"
 lastmodifieremail: ""
 
-weight: 10
+weight: 5
 # alwaysopen: true
 ---
 

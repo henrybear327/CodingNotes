@@ -11,21 +11,35 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30      ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/",
-	"title": "ITSA/PTC",
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/educational/30/",
+	"title": "Round 30",
+	"tags": ["Codeforces", "Educational Round", "Observation"],
+	"description": " ",
+	"content": "A contest full of frustration\n\nA. Chores 1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6typedefpair\u0026lt;int,int\u0026gt;ii;78intmain()9{10intn,k,x;11scanf(\u0026#34;%d %d %d\u0026#34;,\u0026amp;n,\u0026amp;k,\u0026amp;x);1213inttot=0;14for(inti=0;i\u0026lt;n;i++){15intnum;16scanf(\u0026#34;%d\u0026#34;,\u0026amp;num);1718if(i\u0026lt;n-k)19tot+=num;20else21tot+=x;22}23printf(\u0026#34;%d\\n\u0026#34;,tot);2425return0;26}  B. Balanced Substring A pretty good one!\nBinary search won\u0026rsquo;t work, don\u0026rsquo;t be tricked.\nWe can keep a $sum$, initialized with $0$. If we encounter a $0$, we subtract the $sum$ by 1, otherwise, we add $1$ to $sum$.\nIt is easy to see that whenever you have the same $sum$, this implies that the number of $+1$ and $-1$ is the same between the interval! Using this property we can get the maximum balanced substring.\nKeep in mind of a tricky case, $01101010$ :)\n1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6typedefpair\u0026lt;int,int\u0026gt;ii;78intmain()9{10intlen;11charinp[100010];12scanf(\u0026#34;%d\u0026#34;,\u0026amp;len);13scanf(\u0026#34;%s\u0026#34;,inp+1);// case 01101010 1415intsum=0;16map\u0026lt;int,int\u0026gt;loc;17intans=0;18loc[0]=0;19for(inti=1;i\u0026lt;=len;i++){20if(inp[i]==\u0026#39;1\u0026#39;)21sum++;22else23sum--;2425autoit=loc.find(sum);26if(it!=loc.end()){27ans=max(ans,i-it-\u0026gt;second);28}else{29loc[sum]=i;30}31}32printf(\u0026#34;%d\\n\u0026#34;,ans);3334return0;35} \n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/educational/",
+	"title": "Educational Rounds",
 	"tags": [],
-	"description": "Monthly cotest",
-	"content": "  October 11, 2017 October 11, 2017 ITSA PTC contest\n   "
+	"description": "Basic stuff, but still can&#39;t solve it QQ",
+	"content": "  Round 30     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/",
+	"title": "Codeforces",
+	"tags": [],
+	"description": "Codeforces, where my passion nurtures",
+	"content": "  Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30      "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/",
 	"title": "Contest",
 	"tags": [],
 	"description": "Programming contest",
-	"content": "  ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    "
+	"content": "  Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30      ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
@@ -40,6 +54,13 @@
 	"tags": ["Hugo", "Setup"],
 	"description": "My setup notes for Hugo",
 	"content": "Hugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy, version controlling it is quite simple, and it\u0026rsquo;s easy to share the source code and let people create post PR!\n\nInstall and Setup Hugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!\n Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!\ncd [sitename];\\ git init;\\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\\ # Edit your config.toml configuration file and add the Ananke theme. echo 'theme = \u0026quot;ananke\u0026quot;' \u0026gt;\u0026gt; config.toml  Using git submodule is a very good idea since we can keep track of the separate projects version controlled by git easily.\n Add some content: hugo new posts/my-first-post.md. Notice that the draft mode by default is true, so it won\u0026rsquo;t be published unless you change it to false.\n .rst will work!  Start the development server: hugo server -D\n Open config.toml\n customize the site URL, title, etc. .toml reference  In order to let Github Pages to parse from docs folder:\n add publishDir = \u0026quot;docs\u0026quot; to config.toml add publishDir: docs to config.yaml  Run hugo to build it!\n Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It\u0026rsquo;s that easy!\n  Cloning Hugo Site from Github  Make sure you have hugo installed. Installation can be checked by running hugo help Clone the repo Run git submodule init on project root and then run git submodule update to get the theme Run hugo server! You are done setting up!  Switching to DocDock Theme + My Personal Tweaks This theme provides searching, tagging, and lot\u0026rsquo;s of shortcodes out-of-the-box. Worth a try!\n Get the theme code: git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock Use the theme\u0026rsquo;s config file: cp themes/docdock/exampleSite/config.toml .:  Better run cp config.toml config.toml.bak first  Open config.toml:  Set theme = \u0026quot;docdock\u0026quot; Comment out themesdir = \u0026quot;../..\u0026quot;  Create a _index.md document in the content folder  Don\u0026rsquo;t forget to create a _index.md with title: and head: front matter!  Update files in archetypes folder:  Check front matter format Tweak and add your own files! It\u0026rsquo;s will be very handy to have some of your own!  Create a _header.md page in content folder. Its content is what you get in the logo placeholder (top left of the screen). Add a custon terms.html file to layouts/_default, for the tags and categories summary page to be rendered  MathJax support  Create a custom-head.html into a layouts/partials folder next to the content folder, this is where we should add the javascript code in every \u0026lt;head\u0026gt;. Paste the following code in to the file in order for MathJax and inline latex to work!\n\u0026lt;!-- Partial intended to be overwritten to add CSS --\u0026gt; \u0026lt;script type=\u0026quot;text/x-mathjax-config\u0026quot;\u0026gt; MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]} }); \u0026lt;/script\u0026gt; \u0026lt;script type=\u0026quot;text/javascript\u0026quot; async src=\u0026quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML\u0026quot;\u0026gt; \u0026lt;/script\u0026gt;  Also, if you have Google Analytics tracking code, you can add it here.\n Check out the result $e = mc^2$ :)\n "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/",
+	"title": "ITSA/PTC",
+	"tags": [],
+	"description": "Monthly cotest",
+	"content": "  October 11, 2017 October 11, 2017 ITSA PTC contest\n   "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-usage/",
@@ -70,6 +91,13 @@
 	"content": ""
 },
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/codeforces/",
+	"title": "Codeforces",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/categories/competitive-programming/",
 	"title": "Competitive Programming",
 	"tags": [],
@@ -77,8 +105,8 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
-	"title": "Hugo",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/educational-round/",
+	"title": "Educational Round",
 	"tags": [],
 	"description": "",
 	"content": ""
@@ -91,8 +119,22 @@
 	"content": ""
 },
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/itsa/",
 	"title": "Itsa",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/observation/",
+	"title": "Observation",
 	"tags": [],
 	"description": "",
 	"content": ""
