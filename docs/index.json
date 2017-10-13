@@ -11,13 +11,20 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30      ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/gym/ecpc16/",
+	"title": "2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)",
+	"tags": ["Codeforces", "Gym", "BFS"],
+	"description": "",
+	"content": "Problem statements\n3 easy problems, but the rest are hard.\n\nB 3 cases:\n x-axis overlapping y-axis overlapping no overlapping  The case that might got you is the case of rectangles touching on the y-axis. Try this case:\n1 4 200 100 20 80 10 1 80 20 20 0 20 90 120 1 30 8 150 0  The answer is 60.198039.\n1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45#define N 111 6#define MAX 1e18 78typedeflonglongll;910structPt{11intx,y;12};1314structRect{15PtupperLeft,lowerRight;16intk;17};1819doubledist(intx1,inty1,intx2,inty2)20{21lldx=x2-x1;22lldy=y2-y1;23returnsqrt(dx*dx+dy*dy);24}2526voidsolve()27{28intn,l,u;29scanf(\u0026#34;%d %d %d\u0026#34;,\u0026amp;n,\u0026amp;l,\u0026amp;u);3031// read 32doublem[N][N];33for(inti=0;i\u0026lt;N;i++)34for(intj=0;j\u0026lt;N;j++)35m[i][j]=(i==j?0:MAX);3637vector\u0026lt;Rect\u0026gt;rect;38rect.push_back({{0,0},{u,0},0});// bottom 39rect.push_back({{0,l},{u,l},0});// top 40m[0][1]=m[1][0]=l;4142for(inti=0;i\u0026lt;n;i++){43inth,w,d,k;44scanf(\u0026#34;%d %d %d %d\u0026#34;,\u0026amp;h,\u0026amp;w,\u0026amp;d,\u0026amp;k);4546if(k==0){47PtupperLeft={0,h+d};48PtlowerRight={w,d};49rect.push_back({upperLeft,lowerRight,k});50}else{51PtupperLeft={u-w,h+d};52PtlowerRight={u,d};53rect.push_back({upperLeft,lowerRight,k});54}5556m[i+2][1]=m[1][i+2]=l-h-d;57m[i+2][0]=m[0][i+2]=d;58}5960// build 61intsz=rect.size();62for(inti=2;i\u0026lt;sz;i++){63for(intj=2;j\u0026lt;sz;j++){64if(i==j)65continue;6667int\u0026amp;ax=rect[i].upperLeft.x;68int\u0026amp;ay=rect[i].upperLeft.y;69int\u0026amp;bx=rect[i].lowerRight.x;70int\u0026amp;by=rect[i].lowerRight.y;71int\u0026amp;ki=rect[i].k;7273int\u0026amp;cx=rect[j].upperLeft.x;74int\u0026amp;cy=rect[j].upperLeft.y;75int\u0026amp;dx=rect[j].lowerRight.x;76int\u0026amp;dy=rect[j].lowerRight.y;77int\u0026amp;kj=rect[j].k;7879doubleval;80if(ax\u0026lt;=cx\u0026amp;\u0026amp;cx\u0026lt;=bx){// case1 - 1 81if(ki!=kj\u0026amp;\u0026amp;cx==bx\u0026amp;\u0026amp;by\u0026lt;=cy\u0026amp;\u0026amp;cy\u0026lt;=ay)// touching case 82val=0;83else84val=min(abs(ay-dy),abs(by-cy));85}elseif(ax\u0026lt;=dx\u0026amp;\u0026amp;dx\u0026lt;=bx){// case1 - 2 86if(ki!=kj\u0026amp;\u0026amp;dx==bx\u0026amp;\u0026amp;by\u0026lt;=dy\u0026amp;\u0026amp;dy\u0026lt;=ay)// touching case 87val=0;88else89val=min(abs(ay-dy),abs(by-cy));90}elseif(by\u0026lt;=cy\u0026amp;\u0026amp;cy\u0026lt;=ay){// case2 - 1 91val=abs(bx-cx);92}elseif(by\u0026lt;=dy\u0026amp;\u0026amp;dy\u0026lt;=ay){// case2 - 2 93val=abs(bx-cx);94}else{// case3 95val=min(dist(bx,ay,cx,dy),dist(bx,by,cx,cy));96/* 97if(ay \u0026lt; dy) { 98val = dist(bx, ay, cx, dy); 99} else { 100val = dist(bx, by, cx, cy); 101} 102*/103}104105m[i][j]=min(m[i][j],val);106m[j][i]=min(m[j][i],val);107//printf(\u0026#34;%d %d %.6f\\n\u0026#34;, i, j, m[i][j]); 108//printf(\u0026#34;%d %d, %d %d, %d %d, %d %d\\n\u0026#34;, ax, ay, bx, by, cx, cy, dx, dy); 109}110}111112// solve 113for(intk=0;k\u0026lt;sz;k++)114for(inti=0;i\u0026lt;sz;i++)115for(intj=0;j\u0026lt;sz;j++){116if(m[i][j]\u0026gt;1e9)117continue;118m[i][j]=min(m[i][j],m[i][k]+m[k][j]);119}120121printf(\u0026#34;%.6f\\n\u0026#34;,m[0][1]);122}123124intmain()125{126freopen(\u0026#34;street.in\u0026#34;,\u0026#34;r\u0026#34;,stdin);127128intncase;129scanf(\u0026#34;%d\u0026#34;,\u0026amp;ncase);130131while(ncase--)132solve();133134return0;135}  D $C(n, m)$\n1lude\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6lldp[30][30];7llC(lla,llb)8{9if(dp[a][b]!=-1)10returndp[a][b];11llans=1;12for(inti=1;i\u0026lt;=b;i++){13ans=ans*(a-i+1);14ans=ans/i;15}16returndp[a][b]=ans;17}1819voidsolve()20{21intn,m;22scanf(\u0026#34;%d %d\u0026#34;,\u0026amp;n,\u0026amp;m);2324printf(\u0026#34;%lld\\n\u0026#34;,C(n,m));25}2627intmain()28{29freopen(\u0026#34;popcorn.in\u0026#34;,\u0026#34;r\u0026#34;,stdin);30intncase;31scanf(\u0026#34;%d\u0026#34;,\u0026amp;ncase);32memset(dp,-1,sizeof(dp));33while(ncase--)34solve();3536return0;37} \nE BFS. Add edges, but reverse them!\n1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45#define N 100010 6vector\u0026lt;int\u0026gt;g[N];78voidsolve()9{10intn;11scanf(\u0026#34;%d\u0026#34;,\u0026amp;n);1213for(inti=0;i\u0026lt;n;i++)14g[i].clear();1516for(inti=0;i\u0026lt;n;i++){17intd;18scanf(\u0026#34;%d\u0026#34;,\u0026amp;d);1920intnxt=i+d;21intpre=i-d;2223if(nxt\u0026lt;n)24g[nxt].push_back(i);25if(pre\u0026gt;=0)26g[pre].push_back(i);27}2829queue\u0026lt;int\u0026gt;q;30intdist[N];31memset(dist,-1,sizeof(dist));32dist[n-1]=0;33q.push(n-1);3435while(q.empty()==false){36intu=q.front();37q.pop();3839for(autov:g[u]){40if(dist[v]==-1){41dist[v]=dist[u]+1;42q.push(v);43}44}45}4647for(inti=0;i\u0026lt;n;i++)48printf(\u0026#34;%d\\n\u0026#34;,dist[i]);49}5051intmain()52{53freopen(\u0026#34;jumping.in\u0026#34;,\u0026#34;r\u0026#34;,stdin);5455intncase;56scanf(\u0026#34;%d\u0026#34;,\u0026amp;ncase);5758while(ncase--){59solve();60}6162return0;63} \n"
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/educational/30/",
 	"title": "Round 30",
 	"tags": ["Codeforces", "Educational Round", "Observation"],
-	"description": " ",
+	"description": "",
 	"content": "A contest full of frustration\n\nA. Chores 1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6typedefpair\u0026lt;int,int\u0026gt;ii;78intmain()9{10intn,k,x;11scanf(\u0026#34;%d %d %d\u0026#34;,\u0026amp;n,\u0026amp;k,\u0026amp;x);1213inttot=0;14for(inti=0;i\u0026lt;n;i++){15intnum;16scanf(\u0026#34;%d\u0026#34;,\u0026amp;num);1718if(i\u0026lt;n-k)19tot+=num;20else21tot+=x;22}23printf(\u0026#34;%d\\n\u0026#34;,tot);2425return0;26}  B. Balanced Substring A pretty good one!\nBinary search won\u0026rsquo;t work, don\u0026rsquo;t be tricked.\nWe can keep a $sum$, initialized with $0$. If we encounter a $0$, we subtract the $sum$ by 1, otherwise, we add $1$ to $sum$.\nIt is easy to see that whenever you have the same $sum$, this implies that the number of $+1$ and $-1$ is the same between the interval! Using this property we can get the maximum balanced substring.\nKeep in mind of a tricky case, $01101010$ :)\n1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6typedefpair\u0026lt;int,int\u0026gt;ii;78intmain()9{10intlen;11charinp[100010];12scanf(\u0026#34;%d\u0026#34;,\u0026amp;len);13scanf(\u0026#34;%s\u0026#34;,inp+1);// case 01101010 1415intsum=0;16map\u0026lt;int,int\u0026gt;loc;17intans=0;18loc[0]=0;19for(inti=1;i\u0026lt;=len;i++){20if(inp[i]==\u0026#39;1\u0026#39;)21sum++;22else23sum--;2425autoit=loc.find(sum);26if(it!=loc.end()){27ans=max(ans,i-it-\u0026gt;second);28}else{29loc[sum]=i;30}31}32printf(\u0026#34;%d\\n\u0026#34;,ans);3334return0;35} \n"
 },
 {
@@ -25,21 +32,21 @@
 	"title": "Educational Rounds",
 	"tags": [],
 	"description": "Basic stuff, but still can&#39;t solve it QQ",
-	"content": "  Round 30     "
+	"content": "  Round 30 \n   "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/",
 	"title": "Codeforces",
 	"tags": [],
 	"description": "Codeforces, where my passion nurtures",
-	"content": "  Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30      "
+	"content": "  Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/",
 	"title": "Contest",
 	"tags": [],
 	"description": "Programming contest",
-	"content": "  Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30      ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    "
+	"content": "  Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
@@ -54,6 +61,13 @@
 	"tags": ["Hugo", "Setup"],
 	"description": "My setup notes for Hugo",
 	"content": "Hugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy, version controlling it is quite simple, and it\u0026rsquo;s easy to share the source code and let people create post PR!\n\nInstall and Setup Hugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!\n Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!\ncd [sitename];\\ git init;\\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\\ # Edit your config.toml configuration file and add the Ananke theme. echo 'theme = \u0026quot;ananke\u0026quot;' \u0026gt;\u0026gt; config.toml  Using git submodule is a very good idea since we can keep track of the separate projects version controlled by git easily.\n Add some content: hugo new posts/my-first-post.md. Notice that the draft mode by default is true, so it won\u0026rsquo;t be published unless you change it to false.\n .rst will work!  Start the development server: hugo server -D\n Open config.toml\n customize the site URL, title, etc. .toml reference  In order to let Github Pages to parse from docs folder:\n add publishDir = \u0026quot;docs\u0026quot; to config.toml add publishDir: docs to config.yaml  Run hugo to build it!\n Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It\u0026rsquo;s that easy!\n  Cloning Hugo Site from Github  Make sure you have hugo installed. Installation can be checked by running hugo help Clone the repo Run git submodule init on project root and then run git submodule update to get the theme Run hugo server! You are done setting up!  Switching to DocDock Theme + My Personal Tweaks This theme provides searching, tagging, and lot\u0026rsquo;s of shortcodes out-of-the-box. Worth a try!\n Get the theme code: git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock Use the theme\u0026rsquo;s config file: cp themes/docdock/exampleSite/config.toml .:  Better run cp config.toml config.toml.bak first  Open config.toml:  Set theme = \u0026quot;docdock\u0026quot; Comment out themesdir = \u0026quot;../..\u0026quot;  Create a _index.md document in the content folder  Don\u0026rsquo;t forget to create a _index.md with title: and head: front matter!  Update files in archetypes folder:  Check front matter format Tweak and add your own files! It\u0026rsquo;s will be very handy to have some of your own!  Create a _header.md page in content folder. Its content is what you get in the logo placeholder (top left of the screen). Add a custon terms.html file to layouts/_default, for the tags and categories summary page to be rendered  MathJax support  Create a custom-head.html into a layouts/partials folder next to the content folder, this is where we should add the javascript code in every \u0026lt;head\u0026gt;. Paste the following code in to the file in order for MathJax and inline latex to work!\n\u0026lt;!-- Partial intended to be overwritten to add CSS --\u0026gt; \u0026lt;script type=\u0026quot;text/x-mathjax-config\u0026quot;\u0026gt; MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]} }); \u0026lt;/script\u0026gt; \u0026lt;script type=\u0026quot;text/javascript\u0026quot; async src=\u0026quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML\u0026quot;\u0026gt; \u0026lt;/script\u0026gt;  Also, if you have Google Analytics tracking code, you can add it here.\n Check out the result $e = mc^2$ :)\n "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/gym/",
+	"title": "Gym",
+	"tags": [],
+	"description": "",
+	"content": "  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n   "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/",
@@ -84,6 +98,13 @@
 	"content": " Coding Notes\n"
 },
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/bfs/",
+	"title": "Bfs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/categories/",
 	"title": "Categories",
 	"tags": [],
@@ -112,14 +133,21 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
-	"title": "Hugo",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/gym/",
+	"title": "Gym",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
