@@ -1,6 +1,5 @@
 ---
-title: "Linear_function"
-description: "Writing something :)"
+title: "Linear function"
 date: 2017-10-14T23:11:41+08:00
 draft: false
 

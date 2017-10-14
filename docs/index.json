@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/",
+	"title": "CCU Competitive Programming 2017 Fall",
+	"tags": [],
+	"description": "",
+	"content": "  Linear function \n   "
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/",
 	"title": "Hugo",
 	"tags": [],
@@ -11,21 +18,14 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    Course Notes \n CCU Competitive Programming 2017 Fall Write something :)\n Linear_function Writing something :)\n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    Course Notes \n CCU Competitive Programming 2017 Fall  Linear function  Linear function \n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
-	"title": "Linear_function",
+	"title": "Linear function",
 	"tags": ["Stack", "Implementation"],
-	"description": "Writing something :)",
+	"description": "",
 	"content": "\nProblem There are $n$ linear functions $f_i(x)=a[i]x+b[i], 1\u0026lt;= i \u0026lt;=n$. Define $F(x)=max{f_i(x) : 1\u0026lt;= i \u0026lt;=n}$.\nGiven $m$ x-values $c[1],c[2],…, c[m]$, please compute the sum of all $F(c[j])$, i.e., $F(c[1])+ F(c[2])+…+ F(c[m])$.\nSolution sketch To be continued\u0026hellip;\nAC Code 1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6typedefpair\u0026lt;ll,ll\u0026gt;ii;78boolcmp(constii\u0026amp;a,constii\u0026amp;b)9{10if(a.first==b.first)11returna.second\u0026gt;b.second;12returna.first\u0026lt;b.first;13}1415llcal(iicoeff,llx)16{17returncoeff.first*x+coeff.second;18}1920doublex_val(iia,iib)21{22return(b.second-a.second)/(a.first-b.first);23}2425voidsolve(intn,intm)26{27iicoeff[n];28for(inti=0;i\u0026lt;n;i++)29scanf(\u0026#34;%lld %lld\u0026#34;,\u0026amp;coeff[i].first,\u0026amp;coeff[i].second);30llx[m];31for(inti=0;i\u0026lt;m;i++)32scanf(\u0026#34;%lld\u0026#34;,\u0026amp;x[i]);3334sort(coeff,coeff+n,cmp);35sort(x,x+m);3637vector\u0026lt;ii\u0026gt;ok;38ok.push_back(coeff[0]);39for(inti=1;i\u0026lt;n;i++){40while(ok.size()\u0026gt;1){41intsz=ok.size()-1;42if(ok[sz].first==coeff[i].first||(x_val(ok[sz],ok[sz-1])\u0026gt;x_val(ok[sz],coeff[i])))43ok.pop_back();44else45break;46}47ok.push_back(coeff[i]);48}4950// for(auto i : ok) 51// printf(\u0026#34;%lld %lld\\n\u0026#34;, i.first, i.second); 5253llans=0;54intidx=0;55for(inti=0;i\u0026lt;m;i++){56while(idx!=(int)ok.size()-1\u0026amp;\u0026amp;57cal(ok[idx],x[i])\u0026lt;cal(ok[idx+1],x[i])){58idx++;59}60ans+=cal(ok[idx],x[i]);61}6263printf(\u0026#34;%lld\\n\u0026#34;,ans);64}6566intmain()67{68intn,m;69while(scanf(\u0026#34;%d %d\u0026#34;,\u0026amp;n,\u0026amp;m)==2\u0026amp;\u0026amp;(n!=0)){70solve(n,m);71}7273return0;74} "
-},
-{
-	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/",
-	"title": "CCU Competitive Programming 2017 Fall",
-	"tags": [],
-	"description": "Write something :)",
-	"content": "  Linear_function Writing something :)\n   "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2017preliminary/",
@@ -88,7 +88,7 @@
 	"title": "Course Notes",
 	"tags": [],
 	"description": "",
-	"content": "  CCU Competitive Programming 2017 Fall Write something :)\n Linear_function Writing something :)\n    "
+	"content": "  CCU Competitive Programming 2017 Fall  Linear function  Linear function \n    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/gym/",
