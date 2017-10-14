@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.29" />
+    <meta name="description" content="Problem E, what a pity!">
+
+
+    <title>NCPC 2017 Preliminary Round :: Docdock</title>
+    <link rel="shortcut icon" href="/CodingNotes/images/favicon.png" type="image/x-icon" />
+    <link href="/CodingNotes/css/nucleus.css" rel="stylesheet">
+    <link href="/CodingNotes/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/CodingNotes/css/hybrid.css" rel="stylesheet">
+    <link href="/CodingNotes/css/featherlight.min.css" rel="stylesheet">
+    <link href="/CodingNotes/css/auto-complete.css" rel="stylesheet">
+    
+    <link href="/CodingNotes/css/theme.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/CodingNotes/css/bootstrap.min.css">
+    <script src="/CodingNotes/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107858184-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107858184-1');
+</script>
+
+  </head>
+  <body class="" data-url="/CodingNotes/contest/onsite/ncpc2017preliminary/">
+    <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header"> 
+	<p><i class='fa fa-home'></i> <a href="https://henrybear327.github.io/CodingNotes/">Coding Notes</a></p>
+ 
+
+
+    </div><div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/CodingNotes/js/lunr.min.js"></script>
+<script type="text/javascript" src="/CodingNotes/js/auto-complete.js"></script>
+<script type="text/javascript">
+    var baseurl = "https:\/\/henrybear327.github.io\/CodingNotes\/";
+</script>
+<script type="text/javascript" src="/CodingNotes/js/search.js"></script>
+
+  </div>
+
+
+    <ul class="topics">
+    <li data-nav-id="/CodingNotes/contest/" class="dd-item parent">
+      <a href="/CodingNotes/contest/">
+        <span><i class='fa fa-edit'></i> Contest</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/contest/codeforces/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/">
+        <span><i class='fa fa-edit'></i> Codeforces</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/contest/codeforces/educational/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/educational/">
+        <span><i class='fa fa-edit'></i> Educational Rounds</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/codeforces/educational/30/" class="dd-item">
+        <a href="/CodingNotes/contest/codeforces/educational/30/">
+          <span>Round 30</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/codeforces/gym/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/gym/">
+        <span><i class='fa fa-edit'></i> Gym</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/codeforces/gym/ecpc16/" class="dd-item">
+        <a href="/CodingNotes/contest/codeforces/gym/ecpc16/">
+          <span>2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/itsa_ptc/" class="dd-item">
+      <a href="/CodingNotes/contest/itsa_ptc/">
+        <span><i class='fa fa-edit'></i> ITSA/PTC</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/itsa_ptc/oct2017/" class="dd-item">
+        <a href="/CodingNotes/contest/itsa_ptc/oct2017/">
+          <span>October 11, 2017</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/onsite/" class="dd-item parent">
+      <a href="/CodingNotes/contest/onsite/">
+        <span><i class='fa fa-edit'></i> Onsite competitions</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/onsite/ncpc2017preliminary/" class="dd-item active">
+        <a href="/CodingNotes/contest/onsite/ncpc2017preliminary/">
+          <span>NCPC 2017 Preliminary Round</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/tools/" class="dd-item">
+      <a href="/CodingNotes/tools/">
+        <span><i class='fa fa-edit'></i> Tools</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/tools/hugo/" class="dd-item">
+      <a href="/CodingNotes/tools/hugo/">
+        <span><i class='fa fa-edit'></i> Hugo</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-setup/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-setup/">
+          <span>Hugo Setup</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-usage/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-usage/">
+          <span>Hugo Usage</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        <section id="shortcuts">
+                <li class="" role=""><h3>索引</h3><a href="/CodingNotes/tags" target="_blank" rel="noopener"><i class='fa fa-link'></i> Tags</a></li>
+                <li class="" role=""><a href="/CodingNotes/categories" target="_blank" rel="noopener"><i class='fa fa-link'></i> Categories</a></li>
+                <li class="" role=""><h3>About me</h3><a href="https://github.com/henrybear327?tab=repositories" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+                <li class="" role=""><a href="https://itunes.apple.com/tw/app/cculife/id1091437125?l=zh&amp;mt=8" target="_blank" rel="noopener"><i class='fa fa-camera'></i> CCULife</a></li>
+                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Official Site</a></li>
+                <li class="" role=""><h3>題解網站</h3><a href="https://amoshyc.github.io/CPsolution/" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> amoshyc 題解網站</a></li>
+        </section>
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+    </ul>
+
+
+    <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/henrybear327/CodingNotes/tree/master/content/contest/Onsite/NCPC2017Preliminary.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+
+
+
+ <a href='/CodingNotes/'>Coding Blog</a> > <a href='/CodingNotes/contest/'>Contest</a> > <a href='/CodingNotes/contest/onsite/'>Onsite competitions</a> > NCPC 2017 Preliminary Round
+
+ 
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#a">A</a></li>
+<li><a href="#b">B</a></li>
+<li><a href="#c">C</a></li>
+<li><a href="#d">D</a></li>
+<li><a href="#g">G</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+          <div id="tags">
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/ncpc">NCPC</a>
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/implementation">Implementation</a>
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/enumeration">Enumeration</a>
+            
+          </div>
+        
+        <div id="body-inner">
+          
+            <h1>NCPC 2017 Preliminary Round</h1>
+          
+
+
+
+
+<p></p>
+
+<h2 id="problem">Problem</h2>
+
+<div class="panel panel-success">
+	<div class="panel-heading">比賽題目</div>
+	<div class="panel-body"><section class="attachments">
+    <label>
+        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+        Attachments
+    </label>
+    
+        
+    
+    
+        
+        
+            
+                <li>
+                    <a href="https://henrybear327.github.io/CodingNotes//contest/Onsite/NCPC2017Preliminary.files/Problem%20A:%20Verify%20Collatz%203x%20&#43;%201%20Conjecture.pdf" >
+                        Problem A: Verify Collatz 3x &#43; 1 Conjecture.pdf
+                    </a>
+                    (100 kB)
+                </li>
+            
+        
+    
+        
+        
+            
+                <li>
+                    <a href="https://henrybear327.github.io/CodingNotes//contest/Onsite/NCPC2017Preliminary.files/Problem%20B:%20Largest%20Three%20Companions.pdf" >
+                        Problem B: Largest Three Companions.pdf
+                    </a>
+                    (69 kB)
+                </li>
+            
+        
+    
+        
+        
+            
+                <li>
+                    <a href="https://henrybear327.github.io/CodingNotes//contest/Onsite/NCPC2017Preliminary.files/Problem%20C:%20Data%20Recovery.pdf" >
+                        Problem C: Data Recovery.pdf
+                    </a>
+                    (108 kB)
+                </li>
+            
+        
+    
+        
+        
+            
+                <li>
+                    <a href="https://henrybear327.github.io/CodingNotes//contest/Onsite/NCPC2017Preliminary.files/Problem%20D:%20Routing%20mode%20checking.pdf" >
+                        Problem D: Routing mode checking.pdf
+                    </a>
+                    (129 kB)
+                </li>
+            
+        
+    
+        
+        
+            
+                <li>
+                    <a href="https://henrybear327.github.io/CodingNotes//contest/Onsite/NCPC2017Preliminary.files/Problem%20E:%20Terrestrial%20Stations.pdf" >
+                        Problem E: Terrestrial Stations.pdf
+                    </a>
+                    (118 kB)
+                </li>
+            
+        
+    
+        
+        
+            
+                <li>
+                    <a href="https://henrybear327.github.io/CodingNotes//contest/Onsite/NCPC2017Preliminary.files/Problem%20F:%20Battle%20Calculator.pdf" >
+                        Problem F: Battle Calculator.pdf
+                    </a>
+                    (72 kB)
+                </li>
+            
+        
+    
+        
+        
+            
+                <li>
+                    <a href="https://henrybear327.github.io/CodingNotes//contest/Onsite/NCPC2017Preliminary.files/Problem%20G:%20Chaining.pdf" >
+                        Problem G: Chaining.pdf
+                    </a>
+                    (109 kB)
+                </li>
+            
+        
+    
+</section>
+</div>
+	
+</div>
+
+
+<h2 id="a">A</h2>
+
+<p>Just 3n + 1.</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style=""></span><span style="color:#75715e">#define sz(x) (int(x.size()))
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style="color:#75715e"></span><span style="color:#66d9ef">typedef</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="">ll</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style=""></span><span style="color:#66d9ef">typedef</span><span style=""> </span><span style="color:#66d9ef">double</span><span style=""> </span><span style="">db</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="color:#a6e22e">main</span><span style="">()</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span><span style="">    </span><span style="">ll</span><span style=""> </span><span style="">x</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span><span style="">    </span><span style="color:#66d9ef">while</span><span style=""> </span><span style="">(</span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34; %lld&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">x</span><span style="">))</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span><span style="">        </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">x</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">)</span><span style=""> </span><span style="color:#66d9ef">break</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span><span style="">        </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld &#34;</span><span style="">,</span><span style=""> </span><span style="">x</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span><span style="">        </span><span style="">ll</span><span style=""> </span><span style="">mx</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#f92672">-</span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span><span style="">        </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span><span style="">            </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">x</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span><span style="">                </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">3</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span><span style="">            </span><span style="color:#66d9ef">else</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span><span style="">                </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">/</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span><span style="">            </span><span style="">mx</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">max</span><span style="">(</span><span style="">mx</span><span style="">,</span><span style=""> </span><span style="">x</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span><span style="">            </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">x</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span><span style="">                </span><span style="color:#66d9ef">break</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span><span style="">        </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="">,</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">,</span><span style=""> </span><span style="">mx</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span><span style=""></span><span style="">}</span></code></pre>
+</div></p>
+
+<h2 id="b">B</h2>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style=""></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style=""></span><span style="color:#66d9ef">typedef</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="">ll</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span><span style=""></span><span style="color:#66d9ef">void</span><span style=""> </span><span style="color:#a6e22e">solve</span><span style="">()</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">n</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span><span style="">    </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">n</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">inp</span><span style="">[</span><span style="">n</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">n</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span><span style="">        </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">inp</span><span style="">[</span><span style="">i</span><span style="">]);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span><span style="">    </span><span style="">sort</span><span style="">(</span><span style="">inp</span><span style="">,</span><span style=""> </span><span style="">inp</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="">n</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span><span style="">    </span><span style="color:#75715e">// implement
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span><span style="color:#75715e"></span><span style="">    </span><span style="color:#75715e">// -------++++++++
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span><span style="color:#75715e"></span><span style="">    </span><span style="">ll</span><span style=""> </span><span style="">product</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">inp</span><span style="">[</span><span style="color:#ae81ff">0</span><span style="">]</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">inp</span><span style="">[</span><span style="color:#ae81ff">1</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span><span style="">    </span><span style="">ll</span><span style=""> </span><span style="">ans</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">LLONG_MIN</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">n</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span><span style="">        </span><span style="">ans</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">max</span><span style="">(</span><span style="">ans</span><span style="">,</span><span style=""> </span><span style="">product</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">inp</span><span style="">[</span><span style="">i</span><span style="">]);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span><span style="">    </span><span style="">product</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">inp</span><span style="">[</span><span style="">n</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">]</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">inp</span><span style="">[</span><span style="">n</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">n</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span><span style="">        </span><span style="">ans</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">max</span><span style="">(</span><span style="">ans</span><span style="">,</span><span style=""> </span><span style="">product</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">inp</span><span style="">[</span><span style="">i</span><span style="">]);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span><span style="">    </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="">,</span><span style=""> </span><span style="">ans</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span><span style=""></span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="color:#a6e22e">main</span><span style="">()</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ncase</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span><span style="">    </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">ncase</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span><span style="">    </span><span style="color:#66d9ef">while</span><span style="">(</span><span style="">ncase</span><span style="color:#f92672">--</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span><span style="">        </span><span style="">solve</span><span style="">();</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span><span style=""></span><span style="">}</span></code></pre>
+</div></p>
+
+<h2 id="c">C</h2>
+
+<p>Ahh&hellip;&hellip; We can&rsquo;t do the math with mod inverse&hellip; so we resort to enumeration&hellip;</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style=""></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style=""></span><span style="color:#66d9ef">typedef</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="">ll</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style=""></span><span style="color:#66d9ef">const</span><span style=""> </span><span style="">ll</span><span style=""> </span><span style="">P</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">65537</span><span style="">;</span><span style=""> 
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span><span style=""></span><span style="">ll</span><span style=""> </span><span style="">x</span><span style="">[</span><span style="color:#ae81ff">3</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span><span style=""></span><span style="">ll</span><span style=""> </span><span style="">y</span><span style="">[</span><span style="color:#ae81ff">3</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span><span style=""></span><span style="">ll</span><span style=""> </span><span style="color:#a6e22e">cal</span><span style="">(</span><span style="">ll</span><span style=""> </span><span style="">a0</span><span style="">,</span><span style=""> </span><span style="">ll</span><span style=""> </span><span style="">a1</span><span style="">,</span><span style=""> </span><span style="">ll</span><span style=""> </span><span style="">a2</span><span style="">,</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">which</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span><span style="">    </span><span style="">ll</span><span style=""> </span><span style="">x_2</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">x</span><span style="">[</span><span style="">which</span><span style="">]</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">x</span><span style="">[</span><span style="">which</span><span style="">]</span><span style=""> </span><span style="color:#f92672">%</span><span style=""> </span><span style="">P</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">(((</span><span style="">a0</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="">a1</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">x</span><span style="">[</span><span style="">which</span><span style="">])</span><span style=""> </span><span style="color:#f92672">%</span><span style=""> </span><span style="">P</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="">a2</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">x_2</span><span style="">)</span><span style=""> </span><span style="color:#f92672">%</span><span style=""> </span><span style="">P</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span><span style=""></span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span><span style=""></span><span style="color:#66d9ef">void</span><span style=""> </span><span style="color:#a6e22e">solve</span><span style="">()</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">3</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span><span style="">        </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld %lld&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">x</span><span style="">[</span><span style="">i</span><span style="">],</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">y</span><span style="">[</span><span style="">i</span><span style="">]);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span><span style="">    
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span><span style="">    </span><span style="">ll</span><span style=""> </span><span style="">x_2</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">(</span><span style="">x</span><span style="">[</span><span style="color:#ae81ff">0</span><span style="">]</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">x</span><span style="">[</span><span style="color:#ae81ff">0</span><span style="">])</span><span style=""> </span><span style="color:#f92672">%</span><span style=""> </span><span style="">P</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="">ll</span><span style=""> </span><span style="">a1</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">a1</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">P</span><span style="">;</span><span style=""> </span><span style="">a1</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span><span style="">        </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="">ll</span><span style=""> </span><span style="">a2</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">a2</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">P</span><span style="">;</span><span style=""> </span><span style="">a2</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span><span style="">            </span><span style="">ll</span><span style=""> </span><span style="">a0</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">5</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">P</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="">y</span><span style="">[</span><span style="color:#ae81ff">0</span><span style="">]</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="">(</span><span style="">a1</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">x</span><span style="">[</span><span style="color:#ae81ff">0</span><span style="">])</span><span style=""> </span><span style="color:#f92672">%</span><span style=""> </span><span style="">P</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="">(</span><span style="">a2</span><span style=""> </span><span style="color:#f92672">*</span><span style=""> </span><span style="">x_2</span><span style="">)</span><span style=""> </span><span style="color:#f92672">%</span><span style=""> </span><span style="">P</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span><span style="">            </span><span style="">a0</span><span style=""> </span><span style="color:#f92672">%=</span><span style=""> </span><span style="">P</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span><span style="">            </span><span style="">assert</span><span style="">(</span><span style="">cal</span><span style="">(</span><span style="">a0</span><span style="">,</span><span style=""> </span><span style="">a1</span><span style="">,</span><span style=""> </span><span style="">a2</span><span style="">,</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">)</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">y</span><span style="">[</span><span style="color:#ae81ff">0</span><span style="">]);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span><span style="">            </span><span style="color:#66d9ef">if</span><span style="">(</span><span style="">cal</span><span style="">(</span><span style="">a0</span><span style="">,</span><span style=""> </span><span style="">a1</span><span style="">,</span><span style=""> </span><span style="">a2</span><span style="">,</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">)</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">y</span><span style="">[</span><span style="color:#ae81ff">1</span><span style="">]</span><span style=""> </span><span style="color:#f92672">&amp;&amp;</span><span style=""> </span><span style="">cal</span><span style="">(</span><span style="">a0</span><span style="">,</span><span style=""> </span><span style="">a1</span><span style="">,</span><span style=""> </span><span style="">a2</span><span style="">,</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">)</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">y</span><span style="">[</span><span style="color:#ae81ff">2</span><span style="">])</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span><span style="">                </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld %lld %lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="">,</span><span style=""> </span><span style="">a0</span><span style="">,</span><span style=""> </span><span style="">a1</span><span style="">,</span><span style=""> </span><span style="">a2</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span><span style="">                </span><span style="color:#66d9ef">return</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span><span style=""></span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="color:#a6e22e">main</span><span style="">()</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ncase</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span><span style="">    </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">ncase</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span><span style="">    </span><span style="color:#66d9ef">while</span><span style="">(</span><span style="">ncase</span><span style="color:#f92672">--</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span><span style="">        </span><span style="">solve</span><span style="">();</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span><span style=""></span><span style="">}</span></code></pre>
+</div></p>
+
+<h2 id="d">D</h2>
+
+<p>Problem statement contains error&hellip;&hellip;&hellip;&hellip;..</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  3</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  4</span><span style=""></span><span style="color:#66d9ef">const</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">S</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">4</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  5</span><span style=""></span><span style="color:#66d9ef">const</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">INA</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">;</span><span style=""> </span><span style="color:#75715e">// inactive
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  6</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ADA</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  7</span><span style=""></span><span style="color:#66d9ef">const</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">XY</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  8</span><span style=""></span><span style="color:#66d9ef">const</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">NON</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">3</span><span style="">;</span><span style=""> </span><span style="color:#75715e">// nonreachable
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  9</span><span style="color:#75715e"></span><span style="color:#66d9ef">const</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ACT</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">5</span><span style="">;</span><span style=""> </span><span style="color:#75715e">// active
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 10</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 11</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">sx</span><span style="">,</span><span style=""> </span><span style="">sy</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 12</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">A</span><span style="">[</span><span style="color:#ae81ff">8</span><span style="">][</span><span style="color:#ae81ff">8</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 13</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">Z</span><span style="">[</span><span style="color:#ae81ff">8</span><span style="">][</span><span style="color:#ae81ff">8</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 14</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 15</span><span style=""></span><span style="color:#66d9ef">bool</span><span style=""> </span><span style="color:#a6e22e">xy_check</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">tx</span><span style="">,</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ty</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 16</span><span style="">    </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">min</span><span style="">(</span><span style="">sx</span><span style="">,</span><span style=""> </span><span style="">tx</span><span style="">);</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">max</span><span style="">(</span><span style="">sx</span><span style="">,</span><span style=""> </span><span style="">tx</span><span style="">);</span><span style=""> </span><span style="">x</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 17</span><span style="">        </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">A</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">sy</span><span style="">]</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">INA</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 18</span><span style="">            </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">false</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 19</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 20</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 21</span><span style="">    </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">min</span><span style="">(</span><span style="">sy</span><span style="">,</span><span style=""> </span><span style="">ty</span><span style="">);</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">max</span><span style="">(</span><span style="">sy</span><span style="">,</span><span style=""> </span><span style="">ty</span><span style="">);</span><span style=""> </span><span style="">y</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 22</span><span style="">        </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">A</span><span style="">[</span><span style="">tx</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">INA</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 23</span><span style="">            </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">false</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 24</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 25</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 26</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">true</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 27</span><span style=""></span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 28</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 29</span><span style=""></span><span style="color:#66d9ef">bool</span><span style=""> </span><span style="color:#a6e22e">ada_check</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">tx</span><span style="">,</span><span style=""> </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ty</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 30</span><span style="">    </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">min</span><span style="">(</span><span style="">sx</span><span style="">,</span><span style=""> </span><span style="">tx</span><span style="">);</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">max</span><span style="">(</span><span style="">sx</span><span style="">,</span><span style=""> </span><span style="">tx</span><span style="">);</span><span style=""> </span><span style="">x</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 31</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">min</span><span style="">(</span><span style="">sy</span><span style="">,</span><span style=""> </span><span style="">ty</span><span style="">);</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">max</span><span style="">(</span><span style="">sy</span><span style="">,</span><span style=""> </span><span style="">ty</span><span style="">);</span><span style=""> </span><span style="">y</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 32</span><span style="">            </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">A</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">INA</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 33</span><span style="">                </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">false</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 34</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 35</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 36</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 37</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">true</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 38</span><span style=""></span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 39</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 40</span><span style=""></span><span style="color:#66d9ef">void</span><span style=""> </span><span style="color:#a6e22e">print</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">a</span><span style="">[</span><span style="color:#ae81ff">8</span><span style="">][</span><span style="color:#ae81ff">8</span><span style="">])</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 41</span><span style="">    </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">y</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 42</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">x</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 43</span><span style="">            </span><span style="">cout</span><span style=""> </span><span style="color:#f92672">&lt;&lt;</span><span style=""> </span><span style="">a</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 44</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 45</span><span style="">        </span><span style="">cout</span><span style=""> </span><span style="color:#f92672">&lt;&lt;</span><span style=""> </span><span style="">endl</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 46</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 47</span><span style=""></span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 48</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 49</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="color:#a6e22e">main</span><span style="">()</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 50</span><span style="">    </span><span style="">ios</span><span style="color:#f92672">::</span><span style="">sync_with_stdio</span><span style="">(</span><span style="">false</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 51</span><span style="">    </span><span style="">cin</span><span style="">.</span><span style="">tie</span><span style="">(</span><span style="color:#ae81ff">0</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 52</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 53</span><span style="">    </span><span style="">string</span><span style=""> </span><span style="">s</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 54</span><span style="">    </span><span style="color:#66d9ef">while</span><span style=""> </span><span style="">(</span><span style="">cin</span><span style=""> </span><span style="color:#f92672">&gt;&gt;</span><span style=""> </span><span style="">s</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 55</span><span style="">        </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">s</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;0&#34;</span><span style="">)</span><span style=""> </span><span style="color:#66d9ef">break</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 56</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 57</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">x</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 58</span><span style="">            </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">y</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 59</span><span style="">                </span><span style="">Z</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">NON</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 60</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 61</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 62</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 63</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">64</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 64</span><span style="">            </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">/</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 65</span><span style="">            </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">%</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 66</span><span style="">            </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">s</span><span style="">[</span><span style="">i</span><span style="">]</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;2&#39;</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 67</span><span style="">                </span><span style="">A</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">S</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 68</span><span style="">                </span><span style="">Z</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">S</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 69</span><span style="">                </span><span style="">sx</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">x</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 70</span><span style="">                </span><span style="">sy</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">y</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 71</span><span style="">            </span><span style="">}</span><span style=""> </span><span style="color:#66d9ef">else</span><span style=""> </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">s</span><span style="">[</span><span style="">i</span><span style="">]</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#e6db74"></span><span style="color:#e6db74">&#39;1&#39;</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 72</span><span style="">                </span><span style="">A</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">INA</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 73</span><span style="">                </span><span style="">Z</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">INA</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 74</span><span style="">            </span><span style="">}</span><span style=""> </span><span style="color:#66d9ef">else</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 75</span><span style="">                </span><span style="">A</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">ACT</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 76</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 77</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 78</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 79</span><span style="">        </span><span style="color:#75715e">// print(A);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 80</span><span style="color:#75715e"></span><span style="">        </span><span style="color:#75715e">// cout &lt;&lt; endl;
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 81</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 82</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">x</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 83</span><span style="">            </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">y</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 84</span><span style="">                </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">x</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">sx</span><span style=""> </span><span style="color:#f92672">&amp;&amp;</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">sy</span><span style="">)</span><span style=""> </span><span style="color:#66d9ef">continue</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 85</span><span style="">                </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">xy_check</span><span style="">(</span><span style="">x</span><span style="">,</span><span style=""> </span><span style="">y</span><span style="">))</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 86</span><span style="">                    </span><span style="">Z</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">XY</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 87</span><span style="">                </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 88</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 89</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 90</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 91</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">x</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 92</span><span style="">            </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">y</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 93</span><span style="">                </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">x</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">sx</span><span style=""> </span><span style="color:#f92672">&amp;&amp;</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="">sy</span><span style="">)</span><span style=""> </span><span style="color:#66d9ef">continue</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 94</span><span style="">                </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">ada_check</span><span style="">(</span><span style="">x</span><span style="">,</span><span style=""> </span><span style="">y</span><span style="">))</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 95</span><span style="">                    </span><span style="">Z</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">ADA</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 96</span><span style="">                </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 97</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 98</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 99</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">100</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">y</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">y</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">101</span><span style="">            </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">x</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">8</span><span style="">;</span><span style=""> </span><span style="">x</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">102</span><span style="">                </span><span style="">cout</span><span style=""> </span><span style="color:#f92672">&lt;&lt;</span><span style=""> </span><span style="">Z</span><span style="">[</span><span style="">x</span><span style="">][</span><span style="">y</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">103</span><span style="">            </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">104</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">105</span><span style="">        </span><span style="">cout</span><span style=""> </span><span style="color:#f92672">&lt;&lt;</span><span style=""> </span><span style="">endl</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">106</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">107</span><span style="">        </span><span style="color:#75715e">// print(Z);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">108</span><span style="color:#75715e"></span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">109</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">110</span><span style=""></span><span style="">}</span></code></pre>
+</div></p>
+
+<h2 id="g">G</h2>
+
+<p>I know using graph for this one is overkill, but this is what makes us feel like 1 AC :)</p>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style=""></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style=""></span><span style="color:#75715e">#define N 10010
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span><span style=""></span><span style="color:#66d9ef">typedef</span><span style=""> </span><span style="">pair</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="">,</span><span style=""> </span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span><span style=""> </span><span style="">ii</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span><span style=""></span><span style="color:#66d9ef">void</span><span style=""> </span><span style="color:#a6e22e">solve</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">n</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">inp</span><span style="">[</span><span style="">n</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">n</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span><span style="">        </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">inp</span><span style="">[</span><span style="">i</span><span style="">]);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span><span style="">    </span><span style="color:#75715e">// for(int i = 1; i &lt;= n; i++)
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span><span style="color:#75715e"></span><span style="">        </span><span style="color:#75715e">//printf(&#34;%d%c&#34;, inp[i], i == n ? &#39;\n&#39; : &#39; &#39;);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span><span style="">    </span><span style="">vector</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span><span style=""> </span><span style="">g</span><span style="">[</span><span style="">N</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">in</span><span style="">[</span><span style="">N</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">{</span><span style="color:#ae81ff">0</span><span style="">};</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">out</span><span style="">[</span><span style="">N</span><span style="">]</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">{</span><span style="color:#ae81ff">0</span><span style="">};</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">n</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span><span style="">        </span><span style="">g</span><span style="">[</span><span style="">i</span><span style="">].</span><span style="">push_back</span><span style="">(</span><span style="">inp</span><span style="">[</span><span style="">i</span><span style="">]);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span><span style="">        </span><span style="">in</span><span style="">[</span><span style="">inp</span><span style="">[</span><span style="">i</span><span style="">]]</span><span style="color:#f92672">++</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span><span style="">        </span><span style="">out</span><span style="">[</span><span style="">i</span><span style="">]</span><span style="color:#f92672">++</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span><span style="">    
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span><span style="">    </span><span style="">vector</span><span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span><span style=""> </span><span style="">s</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">n</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span><span style="">        </span><span style="color:#66d9ef">if</span><span style="">(</span><span style="">in</span><span style="">[</span><span style="">i</span><span style="">]</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span><span style="">            </span><span style="">s</span><span style="">.</span><span style="">push_back</span><span style="">(</span><span style="">i</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span><span style="">    
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span><span style="">    </span><span style="">vector</span><span style="color:#f92672">&lt;</span><span style="">ii</span><span style="color:#f92672">&gt;</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style="">)</span><span style=""> </span><span style="">s</span><span style="">.</span><span style="">size</span><span style="">();</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span><span style="">        </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">cnt</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span><span style="">        </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">who</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">s</span><span style="">[</span><span style="">i</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span><span style="">        </span><span style="color:#75715e">// printf(&#34;cnt %d who %d\n&#34;, cnt, who);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span><span style="color:#75715e"></span><span style="">        </span><span style="color:#66d9ef">while</span><span style="">((</span><span style="color:#66d9ef">int</span><span style="">)</span><span style="">g</span><span style="">[</span><span style="">who</span><span style="">].</span><span style="">size</span><span style="">()</span><span style=""> </span><span style="color:#f92672">&gt;</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span><span style="">            </span><span style="color:#75715e">// printf(&#34;cnt %d who %d\n&#34;, cnt, who);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span><span style="color:#75715e"></span><span style="">            </span><span style="">cnt</span><span style="color:#f92672">++</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span><span style="">            </span><span style="">who</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">g</span><span style="">[</span><span style="">who</span><span style="">][</span><span style="color:#ae81ff">0</span><span style="">];</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span><span style="">        </span><span style="">ans</span><span style="">.</span><span style="">push_back</span><span style="">(</span><span style="">ii</span><span style="">(</span><span style="">s</span><span style="">[</span><span style="">i</span><span style="">],</span><span style=""> </span><span style="">cnt</span><span style="">));</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span><span style="">    </span><span style="">}</span><span style="">   
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span><span style="">    </span><span style="">sort</span><span style="">(</span><span style="">ans</span><span style="">.</span><span style="">begin</span><span style="">(),</span><span style=""> </span><span style="">ans</span><span style="">.</span><span style="">end</span><span style="">());</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span><span style="">    
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">47</span><span style="">    </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style="">)</span><span style="">ans</span><span style="">.</span><span style="">size</span><span style="">());</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">48</span><span style="">    </span><span style="color:#66d9ef">for</span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style="">)</span><span style="">ans</span><span style="">.</span><span style="">size</span><span style="">();</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">49</span><span style="">        </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34; %d %d&#34;</span><span style="">,</span><span style=""> </span><span style="">ans</span><span style="">[</span><span style="">i</span><span style="">].</span><span style="">first</span><span style="">,</span><span style=""> </span><span style="">ans</span><span style="">[</span><span style="">i</span><span style="">].</span><span style="">second</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">50</span><span style="">    </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">51</span><span style=""></span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">52</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">53</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="color:#a6e22e">main</span><span style="">()</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">54</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">55</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">n</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">56</span><span style="">    </span><span style="color:#66d9ef">while</span><span style="">(</span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">n</span><span style="">)</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#ae81ff">1</span><span style=""> </span><span style="color:#f92672">&amp;&amp;</span><span style=""> </span><span style="">n</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">57</span><span style="">        </span><span style="">solve</span><span style="">(</span><span style="">n</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">58</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">59</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">60</span><span style=""></span><span style="">}</span></code></pre>
+</div></p>
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+
+        
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        <a class="nav nav-prev" href="/CodingNotes/contest/onsite/" title="Onsite competitions"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/CodingNotes/tools/" title="Tools" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>    
+
+    <script src="/CodingNotes/js/clipboard.min.js"></script>
+<script src="/CodingNotes/js/featherlight.min.js"></script>
+<script src="/CodingNotes/js/html5shiv-printshiv.min.js"></script>
+<script src="/CodingNotes/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/CodingNotes/js/modernizr.custom.71422.js"></script>
+<script src="/CodingNotes/js/learn.js"></script>
+<script src="/CodingNotes/js/hugo-learn.js"></script>
+
+
+<link href="/CodingNotes/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script src="/CodingNotes/mermaid/mermaid.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+  </body>
+</html>
+
