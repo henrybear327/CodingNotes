@@ -11,7 +11,21 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    Course Notes \n CCU Competitive Programming 2017 Fall Write something :)\n Linear_function Writing something :)\n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
+	"title": "Linear_function",
+	"tags": ["Stack", "Implementation"],
+	"description": "Writing something :)",
+	"content": "\nProblem There are $n$ linear functions $f_i(x)=a[i]x+b[i], 1\u0026lt;= i \u0026lt;=n$. Define $F(x)=max{f_i(x) : 1\u0026lt;= i \u0026lt;=n}$.\nGiven $m$ x-values $c[1],c[2],…, c[m]$, please compute the sum of all $F(c[j])$, i.e., $F(c[1])+ F(c[2])+…+ F(c[m])$.\nSolution sketch To be continued\u0026hellip;\nAC Code 1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6typedefpair\u0026lt;ll,ll\u0026gt;ii;78boolcmp(constii\u0026amp;a,constii\u0026amp;b)9{10if(a.first==b.first)11returna.second\u0026gt;b.second;12returna.first\u0026lt;b.first;13}1415llcal(iicoeff,llx)16{17returncoeff.first*x+coeff.second;18}1920doublex_val(iia,iib)21{22return(b.second-a.second)/(a.first-b.first);23}2425voidsolve(intn,intm)26{27iicoeff[n];28for(inti=0;i\u0026lt;n;i++)29scanf(\u0026#34;%lld %lld\u0026#34;,\u0026amp;coeff[i].first,\u0026amp;coeff[i].second);30llx[m];31for(inti=0;i\u0026lt;m;i++)32scanf(\u0026#34;%lld\u0026#34;,\u0026amp;x[i]);3334sort(coeff,coeff+n,cmp);35sort(x,x+m);3637vector\u0026lt;ii\u0026gt;ok;38ok.push_back(coeff[0]);39for(inti=1;i\u0026lt;n;i++){40while(ok.size()\u0026gt;1){41intsz=ok.size()-1;42if(ok[sz].first==coeff[i].first||(x_val(ok[sz],ok[sz-1])\u0026gt;x_val(ok[sz],coeff[i])))43ok.pop_back();44else45break;46}47ok.push_back(coeff[i]);48}4950// for(auto i : ok) 51// printf(\u0026#34;%lld %lld\\n\u0026#34;, i.first, i.second); 5253llans=0;54intidx=0;55for(inti=0;i\u0026lt;m;i++){56while(idx!=(int)ok.size()-1\u0026amp;\u0026amp;57cal(ok[idx],x[i])\u0026lt;cal(ok[idx+1],x[i])){58idx++;59}60ans+=cal(ok[idx],x[i]);61}6263printf(\u0026#34;%lld\\n\u0026#34;,ans);64}6566intmain()67{68intn,m;69while(scanf(\u0026#34;%d %d\u0026#34;,\u0026amp;n,\u0026amp;m)==2\u0026amp;\u0026amp;(n!=0)){70solve(n,m);71}7273return0;74} "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/",
+	"title": "CCU Competitive Programming 2017 Fall",
+	"tags": [],
+	"description": "Write something :)",
+	"content": "  Linear_function Writing something :)\n   "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2017preliminary/",
@@ -39,21 +53,21 @@
 	"title": "Educational Rounds",
 	"tags": [],
 	"description": "Basic stuff, but still can&#39;t solve it QQ",
-	"content": "  Round 30 \n   "
+	"content": "  Round 30 A contest full of frustration\n\n   "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/",
 	"title": "Codeforces",
 	"tags": [],
 	"description": "Codeforces, where my passion nurtures",
-	"content": "  Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    "
+	"content": "  Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 A contest full of frustration\n\n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/",
 	"title": "Contest",
 	"tags": [],
 	"description": "Programming contest",
-	"content": "  Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    "
+	"content": "  Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 A contest full of frustration\n\n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
@@ -68,6 +82,13 @@
 	"tags": ["Hugo", "Setup"],
 	"description": "My setup notes for Hugo",
 	"content": "Hugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy, version controlling it is quite simple, and it\u0026rsquo;s easy to share the source code and let people create post PR!\n\nInstall and Setup Hugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!\n Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!\ncd [sitename];\\ git init;\\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\\ # Edit your config.toml configuration file and add the Ananke theme. echo 'theme = \u0026quot;ananke\u0026quot;' \u0026gt;\u0026gt; config.toml  Using git submodule is a very good idea since we can keep track of the separate projects version controlled by git easily.\n Add some content: hugo new posts/my-first-post.md. Notice that the draft mode by default is true, so it won\u0026rsquo;t be published unless you change it to false.\n .rst will work!  Start the development server: hugo server -D\n Open config.toml\n customize the site URL, title, etc. .toml reference  In order to let Github Pages to parse from docs folder:\n add publishDir = \u0026quot;docs\u0026quot; to config.toml add publishDir: docs to config.yaml  Run hugo to build it!\n Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It\u0026rsquo;s that easy!\n  Cloning Hugo Site from Github  Make sure you have hugo installed. Installation can be checked by running hugo help Clone the repo Run git submodule init on project root and then run git submodule update to get the theme Run hugo server! You are done setting up!  Switching to DocDock Theme + My Personal Tweaks This theme provides searching, tagging, and lot\u0026rsquo;s of shortcodes out-of-the-box. Worth a try!\n Get the theme code: git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock Use the theme\u0026rsquo;s config file: cp themes/docdock/exampleSite/config.toml .:  Better run cp config.toml config.toml.bak first  Open config.toml:  Set theme = \u0026quot;docdock\u0026quot; Comment out themesdir = \u0026quot;../..\u0026quot;  Create a _index.md document in the content folder  Don\u0026rsquo;t forget to create a _index.md with title: and head: front matter!  Update files in archetypes folder:  Check front matter format Tweak and add your own files! It\u0026rsquo;s will be very handy to have some of your own!  Create a _header.md page in content folder. Its content is what you get in the logo placeholder (top left of the screen). Add a custon terms.html file to layouts/_default, for the tags and categories summary page to be rendered  MathJax support  Create a custom-head.html into a layouts/partials folder next to the content folder, this is where we should add the javascript code in every \u0026lt;head\u0026gt;. Paste the following code in to the file in order for MathJax and inline latex to work!\n\u0026lt;!-- Partial intended to be overwritten to add CSS --\u0026gt; \u0026lt;script type=\u0026quot;text/x-mathjax-config\u0026quot;\u0026gt; MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]} }); \u0026lt;/script\u0026gt; \u0026lt;script type=\u0026quot;text/javascript\u0026quot; async src=\u0026quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML\u0026quot;\u0026gt; \u0026lt;/script\u0026gt;  Also, if you have Google Analytics tracking code, you can add it here.\n Check out the result $e = mc^2$ :)\n "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/",
+	"title": "Course Notes",
+	"tags": [],
+	"description": "",
+	"content": "  CCU Competitive Programming 2017 Fall Write something :)\n Linear_function Writing something :)\n    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/gym/",
@@ -212,6 +233,13 @@
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/setup/",
 	"title": "Setup",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/stack/",
+	"title": "Stack",
 	"tags": [],
 	"description": "",
 	"content": ""

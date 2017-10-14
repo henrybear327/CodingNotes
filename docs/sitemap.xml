@@ -13,6 +13,16 @@
   </url>
   
   <url>
+    <loc>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/</loc>
+    <lastmod>2017-10-14T23:11:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/</loc>
+    <lastmod>2017-10-14T23:11:23+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2017preliminary/</loc>
     <lastmod>2017-10-14T22:49:57+08:00</lastmod>
   </url>
@@ -50,6 +60,11 @@
   <url>
     <loc>https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-setup/</loc>
     <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/course/</loc>
+    <lastmod>2017-10-14T23:11:23+08:00</lastmod>
   </url>
   
   <url>
@@ -100,7 +115,7 @@
   
   <url>
     <loc>https://henrybear327.github.io/CodingNotes/categories/competitive-programming/</loc>
-    <lastmod>2017-10-14T22:49:57+08:00</lastmod>
+    <lastmod>2017-10-14T23:11:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -136,7 +151,7 @@
   
   <url>
     <loc>https://henrybear327.github.io/CodingNotes/tags/implementation/</loc>
-    <lastmod>2017-10-14T22:49:57+08:00</lastmod>
+    <lastmod>2017-10-14T23:11:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -167,6 +182,12 @@
   <url>
     <loc>https://henrybear327.github.io/CodingNotes/tags/setup/</loc>
     <lastmod>2017-10-09T23:30:04+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/tags/stack/</loc>
+    <lastmod>2017-10-14T23:11:41+08:00</lastmod>
     <priority>0</priority>
   </url>
   
