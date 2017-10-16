@@ -4,7 +4,7 @@
 	"title": "CCU Competitive Programming 2017 Fall",
 	"tags": [],
 	"description": "",
-	"content": "  Linear function \n   "
+	"content": "  PC2 在 Mac 上的使用方法 PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～\n\n  Linear function \n   "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/",
@@ -18,7 +18,14 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    Course Notes \n CCU Competitive Programming 2017 Fall  Linear function  Linear function \n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    Course Notes \n CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法 PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～ Linear function  PC2 在 Mac 上的使用方法 PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～\n\n  Linear function \n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/pc2/",
+	"title": "PC2 在 Mac 上的使用方法",
+	"tags": ["PC2", "Linux", "Mac"],
+	"description": "",
+	"content": "PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～\n\n流程 首先，請先開啟終端機。\n 安裝 Homebrew: 在終端機中執行 /usr/bin/ruby -e \u0026quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\u0026quot;。  Homebrew 就像是 Linux 的 apt-get，要安裝東西就 brew install [package name] 就對啦！  安裝 Java: 在終端機中執行 brew cask install java，他會幫你裝好並設定好 Java 的路徑 下載上課用的 $PC2$ 軟體資料夾，放在你喜歡的地方。 打開 $PC2$ 的資料夾，裡面會有一個 bin 資料夾。其中，會有一個 pc2team 的檔案。將該檔案拖曳至終端機中，按下enter，等待片刻就好啦！  將檔案拖曳至終端機，應該會看到類似這樣的字串出現在終端機中：/Users/[你的Mac目前使用者帳號]/[中/間/一/堆/路/徑/...]/pc2-9.4.1_student/bin/pc2team\n  "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
@@ -88,7 +95,7 @@
 	"title": "Course Notes",
 	"tags": [],
 	"description": "",
-	"content": "  CCU Competitive Programming 2017 Fall  Linear function  Linear function \n    "
+	"content": "  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法 PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～ Linear function  PC2 在 Mac 上的使用方法 PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～\n\n  Linear function \n    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/gym/",
@@ -210,6 +217,20 @@
 	"content": ""
 },
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/linux/",
+	"title": "Linux",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/mac/",
+	"title": "Mac",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/ncpc/",
 	"title": "Ncpc",
 	"tags": [],
@@ -219,6 +240,20 @@
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/observation/",
 	"title": "Observation",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/pc2/",
+	"title": "Pc2",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/pc2/",
+	"title": "Pc2",
 	"tags": [],
 	"description": "",
 	"content": ""
