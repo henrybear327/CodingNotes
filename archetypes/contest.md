@@ -14,11 +14,11 @@ weight: 5
 
 ## [Problem]()
 
-{{% expand "Hint ?" %}}
+{{% expand "Hint" %}}
 
 {{% /expand %}}
 
-{{% expand "Solution ?" %}}
+{{% expand "Solution" %}}
 
 {{% /expand %}}
 

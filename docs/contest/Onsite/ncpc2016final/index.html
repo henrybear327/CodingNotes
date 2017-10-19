@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.29" />
+    <meta name="description" content="">
+
+
+    <title>NCPC 2016 Final :: Docdock</title>
+    <link rel="shortcut icon" href="/CodingNotes/images/favicon.png" type="image/x-icon" />
+    <link href="/CodingNotes/css/nucleus.css" rel="stylesheet">
+    <link href="/CodingNotes/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/CodingNotes/css/hybrid.css" rel="stylesheet">
+    <link href="/CodingNotes/css/featherlight.min.css" rel="stylesheet">
+    <link href="/CodingNotes/css/auto-complete.css" rel="stylesheet">
+    
+    <link href="/CodingNotes/css/theme.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/CodingNotes/css/bootstrap.min.css">
+    <script src="/CodingNotes/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107858184-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107858184-1');
+</script>
+
+  </head>
+  <body class="" data-url="/CodingNotes/contest/onsite/ncpc2016final/">
+    <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header"> 
+	<p><i class='fa fa-home'></i> <a href="https://henrybear327.github.io/CodingNotes/">Coding Notes</a></p>
+ 
+
+
+    </div><div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/CodingNotes/js/lunr.min.js"></script>
+<script type="text/javascript" src="/CodingNotes/js/auto-complete.js"></script>
+<script type="text/javascript">
+    var baseurl = "https:\/\/henrybear327.github.io\/CodingNotes\/";
+</script>
+<script type="text/javascript" src="/CodingNotes/js/search.js"></script>
+
+  </div>
+
+
+    <ul class="topics">
+    <li data-nav-id="/CodingNotes/contest/" class="dd-item parent">
+      <a href="/CodingNotes/contest/">
+        <span><i class='fa fa-edit'></i> Contest</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/contest/codeforces/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/">
+        <span><i class='fa fa-edit'></i> Codeforces</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/contest/codeforces/educational/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/educational/">
+        <span><i class='fa fa-edit'></i> Educational Rounds</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/codeforces/educational/30/" class="dd-item">
+        <a href="/CodingNotes/contest/codeforces/educational/30/">
+          <span>Round 30</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/codeforces/contest/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/contest/">
+        <span><i class='fa fa-edit'></i> Rated Contests</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/codeforces/contest/r441/" class="dd-item">
+        <a href="/CodingNotes/contest/codeforces/contest/r441/">
+          <span>Round 441</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/codeforces/gym/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/gym/">
+        <span><i class='fa fa-edit'></i> Gym</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/codeforces/gym/ecpc16/" class="dd-item">
+        <a href="/CodingNotes/contest/codeforces/gym/ecpc16/">
+          <span>2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/itsa_ptc/" class="dd-item">
+      <a href="/CodingNotes/contest/itsa_ptc/">
+        <span><i class='fa fa-edit'></i> ITSA/PTC</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/itsa_ptc/oct2017/" class="dd-item">
+        <a href="/CodingNotes/contest/itsa_ptc/oct2017/">
+          <span>October 11, 2017</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/onsite/" class="dd-item parent">
+      <a href="/CodingNotes/contest/onsite/">
+        <span><i class='fa fa-edit'></i> Onsite competitions</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/tools/hugo/" class="dd-item">
+      <a href="/CodingNotes/tools/hugo/">
+        <span><i class='fa fa-edit'></i> Hugo</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-setup/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-setup/">
+          <span>Hugo Setup</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-usage/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-usage/">
+          <span>Hugo Usage</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/course/" class="dd-item">
+      <a href="/CodingNotes/course/">
+        <span><i class='fa fa-edit'></i> Course Notes</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/" class="dd-item">
+      <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/">
+        <span><i class='fa fa-edit'></i> CCU Competitive Programming 2017 Fall</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/pc2/" class="dd-item">
+        <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/pc2/">
+          <span>PC2 在 Mac 上的使用方法</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/" class="dd-item">
+        <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/">
+          <span>Linear function</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/" class="dd-item">
+        <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/">
+          <span>Exam A Problem B</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/tools/" class="dd-item">
+      <a href="/CodingNotes/tools/">
+        <span><i class='fa fa-edit'></i> Tools</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/tools/hugo/" class="dd-item">
+      <a href="/CodingNotes/tools/hugo/">
+        <span><i class='fa fa-edit'></i> Hugo</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-setup/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-setup/">
+          <span>Hugo Setup</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-usage/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-usage/">
+          <span>Hugo Usage</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        <section id="shortcuts">
+                <li class="" role=""><h3>索引</h3><a href="/CodingNotes/tags" target="_blank" rel="noopener"><i class='fa fa-link'></i> Tags</a></li>
+                <li class="" role=""><a href="/CodingNotes/categories" target="_blank" rel="noopener"><i class='fa fa-link'></i> Categories</a></li>
+                <li class="" role=""><h3>About me</h3><a href="https://github.com/henrybear327?tab=repositories" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+                <li class="" role=""><a href="https://itunes.apple.com/tw/app/cculife/id1091437125?l=zh&amp;mt=8" target="_blank" rel="noopener"><i class='fa fa-camera'></i> CCULife</a></li>
+                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Official Site</a></li>
+                <li class="" role=""><h3>題解網站</h3><a href="https://amoshyc.github.io/CPsolution/" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> amoshyc 題解網站</a></li>
+        </section>
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+    </ul>
+
+
+    <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/henrybear327/CodingNotes/tree/master/content/contest/Onsite/NCPC2016Final.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+
+
+
+ <a href='/CodingNotes/'>Coding Blog</a> > <a href='/CodingNotes/contest/'>Contest</a> > <a href='/CodingNotes/contest/onsite/'>Onsite competitions</a> > NCPC 2016 Final
+
+ 
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#b-http-e-tutor-itsa-org-tw-e-tutor-mod-programming-view-php-a-17928"><a href="http://e-tutor.itsa.org.tw/e-Tutor/mod/programming/view.php?a=17928">B</a></a>
+<ul>
+<li><a href="#ac-code">AC Code</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+          <div id="tags">
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/ncpc">NCPC</a>
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/enumeration">Enumeration</a>
+            
+          </div>
+        
+        <div id="body-inner">
+          
+            <h1>NCPC 2016 Final</h1>
+          
+
+
+
+
+<p>充滿回憶的比賽，尤其是B QAQ</p>
+
+<p></p>
+
+<h2 id="b-http-e-tutor-itsa-org-tw-e-tutor-mod-programming-view-php-a-17928"><a href="http://e-tutor.itsa.org.tw/e-Tutor/mod/programming/view.php?a=17928">B</a></h2>
+
+<p>簡單爆搜。</p>
+
+<div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Hint
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>幾個1?</p>
+
+    </div>
+</div>
+
+
+
+<p><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Solution
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+
+    </div>
+</div>
+
+</p>
+
+<h3 id="ac-code">AC Code</h3>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style=""></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style=""></span><span style="color:#66d9ef">typedef</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="">ll</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span><span style=""></span><span style="">ll</span><span style=""> </span><span style="color:#a6e22e">solve</span><span style="">(</span><span style="">ll</span><span style=""> </span><span style="">n</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span><span style="">    </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">n</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span><span style="">        </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ans</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span><span style="">    </span><span style="">ll</span><span style=""> </span><span style="">orig</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">n</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span><span style="">    </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(;</span><span style=""> </span><span style="">ans</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">33</span><span style="">;</span><span style=""> </span><span style="">ans</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span><span style="">        </span><span style="">n</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">orig</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span><span style="">        </span><span style="">ll</span><span style=""> </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span><span style="">        </span><span style="">n</span><span style=""> </span><span style="color:#f92672">-=</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span><span style="">            </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">n</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="">(</span><span style="">ans</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">)</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span><span style="">                </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span><span style="">            </span><span style="">n</span><span style=""> </span><span style="color:#f92672">-=</span><span style=""> </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span><span style="">            </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">+=</span><span style=""> </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span><span style="">        </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span><span style="">        </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">n</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">)</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span><span style="">            </span><span style="color:#66d9ef">break</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span><span style=""></span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="color:#a6e22e">main</span><span style="">()</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span><span style=""></span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span><span style=""></span><span style="color:#75715e">#ifndef DEBUG
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span><span style="color:#75715e"></span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ncase</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span><span style="">    </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">ncase</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span><span style="">    </span><span style="color:#66d9ef">while</span><span style=""> </span><span style="">(</span><span style="">ncase</span><span style="color:#f92672">--</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span><span style="">        </span><span style="">ll</span><span style=""> </span><span style="">n</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span><span style="">        </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">n</span><span style="">);</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span><span style="">        </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="">,</span><span style=""> </span><span style="">solve</span><span style="">(</span><span style="">n</span><span style="">));</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span><span style=""></span><span style="color:#75715e">#else
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span><span style="color:#75715e"></span><span style="">    </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="color:#ae81ff">100</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span><span style="">        </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;n = %d, %lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="">,</span><span style=""> </span><span style="">i</span><span style="">,</span><span style=""> </span><span style="">solve</span><span style="">(</span><span style="">i</span><span style="">));</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">47</span><span style="">    </span><span style="">}</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">48</span><span style=""></span><span style="color:#75715e">#endif
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">49</span><span style="color:#75715e"></span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">50</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">51</span><span style=""></span><span style="">}</span></code></pre>
+</div></p>
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+
+        
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        <a class="nav nav-prev" href="/CodingNotes/contest/onsite/" title="Onsite competitions"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/CodingNotes/contest/onsite/ncpc2017preliminary/" title="NCPC 2017 Preliminary Round" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>    
+
+    <script src="/CodingNotes/js/clipboard.min.js"></script>
+<script src="/CodingNotes/js/featherlight.min.js"></script>
+<script src="/CodingNotes/js/html5shiv-printshiv.min.js"></script>
+<script src="/CodingNotes/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/CodingNotes/js/modernizr.custom.71422.js"></script>
+<script src="/CodingNotes/js/learn.js"></script>
+<script src="/CodingNotes/js/hugo-learn.js"></script>
+
+
+<link href="/CodingNotes/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script src="/CodingNotes/mermaid/mermaid.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+  </body>
+</html>
+

@@ -7,7 +7,7 @@ draft: false
 tags: ["NCPC", "Implementation", "Enumeration"]
 categories: ["Competitive Programming"]
 
-weight: 5
+weight: 20170
 ---
 
 <!--more-->
