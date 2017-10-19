@@ -1,5 +1,5 @@
 ---
-title: "ExamA Problem B"
+title: "Exam A Problem B"
 date: 2017-10-19T15:33:15+08:00
 draft: false
 
