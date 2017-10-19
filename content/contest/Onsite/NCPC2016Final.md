@@ -6,7 +6,7 @@ draft: false
 tags: ["NCPC", "Enumeration"]
 categories: ["Competitive Programming"]
 
-weight: 20161
+weight: 161
 ---
 
 充滿回憶的比賽，尤其是B QAQ

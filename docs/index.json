@@ -140,13 +140,6 @@
 	"content": "PR is welcomed! Feel free to create some if you want to :)\nCheers~\n Hugo  Hugo Setup   Hugo Usage     "
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/",
-	"title": "Exam A Problem B",
-	"tags": ["Math"],
-	"description": "",
-	"content": "費馬小定理應用題。\n在 $mod\\ p$ 底下，指數是對 $p - 1$ 取餘數。\n\nSolution sketch 費馬小定理為 $x^{p - 1} \\equiv 1 \\pmod{p}$\n如果要對 $x^y \\pmod p$ 的 $y$ 取餘數，我們令 $y = (p - 1)r + s$\n可以推得，\n$$ x^y \\equiv (x^{p - 1})^r(x)^s \\equiv 1^r(x)^s \\equiv x^s \\pmod p $$\n利用 $s = y \\% (p - 1)$ 可以得知，指數在 $\\pmod p$ 底下，是要 $mod\\ p - 1$ 而不是 $mod\\ p$\nAC Code 1Tobeadded... "
-},
-{
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2016final/",
 	"title": "NCPC 2016 Final",
 	"tags": ["NCPC", "Enumeration"],
@@ -159,6 +152,13 @@
 	"tags": ["NCPC", "Implementation", "Enumeration"],
 	"description": "Problem E, what a pity!",
 	"content": "\nProblem 比賽題目   Attachments   Problem A: Verify Collatz 3x \u0026#43; 1 Conjecture.pdf  (100 kB)   Problem B: Largest Three Companions.pdf  (69 kB)   Problem C: Data Recovery.pdf  (108 kB)   Problem D: Routing mode checking.pdf  (129 kB)   Problem E: Terrestrial Stations.pdf  (118 kB)   Problem F: Battle Calculator.pdf  (72 kB)   Problem G: Chaining.pdf  (109 kB)     A Just 3n + 1.\n1#include\u0026lt;bits/stdc++.h\u0026gt;2usingnamespacestd;34#define sz(x) (int(x.size())) 5typedeflonglongll;6typedefdoubledb;78intmain(){9llx;10while(scanf(\u0026#34; %lld\u0026#34;,\u0026amp;x)){11if(x==0)break;12printf(\u0026#34;%lld \u0026#34;,x);1314llmx=-1;15inti;16for(i=0;;i++){17if(x\u0026amp;1){18x=3*x+1;19}20else{21x=x/2;22}23mx=max(mx,x);24if(x==1){25break;26}27}2829printf(\u0026#34;%d %lld\\n\u0026#34;,i+1,mx);30}313233return0;34} \nB 1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;67voidsolve()8{9intn;10scanf(\u0026#34;%d\u0026#34;,\u0026amp;n);1112intinp[n];13for(inti=0;i\u0026lt;n;i++){14scanf(\u0026#34;%d\u0026#34;,\u0026amp;inp[i]);15}1617sort(inp,inp+n);1819// implement 20// -------++++++++ 21llproduct=inp[0]*inp[1];22llans=LLONG_MIN;23for(inti=2;i\u0026lt;n;i++){24ans=max(ans,product*inp[i]);25}2627product=inp[n-1]*inp[n-2];28for(inti=0;i\u0026lt;n-2;i++){29ans=max(ans,product*inp[i]);30}3132printf(\u0026#34;%lld\\n\u0026#34;,ans);33}3435intmain()36{37intncase;38scanf(\u0026#34;%d\u0026#34;,\u0026amp;ncase);3940while(ncase--)41solve();4243return0;44} \nC Ahh\u0026hellip;\u0026hellip; We can\u0026rsquo;t do the math with mod inverse\u0026hellip; so we resort to enumeration\u0026hellip;\n1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6constllP=65537;78llx[3];9lly[3];10llcal(lla0,lla1,lla2,intwhich)11{12llx_2=x[which]*x[which]%P;13return(((a0+a1*x[which])%P+a2*x_2)%P);14}1516voidsolve()17{18for(inti=0;i\u0026lt;3;i++)19scanf(\u0026#34;%lld %lld\u0026#34;,\u0026amp;x[i],\u0026amp;y[i]);2021llx_2=(x[0]*x[0])%P;22for(lla1=0;a1\u0026lt;P;a1++){23for(lla2=0;a2\u0026lt;P;a2++){24lla0=5*P+y[0]-(a1*x[0])%P-(a2*x_2)%P;25a0%=P;26assert(cal(a0,a1,a2,0)==y[0]);2728if(cal(a0,a1,a2,1)==y[1]\u0026amp;\u0026amp;cal(a0,a1,a2,2)==y[2]){29printf(\u0026#34;%lld %lld %lld\\n\u0026#34;,a0,a1,a2);30return;31}32}33}34}3536intmain()37{38intncase;39scanf(\u0026#34;%d\u0026#34;,\u0026amp;ncase);4041while(ncase--)42solve();4344return0;45} \nD Problem statement contains error\u0026hellip;\u0026hellip;\u0026hellip;\u0026hellip;..\n1#include\u0026lt;bits/stdc++.h\u0026gt;2usingnamespacestd;34constintS=4;5constintINA=2;// inactive 6constintADA=0;7constintXY=1;8constintNON=3;// nonreachable 9constintACT=5;// active 1011intsx,sy;12intA[8][8];13intZ[8][8];1415boolxy_check(inttx,intty){16for(intx=min(sx,tx);x\u0026lt;=max(sx,tx);x++){17if(A[x][sy]==INA){18returnfalse;19}20}21for(inty=min(sy,ty);y\u0026lt;=max(sy,ty);y++){22if(A[tx][y]==INA){23returnfalse;24}25}26returntrue;27}2829boolada_check(inttx,intty){30for(intx=min(sx,tx);x\u0026lt;=max(sx,tx);x++){31for(inty=min(sy,ty);y\u0026lt;=max(sy,ty);y++){32if(A[x][y]==INA){33returnfalse;34}35}36}37returntrue;38}3940voidprint(inta[8][8]){41for(inty=0;y\u0026lt;8;y++){42for(intx=0;x\u0026lt;8;x++){43cout\u0026lt;\u0026lt;a[x][y];44}45cout\u0026lt;\u0026lt;endl;46}47}4849intmain(){50ios::sync_with_stdio(false);51cin.tie(0);5253strings;54while(cin\u0026gt;\u0026gt;s){55if(s==\u0026#34;0\u0026#34;)break;5657for(intx=0;x\u0026lt;8;x++){58for(inty=0;y\u0026lt;8;y++){59Z[x][y]=NON;60}61}6263for(inti=0;i\u0026lt;64;i++){64inty=i/8;65intx=i%8;66if(s[i]==\u0026#39;2\u0026#39;){67A[x][y]=S;68Z[x][y]=S;69sx=x;70sy=y;71}elseif(s[i]==\u0026#39;1\u0026#39;){72A[x][y]=INA;73Z[x][y]=INA;74}else{75A[x][y]=ACT;76}77}7879// print(A); 80// cout \u0026lt;\u0026lt; endl; 8182for(intx=0;x\u0026lt;8;x++){83for(inty=0;y\u0026lt;8;y++){84if(x==sx\u0026amp;\u0026amp;y==sy)continue;85if(xy_check(x,y)){86Z[x][y]=XY;87}88}89}9091for(intx=0;x\u0026lt;8;x++){92for(inty=0;y\u0026lt;8;y++){93if(x==sx\u0026amp;\u0026amp;y==sy)continue;94if(ada_check(x,y)){95Z[x][y]=ADA;96}97}98}99100for(inty=0;y\u0026lt;8;y++){101for(intx=0;x\u0026lt;8;x++){102cout\u0026lt;\u0026lt;Z[x][y];103}104}105cout\u0026lt;\u0026lt;endl;106107// print(Z); 108}109return0;110} \nG I know using graph for this one is overkill, but this is what makes us feel like 1 AC :)\n1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45#define N 10010 67typedefpair\u0026lt;int,int\u0026gt;ii;89voidsolve(intn)10{11intinp[n+1];12for(inti=1;i\u0026lt;=n;i++)13scanf(\u0026#34;%d\u0026#34;,\u0026amp;inp[i]);14// for(int i = 1; i \u0026lt;= n; i++) 15//printf(\u0026#34;%d%c\u0026#34;, inp[i], i == n ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 1617vector\u0026lt;int\u0026gt;g[N];18intin[N]={0};19intout[N]={0};20for(inti=1;i\u0026lt;=n;i++){21g[i].push_back(inp[i]);22in[inp[i]]++;23out[i]++;24}2526vector\u0026lt;int\u0026gt;s;27for(inti=1;i\u0026lt;=n;i++){28if(in[i]==0)29s.push_back(i);30}3132vector\u0026lt;ii\u0026gt;ans;33for(inti=0;i\u0026lt;(int)s.size();i++){34intcnt=0;35intwho=s[i];36// printf(\u0026#34;cnt %d who %d\\n\u0026#34;, cnt, who); 37while((int)g[who].size()\u0026gt;0){38// printf(\u0026#34;cnt %d who %d\\n\u0026#34;, cnt, who); 39cnt++;40who=g[who][0];41}4243ans.push_back(ii(s[i],cnt));44}45sort(ans.begin(),ans.end());4647printf(\u0026#34;%d\u0026#34;,(int)ans.size());48for(inti=0;i\u0026lt;(int)ans.size();i++)49printf(\u0026#34; %d %d\u0026#34;,ans[i].first,ans[i].second);50printf(\u0026#34;\\n\u0026#34;);51}5253intmain()54{55intn;56while(scanf(\u0026#34;%d\u0026#34;,\u0026amp;n)==1\u0026amp;\u0026amp;n)57solve(n);5859return0;60} \n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/",
+	"title": "Exam A Problem B",
+	"tags": ["Math"],
+	"description": "",
+	"content": "費馬小定理應用題。\n在 $mod\\ p$ 底下，指數是對 $p - 1$ 取餘數。\n\nSolution sketch 費馬小定理為 $x^{p - 1} \\equiv 1 \\pmod{p}$\n如果要對 $x^y \\pmod p$ 的 $y$ 取餘數，我們令 $y = (p - 1)r + s$\n可以推得，\n$$ x^y \\equiv (x^{p - 1})^r(x)^s \\equiv 1^r(x)^s \\equiv x^s \\pmod p $$\n利用 $s = y \\% (p - 1)$ 可以得知，指數在 $\\pmod p$ 底下，是要 $mod\\ p - 1$ 而不是 $mod\\ p$\nAC Code 1Tobeadded... "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/_header/",
@@ -217,14 +217,14 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
@@ -280,14 +280,14 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/pc2/",
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/pc2/",
 	"title": "Pc2",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/pc2/",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/pc2/",
 	"title": "Pc2",
 	"tags": [],
 	"description": "",

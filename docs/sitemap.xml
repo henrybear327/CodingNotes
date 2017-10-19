@@ -103,11 +103,6 @@
   </url>
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/</loc>
-    <lastmod>2017-10-19T15:33:15+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2016final/</loc>
     <lastmod>2017-10-19T18:44:50+08:00</lastmod>
   </url>
@@ -115,6 +110,11 @@
   <url>
     <loc>https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2017preliminary/</loc>
     <lastmod>2017-10-14T22:49:57+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/</loc>
+    <lastmod>2017-10-19T15:33:15+08:00</lastmod>
   </url>
   
   <url>
@@ -163,13 +163,13 @@
   </url>
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/tags/hugo/</loc>
+    <loc>https://henrybear327.github.io/CodingNotes/categories/hugo/</loc>
     <lastmod>2017-10-09T23:30:04+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/categories/hugo/</loc>
+    <loc>https://henrybear327.github.io/CodingNotes/tags/hugo/</loc>
     <lastmod>2017-10-09T23:30:04+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -217,13 +217,13 @@
   </url>
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/tags/pc2/</loc>
+    <loc>https://henrybear327.github.io/CodingNotes/categories/pc2/</loc>
     <lastmod>2017-10-16T18:54:02+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://henrybear327.github.io/CodingNotes/categories/pc2/</loc>
+    <loc>https://henrybear327.github.io/CodingNotes/tags/pc2/</loc>
     <lastmod>2017-10-16T18:54:02+08:00</lastmod>
     <priority>0</priority>
   </url>
