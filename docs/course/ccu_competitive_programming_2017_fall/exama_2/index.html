@@ -7,7 +7,7 @@
     <meta name="description" content="">
 
 
-    <title>Enumeration :: Docdock</title>
+    <title>ExamA Problem B :: Docdock</title>
     <link rel="shortcut icon" href="/CodingNotes/images/favicon.png" type="image/x-icon" />
     <link href="/CodingNotes/css/nucleus.css" rel="stylesheet">
     <link href="/CodingNotes/css/font-awesome.min.css" rel="stylesheet">
@@ -49,7 +49,7 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 </script>
 
   </head>
-  <body class="" data-url="/CodingNotes/tags/enumeration/">
+  <body class="" data-url="/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/">
     <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
   <div id="header-wrapper">
     <div id="header"> 
@@ -147,17 +147,19 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
     </li>
         </ul>
     </li>
-    <li data-nav-id="/CodingNotes/course/" class="dd-item">
+    <li data-nav-id="/CodingNotes/course/" class="dd-item parent">
       <a href="/CodingNotes/course/">
-        <span><i class='fa fa-edit'></i> Course Notes</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span><i class='fa fa-edit'></i> Course Notes</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-    <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/" class="dd-item">
+    <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/" class="dd-item parent">
       <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/">
-        <span><i class='fa fa-edit'></i> CCU Competitive Programming 2017 Fall</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+        <span><i class='fa fa-edit'></i> CCU Competitive Programming 2017 Fall</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/" class="dd-item">
+      <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/" class="dd-item active">
         <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/">
           <span>ExamA Problem B</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
@@ -224,7 +226,16 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
         <div class="padding highlightable">
         
           <div id="top-bar">
-            <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/henrybear327/CodingNotes/tree/master/content/Course/CCU_Competitive_Programming_2017_Fall/ExamA_2.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                 <span id="sidebar-toggle-span">
                   <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
                     <i class="fa fa-bars"></i>
@@ -234,119 +245,86 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
                 <span class="links">
                 
 
- Enumeration
+
+
+
+
+
+
+
+
+
+ <a href='/CodingNotes/'>Coding Blog</a> > <a href='/CodingNotes/course/'>Course Notes</a> > <a href='/CodingNotes/course/ccu_competitive_programming_2017_fall/'>CCU Competitive Programming 2017 Fall</a> > ExamA Problem B
+
+ 
+
+ 
+
+ 
 
    
                 </span>
             </div>
             <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#solution-sketch">Solution sketch</a></li>
+<li><a href="#ac-code">AC Code</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
           </div>
         
         
+          <div id="tags">
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/math">Math</a>
+            
+          </div>
+        
         <div id="body-inner">
           
-            <h1>Enumeration</h1>
+            <h1>ExamA Problem B</h1>
           
 
 
 
 
+<p>費馬小定理應用題。</p>
 
+<p>在 $mod\ p$ 底下，指數是對 $p - 1$ 取餘數。</p>
+
+<p></p>
+
+<h3 id="solution-sketch">Solution sketch</h3>
+
+<p>費馬小定理為 $x^{p - 1} \equiv 1 \pmod{p}$</p>
+
+<p>如果要對 $x^y \pmod p$ 的 $y$ 取餘數，我們令 $y = (p - 1)r + s$</p>
+
+<p>可以推得，</p>
+
+<p>$$ x^y \equiv (x^{p - 1})^r(x)^s \equiv 1^r(x)^s \equiv x^s \pmod p $$</p>
+
+<p>利用 $s = y \% (p - 1)$ 可以得知，指數在 $\pmod p$ 底下，是要 $mod\ p - 1$ 而不是 $mod\ p$</p>
+
+<h3 id="ac-code">AC Code</h3>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">1</span><span style="">To</span><span style=""> </span><span style="">be</span><span style=""> </span><span style="">added</span><span style="">...</span></code></pre>
+</div>
 
 <footer class=" footline" >
 	
 </footer>
-
-
-
-	
-
-	<div class="extra-pagination inner">
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
-	</div>
-
-	
-	   <article class="post contest">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/CodingNotes/contest/codeforces/contest/r441/">Round 441</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p><p>Solved 4 in virtual contest&hellip; What the pity&hellip; Could have gotten my rating rasied lol</p>
-
-<p></p> <a class="read-more" href="/CodingNotes/contest/codeforces/contest/r441/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/codeforces/">Codeforces</a>
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/implementation/">Implementation</a>
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/union-find/">Union Find</a>
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/enumeration/">Enumeration</a>
-            
-        
-
-    </footer>
-</article>
-
-
-
-
-	
-	   <article class="post contest">
-    <header class="post-header">
-        <h2 class="post-title"><a href="/CodingNotes/contest/onsite/ncpc2017preliminary/">NCPC 2017 Preliminary Round</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p><p></p> <a class="read-more" href="/CodingNotes/contest/onsite/ncpc2017preliminary/">&raquo;</a></p>
-    </section>
-    <footer class=" footline" >
-         
-        
-
-        
-          
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/ncpc/">NCPC</a>
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/implementation/">Implementation</a>
-            
-                <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/enumeration/">Enumeration</a>
-            
-        
-
-    </footer>
-</article>
-
-
-
-
-	
-
-	<div style="margin-bottom:2rem"></div>
-
-	<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 1</span>
-	
-</nav>
-
 
 
 
@@ -361,7 +339,8 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
     
 
     <div id="navigation">
-        <a class="nav nav-next" href="/CodingNotes/contest/" title="Contest" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+        <a class="nav nav-prev" href="/CodingNotes/course/ccu_competitive_programming_2017_fall/" title="CCU Competitive Programming 2017 Fall"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/CodingNotes/course/ccu_competitive_programming_2017_fall/pc2/" title="PC2 在 Mac 上的使用方法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
     </div>
 
     </section>
@@ -386,3 +365,4 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
   </body>
 </html>
+

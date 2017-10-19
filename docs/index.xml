@@ -12,6 +12,19 @@
     
     
     <item>
+      <title>ExamA Problem B</title>
+      <link>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/</link>
+      <pubDate>Thu, 19 Oct 2017 15:33:15 +0800</pubDate>
+      
+      <guid>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/</guid>
+      <description>&lt;p&gt;費馬小定理應用題。&lt;/p&gt;
+
+&lt;p&gt;在 $mod\ p$ 底下，指數是對 $p - 1$ 取餘數。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Round 441</title>
       <link>https://henrybear327.github.io/CodingNotes/contest/codeforces/contest/r441/</link>
       <pubDate>Tue, 17 Oct 2017 01:06:26 +0800</pubDate>

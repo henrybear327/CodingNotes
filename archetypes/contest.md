@@ -14,10 +14,6 @@ weight: 5
 
 ## [Problem]()
 
-{{% expand "Hint ?" %}}Here you go!{{% /expand %}}
-
-### AC Code
-
 {{% expand "Hint ?" %}}
 
 {{% /expand %}}
@@ -25,6 +21,8 @@ weight: 5
 {{% expand "Solution ?" %}}
 
 {{% /expand %}}
+
+### AC Code
 
 {{< highlight cpp "linenos=inline" >}}
 
