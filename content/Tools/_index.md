@@ -17,4 +17,4 @@ PR is welcomed! Feel free to create some if you want to :)
 
 Cheers~
 
-{{% children description="true" depth="5" %}}
+{{% children depth="5" %}}

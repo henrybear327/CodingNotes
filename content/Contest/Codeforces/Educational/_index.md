@@ -15,4 +15,4 @@ weight: 1
 # alwaysopen: true
 ---
 
-{{% children description="false" depth="5"%}}
+{{% children depth="5"%}}

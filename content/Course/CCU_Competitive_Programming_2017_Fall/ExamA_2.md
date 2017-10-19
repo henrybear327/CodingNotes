@@ -6,7 +6,7 @@ draft: false
 tags: ["Math"]
 categories: ["Competitive Programming"]
 
-weight: 5
+weight: 1000
 ---
 
 費馬小定理應用題。

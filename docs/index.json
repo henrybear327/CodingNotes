@@ -4,35 +4,28 @@
 	"title": "CCU Competitive Programming 2017 Fall",
 	"tags": [],
 	"description": "",
-	"content": "  ExamA Problem B \n  PC2 在 Mac 上的使用方法 \n  Linear function \n   "
+	"content": "  PC2 在 Mac 上的使用方法   Linear function   ExamA Problem B    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/educational/",
 	"title": "Educational Rounds",
 	"tags": [],
 	"description": "Basic stuff, but still can&#39;t solve it QQ",
-	"content": "  Round 30 \n   "
+	"content": "  Round 30    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "My notes on Hugo",
-	"content": "  Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n   "
+	"content": "  Hugo Setup   Hugo Usage    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/",
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest Programming contest\n Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 \n   Rated Contests \n Round 441 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    Course Notes \n CCU Competitive Programming 2017 Fall  ExamA Problem B PC2 在 Mac 上的使用方法 Linear function  ExamA Problem B \n  PC2 在 Mac 上的使用方法 PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～\n\n  Linear function \n    Tools Great tools collection\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n     "
-},
-{
-	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/",
-	"title": "ExamA Problem B",
-	"tags": ["Math"],
-	"description": "",
-	"content": "費馬小定理應用題。\n在 $mod\\ p$ 底下，指數是對 $p - 1$ 取餘數。\n\nSolution sketch 費馬小定理為 $x^{p - 1} \\equiv 1 \\pmod{p}$\n如果要對 $x^y \\pmod p$ 的 $y$ 取餘數，我們令 $y = (p - 1)r + s$\n可以推得，\n$$ x^y \\equiv (x^{p - 1})^r(x)^s \\equiv 1^r(x)^s \\equiv x^s \\pmod p $$\n利用 $s = y \\% (p - 1)$ 可以得知，指數在 $\\pmod p$ 底下，是要 $mod\\ p - 1$ 而不是 $mod\\ p$\nAC Code 1Tobeadded... "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017    Onsite competitions  NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   ExamA Problem B     Tools  Hugo  Hugo Setup   Hugo Usage      "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/contest/r441/",
@@ -46,7 +39,7 @@
 	"title": "Rated Contests",
 	"tags": [],
 	"description": "",
-	"content": "  Round 441 \n   "
+	"content": "  Round 441    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/pc2/",
@@ -54,13 +47,6 @@
 	"tags": ["PC2", "Linux", "Mac"],
 	"description": "",
 	"content": "PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～\n\n流程 首先，請先開啟終端機。\n 安裝 Homebrew: 在終端機中執行 /usr/bin/ruby -e \u0026quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\u0026quot;。  Homebrew 就像是 Linux 的 apt-get，要安裝東西就 brew install [package name] 就對啦！  安裝 Java: 在終端機中執行 brew cask install java，他會幫你裝好並設定好 Java 的路徑 下載上課用的 $PC2$ 軟體資料夾，放在你喜歡的地方。 打開 $PC2$ 的資料夾，裡面會有一個 bin 資料夾。其中，會有一個 pc2team 的檔案。將該檔案拖曳至終端機中，按下enter，等待片刻就好啦！  將檔案拖曳至終端機，應該會看到類似這樣的字串出現在終端機中：/Users/[你的Mac目前使用者帳號]/[中/間/一/堆/路/徑/...]/pc2-9.4.1_student/bin/pc2team\n  "
-},
-{
-	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
-	"title": "Linear function",
-	"tags": ["Stack", "Implementation"],
-	"description": "",
-	"content": "\nProblem There are $n$ linear functions $f_i(x)=a[i]x+b[i], 1\u0026lt;= i \u0026lt;=n$. Define $F(x)=max{f_i(x) : 1\u0026lt;= i \u0026lt;=n}$.\nGiven $m$ x-values $c[1],c[2],…, c[m]$, please compute the sum of all $F(c[j])$, i.e., $F(c[1])+ F(c[2])+…+ F(c[m])$.\nSolution sketch To be continued\u0026hellip;\nAC Code 1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6typedefpair\u0026lt;ll,ll\u0026gt;ii;78boolcmp(constii\u0026amp;a,constii\u0026amp;b)9{10if(a.first==b.first)11returna.second\u0026gt;b.second;12returna.first\u0026lt;b.first;13}1415llcal(iicoeff,llx)16{17returncoeff.first*x+coeff.second;18}1920doublex_val(iia,iib)21{22return(b.second-a.second)/(a.first-b.first);23}2425voidsolve(intn,intm)26{27iicoeff[n];28for(inti=0;i\u0026lt;n;i++)29scanf(\u0026#34;%lld %lld\u0026#34;,\u0026amp;coeff[i].first,\u0026amp;coeff[i].second);30llx[m];31for(inti=0;i\u0026lt;m;i++)32scanf(\u0026#34;%lld\u0026#34;,\u0026amp;x[i]);3334sort(coeff,coeff+n,cmp);35sort(x,x+m);3637vector\u0026lt;ii\u0026gt;ok;38ok.push_back(coeff[0]);39for(inti=1;i\u0026lt;n;i++){40while(ok.size()\u0026gt;1){41intsz=ok.size()-1;42if(ok[sz].first==coeff[i].first||(x_val(ok[sz],ok[sz-1])\u0026gt;x_val(ok[sz],coeff[i])))43ok.pop_back();44else45break;46}47ok.push_back(coeff[i]);48}4950// for(auto i : ok) 51// printf(\u0026#34;%lld %lld\\n\u0026#34;, i.first, i.second); 5253llans=0;54intidx=0;55for(inti=0;i\u0026lt;m;i++){56while(idx!=(int)ok.size()-1\u0026amp;\u0026amp;57cal(ok[idx],x[i])\u0026lt;cal(ok[idx+1],x[i])){58idx++;59}60ans+=cal(ok[idx],x[i]);61}6263printf(\u0026#34;%lld\\n\u0026#34;,ans);64}6566intmain()67{68intn,m;69while(scanf(\u0026#34;%d %d\u0026#34;,\u0026amp;n,\u0026amp;m)==2\u0026amp;\u0026amp;(n!=0)){70solve(n,m);71}7273return0;74} "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2017preliminary/",
@@ -88,14 +74,14 @@
 	"title": "Codeforces",
 	"tags": [],
 	"description": "Codeforces, where my passion nurtures",
-	"content": "  Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 A contest full of frustration\n\n   Rated Contests  Round 441  Round 441 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    "
+	"content": "  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/",
 	"title": "Contest",
 	"tags": [],
 	"description": "Programming contest",
-	"content": "  Codeforces Codeforces, where my passion nurtures\n Educational Rounds Basic stuff, but still can\u0026#39;t solve it QQ\n Round 30 A contest full of frustration\n\n   Rated Contests  Round 441  Round 441 \n   Gym \n 2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n    ITSA/PTC Monthly cotest\n October 11, 2017 October 11, 2017 ITSA PTC contest\n   Onsite competitions \n NCPC 2017 Preliminary Round Problem E, what a pity!\n    "
+	"content": "  Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017    Onsite competitions  NCPC 2017 Preliminary Round     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
@@ -116,21 +102,21 @@
 	"title": "Course Notes",
 	"tags": [],
 	"description": "",
-	"content": "  CCU Competitive Programming 2017 Fall  ExamA Problem B PC2 在 Mac 上的使用方法 Linear function  ExamA Problem B 費馬小定理應用題。\n在 $mod\\ p$ 底下，指數是對 $p - 1$ 取餘數。\n\n  PC2 在 Mac 上的使用方法 PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～\n\n  Linear function \n    "
+	"content": "  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   ExamA Problem B     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/gym/",
 	"title": "Gym",
 	"tags": [],
 	"description": "",
-	"content": "  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16) \n   "
+	"content": "  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/",
 	"title": "ITSA/PTC",
 	"tags": [],
 	"description": "Monthly cotest",
-	"content": "  October 11, 2017 October 11, 2017 ITSA PTC contest\n   "
+	"content": "  October 11, 2017    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-usage/",
@@ -144,14 +130,28 @@
 	"title": "Onsite competitions",
 	"tags": [],
 	"description": "",
-	"content": "  NCPC 2017 Preliminary Round Problem E, what a pity!\n   "
+	"content": "  NCPC 2017 Preliminary Round    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
+	"title": "Linear function",
+	"tags": ["Stack", "Implementation"],
+	"description": "",
+	"content": "\nProblem There are $n$ linear functions $f_i(x)=a[i]x+b[i], 1\u0026lt;= i \u0026lt;=n$. Define $F(x)=max{f_i(x) : 1\u0026lt;= i \u0026lt;=n}$.\nGiven $m$ x-values $c[1],c[2],…, c[m]$, please compute the sum of all $F(c[j])$, i.e., $F(c[1])+ F(c[2])+…+ F(c[m])$.\nSolution sketch To be continued\u0026hellip;\nAC Code 1#include\u0026lt;bits/stdc++.h\u0026gt;23usingnamespacestd;45typedeflonglongll;6typedefpair\u0026lt;ll,ll\u0026gt;ii;78boolcmp(constii\u0026amp;a,constii\u0026amp;b)9{10if(a.first==b.first)11returna.second\u0026gt;b.second;12returna.first\u0026lt;b.first;13}1415llcal(iicoeff,llx)16{17returncoeff.first*x+coeff.second;18}1920doublex_val(iia,iib)21{22return(b.second-a.second)/(a.first-b.first);23}2425voidsolve(intn,intm)26{27iicoeff[n];28for(inti=0;i\u0026lt;n;i++)29scanf(\u0026#34;%lld %lld\u0026#34;,\u0026amp;coeff[i].first,\u0026amp;coeff[i].second);30llx[m];31for(inti=0;i\u0026lt;m;i++)32scanf(\u0026#34;%lld\u0026#34;,\u0026amp;x[i]);3334sort(coeff,coeff+n,cmp);35sort(x,x+m);3637vector\u0026lt;ii\u0026gt;ok;38ok.push_back(coeff[0]);39for(inti=1;i\u0026lt;n;i++){40while(ok.size()\u0026gt;1){41intsz=ok.size()-1;42if(ok[sz].first==coeff[i].first||(x_val(ok[sz],ok[sz-1])\u0026gt;x_val(ok[sz],coeff[i])))43ok.pop_back();44else45break;46}47ok.push_back(coeff[i]);48}4950// for(auto i : ok) 51// printf(\u0026#34;%lld %lld\\n\u0026#34;, i.first, i.second); 5253llans=0;54intidx=0;55for(inti=0;i\u0026lt;m;i++){56while(idx!=(int)ok.size()-1\u0026amp;\u0026amp;57cal(ok[idx],x[i])\u0026lt;cal(ok[idx+1],x[i])){58idx++;59}60ans+=cal(ok[idx],x[i]);61}6263printf(\u0026#34;%lld\\n\u0026#34;,ans);64}6566intmain()67{68intn,m;69while(scanf(\u0026#34;%d %d\u0026#34;,\u0026amp;n,\u0026amp;m)==2\u0026amp;\u0026amp;(n!=0)){70solve(n,m);71}7273return0;74} "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/",
 	"title": "Tools",
 	"tags": [],
 	"description": "Great tools collection",
-	"content": "PR is welcomed! Feel free to create some if you want to :)\nCheers~\n Hugo My notes on Hugo\n Hugo Setup My setup notes for Hugo\n  Hugo Usage My Hugo handy refernece\n    "
+	"content": "PR is welcomed! Feel free to create some if you want to :)\nCheers~\n Hugo  Hugo Setup   Hugo Usage     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/",
+	"title": "ExamA Problem B",
+	"tags": ["Math"],
+	"description": "",
+	"content": "費馬小定理應用題。\n在 $mod\\ p$ 底下，指數是對 $p - 1$ 取餘數。\n\nSolution sketch 費馬小定理為 $x^{p - 1} \\equiv 1 \\pmod{p}$\n如果要對 $x^y \\pmod p$ 的 $y$ 取餘數，我們令 $y = (p - 1)r + s$\n可以推得，\n$$ x^y \\equiv (x^{p - 1})^r(x)^s \\equiv 1^r(x)^s \\equiv x^s \\pmod p $$\n利用 $s = y \\% (p - 1)$ 可以得知，指數在 $\\pmod p$ 底下，是要 $mod\\ p - 1$ 而不是 $mod\\ p$\nAC Code 1Tobeadded... "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/_header/",

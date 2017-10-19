@@ -6,7 +6,7 @@ draft: false
 tags: ["Stack", "Implementation"]
 categories: ["Competitive Programming"]
 
-weight: 5
+weight: 100
 ---
 
 <!--more-->

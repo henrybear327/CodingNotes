@@ -12,19 +12,6 @@
     
     
     <item>
-      <title>ExamA Problem B</title>
-      <link>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/</link>
-      <pubDate>Thu, 19 Oct 2017 15:33:15 +0800</pubDate>
-      
-      <guid>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/</guid>
-      <description>&lt;p&gt;費馬小定理應用題。&lt;/p&gt;
-
-&lt;p&gt;在 $mod\ p$ 底下，指數是對 $p - 1$ 取餘數。&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>Round 441</title>
       <link>https://henrybear327.github.io/CodingNotes/contest/codeforces/contest/r441/</link>
       <pubDate>Tue, 17 Oct 2017 01:06:26 +0800</pubDate>
@@ -44,15 +31,6 @@
       <description>&lt;p&gt;PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Linear function</title>
-      <link>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/</link>
-      <pubDate>Sat, 14 Oct 2017 23:11:41 +0800</pubDate>
-      
-      <guid>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/</guid>
-      <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -121,6 +99,28 @@
       
       <guid>https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-usage/</guid>
       <description>Useful Commands  hugo help: get Hugo documentation! hugo: generates the site to the destination folder hugo --cleanDestinationDir: remove files from destination not found in static directories  Creating a New Chapter  hugo new --kind chapter [path to file]/_index.md  Creating a New Article  Creater your own archetypes first! hugo new [path to post]/[post name].md: create a new post The one with the lower weight shows up first  Content Organization  All posts are contained in the content folder The folder hierarchy is the shape of the website</description>
+    </item>
+    
+    <item>
+      <title>Linear function</title>
+      <link>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/</link>
+      <pubDate>Sat, 14 Oct 2017 23:11:41 +0800</pubDate>
+      
+      <guid>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ExamA Problem B</title>
+      <link>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/</link>
+      <pubDate>Thu, 19 Oct 2017 15:33:15 +0800</pubDate>
+      
+      <guid>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/</guid>
+      <description>&lt;p&gt;費馬小定理應用題。&lt;/p&gt;
+
+&lt;p&gt;在 $mod\ p$ 底下，指數是對 $p - 1$ 取餘數。&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
