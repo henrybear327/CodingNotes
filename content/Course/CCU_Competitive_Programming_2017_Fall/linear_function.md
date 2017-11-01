@@ -48,6 +48,8 @@ double x_val(ii a, ii b)
 	return (b.second - a.second) / (a.first - b.first);
 }
 
+#define EPS 1e-9
+
 void solve(int n, int m)
 {
 	ii coeff[n];
@@ -65,7 +67,7 @@ void solve(int n, int m)
 	for(int i = 1; i < n; i++) {
 		while(ok.size() > 1) {
 			int sz = ok.size() - 1;
-			if(ok[sz].first == coeff[i].first || (x_val(ok[sz], ok[sz - 1]) > x_val(ok[sz], coeff[i])))
+			if(ok[sz].first == coeff[i].first || (x_val(ok[sz], ok[sz - 1]) - x_val(ok[sz], coeff[i]) > -EPS))
 				ok.pop_back();
 			else
 				break;
