@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <meta name="generator" content="Hugo 0.29" />
+    <meta name="generator" content="Hugo 0.30.2" />
     <meta name="description" content="">
 
 
@@ -132,6 +132,11 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
           <span>October 11, 2017</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
+      <li data-nav-id="/CodingNotes/contest/itsa_ptc/nov2017/" class="dd-item">
+        <a href="/CodingNotes/contest/itsa_ptc/nov2017/">
+          <span>November 8, 2017</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
         </ul>
     </li>
     <li data-nav-id="/CodingNotes/contest/onsite/" class="dd-item parent">
@@ -140,14 +145,14 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
             <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
       </a>
         <ul>
-      <li data-nav-id="/CodingNotes/contest/onsite/ncpc2016/" class="dd-item active">
-        <a href="/CodingNotes/contest/onsite/ncpc2016/">
-          <span>NCPC 2016 Final</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-setup/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-setup/">
+          <span>Hugo Setup</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
-      <li data-nav-id="/CodingNotes/contest/onsite/ncpc2017preliminary/" class="dd-item">
-        <a href="/CodingNotes/contest/onsite/ncpc2017preliminary/">
-          <span>NCPC 2017 Preliminary Round</span><i class="fa fa-circle-thin read-icon"></i>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-usage/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-usage/">
+          <span>Hugo Usage</span><i class="fa fa-circle-thin read-icon"></i>
         </a>
     </li>
         </ul>
@@ -348,58 +353,57 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 <h3 id="ac-code">AC Code</h3>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span><span style=""> </span><span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style=""></span><span style="color:#66d9ef">using</span><span style=""> </span><span style="color:#66d9ef">namespace</span><span style=""> </span><span style="">std</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style=""></span><span style="color:#66d9ef">typedef</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="color:#66d9ef">long</span><span style=""> </span><span style="">ll</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span><span style=""></span><span style="">ll</span><span style=""> </span><span style="color:#a6e22e">solve</span><span style="">(</span><span style="">ll</span><span style=""> </span><span style="">n</span><span style="">)</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span><span style=""></span><span style="">{</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span><span style="">    </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">n</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span><span style="">        </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span><span style="">    </span><span style="">}</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ans</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span><span style="">    </span><span style="">ll</span><span style=""> </span><span style="">orig</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">n</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span><span style="">    </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(;</span><span style=""> </span><span style="">ans</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="color:#ae81ff">33</span><span style="">;</span><span style=""> </span><span style="">ans</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span><span style="">        </span><span style="">n</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">orig</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span><span style="">        </span><span style="">ll</span><span style=""> </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span><span style="">        </span><span style="">n</span><span style=""> </span><span style="color:#f92672">-=</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span><span style="">        </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span><span style="">            </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">n</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="">(</span><span style="">ans</span><span style=""> </span><span style="color:#f92672">-</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">)</span><span style=""> </span><span style="color:#f92672">==</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">)</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span><span style="">                </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span><span style="">            </span><span style="">n</span><span style=""> </span><span style="color:#f92672">-=</span><span style=""> </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span><span style="">            </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">+=</span><span style=""> </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span><span style="">        </span><span style="">}</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span><span style="">        </span><span style="color:#66d9ef">if</span><span style=""> </span><span style="">(</span><span style="">n</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="">sum</span><span style=""> </span><span style="color:#f92672">+</span><span style=""> </span><span style="color:#ae81ff">1</span><span style="">)</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span><span style="">            </span><span style="color:#66d9ef">break</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span><span style="">    </span><span style="">}</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="">ans</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span><span style=""></span><span style="">}</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span><span style=""></span><span style="color:#66d9ef">int</span><span style=""> </span><span style="color:#a6e22e">main</span><span style="">()</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span><span style=""></span><span style="">{</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span><span style=""></span><span style="color:#75715e">#ifndef DEBUG
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span><span style="color:#75715e"></span><span style="">    </span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">ncase</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span><span style="">    </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">ncase</span><span style="">);</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span><span style="">    </span><span style="color:#66d9ef">while</span><span style=""> </span><span style="">(</span><span style="">ncase</span><span style="color:#f92672">--</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span><span style="">        </span><span style="">ll</span><span style=""> </span><span style="">n</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span><span style="">        </span><span style="">scanf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld&#34;</span><span style="">,</span><span style=""> </span><span style="color:#f92672">&amp;</span><span style="">n</span><span style="">);</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span><span style="">        </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="">,</span><span style=""> </span><span style="">solve</span><span style="">(</span><span style="">n</span><span style="">));</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span><span style="">    </span><span style="">}</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span><span style=""></span><span style="color:#75715e">#else
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span><span style="color:#75715e"></span><span style="">    </span><span style="color:#66d9ef">for</span><span style=""> </span><span style="">(</span><span style="color:#66d9ef">int</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">=</span><span style=""> </span><span style="color:#ae81ff">2</span><span style="">;</span><span style=""> </span><span style="">i</span><span style=""> </span><span style="color:#f92672">&lt;=</span><span style=""> </span><span style="color:#ae81ff">100</span><span style="">;</span><span style=""> </span><span style="">i</span><span style="color:#f92672">++</span><span style="">)</span><span style=""> </span><span style="">{</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span><span style="">        </span><span style="">printf</span><span style="">(</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;n = %d, %lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="">,</span><span style=""> </span><span style="">i</span><span style="">,</span><span style=""> </span><span style="">solve</span><span style="">(</span><span style="">i</span><span style="">));</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">47</span><span style="">    </span><span style="">}</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">48</span><span style=""></span><span style="color:#75715e">#endif
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">49</span><span style="color:#75715e"></span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">50</span><span style="">    </span><span style="color:#66d9ef">return</span><span style=""> </span><span style="color:#ae81ff">0</span><span style="">;</span><span style="">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">51</span><span style=""></span><span style="">}</span></code></pre>
-</div></p>
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style="color:#66d9ef">typedef</span> <span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ll;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span>ll <span style="color:#a6e22e">solve</span>(ll n)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span>{
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span>    <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span>        <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span>    }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>    <span style="color:#66d9ef">int</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span>    ll orig <span style="color:#f92672">=</span> n;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span>    <span style="color:#66d9ef">for</span> (; ans <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">33</span>; ans<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>        n <span style="color:#f92672">=</span> orig;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>        ll sum <span style="color:#f92672">=</span> ans;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span>        n <span style="color:#f92672">-=</span> ans;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> ans; i<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>            <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">-</span> (ans <span style="color:#f92672">-</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>                <span style="color:#66d9ef">return</span> ans;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>            n <span style="color:#f92672">-=</span> sum <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>            sum <span style="color:#f92672">+=</span> sum <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span>        }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span>        <span style="color:#66d9ef">if</span> (n <span style="color:#f92672">&lt;=</span> sum <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span>            <span style="color:#66d9ef">break</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span>    }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span>    <span style="color:#66d9ef">return</span> ans;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span>}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span>{
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span><span style="color:#75715e">#ifndef DEBUG
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> ncase;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span>    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>ncase);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span>    <span style="color:#66d9ef">while</span> (ncase<span style="color:#f92672">--</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span>        ll n;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span>        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld&#34;</span>, <span style="color:#f92672">&amp;</span>n);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span>        printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, solve(n));
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span>    }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span><span style="color:#75715e">#else
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> <span style="color:#ae81ff">100</span>; i<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span>        printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;n = %d, %lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, i, solve(i));
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">47</span>    }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">48</span><span style="color:#75715e">#endif
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">49</span><span style="color:#75715e"></span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">50</span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">51</span>}</code></pre></div></p>
 
 <footer class=" footline" >
 	
