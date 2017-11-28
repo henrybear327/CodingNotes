@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/",
+	"title": "競賽程式培訓",
+	"tags": [],
+	"description": "",
+	"content": "  Pretest    "
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/",
 	"title": "CCU Competitive Programming 2017 Fall",
 	"tags": [],
@@ -25,7 +32,14 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage      "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  競賽程式培訓  Pretest    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage      "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/pretest/",
+	"title": "Pretest",
+	"tags": ["eTutor", "Implementation"],
+	"description": "大一前測",
+	"content": "\n題目2. 英哩轉公里   Solution   %.1f 會自動四捨五入喔！\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3int main() 4{ 5\tint n; 6\twhile(scanf(\u0026#34;%d\u0026#34;, \u0026amp;n) == 1) 7\tprintf(\u0026#34;%.1f\\n\u0026#34;, n * 1.6); 8\treturn 0; 9} 題目3. 判斷座標是否在圓形的範圍內   Solution   $x^2 + y^2 = r^2$\n這個公式大家記得嗎？\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3int main() 4{ 5\tint x, y; 6\twhile(scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;x, \u0026amp;y) == 2) { 7\tif(x * x + y * y \u0026lt;= 200 * 200) 8\tprintf(\u0026#34;inside\\n\u0026#34;); 9\telse 10\tprintf(\u0026#34;outside\\n\u0026#34;); 11\t} 12\treturn 0; 13} 題目12. 遞迴程式練習   Solution   遞迴的終止條件最重要了！\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3int f(int n) 4{ 5 if (n == 0 || n == 1) 6 return n + 1; 7 return f(n - 1) + f(n / 2); 8} 9 10int main() 11{ 12 int n; 13 while (scanf(\u0026#34;%d\u0026#34;, \u0026amp;n) == 1) 14 printf(\u0026#34;%d\\n\u0026#34;, f(n)); 15 16 return 0; 17} 題目26. 各位數和排序   Solution   這題做法很多！\n可以開struct紀錄，也可以直接利用pair的特性。\n最簡單的做法，直接在compare function做！\nC++的compare function所利用的性質是如果$a$要在$b$前面就回傳true。\n  AC Code (using pair) 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef pair\u0026lt;int, int\u0026gt; ii; 6 7int getSum(int n) 8{ 9 int sum = 0; 10 while (n \u0026gt; 0) { 11 sum += n % 10; 12 n /= 10; 13 } 14 return sum; 15} 16 17int main() 18{ 19 int n; 20 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 21 22 ii inp[n]; 23 for (int i = 0; i \u0026lt; n; i++) { 24 int num; 25 scanf(\u0026#34;%d\u0026#34;, \u0026amp;num); 26 27 inp[i] = ii(getSum(num), num); 28 } 29 30 sort(inp, inp + n); 31 for (int i = 0; i \u0026lt; n; i++) 32 printf(\u0026#34;%d%c\u0026#34;, inp[i].second, i == n - 1 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 33 34 return 0; 35} AC Code (using compare function) 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef pair\u0026lt;int, int\u0026gt; ii; 6 7int getSum(int n) 8{ 9 int sum = 0; 10 while (n \u0026gt; 0) { 11 sum += n % 10; 12 n /= 10; 13 } 14 return sum; 15} 16 17bool cmp(const int \u0026amp;a, const int \u0026amp;b) 18{ 19 int sa = getSum(a); 20 int sb = getSum(b); 21 if (sa == sb) 22 return a \u0026lt; b; 23 return sa \u0026lt; sb; 24} 25 26int main() 27{ 28 int n; 29 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 30 31 int inp[n]; 32 for (int i = 0; i \u0026lt; n; i++) 33 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 34 35 sort(inp, inp + n, cmp); 36 for (int i = 0; i \u0026lt; n; i++) 37 printf(\u0026#34;%d%c\u0026#34;, inp[i], i == n - 1 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 38 39 return 0; 40}\nAC Code (using lambda) 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef pair\u0026lt;int, int\u0026gt; ii; 6 7int getSum(int n) 8{ 9 int sum = 0; 10 while (n \u0026gt; 0) { 11 sum += n % 10; 12 n /= 10; 13 } 14 return sum; 15} 16 17int main() 18{ 19 int n; 20 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 21 22 int inp[n]; 23 for (int i = 0; i \u0026lt; n; i++) 24 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 25 26 sort(inp, inp + n, [](const int \u0026amp;a, const int \u0026amp;b) -\u0026gt; bool { 27 int sa = getSum(a); 28 int sb = getSum(b); 29 if (sa == sb) 30 return a \u0026lt; b; 31 return sa \u0026lt; sb; 32 }); 33 for (int i = 0; i \u0026lt; n; i++) 34 printf(\u0026#34;%d%c\u0026#34;, inp[i], i == n - 1 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 35 36 return 0; 37}\n題目31. 過半元素   Solution   讀取一行一筆測資，請請多多研究字串！\n解法不唯一，聽說有$O(n)$解法。\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4int main() 5{ 6 char str[10000]; 7 while (fgets(str, 10000, stdin) != NULL) { 8 char *num = strtok(str, \u0026#34;\\n\\r\u0026#34;); 9 map\u0026lt;int, int\u0026gt; cnt; 10 int total = 0; 11 while (num != NULL) { 12 cnt[atoi(num)]++; 13 total++; 14 num = strtok(NULL, \u0026#34;\\n\\r\u0026#34;); 15 } 16 17 int ok = INT_MIN; 18 // 5 -\u0026gt; 3 19 // 6 -\u0026gt; 4 20 for (auto i : cnt) 21 if (i.second \u0026gt;= (total + 2) / 2) { 22 ok = i.first; 23 } 24 25 if (ok == INT_MIN) 26 printf(\u0026#34;NO\\n\u0026#34;); 27 else 28 printf(\u0026#34;%d\\n\u0026#34;, ok); 29 } 30 return 0; 31} 題目33. 一整數序列所含之整數個數及平均值   Solution   字串讚讚！\n  AC Code (C++ but using C method) 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3int main() 4{ 5 char inp[10000]; 6 while (fgets(inp, 10000, stdin) != NULL) { 7 char *num = strtok(inp, \u0026#34;\\r\\n\u0026#34;); 8 int total = 0; 9 int sz = 0; 10 while (num != NULL) { 11 sz++; 12 total += atoi(num); 13 14 num = strtok(NULL, \u0026#34;\\r\\n\u0026#34;); 15 } 16 17 printf(\u0026#34;Size: %d\\n\u0026#34;, sz); 18 printf(\u0026#34;Average: %.3f\\n\u0026#34;, total * 1.0 / sz); 19 } 20 return 0; 21} AC Code (C++ but using C++ method) 1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3#define sz(x) (int(x.size())) 4int main() 5{ 6 string inp; 7 while (getline(cin, inp)) { 8 istringstream iss(inp); 9 vector\u0026lt;int\u0026gt; v; 10 int item; 11 while (iss \u0026gt;\u0026gt; item) { 12 v.push_back(item); 13 } 14 sort(v.begin(), v.end()); 15 int res = v[sz(v) / 2]; 16 int cnt = count(v.begin(), v.end(), res); 17 if (cnt \u0026gt; sz(v) / 2) 18 cout \u0026lt;\u0026lt; res \u0026lt;\u0026lt; endl; 19 else 20 cout \u0026lt;\u0026lt; \u0026#34;NO\u0026#34; \u0026lt;\u0026lt; endl; 21 } 22 return 0; 23}\n"
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/contest/r441/",
@@ -74,7 +88,7 @@
 	"title": "Contest",
 	"tags": [],
 	"description": "Programming contest",
-	"content": "  Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     "
+	"content": "  競賽程式培訓  Pretest    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
@@ -224,6 +238,13 @@
 	"content": ""
 },
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/etutor/",
+	"title": "Etutor",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/gym/",
 	"title": "Gym",
 	"tags": [],
@@ -231,14 +252,14 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
@@ -294,14 +315,14 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/pc2/",
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/pc2/",
 	"title": "Pc2",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/pc2/",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/pc2/",
 	"title": "Pc2",
 	"tags": [],
 	"description": "",
