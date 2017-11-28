@@ -247,7 +247,7 @@ int main()
 解法不唯一，聽說有$O(n)$解法。
 {{% /expand %}}
 
-### AC Code
+### AC Code (純C)
 
 {{< highlight cpp "linenos=inline" >}}
 
@@ -285,41 +285,7 @@ int main()
 
 {{< / highlight >}}
 
-## [題目33. 一整數序列所含之整數個數及平均值](http://e-tutor.itsa.org.tw/e-Tutor/mod/programming/view.php?id=30791)
-
-{{% expand "Solution" %}}
-字串讚讚！
-{{% /expand %}}
-
-### AC Code (C++ but using C method)
-
-{{< highlight cpp "linenos=inline" >}}
-
-#include <bits/stdc++.h>
-
-int main()
-{
-    char inp[10000];
-    while (fgets(inp, 10000, stdin) != NULL) {
-        char *num = strtok(inp, "\r\n ");
-        int total = 0;
-        int sz = 0;
-        while (num != NULL) {
-            sz++;
-            total += atoi(num);
-
-            num = strtok(NULL, "\r\n ");
-        }
-
-        printf("Size: %d\n", sz);
-        printf("Average: %.3f\n", total * 1.0 / sz);
-    }
-    return 0;
-}
-
-{{< / highlight >}}
-
-### AC Code (using C++ method)
+### AC Code (C++方法)
 
 謝謝黃鈺程幫忙！
 
@@ -345,6 +311,40 @@ int main()
             cout << res << endl;
         else
             cout << "NO" << endl;
+    }
+    return 0;
+}
+
+{{< / highlight >}}
+
+## [題目33. 一整數序列所含之整數個數及平均值](http://e-tutor.itsa.org.tw/e-Tutor/mod/programming/view.php?id=30791)
+
+{{% expand "Solution" %}}
+字串讚讚！
+{{% /expand %}}
+
+### AC Code 
+
+{{< highlight cpp "linenos=inline" >}}
+
+#include <bits/stdc++.h>
+
+int main()
+{
+    char inp[10000];
+    while (fgets(inp, 10000, stdin) != NULL) {
+        char *num = strtok(inp, "\r\n ");
+        int total = 0;
+        int sz = 0;
+        while (num != NULL) {
+            sz++;
+            total += atoi(num);
+
+            num = strtok(NULL, "\r\n ");
+        }
+
+        printf("Size: %d\n", sz);
+        printf("Average: %.3f\n", total * 1.0 / sz);
     }
     return 0;
 }
