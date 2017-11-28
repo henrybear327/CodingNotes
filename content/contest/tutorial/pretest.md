@@ -261,7 +261,7 @@ int main()
 解法不唯一，聽說過半元素有$O(n)$解法。
 {{% /expand %}}
 
-### AC Code (純C)
+### AC Code (strtok)
 
 {{< highlight cpp "linenos=inline" >}}
 
@@ -299,7 +299,7 @@ int main()
 
 {{< / highlight >}}
 
-### AC Code (C++方法)
+### AC Code (getline + istringstream)
 
 謝謝黃鈺程幫忙！
 
