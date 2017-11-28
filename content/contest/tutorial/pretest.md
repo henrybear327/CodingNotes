@@ -195,6 +195,8 @@ int main()
 
 ### AC Code (using lambda)
 
+謝謝黃鈺程幫忙！
+
 {{< highlight cpp "linenos=inline" >}}
 
 #include <bits/stdc++.h>
@@ -240,7 +242,7 @@ int main()
 ## [題目31. 過半元素](http://e-tutor.itsa.org.tw/e-Tutor/mod/programming/view.php?id=30781)
 
 {{% expand "Solution" %}}
-讀取一行一筆測資，請請多多研究字串！
+讀取一行一筆測資，請多多研究字串！
 
 解法不唯一，聽說有$O(n)$解法。
 {{% /expand %}}
@@ -317,7 +319,9 @@ int main()
 
 {{< / highlight >}}
 
-### AC Code (C++ but using C++ method)
+### AC Code (using C++ method)
+
+謝謝黃鈺程幫忙！
 
 {{< highlight cpp "linenos=inline" >}}
 
