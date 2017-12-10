@@ -32,7 +32,7 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  競賽程式培訓  Pretest    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage      "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017    Onsite competitions  NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage     Contests  競賽程式培訓  Pretest    November 8, 2017   NCPC 2016 Final     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/pretest/",
@@ -88,7 +88,7 @@
 	"title": "Contest",
 	"tags": [],
 	"description": "Programming contest",
-	"content": "  競賽程式培訓  Pretest    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     "
+	"content": "  Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017    Onsite competitions  NCPC 2017 Preliminary Round     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
@@ -130,7 +130,7 @@
 	"title": "ITSA/PTC",
 	"tags": [],
 	"description": "Monthly cotest",
-	"content": "  October 11, 2017   November 8, 2017    "
+	"content": "  October 11, 2017    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-usage/",
@@ -144,7 +144,7 @@
 	"title": "Onsite competitions",
 	"tags": [],
 	"description": "",
-	"content": "  NCPC 2016 Final   NCPC 2017 Preliminary Round    "
+	"content": "  NCPC 2017 Preliminary Round    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
@@ -224,6 +224,13 @@
 	"content": ""
 },
 {
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/",
+	"title": "Contests",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/educational-round/",
 	"title": "Educational Round",
 	"tags": [],
@@ -252,14 +259,14 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
 	"title": "Hugo",
 	"tags": [],
 	"description": "",
@@ -315,14 +322,14 @@
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/categories/pc2/",
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/pc2/",
 	"title": "Pc2",
 	"tags": [],
 	"description": "",
 	"content": ""
 },
 {
-	"uri": "https://henrybear327.github.io/CodingNotes/tags/pc2/",
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/pc2/",
 	"title": "Pc2",
 	"tags": [],
 	"description": "",
