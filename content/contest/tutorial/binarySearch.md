@@ -304,6 +304,8 @@ int main()
 
 ## [GukiZ hates Boxes](http://codeforces.com/contest/551/problem/C)
 
+[C++版本](http://codeforces.com/contest/551/submission/22782056)
+
 ### AC Code
 
 {{< highlight cpp "linenos=inline" >}}
