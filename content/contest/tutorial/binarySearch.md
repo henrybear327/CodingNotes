@@ -19,7 +19,7 @@ weight: 10
 
 # 整數上的 binary search
 
-## [Worms](http://codeforces.com/problemset/problem/474/B)
+## [CF 474B Worms](http://codeforces.com/problemset/problem/474/B)
 
 {{% expand "Hint" %}}
 prefix sum + lower_bound
@@ -58,10 +58,10 @@ int main()
 
 {{< / highlight >}}
 
-## [Interesting drink](http://codeforces.com/problemset/problem/706/B)
+## [CF 706B Interesting drink](http://codeforces.com/problemset/problem/706/B)
 
 {{% expand "Hint" %}}
-upper_bound!
+upper_bound
 {{% /expand %}}
 
 ### AC Code
@@ -100,14 +100,14 @@ int main()
 
 # 浮點數的 binary search
 
-## [Cable master](http://poj.org/problem?id=1064)
+## [POJ1064 Cable master](http://poj.org/problem?id=1064)
 
 {{% expand "Hint" %}}
-請小心他沒要你四捨五入
+請小心他**沒**要你四捨五入
 {{% /expand %}}
 
 {{% expand "Solution" %}}
-非常好的 floating point 二分搜題目，需要非常小心的 implement。
+非常好且經典的 floating point 二分搜題目，需要非常小心的 implementation。
 
 [題解](http://blog.csdn.net/discreeter/article/details/53285350)
 {{% /expand %}}
@@ -155,10 +155,10 @@ int main()
 
 {{< / highlight >}}
 
-## [Vanya and Lanterns](http://codeforces.com/problemset/problem/492/B)
+## [CF 492B Vanya and Lanterns](http://codeforces.com/problemset/problem/492/B)
 
 {{% expand "Solution" %}}
-有數學解，但是可以練習一下浮點數二分搜尋。
+有數學解，但是可以練習一下浮點數二分搜。
 {{% /expand %}}
 
 ### AC Code
@@ -225,7 +225,7 @@ int main()
 
 # 挑戰題
 
-## [Grapevine](https://uva.onlinejudge.org/external/121/12192.pdf)
+## [UVa 12192 Grapevine](https://uva.onlinejudge.org/external/121/12192.pdf)
 
 進階題，大家可以挑戰一下。
 
@@ -236,7 +236,7 @@ int main()
 #include <bits/stdc++.h>
 
 // For every query, binary search for the upper-left corner of the square
-// And then binary search for the lower-left corner "on the diagnal
+// And then binary search for the lower-left corner "on the diagnal"
 
 using namespace std;
 
@@ -301,7 +301,9 @@ int main()
 }
 {{< / highlight >}}
 
-## [GukiZ hates Boxes](http://codeforces.com/contest/551/problem/C)
+## [CF 551C GukiZ hates Boxes](http://codeforces.com/contest/551/problem/C)
+
+這題的 check function 需要有個神觀察！
 
 [C++版本](http://codeforces.com/contest/551/submission/22782056)
 
