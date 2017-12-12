@@ -4,7 +4,7 @@
 	"title": "競賽程式培訓",
 	"tags": [],
 	"description": "",
-	"content": "  Pretest    "
+	"content": "  Pretest   Binary Search    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/",
@@ -32,7 +32,7 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017    Onsite competitions  NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage     Contests  競賽程式培訓  Pretest    November 8, 2017   NCPC 2016 Final     "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  競賽程式培訓  Pretest   Binary Search    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage      "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/pretest/",
@@ -88,7 +88,7 @@
 	"title": "Contest",
 	"tags": [],
 	"description": "Programming contest",
-	"content": "  Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017    Onsite competitions  NCPC 2017 Preliminary Round     "
+	"content": "  競賽程式培訓  Pretest   Binary Search    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
@@ -103,6 +103,13 @@
 	"tags": ["Hugo", "Setup"],
 	"description": "My setup notes for Hugo",
 	"content": "Hugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy, version controlling it is quite simple, and it\u0026rsquo;s easy to share the source code and let people create post PR!\n\nInstall and Setup Hugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!\n Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!\ncd [sitename];\\ git init;\\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\\ # Edit your config.toml configuration file and add the Ananke theme. echo 'theme = \u0026quot;ananke\u0026quot;' \u0026gt;\u0026gt; config.toml  Using git submodule is a very good idea since we can keep track of the separate projects version controlled by git easily.\n Add some content: hugo new posts/my-first-post.md. Notice that the draft mode by default is true, so it won\u0026rsquo;t be published unless you change it to false.\n .rst will work!  Start the development server: hugo server -D\n Open config.toml\n customize the site URL, title, etc. .toml reference  In order to let Github Pages to parse from docs folder:\n add publishDir = \u0026quot;docs\u0026quot; to config.toml add publishDir: docs to config.yaml  Run hugo to build it!\n Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It\u0026rsquo;s that easy!\n  Cloning Hugo Site from Github  Make sure you have hugo installed. Installation can be checked by running hugo help Clone the repo Run git submodule init on project root and then run git submodule update to get the theme Run hugo server! You are done setting up!  Switching to DocDock Theme + My Personal Tweaks This theme provides searching, tagging, and lot\u0026rsquo;s of shortcodes out-of-the-box. Worth a try!\n Get the theme code: git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock Use the theme\u0026rsquo;s config file: cp themes/docdock/exampleSite/config.toml .:  Better run cp config.toml config.toml.bak first  Open config.toml:  Set theme = \u0026quot;docdock\u0026quot; Comment out themesdir = \u0026quot;../..\u0026quot;  Create a _index.md document in the content folder  Don\u0026rsquo;t forget to create a _index.md with title: and head: front matter!  Update files in archetypes folder:  Check front matter format Tweak and add your own files! It\u0026rsquo;s will be very handy to have some of your own!  Create a _header.md page in content folder. Its content is what you get in the logo placeholder (top left of the screen). Add a custon terms.html file to layouts/_default, for the tags and categories summary page to be rendered  MathJax support  Create a custom-head.html into a layouts/partials folder next to the content folder, this is where we should add the javascript code in every \u0026lt;head\u0026gt;. Paste the following code in to the file in order for MathJax and inline latex to work!\n\u0026lt;!-- Partial intended to be overwritten to add CSS --\u0026gt; \u0026lt;script type=\u0026quot;text/x-mathjax-config\u0026quot;\u0026gt; MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]} }); \u0026lt;/script\u0026gt; \u0026lt;script type=\u0026quot;text/javascript\u0026quot; async src=\u0026quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML\u0026quot;\u0026gt; \u0026lt;/script\u0026gt;  Also, if you have Google Analytics tracking code, you can add it here.\n Check out the result $e = mc^2$ :)\n "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/binarysearch/",
+	"title": "Binary Search",
+	"tags": ["Binary search"],
+	"description": "Introduction to binary search",
+	"content": "\n二分搜需要有單調性！所以記得先sorting。\nlower_bound() 和 upper_bound()請想清楚再用。\n浮點數要注意精度問題！\n整數上的 binary search Worms   Hint   prefix sum + lower_bound\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int main() 6{ 7 int n; 8 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 9 10 int inp[n + 1]; 11 inp[0] = 0; 12 for (int i = 1; i \u0026lt;= n; i++) 13 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 14 for (int i = 2; i \u0026lt;= n; i++) 15 inp[i] += inp[i - 1]; 16 17 int q, k = 0; 18 scanf(\u0026#34;%d\u0026#34;, \u0026amp;q); 19 20 for (int i = 0; i \u0026lt; q; i++) { 21 scanf(\u0026#34;%d\u0026#34;, \u0026amp;k); 22 printf(\u0026#34;%d\\n\u0026#34;, (int)(lower_bound(inp, inp + n + 1, k) - inp)); 23 } 24 25 return 0; 26} Interesting drink   Hint   upper_bound!\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int main() 6{ 7 int n; 8 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 9 10 int inp[n]; 11 for (int i = 0; i \u0026lt; n; i++) 12 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 13 sort(inp, inp + n); 14 15 int m; 16 scanf(\u0026#34;%d\u0026#34;, \u0026amp;m); 17 // 3 6 8 10 11 18 for (int i = 0; i \u0026lt; m; i++) { 19 int num; 20 scanf(\u0026#34;%d\u0026#34;, \u0026amp;num); 21 22 auto it = upper_bound(inp, inp + n, num); 23 printf(\u0026#34;%d\\n\u0026#34;, (int)(it - inp)); 24 } 25 26 return 0; 27} 浮點數的 binary search Cable master   Hint   請小心他沒要你四捨五入\n    Solution   非常好的 floating point 二分搜題目，需要非常小心的 implement。\n題解\n  AC Code 1#include \u0026lt;cmath\u0026gt;2#include \u0026lt;cstdio\u0026gt;3 4int n, k; 5bool check(double mid, double inp[]) 6{ 7 int cnt = 0; 8 for (int i = 0; i \u0026lt; n; i++) { 9 cnt += (int)(inp[i] / mid); 10 } 11 12 return cnt \u0026gt;= k; 13} 14 15int main() 16{ 17 scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;k); 18 19 double inp[n]; 20 for (int i = 0; i \u0026lt; n; i++) 21 scanf(\u0026#34;%lf\u0026#34;, \u0026amp;inp[i]); 22 23 double l = 0, r = 100000001; 24 for (int i = 0; i \u0026lt; 100; i++) { 25 double mid = (l + r) / 2; 26 27 if (check(mid, inp)) 28 l = mid; 29 else 30 r = mid; 31 } 32 33 printf(\u0026#34;%.2f\\n\u0026#34;, (floor)(l * 100) / 100); 34 35 return 0; 36} Vanya and Lanterns   Solution   有數學解，但是可以練習一下浮點數二分搜尋。\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5#define EPS 1e-10 6 7int n, len; 8bool check(vector\u0026lt;int\u0026gt; \u0026amp;inp, double mid) 9{ 10 if (inp[0] - mid \u0026gt; -EPS) 11 return false; 12 double farthest = inp[0] + mid; 13 for (int i = 1; i \u0026lt; (int)inp.size(); i++) { 14 if (farthest - (inp[i] - mid) \u0026gt;= -EPS) 15 farthest = inp[i] + mid; 16 else 17 return false; 18 } 19 20 if (farthest - len \u0026gt;= -EPS) 21 return true; 22 return false; 23} 24 25int main() 26{ 27 scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;len); 28 29 vector\u0026lt;int\u0026gt; inp; 30 for (int i = 0; i \u0026lt; n; i++) { 31 int num; 32 scanf(\u0026#34;%d\u0026#34;, \u0026amp;num); 33 34 inp.push_back(num); 35 } 36 37 sort(inp.begin(), inp.end()); 38 auto it = unique(inp.begin(), inp.end()); 39 inp.resize(distance(inp.begin(), it)); 40 41 double l = 0, r = len; 42 for (int i = 0; i \u0026lt; 200; i++) { 43 double mid = (l + r) / 2; 44 45 if (check(inp, mid)) 46 r = mid; 47 else 48 l = mid; 49 } 50 51 printf(\u0026#34;%.15f\\n\u0026#34;, l); 52 53 return 0; 54} 挑戰題 Grapevine 進階題，大家可以挑戰一下。\nAC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3// For every query, binary search for the upper-left corner of the square 4// And then binary search for the lower-left corner \u0026#34;on the diagnal 5 6using namespace std; 7 8int n, m; 9int inp[555][555]; 10int low, high; 11 12int search(int row, int col) 13{ 14 // printf(\u0026#34;row %d col %d\\n\u0026#34;, row, col); 15 int l = -1, r = min(n - row, m - col); 16 while(r - l \u0026gt; 1) { 17 int mid = l + (r - l) / 2; 18 // printf(\u0026#34;l = %d, mid = %d, r = %d\\n\u0026#34;, l, mid, r); 19 20 if(inp[row + mid][col + mid] \u0026lt;= high) 21 l = mid; 22 else 23 r = mid; 24 } 25 // printf(\u0026#34;l = %d\\n\u0026#34;, l); 26 27 return l; 28} 29 30void solve() 31{ 32 int ret = 0; 33 for(int i = 0; i \u0026lt; n; i++) { 34 int l = lower_bound(inp[i], inp[i] + m, low) - inp[i]; 35 if(l == m) 36 continue; 37 int r = search(i, l); 38 if(r == -1) 39 continue; 40 // printf(\u0026#34;i = %d l = %d r = %d\\n\u0026#34;, i, l, r); 41 42 ret = max(ret, r + 1); 43 } 44 45 printf(\u0026#34;%d\\n\u0026#34;, ret); 46} 47 48int main() 49{ 50 while(scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;m) == 2 \u0026amp;\u0026amp; (n || m)) { 51 for(int i = 0; i \u0026lt; n; i++) 52 for(int j = 0; j \u0026lt; m; j++) 53 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i][j]); 54 55 int q; 56 scanf(\u0026#34;%d\u0026#34;, \u0026amp;q); 57 for(int i = 0; i \u0026lt; q; i++) { 58 scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;low, \u0026amp;high); 59 60 solve(); 61 } 62 printf(\u0026#34;-\\n\u0026#34;); 63 } 64 65 return 0; 66}\n"
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/nov2017/",
@@ -130,7 +137,7 @@
 	"title": "ITSA/PTC",
 	"tags": [],
 	"description": "Monthly cotest",
-	"content": "  October 11, 2017    "
+	"content": "  October 11, 2017   November 8, 2017    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-usage/",
@@ -144,7 +151,7 @@
 	"title": "Onsite competitions",
 	"tags": [],
 	"description": "",
-	"content": "  NCPC 2017 Preliminary Round    "
+	"content": "  NCPC 2016 Final   NCPC 2017 Preliminary Round    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
@@ -219,13 +226,6 @@
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/categories/competitive-programming/",
 	"title": "Competitive Programming",
-	"tags": [],
-	"description": "",
-	"content": ""
-},
-{
-	"uri": "https://henrybear327.github.io/CodingNotes/contest/",
-	"title": "Contests",
 	"tags": [],
 	"description": "",
 	"content": ""
