@@ -4,7 +4,7 @@ description: "Introduction to binary search"
 date: 2017-12-12T10:19:36+08:00
 draft: false
 
-tags: ["Binary search"]
+tags: ["Binary search", "Codeforces", "POJ", "UVa"]
 categories: ["Competitive Programming"]
 
 weight: 10
@@ -12,11 +12,10 @@ weight: 10
 
 <!--more-->
 
-二分搜需要有單調性！所以記得先sorting。
-
-`lower_bound()` 和 `upper_bound()`請想清楚再用。
-
-浮點數要注意精度問題！
+1. 二分搜的前提：**單調性**！所以記得先 sorting 之後再二分搜
+2. 注意你所訂下的上界與下界，必要時要在對答案做檢查
+3. `lower_bound()` 和 `upper_bound()`請想清楚再用
+4. 浮點數要注意精度問題
 
 # 整數上的 binary search
 
