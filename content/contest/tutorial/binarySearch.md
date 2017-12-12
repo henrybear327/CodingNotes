@@ -301,3 +301,125 @@ int main()
     return 0;
 }
 {{< / highlight >}}
+
+## [GukiZ hates Boxes](http://codeforces.com/contest/551/problem/C)
+
+### AC Code
+
+{{< highlight cpp "linenos=inline" >}}
+
+import java.io.*;
+import java.util.*;
+
+public class C {
+	public static boolean check(int[] inp, long mid, int k) {
+		int[] cur = Arrays.copyOf(inp, inp.length);
+
+		int last = inp.length - 1;
+		while (last >= 0 && cur[last] == 0)
+			last--;
+
+		for (int i = 0; i < k; i++) {
+			long t = mid - last - 1;
+			while (t > 0 && last >= 0) {
+				if (t - cur[last] >= 0) { // move box
+					t -= cur[last];
+					cur[last] = 0;
+
+					while (last >= 0 && cur[last] == 0)
+						last--;
+				} else {
+					cur[last] -= t;
+					t = 0;
+				}
+				if (!(t > 0 && last >= 0))
+					break;
+			}
+		}
+
+		for (int i = last; i >= 0; i--)
+			if (cur[i] != 0)
+				return false;
+		return true;
+	}
+
+	public static void main(String[] args) {
+		MyScanner sc = new MyScanner();
+		out = new PrintWriter(new BufferedOutputStream(System.out));
+
+		int n = sc.nextInt(), k = sc.nextInt();
+
+		int[] inp = new int[n];
+		for (int i = 0; i < n; i++)
+			inp[i] = sc.nextInt();
+
+		long l = 0, r = (long) 1e18;
+		while (r - l > 1) {
+			long mid = (l + r) / 2;
+
+			if (check(inp, mid, k) == true)
+				r = mid;
+			else
+				l = mid;
+		}
+
+		out.println(r);
+
+		out.close();
+	}
+
+	// PrintWriter for faster output
+	public static PrintWriter out;
+
+	// MyScanner class for faster input
+	public static class MyScanner {
+		BufferedReader br;
+		StringTokenizer st;
+
+		public MyScanner() {
+			br = new BufferedReader(new InputStreamReader(System.in));
+		}
+
+		boolean hasNext() {
+			while (st == null || !st.hasMoreElements()) {
+				try {
+					st = new StringTokenizer(br.readLine());
+				} catch (Exception e) {
+					return false;
+				}
+			}
+			return true;
+		}
+
+		String next() {
+			if (hasNext())
+				return st.nextToken();
+			return null;
+		}
+
+		int nextInt() {
+			return Integer.parseInt(next());
+		}
+
+		long nextLong() {
+			return Long.parseLong(next());
+		}
+
+		double nextDouble() {
+			return Double.parseDouble(next());
+		}
+
+		String nextLine() {
+			String str = "";
+			try {
+				str = br.readLine();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			return str;
+		}
+	}
+}
+
+{{< / highlight >}}
+

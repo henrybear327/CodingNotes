@@ -324,6 +324,10 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 <ul>
 <li><a href="#ac-code-4">AC Code</a></li>
 </ul></li>
+<li><a href="#gukiz-hates-boxes-http-codeforces-com-contest-551-problem-c"><a href="http://codeforces.com/contest/551/problem/C">GukiZ hates Boxes</a></a>
+<ul>
+<li><a href="#ac-code-5">AC Code</a></li>
+</ul></li>
 </ul></li>
 </ul>
 </nav>
@@ -683,6 +687,123 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 <span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">64</span>    
 <span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">65</span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
 <span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">66</span>}</code></pre></div></p>
+
+<h2 id="gukiz-hates-boxes-http-codeforces-com-contest-551-problem-c"><a href="http://codeforces.com/contest/551/problem/C">GukiZ hates Boxes</a></h2>
+
+<h3 id="ac-code-5">AC Code</h3>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  1</span>import java.io.<span style="color:#f92672">*</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  2</span>import java.util.<span style="color:#f92672">*</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  3</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  4</span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span> {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  5</span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> boolean check(<span style="color:#66d9ef">int</span>[] inp, <span style="color:#66d9ef">long</span> mid, <span style="color:#66d9ef">int</span> k) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  6</span>		<span style="color:#66d9ef">int</span>[] cur <span style="color:#f92672">=</span> Arrays.copyOf(inp, inp.length);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  7</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  8</span>		<span style="color:#66d9ef">int</span> last <span style="color:#f92672">=</span> inp.length <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  9</span>		<span style="color:#66d9ef">while</span> (last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> cur[last] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 10</span>			last<span style="color:#f92672">--</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 11</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 12</span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> k; i<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 13</span>			<span style="color:#66d9ef">long</span> t <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> last <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 14</span>			<span style="color:#66d9ef">while</span> (t <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 15</span>				<span style="color:#66d9ef">if</span> (t <span style="color:#f92672">-</span> cur[last] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e">// move box
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 16</span><span style="color:#75715e"></span>					t <span style="color:#f92672">-=</span> cur[last];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 17</span>					cur[last] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 18</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 19</span>					<span style="color:#66d9ef">while</span> (last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> cur[last] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 20</span>						last<span style="color:#f92672">--</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 21</span>				} <span style="color:#66d9ef">else</span> {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 22</span>					cur[last] <span style="color:#f92672">-=</span> t;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 23</span>					t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 24</span>				}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 25</span>				<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(t <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>))
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 26</span>					<span style="color:#66d9ef">break</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 27</span>			}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 28</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 29</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 30</span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> last; i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; i<span style="color:#f92672">--</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 31</span>			<span style="color:#66d9ef">if</span> (cur[i] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 32</span>				<span style="color:#66d9ef">return</span> false;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 33</span>		<span style="color:#66d9ef">return</span> true;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 34</span>	}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 35</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 36</span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> main(String[] args) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 37</span>		MyScanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyScanner();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 38</span>		out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(<span style="color:#66d9ef">new</span> BufferedOutputStream(System.out));
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 39</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 40</span>		<span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> sc.nextInt(), k <span style="color:#f92672">=</span> sc.nextInt();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 41</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 42</span>		<span style="color:#66d9ef">int</span>[] inp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[n];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 43</span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 44</span>			inp[i] <span style="color:#f92672">=</span> sc.nextInt();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 45</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 46</span>		<span style="color:#66d9ef">long</span> l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> (<span style="color:#66d9ef">long</span>) <span style="color:#ae81ff">1e18</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 47</span>		<span style="color:#66d9ef">while</span> (r <span style="color:#f92672">-</span> l <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 48</span>			<span style="color:#66d9ef">long</span> mid <span style="color:#f92672">=</span> (l <span style="color:#f92672">+</span> r) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 49</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 50</span>			<span style="color:#66d9ef">if</span> (check(inp, mid, k) <span style="color:#f92672">==</span> true)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 51</span>				r <span style="color:#f92672">=</span> mid;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 52</span>			<span style="color:#66d9ef">else</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 53</span>				l <span style="color:#f92672">=</span> mid;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 54</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 55</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 56</span>		out.println(r);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 57</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 58</span>		out.close();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 59</span>	}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 60</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 61</span>	<span style="color:#75715e">// PrintWriter for faster output
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 62</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> PrintWriter out;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 63</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 64</span>	<span style="color:#75715e">// MyScanner class for faster input
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 65</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyScanner</span> {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 66</span>		BufferedReader br;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 67</span>		StringTokenizer st;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 68</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 69</span>		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">MyScanner</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 70</span>			br <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> InputStreamReader(System.in));
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 71</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 72</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 73</span>		boolean <span style="color:#a6e22e">hasNext</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 74</span>			<span style="color:#66d9ef">while</span> (st <span style="color:#f92672">==</span> null <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>st.hasMoreElements()) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 75</span>				<span style="color:#66d9ef">try</span> {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 76</span>					st <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringTokenizer(br.readLine());
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 77</span>				} <span style="color:#66d9ef">catch</span> (Exception e) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 78</span>					<span style="color:#66d9ef">return</span> false;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 79</span>				}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 80</span>			}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 81</span>			<span style="color:#66d9ef">return</span> true;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 82</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 83</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 84</span>		String <span style="color:#a6e22e">next</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 85</span>			<span style="color:#66d9ef">if</span> (hasNext())
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 86</span>				<span style="color:#66d9ef">return</span> st.nextToken();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 87</span>			<span style="color:#66d9ef">return</span> null;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 88</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 89</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 90</span>		<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nextInt</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 91</span>			<span style="color:#66d9ef">return</span> Integer.parseInt(next());
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 92</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 93</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 94</span>		<span style="color:#66d9ef">long</span> <span style="color:#a6e22e">nextLong</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 95</span>			<span style="color:#66d9ef">return</span> Long.parseLong(next());
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 96</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 97</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 98</span>		<span style="color:#66d9ef">double</span> <span style="color:#a6e22e">nextDouble</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 99</span>			<span style="color:#66d9ef">return</span> Double.parseDouble(next());
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">100</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">101</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">102</span>		String <span style="color:#a6e22e">nextLine</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">103</span>			String str <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">104</span>			<span style="color:#66d9ef">try</span> {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">105</span>				str <span style="color:#f92672">=</span> br.readLine();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">106</span>			} <span style="color:#66d9ef">catch</span> (IOException e) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">107</span>				e.printStackTrace();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">108</span>			}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">109</span>			<span style="color:#66d9ef">return</span> str;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">110</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">111</span>	}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">112</span>}</code></pre></div></p>
 
 <footer class=" footline" >
 	
