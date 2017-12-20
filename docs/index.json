@@ -4,7 +4,7 @@
 	"title": "競賽程式培訓",
 	"tags": [],
 	"description": "",
-	"content": "  Pretest   Binary Search    "
+	"content": "  Pretest   Binary Search   大一程式設計期末專題    "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/",
@@ -32,7 +32,7 @@
 	"title": "Coding Blog",
 	"tags": [],
 	"description": "",
-	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  競賽程式培訓  Pretest   Binary Search    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage      "
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  競賽程式培訓  Pretest   Binary Search   大一程式設計期末專題    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage      "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/pretest/",
@@ -88,7 +88,7 @@
 	"title": "Contest",
 	"tags": [],
 	"description": "Programming contest",
-	"content": "  競賽程式培訓  Pretest   Binary Search    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     "
+	"content": "  競賽程式培訓  Pretest   Binary Search   大一程式設計期末專題    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     "
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
@@ -152,6 +152,13 @@
 	"tags": [],
 	"description": "",
 	"content": "  NCPC 2016 Final   NCPC 2017 Preliminary Round    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/freshmanfallfinalproject/",
+	"title": "大一程式設計期末專題",
+	"tags": ["Implementation"],
+	"description": "教學",
+	"content": "作業題目   Attachments   2048題目說明.docx  (18 kB)   AB測資版.docx  (15 kB)     \n猜數字 數字分解 + 檢查重複數值。這些都是作業有的技巧歐！\nAC Code 1#include \u0026lt;stdio.h\u0026gt;2 3int check(int ans, int guess) 4{ 5 int ansDecompose[4] = {0}, guessDecompose[4] = {0}; 6 int aCnt[10] = {0}, gCnt[10] = {0}; 7 int orig = guess; 8\t9\tint i; 10 for (i = 0; i \u0026lt; 4; i++) { 11 ansDecompose[i] = ans % 10; 12 aCnt[ans % 10]++; 13 ans /= 10; 14 } 15 for (i = 0; i \u0026lt; 4; i++) { 16 guessDecompose[i] = guess % 10; 17 if (gCnt[guess % 10] != 0) { 18 printf(\u0026#34;%d is an invalid guess.\\n\u0026#34;, orig); 19 return 0; 20 } 21 gCnt[guess % 10]++; 22 guess /= 10; 23 } 24 25 int a = 0, b = 0; 26 27 for (i = 0; i \u0026lt; 4; i++) { 28 if (ansDecompose[i] == guessDecompose[i]) 29 a++; 30 else if (aCnt[guessDecompose[i]] \u0026gt; 0) { 31 b++; 32 } 33 } 34 35 printf(\u0026#34;%dA%dB\\n\u0026#34;, a, b); 36 37 return a == 4; 38} 39 40void solve() 41{ 42 int ans; 43 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ans); 44 45 int guess; 46 47 int history[9999] = {0}; 48 while (scanf(\u0026#34;%d\u0026#34;, \u0026amp;guess) == 1) { 49 // check guessing history 50 if (history[guess] == 1) { 51 printf(\u0026#34;%d is already guessed.\\n\u0026#34;, guess); 52 continue; 53 } 54 history[guess] = 1; 55 56 if (check(ans, guess) == 1) 57 break; 58 } 59} 60 61int main() 62{ 63 int ncase; 64 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 65 while (ncase--) { 66 solve(); 67 if (ncase) 68 printf(\u0026#34;\\n\u0026#34;); 69 } 70 71 return 0; 72}\n2048 要如何把四個方向有效率的實作移動呢？沒錯，就是透過旋轉！\n只要實作其中一個方向的移動後，其他方向就是先選轉到剛剛實作好的方向後，做完，再轉回去就好啦！\n注意 Game over 條件，別看錯了QQ\nAC Code 1#include \u0026lt;stdio.h\u0026gt;2 3void print(int inp[4][4]) 4{ 5 // printf(\u0026#34;==============\\n\u0026#34;); 6 int i, j; 7 for (i = 0; i \u0026lt; 4; i++) 8 for (j = 0; j \u0026lt; 4; j++) 9 printf(\u0026#34;%d%c\u0026#34;, inp[i][j], j == 3 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 10 // printf(\u0026#34;==============\\n\u0026#34;); 11} 12 13int checkSame(int inp[4][4]) 14{ 15 int i, j, k; 16 int hasSame = 0; 17 for (i = 0; i \u0026lt; 4; i++) { 18 for (j = 0; j \u0026lt; 4; j++) { 19 if (inp[i][j] == 0) 20 continue; 21 for (k = j + 1; k \u0026lt; 4; k++) { 22 if (inp[i][k] == 0) 23 continue; 24 if (inp[i][j] == inp[i][k]) { 25 hasSame = 1; 26 } else { 27 j = k - 1; 28 break; 29 } 30 } 31 } 32 } 33 return hasSame; 34} 35 36void rotate90Left(int inp[4][4]) 37{ 38 int i, j, tmp[4][4]; 39 for (i = 0; i \u0026lt; 4; i++) 40 for (j = 0; j \u0026lt; 4; j++) { 41 tmp[i][j] = inp[j][4 - 1 - i]; 42 } 43 44 for (i = 0; i \u0026lt; 4; i++) 45 for (j = 0; j \u0026lt; 4; j++) 46 inp[i][j] = tmp[i][j]; 47} 48 49// 0, no message 50// 1, has 64 51// 2, no move 52int move(int inp[4][4]) 53{ 54 // printf(\u0026#34;Before\\n\u0026#34;); 55 // print(inp); 56 57 int i, j, k; 58 int has0 = 0; 59 int has64 = 0; 60 for (i = 0; i \u0026lt; 4; i++) { 61 for (j = 0; j \u0026lt; 4; j++) { 62 if (inp[i][j] == 0) 63 continue; 64 65 for (k = j + 1; k \u0026lt; 4; k++) { 66 if (inp[i][k] == 0) // 0, continue 67 continue; 68 if (inp[i][j] == inp[i][k]) { // same, merge 69 inp[i][j] += inp[i][k]; 70 inp[i][k] = 0; 71 break; 72 } else { // not the same, skip 73 break; 74 } 75 } 76 } 77 } 78 79 for (i = 0; i \u0026lt; 4; i++) { 80 int lastZero = -1; 81 for (j = 0; j \u0026lt; 4; j++) { 82 if (inp[i][j] == 64) 83 has64 = 1; 84 if (inp[i][j] == 0) 85 has0 = 1; 86 87 if (inp[i][j] != 0 \u0026amp;\u0026amp; lastZero != -1) { 88 inp[i][lastZero] = inp[i][j]; // move 89 inp[i][j] = 0; // fill zero 90 lastZero = j; // crucial 91 continue; 92 } 93 if (inp[i][j] == 0 \u0026amp;\u0026amp; 94 lastZero == -1) // update last when no previous zero is present 95 lastZero = j; 96 } 97 } 98 99 // printf(\u0026#34;after\\n\u0026#34;); 100 // print(inp); 101 102 if (has64 == 1) 103 return 1; 104 else if (has64 == 0 \u0026amp;\u0026amp; has0 == 0) { 105 int hasSame = checkSame(inp); 106 if (hasSame == 0) { 107 rotate90Left(inp); 108 hasSame = checkSame(inp); 109 rotate90Left(inp); 110 rotate90Left(inp); 111 rotate90Left(inp); 112 } 113 return hasSame == 0 ? 2 : 0; 114 } else 115 return 0; 116} 117 118void swap(int *a, int *b) 119{ 120 int tmp = *a; 121 *a = *b; 122 *b = tmp; 123} 124 125void solve() 126{ 127 int i, j, inp[4][4]; 128 for (i = 0; i \u0026lt; 4; i++) 129 for (j = 0; j \u0026lt; 4; j++) 130 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i][j]); 131 char dir[10]; 132 scanf(\u0026#34;%s\u0026#34;, dir); 133 134 // a left 135 // s down 136 // d right 137 // w up 138 139 // merge and move 140 int ret = 0; 141 if (dir[0] == \u0026#39;a\u0026#39;) { 142 ret = move(inp); 143 } else if (dir[0] == \u0026#39;d\u0026#39;) { 144 rotate90Left(inp); 145 rotate90Left(inp); 146 ret = move(inp); 147 rotate90Left(inp); 148 rotate90Left(inp); 149 } else if (dir[0] == \u0026#39;s\u0026#39;) { 150 rotate90Left(inp); 151 rotate90Left(inp); 152 rotate90Left(inp); 153 ret = move(inp); 154 rotate90Left(inp); 155 } else { // w 156 rotate90Left(inp); 157 ret = move(inp); 158 rotate90Left(inp); 159 rotate90Left(inp); 160 rotate90Left(inp); 161 } 162 163 print(inp); 164 if (ret == 1) 165 printf(\u0026#34;You win\\n\u0026#34;); 166 else if (ret == 2) 167 printf(\u0026#34;Game over\\n\u0026#34;); 168} 169 170int main() 171{ 172 int ncase; 173 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 174 while (ncase--) { 175 solve(); 176 if (ncase) 177 printf(\u0026#34;\\n\u0026#34;); 178 } 179 180 return 0; 181}\n"
 },
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
@@ -373,6 +380,13 @@
 {
 	"uri": "https://henrybear327.github.io/CodingNotes/tags/",
 	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/tutorial/",
+	"title": "Tutorial",
 	"tags": [],
 	"description": "",
 	"content": ""

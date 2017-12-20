@@ -113,6 +113,11 @@
   </url>
   
   <url>
+    <loc>https://henrybear327.github.io/CodingNotes/contest/tutorial/freshmanfallfinalproject/</loc>
+    <lastmod>2017-12-20T15:20:09+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/</loc>
     <lastmod>2017-10-14T23:11:41+08:00</lastmod>
   </url>
@@ -293,6 +298,12 @@
   <url>
     <loc>https://henrybear327.github.io/CodingNotes/tags/</loc>
     <lastmod>2017-10-13T20:36:01+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://henrybear327.github.io/CodingNotes/categories/tutorial/</loc>
+    <lastmod>2017-12-20T15:20:09+08:00</lastmod>
     <priority>0</priority>
   </url>
   
