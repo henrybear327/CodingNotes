@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="generator" content="Hugo 0.32.3" />
+    <meta name="description" content="">
+
+
+    <title>November 8, 2017 :: Docdock</title>
+    <link rel="shortcut icon" href="/CodingNotes/images/favicon.png" type="image/x-icon" />
+    <link href="/CodingNotes/css/nucleus.css" rel="stylesheet">
+    <link href="/CodingNotes/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/CodingNotes/css/hybrid.css" rel="stylesheet">
+    <link href="/CodingNotes/css/featherlight.min.css" rel="stylesheet">
+    <link href="/CodingNotes/css/auto-complete.css" rel="stylesheet">
+    
+    <link href="/CodingNotes/css/theme.css" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="/CodingNotes/css/bootstrap.min.css">
+    <script src="/CodingNotes/js/jquery-2.x.min.js"></script>
+    <style type="text/css">
+      :root #header + #content > #left > #rlblock_left {
+        display:none !important;
+      }
+    </style>
+
+    
+
+    
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+</script>
+<script type="text/javascript" async
+src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-107858184-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-107858184-1');
+</script>
+
+  </head>
+  <body class="" data-url="/CodingNotes/contest/itsa_ptc/nov2017/">
+    <nav id="sidebar" class="showVisitedLinks"><div class="highlightable">
+  <div id="header-wrapper">
+    <div id="header"> 
+	<p><i class='fa fa-home'></i> <a href="https://henrybear327.github.io/CodingNotes/">Coding Notes</a></p>
+ 
+
+
+    </div><div class="searchbox">
+    <label for="search-by"><i class="fa fa-search"></i></label>
+    <input data-search-input id="search-by" type="text" placeholder="Search...">
+    <span data-search-clear=""><i class="fa fa-close"></i></span>
+</div>
+<script type="text/javascript" src="/CodingNotes/js/lunr.min.js"></script>
+<script type="text/javascript" src="/CodingNotes/js/auto-complete.js"></script>
+<script type="text/javascript">
+    var baseurl = "https:\/\/henrybear327.github.io\/CodingNotes\/";
+</script>
+<script type="text/javascript" src="/CodingNotes/js/search.js"></script>
+
+  </div>
+
+
+    <ul class="topics">
+    <li data-nav-id="/CodingNotes/contest/" class="dd-item parent">
+      <a href="/CodingNotes/contest/">
+        <span><i class='fa fa-edit'></i> Contest</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/contest/tutorial/" class="dd-item">
+      <a href="/CodingNotes/contest/tutorial/">
+        <span><i class='fa fa-edit'></i> 競賽程式培訓</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/tutorial/pretest/" class="dd-item">
+        <a href="/CodingNotes/contest/tutorial/pretest/">
+          <span>Pretest</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/contest/tutorial/binarysearch/" class="dd-item">
+        <a href="/CodingNotes/contest/tutorial/binarysearch/">
+          <span>Binary Search</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/contest/tutorial/freshmanfallfinalproject/" class="dd-item">
+        <a href="/CodingNotes/contest/tutorial/freshmanfallfinalproject/">
+          <span>大一程式設計期末專題</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/apcs/" class="dd-item">
+      <a href="/CodingNotes/contest/apcs/">
+        <span><i class='fa fa-edit'></i> APCS</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/apcs/1061028/" class="dd-item">
+        <a href="/CodingNotes/contest/apcs/1061028/">
+          <span>APCS 1061028</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/codeforces/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/">
+        <span><i class='fa fa-edit'></i> Codeforces</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/contest/codeforces/educational/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/educational/">
+        <span><i class='fa fa-edit'></i> Educational Rounds</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/codeforces/educational/30/" class="dd-item">
+        <a href="/CodingNotes/contest/codeforces/educational/30/">
+          <span>Round 30</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/codeforces/contest/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/contest/">
+        <span><i class='fa fa-edit'></i> Rated Contests</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/codeforces/contest/r441/" class="dd-item">
+        <a href="/CodingNotes/contest/codeforces/contest/r441/">
+          <span>Round 441</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/codeforces/gym/" class="dd-item">
+      <a href="/CodingNotes/contest/codeforces/gym/">
+        <span><i class='fa fa-edit'></i> Gym</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/codeforces/gym/ecpc16/" class="dd-item">
+        <a href="/CodingNotes/contest/codeforces/gym/ecpc16/">
+          <span>2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/itsa_ptc/" class="dd-item parent">
+      <a href="/CodingNotes/contest/itsa_ptc/">
+        <span><i class='fa fa-edit'></i> ITSA/PTC</span>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/itsa_ptc/oct2017/" class="dd-item">
+        <a href="/CodingNotes/contest/itsa_ptc/oct2017/">
+          <span>October 11, 2017</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/contest/itsa_ptc/nov2017/" class="dd-item active">
+        <a href="/CodingNotes/contest/itsa_ptc/nov2017/">
+          <span>November 8, 2017</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/contest/onsite/" class="dd-item">
+      <a href="/CodingNotes/contest/onsite/">
+        <span><i class='fa fa-edit'></i> Onsite competitions</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/contest/onsite/ncpc2016/" class="dd-item">
+        <a href="/CodingNotes/contest/onsite/ncpc2016/">
+          <span>NCPC 2016 Final</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/contest/onsite/ncpc2017preliminary/" class="dd-item">
+        <a href="/CodingNotes/contest/onsite/ncpc2017preliminary/">
+          <span>NCPC 2017 Preliminary Round</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/course/" class="dd-item">
+      <a href="/CodingNotes/course/">
+        <span><i class='fa fa-edit'></i> Course Notes</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/" class="dd-item">
+      <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/">
+        <span><i class='fa fa-edit'></i> CCU Competitive Programming 2017 Fall</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/pc2/" class="dd-item">
+        <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/pc2/">
+          <span>PC2 在 Mac 上的使用方法</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/" class="dd-item">
+        <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/">
+          <span>Linear function</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/" class="dd-item">
+        <a href="/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/">
+          <span>Exam A Problem B</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/CodingNotes/tools/" class="dd-item">
+      <a href="/CodingNotes/tools/">
+        <span><i class='fa fa-edit'></i> Tools</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+    <li data-nav-id="/CodingNotes/tools/hugo/" class="dd-item">
+      <a href="/CodingNotes/tools/hugo/">
+        <span><i class='fa fa-edit'></i> Hugo</span><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </a>
+        <ul>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-setup/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-setup/">
+          <span>Hugo Setup</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+      <li data-nav-id="/CodingNotes/tools/hugo/hugo-usage/" class="dd-item">
+        <a href="/CodingNotes/tools/hugo/hugo-usage/">
+          <span>Hugo Usage</span><i class="fa fa-circle-thin read-icon"></i>
+        </a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+        <section id="shortcuts">
+                <li class="" role=""><h3>索引</h3><a href="/CodingNotes/tags" target="_blank" rel="noopener"><i class='fa fa-link'></i> Tags</a></li>
+                <li class="" role=""><a href="/CodingNotes/categories" target="_blank" rel="noopener"><i class='fa fa-link'></i> Categories</a></li>
+                <li class="" role=""><h3>About me</h3><a href="https://github.com/henrybear327?tab=repositories" target="_blank" rel="noopener"><i class='fa fa-github'></i> Github repo</a></li>
+                <li class="" role=""><a href="https://itunes.apple.com/tw/app/cculife/id1091437125?l=zh&amp;mt=8" target="_blank" rel="noopener"><i class='fa fa-camera'></i> CCULife</a></li>
+                <li class="" role=""><a href="https://gohugo.io/" target="_blank" rel="noopener"><i class='fa fa-bookmark'></i> Hugo Official Site</a></li>
+                <li class="" role=""><h3>題解網站</h3><a href="https://amoshyc.github.io/CPsolution/" target="_blank" rel="noopener"><i class='fa fa-bullhorn'></i> amoshyc 題解網站</a></li>
+        </section>
+            <a class="" href="#" data-clear-history-toggle=""><i class="fa  fa-history"></i> Clear History</a>
+    </ul>
+
+
+    <section id="footer">
+    </section>
+  </div>
+</nav>
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+        
+          <div id="top-bar">
+            
+              
+              
+              
+            <div id="top-github-link">
+              <a class="github-link" href="https://github.com/henrybear327/CodingNotes/tree/master/content/contest/itsa_ptc/Nov2017.md" target="blank">
+                <i class="fa fa-code-fork"></i>
+                Edit page
+              </a>
+            </div><div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <span id="sidebar-toggle-span">
+                  <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                    <i class="fa fa-bars"></i>
+                  </a>
+                </span>
+                <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
+                <span class="links">
+                
+
+
+
+
+
+
+
+
+
+
+ <a href='/CodingNotes/'>Coding Blog</a> > <a href='/CodingNotes/contest/'>Contest</a> > <a href='/CodingNotes/contest/itsa_ptc/'>ITSA/PTC</a> > November 8, 2017
+
+ 
+
+ 
+
+ 
+
+   
+                </span>
+            </div>
+            <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#a">A</a>
+<ul>
+<li><a href="#ac-code">AC Code</a></li>
+</ul></li>
+<li><a href="#b">B</a>
+<ul>
+<li><a href="#ac-code-1">AC Code</a></li>
+</ul></li>
+<li><a href="#e">E</a>
+<ul>
+<li><a href="#ac-code-2">AC Code</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+          </div>
+        
+        
+          <div id="tags">
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/ptc">PTC</a>
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/two-pointer">two pointer</a>
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/binary-search">binary search</a>
+            
+              <a class="label label-default" href="https://henrybear327.github.io/CodingNotes/tags/physics">physics</a>
+            
+          </div>
+        
+        <div id="body-inner">
+          
+            <h1>November 8, 2017</h1>
+          
+
+
+
+
+<p></p>
+
+<div class="panel panel-success">
+	<div class="panel-heading">比賽題目</div>
+	<div class="panel-body"><section class="attachments">
+    <label>
+        <span class="glyphicon glyphicon-paperclip" aria-hidden="true"></span>
+        Attachments
+    </label>
+    
+        
+    
+    
+        
+        
+            
+                <li>
+                    <a href="https://henrybear327.github.io/CodingNotes//contest/itsa_ptc/Nov2017.files/PTC201711.pdf" >
+                        PTC201711.pdf
+                    </a>
+                    (494 kB)
+                </li>
+            
+        
+    
+</section>
+</div>
+	
+</div>
+
+
+<h2 id="a">A</h2>
+
+<p><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Hint
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>力矩</p>
+
+    </div>
+</div>
+
+</p>
+
+<p><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Solution
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>有個觀察，就是從上而下，棒子一個一個加入。如果從某棒子以上的所有棒子的重心超出了他所壓的棒子的範圍，必倒下。</p>
+
+    </div>
+</div>
+
+</p>
+
+<h3 id="ac-code">AC Code</h3>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="color:#66d9ef">double</span> eps <span style="color:#f92672">=</span> <span style="color:#ae81ff">1e-6</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style="color:#66d9ef">inline</span> <span style="color:#66d9ef">int</span> <span style="color:#a6e22e">getint</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span>    <span style="color:#66d9ef">int</span> inp; scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>inp); <span style="color:#66d9ef">return</span> inp;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span>}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span><span style="color:#66d9ef">int</span> N;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span><span style="color:#66d9ef">int</span> len[<span style="color:#ae81ff">100</span>];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span><span style="color:#66d9ef">int</span> pos[<span style="color:#ae81ff">100</span>];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">C</span>(<span style="color:#66d9ef">int</span> level, <span style="color:#66d9ef">double</span> mid) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span>    <span style="color:#66d9ef">double</span> left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>	
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> N <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;=</span> level; i<span style="color:#f92672">--</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span>		<span style="color:#66d9ef">double</span> a <span style="color:#f92672">=</span> pos[i], b <span style="color:#f92672">=</span> pos[i] <span style="color:#f92672">+</span> len[i];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span>		<span style="color:#66d9ef">double</span> center <span style="color:#f92672">=</span> (a <span style="color:#f92672">+</span> b) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2.0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>		<span style="color:#66d9ef">if</span>(center <span style="color:#f92672">-</span> mid <span style="color:#f92672">&lt;</span> eps)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>			left <span style="color:#f92672">+=</span> (mid <span style="color:#f92672">-</span> center) <span style="color:#f92672">*</span> len[i];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>		<span style="color:#66d9ef">else</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>			right <span style="color:#f92672">+=</span> (center <span style="color:#f92672">-</span> mid) <span style="color:#f92672">*</span> len[i];		
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span>    }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span>    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">-</span> right <span style="color:#f92672">&lt;</span> eps) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span>    }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span>}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">solve</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> N <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">--</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span>        <span style="color:#75715e">// find center
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">double</span> lb <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, ub <span style="color:#f92672">=</span> <span style="color:#ae81ff">200</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>; j<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span>            <span style="color:#66d9ef">double</span> mid <span style="color:#f92672">=</span> (lb <span style="color:#f92672">+</span> ub) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span>            <span style="color:#66d9ef">if</span> (C(i, mid) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span>                lb <span style="color:#f92672">=</span> mid;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span>            }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span>            <span style="color:#66d9ef">else</span> {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span>                ub <span style="color:#f92672">=</span> mid;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span>            }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span>        }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">47</span>        <span style="color:#66d9ef">double</span> center <span style="color:#f92672">=</span> lb;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">48</span>        <span style="color:#66d9ef">double</span> a <span style="color:#f92672">=</span> pos[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>], b <span style="color:#f92672">=</span> pos[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">+</span> len[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">49</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">50</span>        <span style="color:#66d9ef">if</span> (a <span style="color:#f92672">-</span> center <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">+</span>eps <span style="color:#f92672">&amp;&amp;</span> center <span style="color:#f92672">-</span> b <span style="color:#f92672">&lt;=</span> <span style="color:#f92672">+</span>eps) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">51</span>            <span style="color:#66d9ef">continue</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">52</span>        } <span style="color:#66d9ef">else</span> {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">53</span>            <span style="color:#66d9ef">return</span> false;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">54</span>        }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">55</span>    }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">56</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">57</span>    <span style="color:#66d9ef">return</span> true;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">58</span>}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">59</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">60</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">61</span>    <span style="color:#66d9ef">int</span> TC <span style="color:#f92672">=</span> getint();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">62</span>    <span style="color:#66d9ef">while</span> (TC<span style="color:#f92672">--</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">63</span>        N <span style="color:#f92672">=</span> getint();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">64</span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> N; i<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">65</span>            scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>len[i]);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">66</span>        }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">67</span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> N; i<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">68</span>            scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>pos[i]);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">69</span>        }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">70</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">71</span>        <span style="color:#66d9ef">if</span> (solve()) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">72</span>            puts(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;STABLE&#34;</span>);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">73</span>        }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">74</span>        <span style="color:#66d9ef">else</span> {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">75</span>            puts(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;DOWN&#34;</span>);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">76</span>        }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">77</span>    }
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">78</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">79</span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">80</span>}</code></pre></div></p>
+
+<h2 id="b">B</h2>
+
+<p><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Hint
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>簡單 greedy</p>
+
+    </div>
+</div>
+
+</p>
+
+<p><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Solution
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>task從小到大，從最小可以匹配的worker來做。</p>
+
+    </div>
+</div>
+
+</p>
+
+<h3 id="ac-code-1">AC Code</h3>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span>{
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span>	<span style="color:#66d9ef">int</span> ncase;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span>	scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>ncase);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span>	<span style="color:#66d9ef">while</span>(ncase<span style="color:#f92672">--</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span>		<span style="color:#66d9ef">int</span> n, m;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span>		scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>m);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span>		<span style="color:#66d9ef">int</span> work[n], worker[m];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>work[i]);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> m; i<span style="color:#f92672">++</span>) scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>worker[i]);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>		sort(work, work <span style="color:#f92672">+</span> n);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span>		priority_queue<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span>, vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span>, greater<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> pq;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> m; i<span style="color:#f92672">++</span>) 
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>			pq.push(worker[i]);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>		
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>		<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> ans <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>		
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span>			<span style="color:#66d9ef">bool</span> used <span style="color:#f92672">=</span> false;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span>			<span style="color:#66d9ef">while</span>(pq.size() <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span>				<span style="color:#66d9ef">long</span> <span style="color:#66d9ef">long</span> cur <span style="color:#f92672">=</span> pq.top(); pq.pop();
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span>				<span style="color:#66d9ef">if</span>(cur <span style="color:#f92672">&gt;=</span> work[i]) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span>					ans <span style="color:#f92672">+=</span> cur <span style="color:#f92672">*</span> cur;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span>					used <span style="color:#f92672">=</span> true;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span>					<span style="color:#66d9ef">break</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span>				}		
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span>			}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span>			<span style="color:#66d9ef">if</span>(used <span style="color:#f92672">==</span> false) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span>				ans <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span>				<span style="color:#66d9ef">break</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span>			}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span>		printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ans);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span>	}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span>}</code></pre></div></p>
+
+<h2 id="e">E</h2>
+
+<p><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Hint
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>$A + B = sum$, $A$ 的最佳解為 $floor(\frac{sum}{2})$</p>
+
+    </div>
+</div>
+
+</p>
+
+<p><div class="expand">
+    <div class="expand-label" style="cursor: pointer;" onclick="$h = $(this);$h.next('div').slideToggle(100,function () {$h.children('i').attr('class',function () {return $h.next('div').is(':visible') ? 'fa fa-chevron-down' : 'fa fa-chevron-right';});});">
+    	<i style="font-size:x-small;" class="fa fa-chevron-right"></i>
+    	<span>
+    	
+    	Solution
+    	
+    	</span>
+    </div>
+    <div class="expand-content" style="display: none;">
+<p>爬行法</p>
+
+<p>記得把圓展開後，串接一次。</p>
+
+    </div>
+</div>
+
+</p>
+
+<h3 id="ac-code-2">AC Code</h3>
+
+<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span>
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span>{
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span>	<span style="color:#66d9ef">int</span> ncase;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span>	scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>ncase);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span>	
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span>	<span style="color:#66d9ef">while</span>(ncase<span style="color:#f92672">--</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span>		<span style="color:#66d9ef">int</span> n;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span>		scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>n);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span>		
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>		<span style="color:#66d9ef">int</span> inp[n <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span>		<span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>			scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i]);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>			inp[i <span style="color:#f92672">+</span> n] <span style="color:#f92672">=</span> inp[i];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span>			sum <span style="color:#f92672">+=</span> inp[i];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>		
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>		<span style="color:#66d9ef">int</span> l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>		<span style="color:#66d9ef">int</span> mn <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>		<span style="color:#66d9ef">int</span> partial <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>		<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> r <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; r <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>; r<span style="color:#f92672">++</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span>			<span style="color:#75715e">//printf(&#34;just in %d %d %d\n&#34;, l, r, partial);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span><span style="color:#75715e"></span>			<span style="color:#66d9ef">while</span>(r <span style="color:#f92672">-</span> l <span style="color:#f92672">&gt;=</span> n <span style="color:#f92672">||</span> (partial <span style="color:#f92672">&gt;</span> sum <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> l <span style="color:#f92672">&lt;</span> r)) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span>				partial <span style="color:#f92672">-=</span> inp[l];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span>				l<span style="color:#f92672">++</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span>				<span style="color:#66d9ef">if</span>(partial <span style="color:#f92672">&lt;=</span> sum <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span>					mn <span style="color:#f92672">=</span> max(mn, partial);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span>				<span style="color:#75715e">//printf(&#34;popped %d %d %d\n&#34;, l, r, partial);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span><span style="color:#75715e"></span>			}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span>			
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span>			partial <span style="color:#f92672">+=</span> inp[r];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span>			<span style="color:#66d9ef">if</span>(partial <span style="color:#f92672">&lt;=</span> sum <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span>				mn <span style="color:#f92672">=</span> max(mn, partial);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span>			<span style="color:#75715e">//printf(&#34;end for %d %d %d\n&#34;, l, r, partial);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span><span style="color:#75715e"></span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span>		
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span>		<span style="color:#75715e">// left must be done
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span><span style="color:#75715e"></span>		<span style="color:#66d9ef">while</span>(l <span style="color:#f92672">&lt;</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">2</span>) {
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span>			<span style="color:#75715e">//printf(&#34;outer %d %d\n&#34;, l, partial);
+</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span><span style="color:#75715e"></span>			partial <span style="color:#f92672">-=</span> inp[l];
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span>			l<span style="color:#f92672">++</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span>			<span style="color:#66d9ef">if</span>(partial <span style="color:#f92672">&lt;=</span> sum <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span>				mn <span style="color:#f92672">=</span> max(mn, partial);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">47</span>		}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">48</span>		
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">49</span>		printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, mn, sum <span style="color:#f92672">-</span> mn);
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">50</span>	}
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">51</span>	<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">52</span>}</code></pre></div></p>
+
+<footer class=" footline" >
+	
+</footer>
+
+
+
+
+        
+
+      </div>
+    </div>
+
+    
+ 
+    
+
+    <div id="navigation">
+        <a class="nav nav-prev" href="/CodingNotes/contest/itsa_ptc/oct2017/" title="October 11, 2017"> <i class="fa fa-chevron-left"></i></a>
+        <a class="nav nav-next" href="/CodingNotes/contest/onsite/" title="Onsite competitions" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+    </div>
+
+    </section>
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>    
+
+    <script src="/CodingNotes/js/clipboard.min.js"></script>
+<script src="/CodingNotes/js/featherlight.min.js"></script>
+<script src="/CodingNotes/js/html5shiv-printshiv.min.js"></script>
+<script src="/CodingNotes/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<script src="/CodingNotes/js/modernizr.custom.71422.js"></script>
+<script src="/CodingNotes/js/learn.js"></script>
+<script src="/CodingNotes/js/hugo-learn.js"></script>
+
+
+<link href="/CodingNotes/mermaid/mermaid.css" type="text/css" rel="stylesheet"/>
+<script src="/CodingNotes/mermaid/mermaid.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+    
+
+  </body>
+</html>
+

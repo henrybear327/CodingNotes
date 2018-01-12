@@ -1,0 +1,449 @@
+[
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/",
+	"title": "競賽程式培訓",
+	"tags": [],
+	"description": "",
+	"content": "  Pretest   Binary Search   大一程式設計期末專題    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/",
+	"title": "CCU Competitive Programming 2017 Fall",
+	"tags": [],
+	"description": "",
+	"content": "  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/educational/",
+	"title": "Educational Rounds",
+	"tags": [],
+	"description": "Basic stuff, but still can&#39;t solve it QQ",
+	"content": "  Round 30    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "My notes on Hugo",
+	"content": "  Hugo Setup   Hugo Usage    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/",
+	"title": "Coding Blog",
+	"tags": [],
+	"description": "",
+	"content": " Coding Blog 歡迎來到我的程式隨筆～\n Contest  競賽程式培訓  Pretest   Binary Search   大一程式設計期末專題    APCS  APCS 1061028    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     Course Notes  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     Tools  Hugo  Hugo Setup   Hugo Usage      "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/apcs/",
+	"title": "APCS",
+	"tags": [],
+	"description": "大學程式設計先修檢測",
+	"content": "  APCS 1061028 \n   "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/pretest/",
+	"title": "Pretest",
+	"tags": ["eTutor", "Implementation"],
+	"description": "大一前測",
+	"content": "\n挑題： 叢壯滋\n題目的解法都不唯一，我只是照著我的習慣打了 sample code。\n英哩轉公里 和 判斷座標是否在圓形的範圍內，是基本功力題，如果做對前兩題代表你會寫程式，也會基本IO。\n遞迴程式練習，是遞迴基本題，如果不會寫的話請一定要花時間畫圖弄懂 recursive call graph。\n各位數和排序 是排序題，也算是看看大家進階一點的C/C++語言使用能力。解法多元，大家可以多多討論學習。\n過半元素 和 一整數序列所含之整數個數及平均值，都是IO題，加上一點基本演算法。如果可以秒殺，恭喜！\n題目2. 英哩轉公里   Solution   %.1f 會自動四捨五入喔！\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3int main() 4{ 5\tint n; 6\twhile(scanf(\u0026#34;%d\u0026#34;, \u0026amp;n) == 1) 7\tprintf(\u0026#34;%.1f\\n\u0026#34;, n * 1.6); 8\treturn 0; 9} 題目3. 判斷座標是否在圓形的範圍內   Solution   $x^2 + y^2 = r^2$\n這個公式大家記得嗎？\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3int main() 4{ 5\tint x, y; 6\twhile(scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;x, \u0026amp;y) == 2) { 7\tif(x * x + y * y \u0026lt;= 200 * 200) 8\tprintf(\u0026#34;inside\\n\u0026#34;); 9\telse 10\tprintf(\u0026#34;outside\\n\u0026#34;); 11\t} 12\treturn 0; 13} 題目12. 遞迴程式練習   Solution   遞迴的終止條件最重要了！\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3int f(int n) 4{ 5 if (n == 0 || n == 1) 6 return n + 1; 7 return f(n - 1) + f(n / 2); 8} 9 10int main() 11{ 12 int n; 13 while (scanf(\u0026#34;%d\u0026#34;, \u0026amp;n) == 1) 14 printf(\u0026#34;%d\\n\u0026#34;, f(n)); 15 16 return 0; 17} 題目26. 各位數和排序   Solution   這題做法很多！\n可以開struct紀錄，也可以直接利用pair的特性。\n最簡單的做法，直接在compare function做！\nC++的compare function所利用的性質是如果$a$要在$b$前面就回傳true。\n  AC Code (using pair) 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef pair\u0026lt;int, int\u0026gt; ii; 6 7int getSum(int n) 8{ 9 int sum = 0; 10 while (n \u0026gt; 0) { 11 sum += n % 10; 12 n /= 10; 13 } 14 return sum; 15} 16 17int main() 18{ 19 int n; 20 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 21 22 ii inp[n]; 23 for (int i = 0; i \u0026lt; n; i++) { 24 int num; 25 scanf(\u0026#34;%d\u0026#34;, \u0026amp;num); 26 27 inp[i] = ii(getSum(num), num); 28 } 29 30 sort(inp, inp + n); 31 for (int i = 0; i \u0026lt; n; i++) 32 printf(\u0026#34;%d%c\u0026#34;, inp[i].second, i == n - 1 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 33 34 return 0; 35} AC Code (using compare function) 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef pair\u0026lt;int, int\u0026gt; ii; 6 7int getSum(int n) 8{ 9 int sum = 0; 10 while (n \u0026gt; 0) { 11 sum += n % 10; 12 n /= 10; 13 } 14 return sum; 15} 16 17bool cmp(const int \u0026amp;a, const int \u0026amp;b) 18{ 19 int sa = getSum(a); 20 int sb = getSum(b); 21 if (sa == sb) 22 return a \u0026lt; b; 23 return sa \u0026lt; sb; 24} 25 26int main() 27{ 28 int n; 29 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 30 31 int inp[n]; 32 for (int i = 0; i \u0026lt; n; i++) 33 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 34 35 sort(inp, inp + n, cmp); 36 for (int i = 0; i \u0026lt; n; i++) 37 printf(\u0026#34;%d%c\u0026#34;, inp[i], i == n - 1 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 38 39 return 0; 40}\nAC Code (using lambda) 謝謝黃鈺程幫忙！\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef pair\u0026lt;int, int\u0026gt; ii; 6 7int getSum(int n) 8{ 9 int sum = 0; 10 while (n \u0026gt; 0) { 11 sum += n % 10; 12 n /= 10; 13 } 14 return sum; 15} 16 17int main() 18{ 19 int n; 20 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 21 22 int inp[n]; 23 for (int i = 0; i \u0026lt; n; i++) 24 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 25 26 sort(inp, inp + n, [](const int \u0026amp;a, const int \u0026amp;b) -\u0026gt; bool { 27 int sa = getSum(a); 28 int sb = getSum(b); 29 if (sa == sb) 30 return a \u0026lt; b; 31 return sa \u0026lt; sb; 32 }); 33 for (int i = 0; i \u0026lt; n; i++) 34 printf(\u0026#34;%d%c\u0026#34;, inp[i], i == n - 1 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 35 36 return 0; 37}\n題目31. 過半元素   Solution   讀取一行一筆測資，請多多研究字串！\nfgets vs scanf。\n解法不唯一，聽說過半元素有$O(n)$解法。\n  AC Code (strtok) 1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4int main() 5{ 6 char str[10000]; 7 while (fgets(str, 10000, stdin) != NULL) { 8 char *num = strtok(str, \u0026#34;\\n\\r\u0026#34;); 9 map\u0026lt;int, int\u0026gt; cnt; 10 int total = 0; 11 while (num != NULL) { 12 cnt[atoi(num)]++; 13 total++; 14 num = strtok(NULL, \u0026#34;\\n\\r\u0026#34;); 15 } 16 17 int ok = INT_MIN; 18 // 5 -\u0026gt; 3 19 // 6 -\u0026gt; 4 20 for (auto i : cnt) 21 if (i.second \u0026gt;= (total + 2) / 2) { 22 ok = i.first; 23 } 24 25 if (ok == INT_MIN) 26 printf(\u0026#34;NO\\n\u0026#34;); 27 else 28 printf(\u0026#34;%d\\n\u0026#34;, ok); 29 } 30 return 0; 31} AC Code (getline + istringstream) 謝謝黃鈺程幫忙！\n1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3#define sz(x) (int(x.size())) 4int main() 5{ 6 string inp; 7 while (getline(cin, inp)) { 8 istringstream iss(inp); 9 vector\u0026lt;int\u0026gt; v; 10 int item; 11 while (iss \u0026gt;\u0026gt; item) { 12 v.push_back(item); 13 } 14 sort(v.begin(), v.end()); 15 int res = v[sz(v) / 2]; 16 int cnt = count(v.begin(), v.end(), res); 17 if (cnt \u0026gt; sz(v) / 2) 18 cout \u0026lt;\u0026lt; res \u0026lt;\u0026lt; endl; 19 else 20 cout \u0026lt;\u0026lt; \u0026#34;NO\u0026#34; \u0026lt;\u0026lt; endl; 21 } 22 return 0; 23}\n題目33. 一整數序列所含之整數個數及平均值   Solution   字串讚讚！\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3int main() 4{ 5 char inp[10000]; 6 while (fgets(inp, 10000, stdin) != NULL) { 7 char *num = strtok(inp, \u0026#34;\\r\\n\u0026#34;); 8 int total = 0; 9 int sz = 0; 10 while (num != NULL) { 11 sz++; 12 total += atoi(num); 13 14 num = strtok(NULL, \u0026#34;\\r\\n\u0026#34;); 15 } 16 17 printf(\u0026#34;Size: %d\\n\u0026#34;, sz); 18 printf(\u0026#34;Average: %.3f\\n\u0026#34;, total * 1.0 / sz); 19 } 20 return 0; 21}"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/contest/r441/",
+	"title": "Round 441",
+	"tags": ["Codeforces", "Implementation", "Union Find", "Enumeration"],
+	"description": "",
+	"content": "Solved 4 in virtual contest\u0026hellip; What the pity\u0026hellip; Could have gotten my rating rasied lol\n\nA. Trip For Meal Just do simulation.\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int main() 6{ 7 int n; 8 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 9 10 int d[3]; 11 for(int i = 0; i \u0026lt; 3; i++) 12 scanf(\u0026#34;%d\u0026#34;, \u0026amp;d[i]); 13 14 int ans = 0, cur = 0, pos = 0; 15 for(int i = 1; i \u0026lt; n; i++) { 16 if(pos == 0) { 17 cur = d[0] \u0026lt; d[1] ? 0 : 1; 18 pos = d[0] \u0026lt; d[1] ? 1 : 2; 19 } else if(pos == 1) { 20 cur = d[0] \u0026lt; d[2] ? 0 : 2; 21 pos = d[0] \u0026lt; d[2] ? 0 : 2; 22 } else { 23 cur = d[1] \u0026lt; d[2] ? 1 : 2; 24 pos = d[1] \u0026lt; d[2] ? 0 : 1; 25 } 26 27 ans += d[cur]; 28 } 29 30 printf(\u0026#34;%d\\n\u0026#34;, ans); 31 32 return 0; 33} B. Divisiblity of Differences   Hint ?   Think about the remainder!\n    Solution ?   For every remainder after under modulo m, check if any of them have more then $k$ elements in it.\nSince the only way of constructing a set, which satisfies the condition that the difference between any two of them is divisible by m, is taking elements that has the same remainder.\n  1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5vector\u0026lt;int\u0026gt; rem[100100]; 6int main() 7{ 8 int n, k, m; 9 scanf(\u0026#34;%d %d %d\u0026#34;, \u0026amp;n, \u0026amp;k, \u0026amp;m); 10 11 for(int i = 0; i \u0026lt; n; i++) { 12 int num; 13 scanf(\u0026#34;%d\u0026#34;, \u0026amp;num); 14 15 rem[num % m].push_back(num); 16 } 17 18 // i = 0 19 for(int i = 0; i \u0026lt; m; i++) { 20 if((int)rem[i].size() \u0026gt;= k) { 21 printf(\u0026#34;Yes\\n\u0026#34;); 22 for(int j = 0; j \u0026lt; k; j++) 23 printf(\u0026#34;%d \u0026#34;, rem[i][j]); 24 return 0; 25 } 26 } 27 printf(\u0026#34;No\\n\u0026#34;); 28 29 return 0; 30} C. Classroom Watch   Hint ?   What are the possible values of the sum of digits of a given number?\n    Solution ?   The range of the sum of digits of a given number is $1$ ~ $9*9$ ($1$ ~ $999999999$).\nAssume $x = n - sum\\ of\\ digits\\ of\\ n$, where $sum\\ of\\ digits\\ of\\ n$ is in range $[1, 81]$. Using the above property, we can check for all x + sum_of_digits(x) and see if any of them equals to n. If yes, add that the the answer set!\n  1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int main() 6{ 7 int n; 8 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 9 10 set\u0026lt;int\u0026gt; ans; 11 for(int i = 1; i \u0026lt;= 81; i++) { 12 if(n - i \u0026gt;= 1) { 13 int num = n - i; 14 int sum = n - i; 15 while(num \u0026gt; 0) { 16 sum += num % 10; 17 num /= 10; 18 } 19 20 if(sum == n) 21 ans.insert(n - i); 22 } 23 } 24 25 printf(\u0026#34;%d\\n\u0026#34;, (int)ans.size()); 26 for(auto i : ans) 27 printf(\u0026#34;%d \u0026#34;, i); 28 29 return 0; 30} D. Sorting the Coins   Hint ?   What will the end result look like?\n    Solution ?   Since the end result will look like OOO...XXX..., and during the simulation one can observe that the total number of X in the O..X..O..X.. sequence, excluding the Xs in the end, is what will affect the hardness value. You can circle all XX..OOO and observe them. For every pass, total number of circled groups will decrease by 1.\nFor example, if we have OOOXOOXOXX, we will need 2 passes to adjust and 1 pass of checking. So the hardness value is $4 - 2 + 1$. 4 is the total number of X in the sequence, $-2$ is the Xs that is not in the end, and $+1$ is for the checking pass.\n  1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5struct UFDS { 6 int par[300100]; 7 void init() { 8 memset(par, -1, sizeof(par)); 9 } 10 11 int root(int x) { 12 return par[x] \u0026lt; 0 ? x : par[x] = root(par[x]); 13 } 14 15 void merge(int x, int y) { 16 x = root(x); 17 y = root(y); 18 19 if(x == y) 20 return; 21 if(par[x] \u0026gt; par[y]) 22 swap(x, y); 23 par[x] += par[y]; 24 par[y] = x; 25 } 26 27 int sz(int x) { 28 return -par[root(x)]; 29 } 30} uf; 31 32int main() 33{ 34 int n; 35 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 36 uf.init(); 37 38 bool has[n]; 39 memset(has, false, sizeof(has)); 40 printf(\u0026#34;1 \u0026#34;); 41 for(int i = 1; i \u0026lt;= n; i++) { 42 int pos; 43 scanf(\u0026#34;%d\u0026#34;, \u0026amp;pos); 44 pos--; 45 46 if(pos - 1 \u0026gt;= 0) { 47 if(has[pos - 1] == true) { 48 uf.merge(pos - 1, pos); 49 } 50 } 51 52 if(pos + 1 \u0026lt; n) { 53 if(has[pos + 1] == true) { 54 uf.merge(pos + 1, pos); 55 } 56 } 57 58 has[pos] = true; 59 60 if(has[n - 1] == false) 61 printf(\u0026#34;%d \u0026#34;, i + 1); 62 else 63 printf(\u0026#34;%d \u0026#34;, i - uf.sz(n - 1) + 1); 64 } 65 66 return 0; 67}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/contest/",
+	"title": "Rated Contests",
+	"tags": [],
+	"description": "",
+	"content": "  Round 441    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/pc2/",
+	"title": "PC2 在 Mac 上的使用方法",
+	"tags": ["PC2", "Linux", "Mac"],
+	"description": "",
+	"content": "PC2 其實是可以在 Mac 上面執行的！不用開啟 Windows 一樣可以上傳 judge 交作業歐～\n\n流程 首先，請先開啟終端機。\n 安裝 Homebrew: 在終端機中執行 /usr/bin/ruby -e \u0026quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\u0026quot;。  Homebrew 就像是 Linux 的 apt-get，要安裝東西就 brew install [package name] 就對啦！  安裝 Java: 在終端機中執行 brew cask install java，他會幫你裝好並設定好 Java 的路徑 下載上課用的 $PC2$ 軟體資料夾，放在你喜歡的地方。 打開 $PC2$ 的資料夾，裡面會有一個 bin 資料夾。其中，會有一個 pc2team 的檔案。將該檔案拖曳至終端機中，按下enter，等待片刻就好啦！  將檔案拖曳至終端機，應該會看到類似這樣的字串出現在終端機中：/Users/[你的Mac目前使用者帳號]/[中/間/一/堆/路/徑/...]/pc2-9.4.1_student/bin/pc2team\n  "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/gym/ecpc16/",
+	"title": "2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)",
+	"tags": ["Codeforces", "Gym", "BFS"],
+	"description": "",
+	"content": "Problem statements\n3 easy problems, but the rest are hard.\n\nB 3 cases:\n x-axis overlapping y-axis overlapping no overlapping  The case that might got you is the case of rectangles touching on the y-axis. Try this case:\n1 4 200 100 20 80 10 1 80 20 20 0 20 90 120 1 30 8 150 0  The answer is 60.198039.\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5#define N 111 6#define MAX 1e18 7 8typedef long long ll; 9 10struct Pt { 11 int x, y; 12}; 13 14struct Rect { 15 Pt upperLeft, lowerRight; 16 int k; 17}; 18 19double dist(int x1, int y1, int x2, int y2) 20{ 21 ll dx = x2 - x1; 22 ll dy = y2 - y1; 23 return sqrt(dx * dx + dy * dy); 24} 25 26void solve() 27{ 28 int n, l, u; 29 scanf(\u0026#34;%d %d %d\u0026#34;, \u0026amp;n, \u0026amp;l, \u0026amp;u); 30 31 // read 32 double m[N][N]; 33 for (int i = 0; i \u0026lt; N; i++) 34 for (int j = 0; j \u0026lt; N; j++) 35 m[i][j] = (i == j ? 0 : MAX); 36 37 vector\u0026lt;Rect\u0026gt; rect; 38 rect.push_back({{0, 0}, {u, 0}, 0}); // bottom 39 rect.push_back({{0, l}, {u, l}, 0}); // top 40 m[0][1] = m[1][0] = l; 41 42 for (int i = 0; i \u0026lt; n; i++) { 43 int h, w, d, k; 44 scanf(\u0026#34;%d %d %d %d\u0026#34;, \u0026amp;h, \u0026amp;w, \u0026amp;d, \u0026amp;k); 45 46 if (k == 0) { 47 Pt upperLeft = {0, h + d}; 48 Pt lowerRight = {w, d}; 49 rect.push_back({upperLeft, lowerRight, k}); 50 } else { 51 Pt upperLeft = {u - w, h + d}; 52 Pt lowerRight = {u, d}; 53 rect.push_back({upperLeft, lowerRight, k}); 54 } 55 56 m[i + 2][1] = m[1][i + 2] = l - h - d; 57 m[i + 2][0] = m[0][i + 2] = d; 58 } 59 60 // build 61 int sz = rect.size(); 62 for (int i = 2; i \u0026lt; sz; i++) { 63 for (int j = 2; j \u0026lt; sz; j++) { 64 if (i == j) 65 continue; 66 67 int \u0026amp;ax = rect[i].upperLeft.x; 68 int \u0026amp;ay = rect[i].upperLeft.y; 69 int \u0026amp;bx = rect[i].lowerRight.x; 70 int \u0026amp;by = rect[i].lowerRight.y; 71 int \u0026amp;ki = rect[i].k; 72 73 int \u0026amp;cx = rect[j].upperLeft.x; 74 int \u0026amp;cy = rect[j].upperLeft.y; 75 int \u0026amp;dx = rect[j].lowerRight.x; 76 int \u0026amp;dy = rect[j].lowerRight.y; 77 int \u0026amp;kj = rect[j].k; 78 79 double val; 80 if (ax \u0026lt;= cx \u0026amp;\u0026amp; cx \u0026lt;= bx) { // case1 - 1 81 if (ki != kj \u0026amp;\u0026amp; cx == bx \u0026amp;\u0026amp; by \u0026lt;= cy \u0026amp;\u0026amp; cy \u0026lt;= ay) // touching case 82 val = 0; 83 else 84 val = min(abs(ay - dy), abs(by - cy)); 85 } else if (ax \u0026lt;= dx \u0026amp;\u0026amp; dx \u0026lt;= bx) { // case1 - 2 86 if (ki != kj \u0026amp;\u0026amp; dx == bx \u0026amp;\u0026amp; by \u0026lt;= dy \u0026amp;\u0026amp; dy \u0026lt;= ay) // touching case 87 val = 0; 88 else 89 val = min(abs(ay - dy), abs(by - cy)); 90 } else if (by \u0026lt;= cy \u0026amp;\u0026amp; cy \u0026lt;= ay) { // case2 - 1 91 val = abs(bx - cx); 92 } else if (by \u0026lt;= dy \u0026amp;\u0026amp; dy \u0026lt;= ay) { // case2 - 2 93 val = abs(bx - cx); 94 } else { // case3 95 val = min(dist(bx, ay, cx, dy), dist(bx, by, cx, cy)); 96 /* 97if(ay \u0026lt; dy) { 98val = dist(bx, ay, cx, dy); 99} else { 100val = dist(bx, by, cx, cy); 101} 102*/ 103 } 104 105 m[i][j] = min(m[i][j], val); 106 m[j][i] = min(m[j][i], val); 107 //printf(\u0026#34;%d %d %.6f\\n\u0026#34;, i, j, m[i][j]); 108 //printf(\u0026#34;%d %d, %d %d, %d %d, %d %d\\n\u0026#34;, ax, ay, bx, by, cx, cy, dx, dy); 109 } 110 } 111 112 // solve 113 for (int k = 0; k \u0026lt; sz; k++) 114 for (int i = 0; i \u0026lt; sz; i++) 115 for (int j = 0; j \u0026lt; sz; j++) { 116 if (m[i][j] \u0026gt; 1e9) 117 continue; 118 m[i][j] = min(m[i][j], m[i][k] + m[k][j]); 119 } 120 121 printf(\u0026#34;%.6f\\n\u0026#34;, m[0][1]); 122} 123 124int main() 125{ 126 freopen(\u0026#34;street.in\u0026#34;, \u0026#34;r\u0026#34;, stdin); 127 128 int ncase; 129 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 130 131 while (ncase--) 132 solve(); 133 134 return 0; 135} D $C(n, m)$\n1lude\u0026lt;bits / stdc++.h\u0026gt; 2 3using namespace std; 4 5typedef long long ll; 6ll dp[30][30]; 7ll C(ll a, ll b) 8{ 9 if (dp[a][b] != -1) 10 return dp[a][b]; 11 ll ans = 1; 12 for (int i = 1; i \u0026lt;= b; i++) { 13 ans = ans * (a - i + 1); 14 ans = ans / i; 15 } 16 return dp[a][b] = ans; 17} 18 19void solve() 20{ 21 int n, m; 22 scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;m); 23 24 printf(\u0026#34;%lld\\n\u0026#34;, C(n, m)); 25} 26 27int main() 28{ 29 freopen(\u0026#34;popcorn.in\u0026#34;, \u0026#34;r\u0026#34;, stdin); 30 int ncase; 31 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 32 memset(dp, -1, sizeof(dp)); 33 while (ncase--) 34 solve(); 35 36 return 0; 37}\nE BFS. Add edges, but reverse them!\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5#define N 100010 6vector\u0026lt;int\u0026gt; g[N]; 7 8void solve() 9{ 10 int n; 11 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 12 13 for (int i = 0; i \u0026lt; n; i++) 14 g[i].clear(); 15 16 for (int i = 0; i \u0026lt; n; i++) { 17 int d; 18 scanf(\u0026#34;%d\u0026#34;, \u0026amp;d); 19 20 int nxt = i + d; 21 int pre = i - d; 22 23 if (nxt \u0026lt; n) 24 g[nxt].push_back(i); 25 if (pre \u0026gt;= 0) 26 g[pre].push_back(i); 27 } 28 29 queue\u0026lt;int\u0026gt; q; 30 int dist[N]; 31 memset(dist, -1, sizeof(dist)); 32 dist[n - 1] = 0; 33 q.push(n - 1); 34 35 while (q.empty() == false) { 36 int u = q.front(); 37 q.pop(); 38 39 for (auto v : g[u]) { 40 if (dist[v] == -1) { 41 dist[v] = dist[u] + 1; 42 q.push(v); 43 } 44 } 45 } 46 47 for (int i = 0; i \u0026lt; n; i++) 48 printf(\u0026#34;%d\\n\u0026#34;, dist[i]); 49} 50 51int main() 52{ 53 freopen(\u0026#34;jumping.in\u0026#34;, \u0026#34;r\u0026#34;, stdin); 54 55 int ncase; 56 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 57 58 while (ncase--) { 59 solve(); 60 } 61 62 return 0; 63}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/educational/30/",
+	"title": "Round 30",
+	"tags": ["Codeforces", "Educational Round", "Observation"],
+	"description": "",
+	"content": "A contest full of frustration\n\nA. Chores 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6typedef pair\u0026lt;int, int\u0026gt; ii; 7 8int main() 9{ 10 int n, k, x; 11 scanf(\u0026#34;%d %d %d\u0026#34;, \u0026amp;n, \u0026amp;k, \u0026amp;x); 12 13 int tot = 0; 14 for(int i = 0; i \u0026lt; n; i++) { 15 int num; 16 scanf(\u0026#34;%d\u0026#34;, \u0026amp;num); 17 18 if(i \u0026lt; n - k) 19 tot += num; 20 else 21 tot += x; 22 } 23 printf(\u0026#34;%d\\n\u0026#34;, tot); 24 25 return 0; 26} B. Balanced Substring A pretty good one!\nBinary search won\u0026rsquo;t work, don\u0026rsquo;t be tricked.\nWe can keep a $sum$, initialized with $0$. If we encounter a $0$, we subtract the $sum$ by 1, otherwise, we add $1$ to $sum$.\nIt is easy to see that whenever you have the same $sum$, this implies that the number of $+1$ and $-1$ is the same between the interval! Using this property we can get the maximum balanced substring.\nKeep in mind of a tricky case, $01101010$ :)\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6typedef pair\u0026lt;int, int\u0026gt; ii; 7 8int main() 9{ 10 int len; 11 char inp[100010]; 12 scanf(\u0026#34;%d\u0026#34;, \u0026amp;len); 13 scanf(\u0026#34;%s\u0026#34;, inp + 1); // case 01101010 14 15 int sum = 0; 16 map\u0026lt;int, int\u0026gt; loc; 17 int ans = 0; 18 loc[0] = 0; 19 for(int i = 1; i \u0026lt;= len; i++) { 20 if(inp[i] == \u0026#39;1\u0026#39;) 21 sum++; 22 else 23 sum--; 24 25 auto it = loc.find(sum); 26 if(it != loc.end()) { 27 ans = max(ans, i - it-\u0026gt;second); 28 } else { 29 loc[sum] = i; 30 } 31 } 32 printf(\u0026#34;%d\\n\u0026#34;, ans); 33 34 return 0; 35}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/",
+	"title": "Codeforces",
+	"tags": [],
+	"description": "Codeforces, where my passion nurtures",
+	"content": "  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/",
+	"title": "Contest",
+	"tags": [],
+	"description": "Programming contest",
+	"content": "  競賽程式培訓  Pretest   Binary Search   大一程式設計期末專題    APCS  APCS 1061028    Codeforces  Educational Rounds  Round 30    Rated Contests  Round 441    Gym  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)     ITSA/PTC  October 11, 2017   November 8, 2017    Onsite competitions  NCPC 2016 Final   NCPC 2017 Preliminary Round     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/oct2017/",
+	"title": "October 11, 2017",
+	"tags": ["ITSA", "PTC"],
+	"description": "October 11, 2017 ITSA PTC contest",
+	"content": "心得 新隊伍一起的第一場正式練習，表現還算可以啦。只是很久沒三人共用一台電腦，實在有點卡卡的。\n討論熱烈，希望可以維持。\n\n比賽題目   Attachments   ITSA.pdf  (222 kB)   PTC.pdf  (312 kB)     ITSA A 線性掃過去，遇到三的倍數就累加。\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6 7void solve() 8{ 9\tint n; 10\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 11\t12\tll ans = 0; 13\tfor(int i = 1; i \u0026lt;= n; i++) 14\tif(i % 3 == 0) 15\tans += i; 16\tprintf(\u0026#34;%lld\\n\u0026#34;, ans); 17} 18 19int main() 20{ 21\tint ncase; 22\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 23\twhile(ncase--) 24\tsolve(); 25 26\treturn 0; 27} B 問問隊友 黃鈺程 陳煒杰\n1m = int(input()) 2for _ in range(m): 3 data = [0 for _ in range(10001)] 4 n = int(input()) 5 for _ in range(n): 6 a, b = map(int, input().split()) 7 for i in range(a, b): 8 data[i] = 1 9 print(sum(data))\nC 基本上掌握對於 1-based 的 complete binary tree index 的性質即可:\n left child index = parent index * 2 right child index = parent index * 2 + 1  IO有點麻煩，各自實現吧！\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6 7#define lc(i) (i*2) 8#define rc(i) (i*2+1) 9 10void solve() 11{ 12\tint C; 13\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;C); 14 15\tchar inp[111]; 16\tscanf(\u0026#34;%s\u0026#34;, inp); 17\t18\tint len = strlen(inp); 19\t// printf(\u0026#34;%s\\n\u0026#34;, inp); 20\t21\tint tree[111], idx = 1; 22\tfor(int i = 0; i \u0026lt; len; i++) { 23\tif(inp[i] == \u0026#39;(\u0026#39;) { 24\tint num; 25\tsscanf(inp + i + 3, \u0026#34;%d\u0026#34;, \u0026amp;num); 26\t// printf(\u0026#34;%s\\n\u0026#34;, inp + i); 27 28\ttree[idx] = num; 29\tidx++; 30\t} 31\t} 32 33\t/* 34for(int i = 1; i \u0026lt; idx; i++) 35printf(\u0026#34;%d %d\\n\u0026#34;, i, tree[i]); 36*/ 37\t38\tvector\u0026lt;string\u0026gt; ans; 39\tfor(int i = 1; i \u0026lt; idx; i++) { 40\tif(lc(i) \u0026lt; idx \u0026amp;\u0026amp; abs(tree[i] - tree[lc(i)]) \u0026lt;= C) { 41\tstring tmp = \u0026#34;\u0026#34;; 42\ttmp += \u0026#39;A\u0026#39; + (i - 1); 43\ttmp += \u0026#39;A\u0026#39; + (lc(i) - 1); 44 45\tans.push_back(tmp); 46\t} 47\t48\tif(rc(i) \u0026lt; idx \u0026amp;\u0026amp; abs(tree[i] - tree[rc(i)]) \u0026lt;= C) { 49\tstring tmp = \u0026#34;\u0026#34;; 50\ttmp += \u0026#39;A\u0026#39; + (i - 1); 51\ttmp += \u0026#39;A\u0026#39; + (rc(i) - 1); 52 53\tans.push_back(tmp); 54\t} 55 56\t} 57 58\tsort(ans.begin(), ans.end()); 59\tfor(int i = 0; i \u0026lt; (int)ans.size(); i++) { 60\tprintf(\u0026#34;%s%c\u0026#34;, ans[i].c_str(), i == (int)ans.size() - 1 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 61\t} 62} 63 64int main() 65{ 66\tint ncase; 67\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 68\twhile(ncase--) 69\tsolve(); 70 71\treturn 0; 72} D 問問隊友 黃鈺程 陳煒杰\n1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4#define st first 5#define nd second 6 7typedef pair\u0026lt;int, int\u0026gt; pii; // \u0026lt;d, v\u0026gt; 8struct Edge { 9 int to, w; 10}; 11 12const int MAX_V = 1000; 13const int INF = 0x3f3f3f3f; 14 15int V; // V, Source 16vector\u0026lt;Edge\u0026gt; g[MAX_V]; 17int d[MAX_V][MAX_V]; 18 19void dijkstra(int S) { 20 fill(d[S], d[S] + V, INF); 21 priority_queue\u0026lt; pii, vector\u0026lt;pii\u0026gt;, greater\u0026lt;pii\u0026gt; \u0026gt; pq; 22 23 d[S][S] = 0; 24 pq.push(pii(0, S)); 25 26 while (!pq.empty()) { 27 pii top = pq.top(); pq.pop(); 28 int u = top.nd; 29 30 if (d[S][u] \u0026lt; top.st) continue; 31 32 // for (const Edge\u0026amp; e : g[u]) { 33 for (size_t i = 0; i \u0026lt; g[u].size(); i++) { 34 const Edge\u0026amp; e = g[u][i]; 35 if (d[S][e.to] \u0026gt; d[S][u] + e.w) { 36 d[S][e.to] = d[S][u] + e.w; 37 pq.push(pii(d[S][e.to], e.to)); 38 } 39 } 40 } 41} 42 43int main() { 44 int N, M; 45 scanf(\u0026#34;%d\u0026#34;, \u0026amp;N); 46 scanf(\u0026#34;%d\u0026#34;, \u0026amp;M); 47 for (int u = 0; u \u0026lt; M; u++) { 48 for (int v = 0; v \u0026lt; M; v++) { 49 int w; scanf(\u0026#34;%d\u0026#34;, \u0026amp;w); 50 g[u].push_back(Edge{v, w}); 51 } 52 } 53 V = M; 54 for (int i = 0; i \u0026lt; N; i++) { 55 int p, q; scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;p, \u0026amp;q); 56 dijkstra(p); 57 printf(\u0026#34;%d\\n\u0026#34;, d[p][q]); 58 } 59 return 0; 60}\nE 比賽時想不出數學解，只好暴力去做，畢竟 $m, n$ 都至多 15而已。\n枚舉所有的可能放的數量，且只要枚舉 non-decreasing order 的數列來做排列組合即可。\n舉例而言，$m = 4, n = 2$的話，我們枚舉\n 1, 3 2, 2  但是 $3, 1$ 等等不枚舉，因為這個數列不是 non-decreasing order。\n有了數列 $a_1, a_2, \u0026hellip;, a_n$，之後就\u0026hellip;\n$C(m, a_1) * C(m - a_1, a_2) * \u0026hellip; * C(m - a_1 - a_2 - \u0026hellip; - a_{n - 1}, a_n)$\n記得，如果有多於一個相同的 $a_i$ 值，要除上 $(相同a_i個數)!$ ，因為我們不管排列方式。\n對於全部數列都累加上述算式即可。\n1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4typedef long long ll; 5 6ll dp[16][16]; 7ll C(ll a, ll b) { 8\tif(dp[a][b] != -1) 9\treturn dp[a][b]; 10 ll ans = 1; 11 for (int i = 1; i \u0026lt;= b; i++) { 12 ans = ans * (a - i + 1); 13 ans = ans / i; 14 } 15 return dp[a][b] = ans; 16} 17 18ll ans = 0; 19 20ll factorial[16]; 21 22int sz[16]; 23 24int total = 0; 25void dfs(int partition, int depth, int rem) 26{ 27\tif(rem \u0026lt;= 0) 28\treturn; 29 30\tif(depth == partition - 1) { 31\t// get last partition 32\tif(depth != 0 \u0026amp;\u0026amp; rem \u0026lt; sz[depth - 1]) 33\treturn; 34\t35\tsz[depth] = rem; 36\t37\t// for(int i = 0; i \u0026lt; partition; i++) 38\t// printf(\u0026#34;%d%c\u0026#34;, sz[i], i == partition - 1 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 39\t// get ans 40\tint sum = total; 41\tll tmp = 1; 42 43\tint acc[16] = {0}; 44\tfor(int i = 0; i \u0026lt; partition; i++) { 45\ttmp *= C(sum, sz[i]); 46\tacc[sz[i]]++; 47\tsum -= sz[i]; 48\t} 49\t// printf(\u0026#34;tmp = %lld\\n\u0026#34;, tmp); 50 51\tfor(int i = 0; i \u0026lt; 16; i++) { 52\tif(acc[i] \u0026gt; 1) 53\ttmp /= factorial[acc[i]]; 54\t} 55\t// printf(\u0026#34;tmp = %lld\\n\u0026#34;, tmp); 56 57\tans += tmp; 58\t59\treturn; 60\t} 61\t62\tint i; 63\tif(depth == 0) { 64\ti = 1; 65\t} else { 66\ti = sz[depth - 1]; 67\t} 68 69\tfor(; i \u0026lt;= rem; i++) { 70\tif(depth != 0 \u0026amp;\u0026amp; i \u0026lt; sz[depth - 1]) 71\tcontinue; 72\tsz[depth] = i; 73\tdfs(partition, depth + 1, rem - i); 74\t} 75} 76 77void solve(int num_cnt, int partition) 78{ 79\t// printf(\u0026#34;%d %d\\n\u0026#34;, num_cnt, partition); 80\tans = 0; 81\t82\ttotal = num_cnt; 83\tdfs(partition, 0, num_cnt); 84 85\t// printf(\u0026#34;ans = %lld\\n\u0026#34;, ans); 86\tprintf(\u0026#34;%lld\\n\u0026#34;, ans); 87}\t88 89int main() { 90 int TC; scanf(\u0026#34;%d\u0026#34;, \u0026amp;TC); 91\tmemset(dp, -1, sizeof(dp)); 92\t93\tfactorial[1] = 1; 94\tfor(int i = 2; i \u0026lt;= 15; i++) { 95\tfactorial[i] = factorial[i - 1] * i; 96\t} 97 98 while (TC--) { 99 int m, n; 100\tscanf(\u0026#34;%d,%d\u0026#34;, \u0026amp;m, \u0026amp;n); 101\t102\tsolve(m, n); 103 } 104 105 return 0; 106}\nPTC A 問問隊友 _陳煒杰_，聽說範測看完就解了！\n1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4int main(){ 5\tint n; 6\tscanf(\u0026#34; %d\u0026#34;, \u0026amp;n); 7\tfor (int i = 0; i \u0026lt; n; i++){ 8\tint x; 9\tscanf(\u0026#34; %d\u0026#34;, \u0026amp;x); 10\tprintf(\u0026#34;%d\\n\u0026#34;, x * 6 + (x - 1) * 2); 11\t} 12\treturn 0; 13}\nB y值其實完全沒有意義\u0026hellip;..\n主要的觀察是，最早結束的區間一定要釘釘子。所以，就 greedy 的找切點啦！\n對結尾排序後，線性掃過去，如果下個線段起點比目前的切點小，不處理; 反之，切點向後移且切點總數+1\n1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4#define sz(x) (int(x.size())) 5 6inline int getint() { 7 int inp; scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp); return inp; 8} 9 10struct Seg { 11 int s, t; 12 bool operator \u0026lt; (const Seg\u0026amp; k) const { 13 return t \u0026lt; k.t; 14 } 15}; 16vector\u0026lt;Seg\u0026gt; segs; 17 18int solve() { 19 // sort(segs.begin(), segs.end(), [\u0026amp;](const Seg\u0026amp; a, const Seg\u0026amp; b) { 20 // if (a.t == b.t) { 21 // return a.s \u0026lt; b.s; 22 // } 23 // return a.t \u0026lt; b.t; 24 // }); 25 sort(segs.begin(), segs.end()); 26 27 int ans = 1; 28 Seg cur = segs[0]; 29 for (int i = 1; i \u0026lt; sz(segs); i++) { 30 // printf(\u0026#34;(%d, %d): \u0026#34;, segs[i].s, segs[i].t); 31 if (segs[i].s \u0026lt; cur.t) { 32 // puts(\u0026#34;c\u0026#34;); 33 continue; 34 } 35 else { 36 ans++; 37 // printf(\u0026#34;%d\\n\u0026#34;, ans); 38 cur = segs[i]; 39 } 40 } 41 return ans; 42} 43 44int main() { 45 int TC = getint(); 46 while (TC--) { 47 segs.clear(); 48 49 int N = getint(); 50 for (int i = 0; i \u0026lt; N; i++) { 51 int l = getint(); 52 int x = getint(); 53 int y = getint(); 54 55 segs.push_back(Seg {x, x + l}); 56 } 57 printf(\u0026#34;%d\\n\u0026#34;, solve()); 58 } 59 return 0; 60}\nC 問問隊友 黃鈺程 陳煒杰\n1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4inline int getint() { 5 int inp; scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp); return inp; 6} 7 8struct Edge { 9 int to, cap, rev; 10 Edge(int a, int b, int c) { 11 to = a; 12 cap = b; 13 rev = c; 14 } 15}; 16 17const int INF = 0x3f3f3f3f; 18const int MAX_V = 400; 19vector\u0026lt;Edge\u0026gt; g[MAX_V]; 20int level[MAX_V]; 21int iter[MAX_V]; 22 23void add_edge(int u, int v, int cap) { 24 g[u].push_back((Edge){v, cap, (int)g[v].size()}); 25 g[v].push_back((Edge){u, 0, (int)g[u].size() - 1}); 26} 27 28void bfs(int s) { 29 memset(level, -1, sizeof(level)); 30 queue\u0026lt;int\u0026gt; q; 31 32 level[s] = 0; 33 q.push(s); 34 35 while (!q.empty()) { 36 int v = q.front(); q.pop(); 37 for (int i = 0; i \u0026lt; int(g[v].size()); i++) { 38 const Edge\u0026amp; e = g[v][i]; 39 if (e.cap \u0026gt; 0 \u0026amp;\u0026amp; level[e.to] \u0026lt; 0) { 40 level[e.to] = level[v] + 1; 41 q.push(e.to); 42 } 43 } 44 } 45} 46 47int dfs(int v, int t, int f) { 48 if (v == t) return f; 49 for (int\u0026amp; i = iter[v]; i \u0026lt; int(g[v].size()); i++) { 50 Edge\u0026amp; e = g[v][i]; 51 if (e.cap \u0026gt; 0 \u0026amp;\u0026amp; level[v] \u0026lt; level[e.to]) { 52 int d = dfs(e.to, t, min(f, e.cap)); 53 if (d \u0026gt; 0) { 54 e.cap -= d; 55 g[e.to][e.rev].cap += d; 56 return d; 57 } 58 } 59 } 60 return 0; 61} 62 63int max_flow(int s, int t) { // dinic 64 int flow = 0; 65 for (;;) { 66 bfs(s); 67 if (level[t] \u0026lt; 0) return flow; 68 memset(iter, 0, sizeof(iter)); 69 int f; 70 while ((f = dfs(s, t, INF)) \u0026gt; 0) { 71 flow += f; 72 } 73 } 74} 75 76int cnt[5]; 77 78int main() { 79 int TC = getint(); 80 while (TC--) { 81 for (int u = 0; u \u0026lt; MAX_V; u++) { 82 g[u].clear(); 83 } 84 85 for (int i = 0; i \u0026lt; 5; i++) { 86 cnt[i] = getint(); 87 } 88 89 int N = getint(); 90 int s_super = N + 10; 91 int t_super = N + 11; 92 for (int i = 0; i \u0026lt; 5; i++) { 93 add_edge(s_super, i, cnt[i]); 94 } 95 96 for (int i = 0; i \u0026lt; N; i++) { 97 char s1[5], s2[5]; 98 scanf(\u0026#34;%s %s\u0026#34;, s1, s2); 99 int c1 = s1[0] - \u0026#39;A\u0026#39;; 100 int c2 = s2[0] - \u0026#39;A\u0026#39;; 101 102 add_edge(c1, i + 5, 1); 103 add_edge(c2, i + 5, 1); 104 add_edge(i + 5, t_super, 1); 105 } 106 107 int f = max_flow(s_super, t_super); 108 if (f == N) { 109 puts(\u0026#34;YES\u0026#34;); 110 } 111 else { 112 puts(\u0026#34;NO\u0026#34;); 113 } 114 } 115 return 0; 116}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-setup/",
+	"title": "Hugo Setup",
+	"tags": ["Hugo", "Setup"],
+	"description": "My setup notes for Hugo",
+	"content": "Hugo is a very well-designed static site generator. The user experience is way better than what I have tried so far. One of the good things about Hugo is that the config file is very clean! Also, the installation is easy, version controlling it is quite simple, and it\u0026rsquo;s easy to share the source code and let people create post PR!\n\nInstall and Setup Hugo The quickstart guide on Hugo is pretty comprehensive. Please check it out!\n Install latest hugo version  On Linux: sudo snap install hugo On Mac: brew install hugo  Create a hugo site: hugo new site [sitename] By default, no theme is installed, so you need to install one on your own!\ncd [sitename];\\ git init;\\ git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke;\\ # Edit your config.toml configuration file and add the Ananke theme. echo 'theme = \u0026quot;ananke\u0026quot;' \u0026gt;\u0026gt; config.toml  Using git submodule is a very good idea since we can keep track of the separate projects version controlled by git easily.\n Add some content: hugo new posts/my-first-post.md. Notice that the draft mode by default is true, so it won\u0026rsquo;t be published unless you change it to false.\n .rst will work!  Start the development server: hugo server -D\n Open config.toml\n customize the site URL, title, etc. .toml reference  In order to let Github Pages to parse from docs folder:\n add publishDir = \u0026quot;docs\u0026quot; to config.toml add publishDir: docs to config.yaml  Run hugo to build it!\n Push the generated static pages to Github, and wait for Github Pages to build! Enjoy!! It\u0026rsquo;s that easy!\n  Cloning Hugo Site from Github  Make sure you have hugo installed. Installation can be checked by running hugo help Clone the repo Run git submodule init on project root and then run git submodule update to get the theme Run hugo server! You are done setting up!  Switching to DocDock Theme + My Personal Tweaks This theme provides searching, tagging, and lot\u0026rsquo;s of shortcodes out-of-the-box. Worth a try!\n Get the theme code: git submodule add https://github.com/vjeantet/hugo-theme-docdock.git themes/docdock Use the theme\u0026rsquo;s config file: cp themes/docdock/exampleSite/config.toml .:  Better run cp config.toml config.toml.bak first  Open config.toml:  Set theme = \u0026quot;docdock\u0026quot; Comment out themesdir = \u0026quot;../..\u0026quot;  Create a _index.md document in the content folder  Don\u0026rsquo;t forget to create a _index.md with title: and head: front matter!  Update files in archetypes folder:  Check front matter format Tweak and add your own files! It\u0026rsquo;s will be very handy to have some of your own!  Create a _header.md page in content folder. Its content is what you get in the logo placeholder (top left of the screen). Add a custon terms.html file to layouts/_default, for the tags and categories summary page to be rendered  MathJax support  Create a custom-head.html into a layouts/partials folder next to the content folder, this is where we should add the javascript code in every \u0026lt;head\u0026gt;. Paste the following code in to the file in order for MathJax and inline latex to work!\n\u0026lt;!-- Partial intended to be overwritten to add CSS --\u0026gt; \u0026lt;script type=\u0026quot;text/x-mathjax-config\u0026quot;\u0026gt; MathJax.Hub.Config({ tex2jax: {inlineMath: [['$','$'], ['\\\\(','\\\\)']]} }); \u0026lt;/script\u0026gt; \u0026lt;script type=\u0026quot;text/javascript\u0026quot; async src=\u0026quot;https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML\u0026quot;\u0026gt; \u0026lt;/script\u0026gt;  Also, if you have Google Analytics tracking code, you can add it here.\n Check out the result $e = mc^2$ :)\n "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/apcs/1061028/",
+	"title": "APCS 1061028",
+	"tags": ["Zerojudge", "APCS", "Implementation", "Greedy"],
+	"description": "",
+	"content": "試題\n\nc461: apcs 邏輯運算子 (Logic Operators) 基本位元運算題\nAC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int main() 6{ 7\tint a, b, c; 8\tscanf(\u0026#34;%d %d %d\u0026#34;, \u0026amp;a, \u0026amp;b, \u0026amp;c); 9\ta = a \u0026gt; 0 ? 1 : 0; 10\tb = b \u0026gt; 0 ? 1 : 0; 11\tc = c \u0026gt; 0 ? 1 : 0; 12\t13\tbool ok = false; 14\tif((a \u0026amp; b) == c) { 15\tprintf(\u0026#34;AND\\n\u0026#34;); 16\tok = true; 17\t} 18\tif((a | b) == c) { 19\tprintf(\u0026#34;OR\\n\u0026#34;); 20\tok = true; 21\t} 22\tif((a ^ b) == c) { 23\tprintf(\u0026#34;XOR\\n\u0026#34;); 24\tok = true; 25\t} 26 27\tif(!ok) 28\tprintf(\u0026#34;IMPOSSIBLE\\n\u0026#34;); 29\t30\treturn 0; 31} c462: apcs 交錯字串 (Alternating Strings) 可以先對大小寫進行01編碼後，壓縮一下 (run-length encoding)\n之後就是找頭尾 $\\ge k$ 且中間均 $=k$ 的長子字串即可\nAC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int k; 6char inp[111111]; 7 8int main() 9{ 10\tscanf(\u0026#34;%d %s\u0026#34;, \u0026amp;k, inp); 11\t12\tint len = strlen(inp); 13\tint data[len]; 14\tfor(int i = 0; i \u0026lt; len; i++) { 15\tif(\u0026#39;a\u0026#39; \u0026lt;= inp[i] \u0026amp;\u0026amp; inp[i] \u0026lt;= \u0026#39;z\u0026#39;) { 16\tdata[i] = 0; 17\t} else { 18\tdata[i] = 1; 19\t} 20\t} 21\t22\tint cnt = 1; 23\tvector\u0026lt;int\u0026gt; compressed; 24\tfor(int i = 1; i \u0026lt; len; i++) { 25\tif(data[i] == data[i - 1]) { 26\tcnt++; 27\t} else { 28\tcompressed.push_back(cnt); 29\tcnt = 1; 30\t} 31\t} 32\tcompressed.push_back(cnt); 33\t/* 34for(auto i : compressed) 35printf(\u0026#34;%d \u0026#34;, i); 36printf(\u0026#34;\\n\u0026#34;); 37*/ 38\t39\tbool active = false; 40\tint ans = 0; 41\tint tmp = 0; 42\t// head tail is ok to be \u0026gt;= k, other must be == k 43\tfor(int i = 0; i \u0026lt; (int)compressed.size(); i++) { 44\tif(active == false) { 45\tif(compressed[i] \u0026gt;= k) { 46\tactive = true; 47\ttmp++; 48\t} 49\t} else { 50\tif(compressed[i] == k) { 51\ttmp++; 52\t} else { 53\tif(compressed[i] \u0026gt;= k) 54\ttmp++; 55\ttmp *= k; 56\tans = max(ans, tmp); 57\ttmp = 0; 58\ti--; // current one might be the start for another one 59 60\tactive = false; 61\t} 62\t} 63\t} 64 65\ttmp *= k; 66\tans = max(ans, tmp); 67 68\tprintf(\u0026#34;%d\\n\u0026#34;, ans); 69 70\treturn 0; 71}\nc463: apcs 樹狀圖分析 (Tree Analyses) Bottom up DP\n從 leaf 開始拔，並且一路更新 parent 的解即可。\nAC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6 7int main() 8{ 9\tint n; 10\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 11 12\tif(n == 1) { 13\tprintf(\u0026#34;1\\n0\\n\u0026#34;); 14\treturn 0; 15\t} 16 17\tint dp[n]; 18\tint par[n]; 19\tint deg[n]; 20\tmemset(par, -1, sizeof(par)); 21\tmemset(dp, 0, sizeof(dp)); 22 23\tqueue\u0026lt;int\u0026gt; q; 24\tfor(int p = 0; p \u0026lt; n; p++) { 25\tint k; 26\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;k); 27\tif(k == 0) 28\tq.push(p); 29 30\tdeg[p] = k; 31 32\tfor(int j = 0; j \u0026lt; k; j++) { 33\tint child; 34\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;child); 35\tchild--; 36\tpar[child] = p; 37\t} 38\t}\t39 40\twhile(q.size() \u0026gt; 0) { 41\tint cur = q.front(); 42\tq.pop(); 43 44\tif(par[cur] != -1) { 45\tdp[par[cur]] = max(dp[par[cur]], dp[cur] + 1); 46\tdeg[par[cur]]--; 47\tif(deg[par[cur]] == 0) 48\tq.push(par[cur]); 49\t} 50\t} 51 52\tll ans = 0; 53\tfor(int i = 0; i \u0026lt; n; i++) { 54\tif(par[i] == -1) 55\tprintf(\u0026#34;%d\\n\u0026#34;, i + 1); 56\tans += dp[i]; 57\t} 58\tprintf(\u0026#34;%lld\\n\u0026#34;, ans); 59 60\treturn 0; 61}\nc471: apcs 物品堆疊 (Stacking)   Hint   Greedy！\n推看看，如果我們只交換某兩物品的位置，他的影響範圍大概如何？\n    Solution   假設目前的堆疊狀態從上到下為 $$ w_1, w_2, \u0026hellip;, w_i, w_{i + 1}, \u0026hellip;, w_n$$ $$ f_1, f_2, \u0026hellip;, f_i, f_{i + 1}, \u0026hellip;, f_n$$\n如果我們交換 $i$ 跟 $i + 1$，堆疊狀態從上到下會變成 $$ w_1, w_2, \u0026hellip;, w_{i + 1}, w_i, \u0026hellip;, w_n$$ $$ f_1, f_2, \u0026hellip;, f_{i + 1}, f_i, \u0026hellip;, f_n$$\n另 $$ A = w_1 + w_2 + \u0026hellip; + w_{i - 1} $$ $$ B = f_{i + 2} + f_{i + 3} + \u0026hellip; + f_n $$\n交換之前（只列出會變動的部分），我們的 cost 是 $$ \u0026hellip; + (A + w_i) (f_{i + 1}) + \u0026hellip; $$\n交換之後（只列出會變動的部分），我們的 cost 是 $$ \u0026hellip; + (A + w_{i + 1}) (f_i)+ \u0026hellip; $$\n相減可以得到 $$w_i f_{i + 1} - w_{i + 1} f_i$$\n所以，我們透過 sorting 時將 compare function 寫成 $$w_i f_{i + 1} \u0026lt; w_{i + 1} f_i$$\n就可以讓 cost 小的堆疊方式被逐漸產生。\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6 7struct Data { 8\tint w, f; 9}; 10 11bool cmp(const Data\u0026amp; a, const Data \u0026amp;b) 12{ 13\t// return a.f * b.w \u0026lt; b.f * a.w; 14\treturn a.w * b.f \u0026lt; b.w * a.f; 15} 16 17int main() 18{ 19\tint n; 20\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 21 22\tData data[n]; 23\tfor(int i = 0; i \u0026lt; n; i++) { 24\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;data[i].w); 25\t} 26 27\tfor(int i = 0; i \u0026lt; n; i++) { 28\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;data[i].f); 29\t} 30\tsort(data, data + n, cmp); 31 32\tll ans = 0, accum = 0; 33\tfor(int i = 0; i \u0026lt; n - 1; i++) { 34\taccum += data[i].w; 35\tans += accum * data[i + 1].f; 36\t} 37 38\tprintf(\u0026#34;%lld\\n\u0026#34;, ans); 39 40\treturn 0; 41}"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/binarysearch/",
+	"title": "Binary Search",
+	"tags": ["Binary search", "Codeforces", "POJ", "UVa"],
+	"description": "Introduction to binary search",
+	"content": "\n 二分搜的前提：單調性！所以記得先 sorting 之後再二分搜 注意你所訂下的上界與下界，必要時要在對答案做檢查 lower_bound() 和 upper_bound()請想清楚再用 浮點數要注意精度問題  整數上的 binary search CF 474B Worms   Hint   prefix sum + lower_bound\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int main() 6{ 7 int n; 8 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 9 10 int inp[n + 1]; 11 inp[0] = 0; 12 for (int i = 1; i \u0026lt;= n; i++) 13 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 14 for (int i = 2; i \u0026lt;= n; i++) 15 inp[i] += inp[i - 1]; 16 17 int q, k = 0; 18 scanf(\u0026#34;%d\u0026#34;, \u0026amp;q); 19 20 for (int i = 0; i \u0026lt; q; i++) { 21 scanf(\u0026#34;%d\u0026#34;, \u0026amp;k); 22 printf(\u0026#34;%d\\n\u0026#34;, (int)(lower_bound(inp, inp + n + 1, k) - inp)); 23 } 24 25 return 0; 26} CF 706B Interesting drink   Hint   upper_bound\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int main() 6{ 7 int n; 8 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 9 10 int inp[n]; 11 for (int i = 0; i \u0026lt; n; i++) 12 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 13 sort(inp, inp + n); 14 15 int m; 16 scanf(\u0026#34;%d\u0026#34;, \u0026amp;m); 17 // 3 6 8 10 11 18 for (int i = 0; i \u0026lt; m; i++) { 19 int num; 20 scanf(\u0026#34;%d\u0026#34;, \u0026amp;num); 21 22 auto it = upper_bound(inp, inp + n, num); 23 printf(\u0026#34;%d\\n\u0026#34;, (int)(it - inp)); 24 } 25 26 return 0; 27} 浮點數的 binary search POJ1064 Cable master   Hint   請小心他沒要你四捨五入\n    Solution   非常好且經典的 floating point 二分搜題目，需要非常小心的 implementation。\n題解\n  AC Code 1#include \u0026lt;cmath\u0026gt;2#include \u0026lt;cstdio\u0026gt;3 4int n, k; 5bool check(double mid, double inp[]) 6{ 7 int cnt = 0; 8 for (int i = 0; i \u0026lt; n; i++) { 9 cnt += (int)(inp[i] / mid); 10 } 11 12 return cnt \u0026gt;= k; 13} 14 15int main() 16{ 17 scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;k); 18 19 double inp[n]; 20 for (int i = 0; i \u0026lt; n; i++) 21 scanf(\u0026#34;%lf\u0026#34;, \u0026amp;inp[i]); 22 23 double l = 0, r = 100000001; 24 for (int i = 0; i \u0026lt; 100; i++) { 25 double mid = (l + r) / 2; 26 27 if (check(mid, inp)) 28 l = mid; 29 else 30 r = mid; 31 } 32 33 printf(\u0026#34;%.2f\\n\u0026#34;, (floor)(l * 100) / 100); 34 35 return 0; 36} CF 492B Vanya and Lanterns   Solution   有數學解，但是可以練習一下浮點數二分搜。\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5#define EPS 1e-10 6 7int n, len; 8bool check(vector\u0026lt;int\u0026gt; \u0026amp;inp, double mid) 9{ 10 if (inp[0] - mid \u0026gt; -EPS) 11 return false; 12 double farthest = inp[0] + mid; 13 for (int i = 1; i \u0026lt; (int)inp.size(); i++) { 14 if (farthest - (inp[i] - mid) \u0026gt;= -EPS) 15 farthest = inp[i] + mid; 16 else 17 return false; 18 } 19 20 if (farthest - len \u0026gt;= -EPS) 21 return true; 22 return false; 23} 24 25int main() 26{ 27 scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;len); 28 29 vector\u0026lt;int\u0026gt; inp; 30 for (int i = 0; i \u0026lt; n; i++) { 31 int num; 32 scanf(\u0026#34;%d\u0026#34;, \u0026amp;num); 33 34 inp.push_back(num); 35 } 36 37 sort(inp.begin(), inp.end()); 38 auto it = unique(inp.begin(), inp.end()); 39 inp.resize(distance(inp.begin(), it)); 40 41 double l = 0, r = len; 42 for (int i = 0; i \u0026lt; 200; i++) { 43 double mid = (l + r) / 2; 44 45 if (check(inp, mid)) 46 r = mid; 47 else 48 l = mid; 49 } 50 51 printf(\u0026#34;%.15f\\n\u0026#34;, l); 52 53 return 0; 54} 挑戰題 UVa 12192 Grapevine 進階題，大家可以挑戰一下。\nAC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3// For every query, binary search for the upper-left corner of the square 4// And then binary search for the lower-left corner \u0026#34;on the diagnal\u0026#34; 5 6using namespace std; 7 8int n, m; 9int inp[555][555]; 10int low, high; 11 12int search(int row, int col) 13{ 14 // printf(\u0026#34;row %d col %d\\n\u0026#34;, row, col); 15 int l = -1, r = min(n - row, m - col); 16 while(r - l \u0026gt; 1) { 17 int mid = l + (r - l) / 2; 18 // printf(\u0026#34;l = %d, mid = %d, r = %d\\n\u0026#34;, l, mid, r); 19 20 if(inp[row + mid][col + mid] \u0026lt;= high) 21 l = mid; 22 else 23 r = mid; 24 } 25 // printf(\u0026#34;l = %d\\n\u0026#34;, l); 26 27 return l; 28} 29 30void solve() 31{ 32 int ret = 0; 33 for(int i = 0; i \u0026lt; n; i++) { 34 int l = lower_bound(inp[i], inp[i] + m, low) - inp[i]; 35 if(l == m) 36 continue; 37 int r = search(i, l); 38 if(r == -1) 39 continue; 40 // printf(\u0026#34;i = %d l = %d r = %d\\n\u0026#34;, i, l, r); 41 42 ret = max(ret, r + 1); 43 } 44 45 printf(\u0026#34;%d\\n\u0026#34;, ret); 46} 47 48int main() 49{ 50 while(scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;m) == 2 \u0026amp;\u0026amp; (n || m)) { 51 for(int i = 0; i \u0026lt; n; i++) 52 for(int j = 0; j \u0026lt; m; j++) 53 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i][j]); 54 55 int q; 56 scanf(\u0026#34;%d\u0026#34;, \u0026amp;q); 57 for(int i = 0; i \u0026lt; q; i++) { 58 scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;low, \u0026amp;high); 59 60 solve(); 61 } 62 printf(\u0026#34;-\\n\u0026#34;); 63 } 64 65 return 0; 66}\nCF 551C GukiZ hates Boxes 這題的 check function 需要有個神觀察！\nC++版本\nAC Code 1import java.io.*; 2import java.util.*; 3 4public class C { 5\tpublic static boolean check(int[] inp, long mid, int k) { 6\tint[] cur = Arrays.copyOf(inp, inp.length); 7 8\tint last = inp.length - 1; 9\twhile (last \u0026gt;= 0 \u0026amp;\u0026amp; cur[last] == 0) 10\tlast--; 11 12\tfor (int i = 0; i \u0026lt; k; i++) { 13\tlong t = mid - last - 1; 14\twhile (t \u0026gt; 0 \u0026amp;\u0026amp; last \u0026gt;= 0) { 15\tif (t - cur[last] \u0026gt;= 0) { // move box 16\tt -= cur[last]; 17\tcur[last] = 0; 18 19\twhile (last \u0026gt;= 0 \u0026amp;\u0026amp; cur[last] == 0) 20\tlast--; 21\t} else { 22\tcur[last] -= t; 23\tt = 0; 24\t} 25\tif (!(t \u0026gt; 0 \u0026amp;\u0026amp; last \u0026gt;= 0)) 26\tbreak; 27\t} 28\t} 29 30\tfor (int i = last; i \u0026gt;= 0; i--) 31\tif (cur[i] != 0) 32\treturn false; 33\treturn true; 34\t} 35 36\tpublic static void main(String[] args) { 37\tMyScanner sc = new MyScanner(); 38\tout = new PrintWriter(new BufferedOutputStream(System.out)); 39 40\tint n = sc.nextInt(), k = sc.nextInt(); 41 42\tint[] inp = new int[n]; 43\tfor (int i = 0; i \u0026lt; n; i++) 44\tinp[i] = sc.nextInt(); 45 46\tlong l = 0, r = (long) 1e18; 47\twhile (r - l \u0026gt; 1) { 48\tlong mid = (l + r) / 2; 49 50\tif (check(inp, mid, k) == true) 51\tr = mid; 52\telse 53\tl = mid; 54\t} 55 56\tout.println(r); 57 58\tout.close(); 59\t} 60 61\t// PrintWriter for faster output 62\tpublic static PrintWriter out; 63 64\t// MyScanner class for faster input 65\tpublic static class MyScanner { 66\tBufferedReader br; 67\tStringTokenizer st; 68 69\tpublic MyScanner() { 70\tbr = new BufferedReader(new InputStreamReader(System.in)); 71\t} 72 73\tboolean hasNext() { 74\twhile (st == null || !st.hasMoreElements()) { 75\ttry { 76\tst = new StringTokenizer(br.readLine()); 77\t} catch (Exception e) { 78\treturn false; 79\t} 80\t} 81\treturn true; 82\t} 83 84\tString next() { 85\tif (hasNext()) 86\treturn st.nextToken(); 87\treturn null; 88\t} 89 90\tint nextInt() { 91\treturn Integer.parseInt(next()); 92\t} 93 94\tlong nextLong() { 95\treturn Long.parseLong(next()); 96\t} 97 98\tdouble nextDouble() { 99\treturn Double.parseDouble(next()); 100\t} 101 102\tString nextLine() { 103\tString str = \u0026#34;\u0026#34;; 104\ttry { 105\tstr = br.readLine(); 106\t} catch (IOException e) { 107\te.printStackTrace(); 108\t} 109\treturn str; 110\t} 111\t} 112}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/nov2017/",
+	"title": "November 8, 2017",
+	"tags": ["PTC", "two pointer", "binary search", "physics"],
+	"description": "",
+	"content": "\n比賽題目   Attachments   PTC201711.pdf  (494 kB)     A   Hint   力矩\n    Solution   有個觀察，就是從上而下，棒子一個一個加入。如果從某棒子以上的所有棒子的重心超出了他所壓的棒子的範圍，必倒下。\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4double eps = 1e-6; 5 6inline int getint() { 7 int inp; scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp); return inp; 8} 9 10int N; 11int len[100]; 12int pos[100]; 13 14int C(int level, double mid) { 15 double left = 0, right = 0; 16\t17 for (int i = N - 1; i \u0026gt;= level; i--) { 18\tdouble a = pos[i], b = pos[i] + len[i]; 19\tdouble center = (a + b) / 2.0; 20 21\tif(center - mid \u0026lt; eps) 22\tleft += (mid - center) * len[i]; 23\telse 24\tright += (center - mid) * len[i];\t25 } 26 27 if (left - right \u0026lt; eps) { 28 return -1; 29 } 30 return +1; 31} 32 33bool solve() { 34 for (int i = N - 1; i \u0026gt;= 1; i--) { 35 // find center 36 double lb = 0, ub = 200; 37 for (int j = 0; j \u0026lt; 100; j++) { 38 double mid = (lb + ub) / 2; 39 if (C(i, mid) == -1) { 40 lb = mid; 41 } 42 else { 43 ub = mid; 44 } 45 } 46 47 double center = lb; 48 double a = pos[i - 1], b = pos[i - 1] + len[i - 1]; 49 50 if (a - center \u0026lt;= +eps \u0026amp;\u0026amp; center - b \u0026lt;= +eps) { 51 continue; 52 } else { 53 return false; 54 } 55 } 56 57 return true; 58} 59 60int main() { 61 int TC = getint(); 62 while (TC--) { 63 N = getint(); 64 for (int i = 0; i \u0026lt; N; i++) { 65 scanf(\u0026#34;%d\u0026#34;, \u0026amp;len[i]); 66 } 67 for (int i = 0; i \u0026lt; N; i++) { 68 scanf(\u0026#34;%d\u0026#34;, \u0026amp;pos[i]); 69 } 70 71 if (solve()) { 72 puts(\u0026#34;STABLE\u0026#34;); 73 } 74 else { 75 puts(\u0026#34;DOWN\u0026#34;); 76 } 77 } 78 79 return 0; 80}\nB   Hint   簡單 greedy\n    Solution   task從小到大，從最小可以匹配的worker來做。\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5int main() 6{ 7\tint ncase; 8\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 9 10\twhile(ncase--) { 11\tint n, m; 12\tscanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;m); 13 14\tint work[n], worker[m]; 15\tfor(int i = 0; i \u0026lt; n; i++) scanf(\u0026#34;%d\u0026#34;, \u0026amp;work[i]); 16\tfor(int i = 0; i \u0026lt; m; i++) scanf(\u0026#34;%d\u0026#34;, \u0026amp;worker[i]); 17\tsort(work, work + n); 18 19\tpriority_queue\u0026lt;int, vector\u0026lt;int\u0026gt;, greater\u0026lt;int\u0026gt;\u0026gt; pq; 20\tfor(int i = 0; i \u0026lt; m; i++) 21\tpq.push(worker[i]); 22\t23\tlong long ans = 0; 24\t25\tfor(int i = 0; i \u0026lt; n; i++) { 26\tbool used = false; 27\twhile(pq.size() \u0026gt; 0) { 28\tlong long cur = pq.top(); pq.pop(); 29\tif(cur \u0026gt;= work[i]) { 30\tans += cur * cur; 31\tused = true; 32\tbreak; 33\t}\t34\t} 35 36\tif(used == false) { 37\tans = -1; 38\tbreak; 39\t} 40\t} 41 42\tprintf(\u0026#34;%lld\\n\u0026#34;, ans); 43\t} 44 45\treturn 0; 46}\nE   Hint   $A + B = sum$, $A$ 的最佳解為 $floor(\\frac{sum}{2})$\n    Solution   爬行法\n記得把圓展開後，串接一次。\n  AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4int main() 5{ 6\tint ncase; 7\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 8\t9\twhile(ncase--) { 10\tint n; 11\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 12\t13\tint inp[n * 2]; 14\tint sum = 0; 15\tfor(int i = 0; i \u0026lt; n; i++) { 16\tscanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 17\tinp[i + n] = inp[i]; 18\tsum += inp[i]; 19\t} 20\t21\tint l = 0; 22\tint mn = 0; 23\tint partial = 0; 24\tfor(int r = 0; r \u0026lt; n * 2; r++) { 25\t//printf(\u0026#34;just in %d %d %d\\n\u0026#34;, l, r, partial); 26\twhile(r - l \u0026gt;= n || (partial \u0026gt; sum / 2 \u0026amp;\u0026amp; l \u0026lt; r)) { 27\tpartial -= inp[l]; 28\tl++; 29\tif(partial \u0026lt;= sum / 2) 30\tmn = max(mn, partial); 31\t//printf(\u0026#34;popped %d %d %d\\n\u0026#34;, l, r, partial); 32\t} 33\t34\tpartial += inp[r]; 35\tif(partial \u0026lt;= sum / 2) 36\tmn = max(mn, partial); 37\t//printf(\u0026#34;end for %d %d %d\\n\u0026#34;, l, r, partial); 38\t} 39\t40\t// left must be done 41\twhile(l \u0026lt; n * 2) { 42\t//printf(\u0026#34;outer %d %d\\n\u0026#34;, l, partial); 43\tpartial -= inp[l]; 44\tl++; 45\tif(partial \u0026lt;= sum / 2) 46\tmn = max(mn, partial); 47\t} 48\t49\tprintf(\u0026#34;%d %d\\n\u0026#34;, mn, sum - mn); 50\t} 51\treturn 0; 52}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/",
+	"title": "Course Notes",
+	"tags": [],
+	"description": "",
+	"content": "  CCU Competitive Programming 2017 Fall  PC2 在 Mac 上的使用方法   Linear function   Exam A Problem B     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/codeforces/gym/",
+	"title": "Gym",
+	"tags": [],
+	"description": "",
+	"content": "  2016-2017 ACM-ICPC, Egyptian Collegiate Programming Contest (ECPC 16)    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/itsa_ptc/",
+	"title": "ITSA/PTC",
+	"tags": [],
+	"description": "Monthly cotest",
+	"content": "  October 11, 2017   November 8, 2017    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tools/hugo/hugo-usage/",
+	"title": "Hugo Usage",
+	"tags": ["Hugo", "Setup"],
+	"description": "My Hugo handy refernece",
+	"content": " Useful Commands  hugo help: get Hugo documentation! hugo: generates the site to the destination folder hugo --cleanDestinationDir: remove files from destination not found in static directories  Creating a New Chapter  hugo new --kind chapter [path to file]/_index.md  Creating a New Article  Creater your own archetypes first! hugo new [path to post]/[post name].md: create a new post The one with the lower weight shows up first  Content Organization  All posts are contained in the content folder The folder hierarchy is the shape of the website\ncontent ├── level-one │ ├── level-two │ │ ├── level-three │ │ │ ├── level-four │ │ │ │ ├── _index.md │ │ │ │ ├── page-4-a.md │ │ │ │ ├── page-4-b.md │ │ │ │ └── page-4-c.md │ │ │ ├── _index.md │ │ │ ├── page-3-a.md │ │ │ ├── page-3-b.md │ │ │ └── page-3-c.md │ │ ├── _index.md │ │ ├── page-2-a.md │ │ ├── page-2-b.md │ │ └── page-2-c.md │ ├── _index.md │ ├── page-1-a.md │ ├── page-1-b.md │ └── page-1-c.md ├── _index.md └── page-top.md  Make sure that _index.md is present!\n  Tips for Writing Markdown  Hugo Docdock theme provides a lot of shortcodes! :) Here are a few useful ones:\n Codeblocks with line number  Use the following snippet  {{\u0026lt; highlight cpp \u0026quot;linenos=inline\u0026quot; \u0026gt;}} {{\u0026lt; / highlight \u0026gt;}}   Alerts\n{{% alert theme=\u0026quot;info\u0026quot; %}}**info**{{% /alert %}} {{% alert theme=\u0026quot;success\u0026quot; %}}**success**{{% /alert %}} {{% alert theme=\u0026quot;warning\u0026quot; %}}**warning**{{% /alert %}} {{% alert theme=\u0026quot;danger\u0026quot; %}}**danger**{{% /alert %}}  info success warning danger  Attachment\n markdown file: attachements must be place in a folder named like your page and ending with .files folder: attachements must be place in a nested files folder. Usage:\n{{%attachments title=\u0026quot;Related files\u0026quot; pattern=\u0026quot;.*(pdf|mp4)\u0026quot;/%}}   Expand\n{{% expand \u0026quot;Hint ?\u0026quot; %}}Here you go!{{% /expand%}}    Hint   Here you go!    Notice\n Must be padded to the left for the title to show up!  {{% notice note %}} Note {{% /notice %}}  Note\n {{% notice info %}} Info {{% /notice %}}  Info\n {{% notice tip %}} Tip {{% /notice %}}  Tip\n {{% notice warning %}} Warning {{% /notice %}}  Warning\n  panel\n success, default, primary, info, warning, danger  {{% panel theme=\u0026quot;success\u0026quot; header=\u0026quot;Title\u0026quot; %}}content{{% /panel %}}  Title content   revealjs\n  "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/onsite/",
+	"title": "Onsite competitions",
+	"tags": [],
+	"description": "",
+	"content": "  NCPC 2016 Final   NCPC 2017 Preliminary Round    "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/tutorial/freshmanfallfinalproject/",
+	"title": "大一程式設計期末專題",
+	"tags": ["Implementation"],
+	"description": "教學",
+	"content": "作業題目   Attachments   2048題目說明.docx  (18 kB)   AB測資版.docx  (15 kB)     \n猜數字 數字分解 + 檢查重複數值。這些都是作業有的技巧歐！\nAC Code 1#include \u0026lt;stdio.h\u0026gt;2 3int check(int ans, int guess) 4{ 5 int ansDecompose[4] = {0}, guessDecompose[4] = {0}; 6 int aCnt[10] = {0}, gCnt[10] = {0}; 7 int orig = guess; 8\t9\tint i; 10 for (i = 0; i \u0026lt; 4; i++) { 11 ansDecompose[i] = ans % 10; 12 aCnt[ans % 10]++; 13 ans /= 10; 14 } 15 for (i = 0; i \u0026lt; 4; i++) { 16 guessDecompose[i] = guess % 10; 17 if (gCnt[guess % 10] != 0) { 18 printf(\u0026#34;%d is an invalid guess.\\n\u0026#34;, orig); 19 return 0; 20 } 21 gCnt[guess % 10]++; 22 guess /= 10; 23 } 24 25 int a = 0, b = 0; 26 27 for (i = 0; i \u0026lt; 4; i++) { 28 if (ansDecompose[i] == guessDecompose[i]) 29 a++; 30 else if (aCnt[guessDecompose[i]] \u0026gt; 0) { 31 b++; 32 } 33 } 34 35 printf(\u0026#34;%dA%dB\\n\u0026#34;, a, b); 36 37 return a == 4; 38} 39 40void solve() 41{ 42 int ans; 43 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ans); 44 45 int guess; 46 47 int history[9999] = {0}; 48 while (scanf(\u0026#34;%d\u0026#34;, \u0026amp;guess) == 1) { 49 // check guessing history 50 if (history[guess] == 1) { 51 printf(\u0026#34;%d is already guessed.\\n\u0026#34;, guess); 52 continue; 53 } 54 history[guess] = 1; 55 56 if (check(ans, guess) == 1) 57 break; 58 } 59} 60 61int main() 62{ 63 int ncase; 64 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 65 while (ncase--) { 66 solve(); 67 if (ncase) 68 printf(\u0026#34;\\n\u0026#34;); 69 } 70 71 return 0; 72}\n2048 要如何把四個方向有效率的實作移動呢？沒錯，就是透過旋轉！\n只要實作其中一個方向的移動後，其他方向就是先選轉到剛剛實作好的方向後，做完，再轉回去就好啦！\n注意 Game over 條件，別看錯了QQ\nAC Code 1#include \u0026lt;stdio.h\u0026gt;2 3void print(int inp[4][4]) 4{ 5 // printf(\u0026#34;==============\\n\u0026#34;); 6 int i, j; 7 for (i = 0; i \u0026lt; 4; i++) 8 for (j = 0; j \u0026lt; 4; j++) 9 printf(\u0026#34;%d%c\u0026#34;, inp[i][j], j == 3 ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 10 // printf(\u0026#34;==============\\n\u0026#34;); 11} 12 13int checkSame(int inp[4][4]) 14{ 15 int i, j, k; 16 int hasSame = 0; 17 for (i = 0; i \u0026lt; 4; i++) { 18 for (j = 0; j \u0026lt; 4; j++) { 19 if (inp[i][j] == 0) 20 continue; 21 for (k = j + 1; k \u0026lt; 4; k++) { 22 if (inp[i][k] == 0) 23 continue; 24 if (inp[i][j] == inp[i][k]) { 25 hasSame = 1; 26 } else { 27 j = k - 1; 28 break; 29 } 30 } 31 } 32 } 33 return hasSame; 34} 35 36void rotate90Left(int inp[4][4]) 37{ 38 int i, j, tmp[4][4]; 39 for (i = 0; i \u0026lt; 4; i++) 40 for (j = 0; j \u0026lt; 4; j++) { 41 tmp[i][j] = inp[j][4 - 1 - i]; 42 } 43 44 for (i = 0; i \u0026lt; 4; i++) 45 for (j = 0; j \u0026lt; 4; j++) 46 inp[i][j] = tmp[i][j]; 47} 48 49// 0, no message 50// 1, has 64 51// 2, no move 52int move(int inp[4][4]) 53{ 54 // printf(\u0026#34;Before\\n\u0026#34;); 55 // print(inp); 56 57 int i, j, k; 58 int has0 = 0; 59 int has64 = 0; 60 for (i = 0; i \u0026lt; 4; i++) { 61 for (j = 0; j \u0026lt; 4; j++) { 62 if (inp[i][j] == 0) 63 continue; 64 65 for (k = j + 1; k \u0026lt; 4; k++) { 66 if (inp[i][k] == 0) // 0, continue 67 continue; 68 if (inp[i][j] == inp[i][k]) { // same, merge 69 inp[i][j] += inp[i][k]; 70 inp[i][k] = 0; 71 break; 72 } else { // not the same, skip 73 break; 74 } 75 } 76 } 77 } 78 79 for (i = 0; i \u0026lt; 4; i++) { 80 int lastZero = -1; 81 for (j = 0; j \u0026lt; 4; j++) { 82 if (inp[i][j] == 64) 83 has64 = 1; 84 if (inp[i][j] == 0) 85 has0 = 1; 86 87 if (inp[i][j] != 0 \u0026amp;\u0026amp; lastZero != -1) { 88 inp[i][lastZero] = inp[i][j]; // move 89 inp[i][j] = 0; // fill zero 90 lastZero = j; // crucial 91 continue; 92 } 93 if (inp[i][j] == 0 \u0026amp;\u0026amp; 94 lastZero == -1) // update last when no previous zero is present 95 lastZero = j; 96 } 97 } 98 99 // printf(\u0026#34;after\\n\u0026#34;); 100 // print(inp); 101 102 if (has64 == 1) 103 return 1; 104 else if (has64 == 0 \u0026amp;\u0026amp; has0 == 0) { 105 int hasSame = checkSame(inp); 106 if (hasSame == 0) { 107 rotate90Left(inp); 108 hasSame = checkSame(inp); 109 rotate90Left(inp); 110 rotate90Left(inp); 111 rotate90Left(inp); 112 } 113 return hasSame == 0 ? 2 : 0; 114 } else 115 return 0; 116} 117 118void swap(int *a, int *b) 119{ 120 int tmp = *a; 121 *a = *b; 122 *b = tmp; 123} 124 125void solve() 126{ 127 int i, j, inp[4][4]; 128 for (i = 0; i \u0026lt; 4; i++) 129 for (j = 0; j \u0026lt; 4; j++) 130 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i][j]); 131 char dir[10]; 132 scanf(\u0026#34;%s\u0026#34;, dir); 133 134 // a left 135 // s down 136 // d right 137 // w up 138 139 // merge and move 140 int ret = 0; 141 if (dir[0] == \u0026#39;a\u0026#39;) { 142 ret = move(inp); 143 } else if (dir[0] == \u0026#39;d\u0026#39;) { 144 rotate90Left(inp); 145 rotate90Left(inp); 146 ret = move(inp); 147 rotate90Left(inp); 148 rotate90Left(inp); 149 } else if (dir[0] == \u0026#39;s\u0026#39;) { 150 rotate90Left(inp); 151 rotate90Left(inp); 152 rotate90Left(inp); 153 ret = move(inp); 154 rotate90Left(inp); 155 } else { // w 156 rotate90Left(inp); 157 ret = move(inp); 158 rotate90Left(inp); 159 rotate90Left(inp); 160 rotate90Left(inp); 161 } 162 163 print(inp); 164 if (ret == 1) 165 printf(\u0026#34;You win\\n\u0026#34;); 166 else if (ret == 2) 167 printf(\u0026#34;Game over\\n\u0026#34;); 168} 169 170int main() 171{ 172 int ncase; 173 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 174 while (ncase--) { 175 solve(); 176 if (ncase) 177 printf(\u0026#34;\\n\u0026#34;); 178 } 179 180 return 0; 181}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/linear_function/",
+	"title": "Linear function",
+	"tags": ["Stack", "Implementation"],
+	"description": "",
+	"content": "\nProblem There are $n$ linear functions $f_i(x)=a[i]x+b[i], 1\u0026lt;= i \u0026lt;=n$. Define $F(x)=max{f_i(x) : 1\u0026lt;= i \u0026lt;=n}$.\nGiven $m$ x-values $c[1],c[2],…, c[m]$, please compute the sum of all $F(c[j])$, i.e., $F(c[1])+ F(c[2])+…+ F(c[m])$.\nSolution sketch To be continued\u0026hellip;\nAC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6typedef pair\u0026lt;ll, ll\u0026gt; ii; 7 8bool cmp(const ii \u0026amp;a, const ii \u0026amp;b) 9{ 10 if (a.first == b.first) 11 return a.second \u0026gt; b.second; 12 return a.first \u0026lt; b.first; 13} 14 15ll cal(ii coeff, ll x) 16{ 17 return coeff.first * x + coeff.second; 18} 19 20double x_val(ii a, ii b) 21{ 22 return (b.second - a.second) / (a.first - b.first); 23} 24 25#define EPS 1e-9 26 27void solve(int n, int m) 28{ 29 ii coeff[n]; 30 for (int i = 0; i \u0026lt; n; i++) 31 scanf(\u0026#34;%lld %lld\u0026#34;, \u0026amp;coeff[i].first, \u0026amp;coeff[i].second); 32 ll x[m]; 33 for (int i = 0; i \u0026lt; m; i++) 34 scanf(\u0026#34;%lld\u0026#34;, \u0026amp;x[i]); 35 36 sort(coeff, coeff + n, cmp); 37 sort(x, x + m); 38 39 vector\u0026lt;ii\u0026gt; ok; 40 ok.push_back(coeff[0]); 41 for (int i = 1; i \u0026lt; n; i++) { 42 while (ok.size() \u0026gt; 1) { 43 int sz = ok.size() - 1; 44 if (ok[sz].first == coeff[i].first || 45 (x_val(ok[sz], ok[sz - 1]) - x_val(ok[sz], coeff[i]) \u0026gt; -EPS)) 46 ok.pop_back(); 47 else 48 break; 49 } 50 ok.push_back(coeff[i]); 51 } 52 53 // for(auto i : ok) 54 // printf(\u0026#34;%lld %lld\\n\u0026#34;, i.first, i.second); 55 56 ll ans = 0; 57 int idx = 0; 58 for (int i = 0; i \u0026lt; m; i++) { 59 while (idx != (int)ok.size() - 1 \u0026amp;\u0026amp; 60 cal(ok[idx], x[i]) \u0026lt; cal(ok[idx + 1], x[i])) { 61 idx++; 62 } 63 ans += cal(ok[idx], x[i]); 64 } 65 66 printf(\u0026#34;%lld\\n\u0026#34;, ans); 67} 68 69int main() 70{ 71 int n, m; 72 while (scanf(\u0026#34;%d %d\u0026#34;, \u0026amp;n, \u0026amp;m) == 2 \u0026amp;\u0026amp; (n != 0)) { 73 solve(n, m); 74 } 75 76 return 0; 77}"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tools/",
+	"title": "Tools",
+	"tags": [],
+	"description": "Great tools collection",
+	"content": "PR is welcomed! Feel free to create some if you want to :)\nCheers~\n Hugo  Hugo Setup   Hugo Usage     "
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2016/",
+	"title": "NCPC 2016 Final",
+	"tags": ["NCPC", "Enumeration"],
+	"description": "",
+	"content": "充滿回憶的比賽，尤其是B QAQ\n\nB 簡單爆搜。\n  Hint   幾個1?\n    Solution     AC Code 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6 7ll solve(ll n) 8{ 9 if (n == 2) { 10 return 1; 11 } 12 13 int ans = 1; 14 ll orig = n; 15 for (; ans \u0026lt; 33; ans++) { 16 n = orig; 17 ll sum = ans; 18 19 n -= ans; 20 for (int i = 0; i \u0026lt; ans; i++) { 21 if (n - (ans - i + 1) == 0) 22 return ans; 23 n -= sum + 1; 24 sum += sum + 1; 25 } 26 27 if (n \u0026lt;= sum + 1) 28 break; 29 } 30 31 return ans; 32} 33 34int main() 35{ 36#ifndef DEBUG 37 int ncase; 38 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 39 while (ncase--) { 40 ll n; 41 scanf(\u0026#34;%lld\u0026#34;, \u0026amp;n); 42 printf(\u0026#34;%lld\\n\u0026#34;, solve(n)); 43 } 44#else 45 for (int i = 2; i \u0026lt;= 100; i++) { 46 printf(\u0026#34;n = %d, %lld\\n\u0026#34;, i, solve(i)); 47 } 48#endif 49 50 return 0; 51}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/contest/onsite/ncpc2017preliminary/",
+	"title": "NCPC 2017 Preliminary Round",
+	"tags": ["NCPC", "Implementation", "Enumeration"],
+	"description": "Problem E, what a pity!",
+	"content": "\nProblem 比賽題目   Attachments   Problem A: Verify Collatz 3x \u0026#43; 1 Conjecture.pdf  (100 kB)   Problem B: Largest Three Companions.pdf  (69 kB)   Problem C: Data Recovery.pdf  (108 kB)   Problem D: Routing mode checking.pdf  (129 kB)   Problem E: Terrestrial Stations.pdf  (118 kB)   Problem F: Battle Calculator.pdf  (72 kB)   Problem G: Chaining.pdf  (109 kB)     A Just 3n + 1.\n1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4#define sz(x) (int(x.size())) 5typedef long long ll; 6typedef double db; 7 8int main() { 9 ll x; 10 while (scanf(\u0026#34; %lld\u0026#34;, \u0026amp;x)) { 11 if (x == 0) break; 12 printf(\u0026#34;%lld \u0026#34;, x); 13 14 ll mx = -1; 15 int i; 16 for (i = 0; ; i++) { 17 if (x \u0026amp; 1) { 18 x = 3 * x + 1; 19 } 20 else { 21 x = x / 2; 22 } 23 mx = max(mx, x); 24 if (x == 1) { 25 break; 26 } 27 } 28 29 printf(\u0026#34;%d %lld\\n\u0026#34;, i + 1, mx); 30 } 31 32 33 return 0; 34}\nB 1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6 7void solve() 8{ 9 int n; 10 scanf(\u0026#34;%d\u0026#34;, \u0026amp;n); 11 12 int inp[n]; 13 for(int i = 0; i \u0026lt; n; i++) { 14 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 15 } 16 17 sort(inp, inp + n); 18 19 // implement 20 // -------++++++++ 21 ll product = inp[0] * inp[1]; 22 ll ans = LLONG_MIN; 23 for(int i = 2; i \u0026lt; n; i++) { 24 ans = max(ans, product * inp[i]); 25 } 26 27 product = inp[n - 1] * inp[n - 2]; 28 for(int i = 0; i \u0026lt; n - 2; i++) { 29 ans = max(ans, product * inp[i]); 30 } 31 32 printf(\u0026#34;%lld\\n\u0026#34;, ans); 33} 34 35int main() 36{ 37 int ncase; 38 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 39 40 while(ncase--) 41 solve(); 42 43 return 0; 44}\nC Ahh\u0026hellip;\u0026hellip; We can\u0026rsquo;t do the math with mod inverse\u0026hellip; so we resort to enumeration\u0026hellip;\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5typedef long long ll; 6const ll P = 65537; 7 8ll x[3]; 9ll y[3]; 10ll cal(ll a0, ll a1, ll a2, int which) 11{ 12 ll x_2 = x[which] * x[which] % P; 13 return (((a0 + a1 * x[which]) % P + a2 * x_2) % P); 14} 15 16void solve() 17{ 18 for(int i = 0; i \u0026lt; 3; i++) 19 scanf(\u0026#34;%lld %lld\u0026#34;, \u0026amp;x[i], \u0026amp;y[i]); 20 21 ll x_2 = (x[0] * x[0]) % P; 22 for(ll a1 = 0; a1 \u0026lt; P; a1++) { 23 for(ll a2 = 0; a2 \u0026lt; P; a2++) { 24 ll a0 = 5 * P + y[0] - (a1 * x[0]) % P - (a2 * x_2) % P; 25 a0 %= P; 26 assert(cal(a0, a1, a2, 0) == y[0]); 27 28 if(cal(a0, a1, a2, 1) == y[1] \u0026amp;\u0026amp; cal(a0, a1, a2, 2) == y[2]) { 29 printf(\u0026#34;%lld %lld %lld\\n\u0026#34;, a0, a1, a2); 30 return; 31 } 32 } 33 } 34} 35 36int main() 37{ 38 int ncase; 39 scanf(\u0026#34;%d\u0026#34;, \u0026amp;ncase); 40 41 while(ncase--) 42 solve(); 43 44 return 0; 45}\nD Problem statement contains error\u0026hellip;\u0026hellip;\u0026hellip;\u0026hellip;..\n1#include \u0026lt;bits/stdc++.h\u0026gt;2using namespace std; 3 4const int S = 4; 5const int INA = 2; // inactive 6const int ADA = 0; 7const int XY = 1; 8const int NON = 3; // nonreachable 9const int ACT = 5; // active 10 11int sx, sy; 12int A[8][8]; 13int Z[8][8]; 14 15bool xy_check(int tx, int ty) { 16 for (int x = min(sx, tx); x \u0026lt;= max(sx, tx); x++) { 17 if (A[x][sy] == INA) { 18 return false; 19 } 20 } 21 for (int y = min(sy, ty); y \u0026lt;= max(sy, ty); y++) { 22 if (A[tx][y] == INA) { 23 return false; 24 } 25 } 26 return true; 27} 28 29bool ada_check(int tx, int ty) { 30 for (int x = min(sx, tx); x \u0026lt;= max(sx, tx); x++) { 31 for (int y = min(sy, ty); y \u0026lt;= max(sy, ty); y++) { 32 if (A[x][y] == INA) { 33 return false; 34 } 35 } 36 } 37 return true; 38} 39 40void print(int a[8][8]) { 41 for (int y = 0; y \u0026lt; 8; y++) { 42 for (int x = 0; x \u0026lt; 8; x++) { 43 cout \u0026lt;\u0026lt; a[x][y]; 44 } 45 cout \u0026lt;\u0026lt; endl; 46 } 47} 48 49int main() { 50 ios::sync_with_stdio(false); 51 cin.tie(0); 52 53 string s; 54 while (cin \u0026gt;\u0026gt; s) { 55 if (s == \u0026#34;0\u0026#34;) break; 56 57 for (int x = 0; x \u0026lt; 8; x++) { 58 for (int y = 0; y \u0026lt; 8; y++) { 59 Z[x][y] = NON; 60 } 61 } 62 63 for (int i = 0; i \u0026lt; 64; i++) { 64 int y = i / 8; 65 int x = i % 8; 66 if (s[i] == \u0026#39;2\u0026#39;) { 67 A[x][y] = S; 68 Z[x][y] = S; 69 sx = x; 70 sy = y; 71 } else if (s[i] == \u0026#39;1\u0026#39;) { 72 A[x][y] = INA; 73 Z[x][y] = INA; 74 } else { 75 A[x][y] = ACT; 76 } 77 } 78 79 // print(A); 80 // cout \u0026lt;\u0026lt; endl; 81 82 for (int x = 0; x \u0026lt; 8; x++) { 83 for (int y = 0; y \u0026lt; 8; y++) { 84 if (x == sx \u0026amp;\u0026amp; y == sy) continue; 85 if (xy_check(x, y)) { 86 Z[x][y] = XY; 87 } 88 } 89 } 90 91 for (int x = 0; x \u0026lt; 8; x++) { 92 for (int y = 0; y \u0026lt; 8; y++) { 93 if (x == sx \u0026amp;\u0026amp; y == sy) continue; 94 if (ada_check(x, y)) { 95 Z[x][y] = ADA; 96 } 97 } 98 } 99 100 for (int y = 0; y \u0026lt; 8; y++) { 101 for (int x = 0; x \u0026lt; 8; x++) { 102 cout \u0026lt;\u0026lt; Z[x][y]; 103 } 104 } 105 cout \u0026lt;\u0026lt; endl; 106 107 // print(Z); 108 } 109 return 0; 110}\nG I know using graph for this one is overkill, but this is what makes us feel like 1 AC :)\n1#include \u0026lt;bits/stdc++.h\u0026gt;2 3using namespace std; 4 5#define N 10010 6 7typedef pair\u0026lt;int, int\u0026gt; ii; 8 9void solve(int n) 10{ 11 int inp[n + 1]; 12 for(int i = 1; i \u0026lt;= n; i++) 13 scanf(\u0026#34;%d\u0026#34;, \u0026amp;inp[i]); 14 // for(int i = 1; i \u0026lt;= n; i++) 15 //printf(\u0026#34;%d%c\u0026#34;, inp[i], i == n ? \u0026#39;\\n\u0026#39; : \u0026#39; \u0026#39;); 16 17 vector\u0026lt;int\u0026gt; g[N]; 18 int in[N] = {0}; 19 int out[N] = {0}; 20 for(int i = 1; i \u0026lt;= n; i++) { 21 g[i].push_back(inp[i]); 22 in[inp[i]]++; 23 out[i]++; 24 } 25 26 vector\u0026lt;int\u0026gt; s; 27 for(int i = 1; i \u0026lt;= n; i++) { 28 if(in[i] == 0) 29 s.push_back(i); 30 } 31 32 vector\u0026lt;ii\u0026gt; ans; 33 for(int i = 0; i \u0026lt; (int) s.size(); i++) { 34 int cnt = 0; 35 int who = s[i]; 36 // printf(\u0026#34;cnt %d who %d\\n\u0026#34;, cnt, who); 37 while((int)g[who].size() \u0026gt; 0) { 38 // printf(\u0026#34;cnt %d who %d\\n\u0026#34;, cnt, who); 39 cnt++; 40 who = g[who][0]; 41 } 42 43 ans.push_back(ii(s[i], cnt)); 44 } 45 sort(ans.begin(), ans.end()); 46 47 printf(\u0026#34;%d\u0026#34;, (int)ans.size()); 48 for(int i = 0; i \u0026lt; (int)ans.size(); i++) 49 printf(\u0026#34; %d %d\u0026#34;, ans[i].first, ans[i].second); 50 printf(\u0026#34;\\n\u0026#34;); 51} 52 53int main() 54{ 55 int n; 56 while(scanf(\u0026#34;%d\u0026#34;, \u0026amp;n) == 1 \u0026amp;\u0026amp; n) 57 solve(n); 58 59 return 0; 60}\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/course/ccu_competitive_programming_2017_fall/exama_2/",
+	"title": "Exam A Problem B",
+	"tags": ["Math"],
+	"description": "",
+	"content": "費馬小定理應用題。\n在 $mod\\ p$ 底下，指數是對 $p - 1$ 取餘數。\n\nSolution sketch 費馬小定理為 $x^{p - 1} \\equiv 1 \\pmod{p}$\n如果要對 $x^y \\pmod p$ 的 $y$ 取餘數，我們令 $y = (p - 1)r + s$\n可以推得，\n$$ x^y \\equiv (x^{p - 1})^r(x)^s \\equiv 1^r(x)^s \\equiv x^s \\pmod p $$\n利用 $s = y \\% (p - 1)$ 可以得知，指數在 $\\pmod p$ 底下，是要 $mod\\ p - 1$ 而不是 $mod\\ p$\nAC Code 1To be added..."
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/_header/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": " Coding Notes\n"
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/apcs/",
+	"title": "Apcs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/bfs/",
+	"title": "Bfs",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/binary-search/",
+	"title": "Binary Search",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/codeforces/",
+	"title": "Codeforces",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/competitive-programming/",
+	"title": "Competitive Programming",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/educational-round/",
+	"title": "Educational Round",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/enumeration/",
+	"title": "Enumeration",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/etutor/",
+	"title": "Etutor",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/greedy/",
+	"title": "Greedy",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/gym/",
+	"title": "Gym",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/hugo/",
+	"title": "Hugo",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/implementation/",
+	"title": "Implementation",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/itsa/",
+	"title": "Itsa",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/linux/",
+	"title": "Linux",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/mac/",
+	"title": "Mac",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/math/",
+	"title": "Math",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/ncpc/",
+	"title": "Ncpc",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/observation/",
+	"title": "Observation",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/pc2/",
+	"title": "Pc2",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/pc2/",
+	"title": "Pc2",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/physics/",
+	"title": "Physics",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/poj/",
+	"title": "Poj",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/ptc/",
+	"title": "Ptc",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/setup/",
+	"title": "Setup",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/stack/",
+	"title": "Stack",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/categories/tutorial/",
+	"title": "Tutorial",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/two-pointer/",
+	"title": "Two Pointer",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/union-find/",
+	"title": "Union Find",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/uva/",
+	"title": "Uva",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://henrybear327.github.io/CodingNotes/tags/zerojudge/",
+	"title": "Zerojudge",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
