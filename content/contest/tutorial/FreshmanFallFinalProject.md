@@ -24,7 +24,7 @@ weight: 20
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <stdio.h>
 
@@ -111,7 +111,7 @@ int main()
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <stdio.h>
 

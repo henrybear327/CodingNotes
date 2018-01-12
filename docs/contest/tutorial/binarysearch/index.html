@@ -406,32 +406,38 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 <h3 id="ac-code">AC Code</h3>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span>    <span style="color:#66d9ef">int</span> n;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span>    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>n);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span>    <span style="color:#66d9ef">int</span> inp[n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span>    inp[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i]);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span>        inp[i] <span style="color:#f92672">+=</span> inp[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>];
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>    <span style="color:#66d9ef">int</span> q, k <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span>    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>q);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> q; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>k);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>        printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#66d9ef">int</span>)(lower_bound(inp, inp <span style="color:#f92672">+</span> n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, k) <span style="color:#f92672">-</span> inp));
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span>}</code></pre></div>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style=";border-spacing:0;padding:0;margin:0;border:0;width:100%;overflow:auto;display:block;"><tr><td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 1</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 2</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 3</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 4</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 5</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 6</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 7</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 8</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 9</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">10</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">11</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">12</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">13</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">14</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">15</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">16</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">17</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">18</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">19</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">20</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">21</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">22</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">23</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">24</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">25</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">26</span></code></pre></td>
+<td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">int</span> n;
+    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>n);
+
+    <span style="color:#66d9ef">int</span> inp[n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+    inp[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i]);
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">2</span>; i <span style="color:#f92672">&lt;=</span> n; i<span style="color:#f92672">++</span>)
+        inp[i] <span style="color:#f92672">+=</span> inp[i <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>];
+
+    <span style="color:#66d9ef">int</span> q, k <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>q);
+
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> q; i<span style="color:#f92672">++</span>) {
+        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>k);
+        printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#66d9ef">int</span>)(lower_bound(inp, inp <span style="color:#f92672">+</span> n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, k) <span style="color:#f92672">-</span> inp));
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}</code></pre></td></tr></table>
+</div>
+</div>
 
 <h2 id="cf-706b-interesting-drink-http-codeforces-com-problemset-problem-706-b"><a href="http://codeforces.com/problemset/problem/706/B">CF 706B Interesting drink</a></h2>
 
@@ -454,33 +460,39 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 <h3 id="ac-code-1">AC Code</h3>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span>    <span style="color:#66d9ef">int</span> n;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span>    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>n);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span>    <span style="color:#66d9ef">int</span> inp[n];
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span>        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i]);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>    sort(inp, inp <span style="color:#f92672">+</span> n);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span>    <span style="color:#66d9ef">int</span> m;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>m);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>    <span style="color:#75715e">// 3 6 8 10 11
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> m; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span>        <span style="color:#66d9ef">int</span> num;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>num);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>        <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> upper_bound(inp, inp <span style="color:#f92672">+</span> n, num);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>        printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#66d9ef">int</span>)(it <span style="color:#f92672">-</span> inp));
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span>}</code></pre></div>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style=";border-spacing:0;padding:0;margin:0;border:0;width:100%;overflow:auto;display:block;"><tr><td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 1</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 2</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 3</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 4</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 5</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 6</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 7</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 8</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 9</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">10</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">11</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">12</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">13</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">14</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">15</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">16</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">17</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">18</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">19</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">20</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">21</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">22</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">23</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">24</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">25</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">26</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">27</span></code></pre></td>
+<td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">int</span> n;
+    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>n);
+
+    <span style="color:#66d9ef">int</span> inp[n];
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i]);
+    sort(inp, inp <span style="color:#f92672">+</span> n);
+
+    <span style="color:#66d9ef">int</span> m;
+    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>m);
+    <span style="color:#75715e">// 3 6 8 10 11
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> m; i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">int</span> num;
+        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>num);
+
+        <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> upper_bound(inp, inp <span style="color:#f92672">+</span> n, num);
+        printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#66d9ef">int</span>)(it <span style="color:#f92672">-</span> inp));
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}</code></pre></td></tr></table>
+</div>
+</div>
 
 <h1 id="浮點數的-binary-search">浮點數的 binary search</h1>
 
@@ -524,42 +536,48 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 <h3 id="ac-code-2">AC Code</h3>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cmath&gt;</span><span style="color:#75715e">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style="color:#75715e"></span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="color:#66d9ef">int</span> n, k;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">check</span>(<span style="color:#66d9ef">double</span> mid, <span style="color:#66d9ef">double</span> inp[])
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span>    <span style="color:#66d9ef">int</span> cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span>        cnt <span style="color:#f92672">+=</span> (<span style="color:#66d9ef">int</span>)(inp[i] <span style="color:#f92672">/</span> mid);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span>    <span style="color:#66d9ef">return</span> cnt <span style="color:#f92672">&gt;=</span> k;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>k);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span>    <span style="color:#66d9ef">double</span> inp[n];
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lf&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i]);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>    <span style="color:#66d9ef">double</span> l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> <span style="color:#ae81ff">100000001</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span>        <span style="color:#66d9ef">double</span> mid <span style="color:#f92672">=</span> (l <span style="color:#f92672">+</span> r) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span>        <span style="color:#66d9ef">if</span> (check(mid, inp))
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span>            l <span style="color:#f92672">=</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span>        <span style="color:#66d9ef">else</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span>            r <span style="color:#f92672">=</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span>    printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%.2f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (floor)(l <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span>}</code></pre></div>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style=";border-spacing:0;padding:0;margin:0;border:0;width:100%;overflow:auto;display:block;"><tr><td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 1</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 2</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 3</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 4</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 5</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 6</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 7</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 8</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 9</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">10</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">11</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">12</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">13</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">14</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">15</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">16</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">17</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">18</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">19</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">20</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">21</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">22</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">23</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">24</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">25</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">26</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">27</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">28</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">29</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">30</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">31</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">32</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">33</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">34</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">35</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">36</span></code></pre></td>
+<td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cmath&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;cstdio&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> n, k;
+<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">check</span>(<span style="color:#66d9ef">double</span> mid, <span style="color:#66d9ef">double</span> inp[])
+{
+    <span style="color:#66d9ef">int</span> cnt <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+        cnt <span style="color:#f92672">+=</span> (<span style="color:#66d9ef">int</span>)(inp[i] <span style="color:#f92672">/</span> mid);
+    }
+
+    <span style="color:#66d9ef">return</span> cnt <span style="color:#f92672">&gt;=</span> k;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>k);
+
+    <span style="color:#66d9ef">double</span> inp[n];
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%lf&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i]);
+
+    <span style="color:#66d9ef">double</span> l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> <span style="color:#ae81ff">100000001</span>;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">100</span>; i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">double</span> mid <span style="color:#f92672">=</span> (l <span style="color:#f92672">+</span> r) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+
+        <span style="color:#66d9ef">if</span> (check(mid, inp))
+            l <span style="color:#f92672">=</span> mid;
+        <span style="color:#66d9ef">else</span>
+            r <span style="color:#f92672">=</span> mid;
+    }
+
+    printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%.2f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (floor)(l <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span>) <span style="color:#f92672">/</span> <span style="color:#ae81ff">100</span>);
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}</code></pre></td></tr></table>
+</div>
+</div>
 
 <h2 id="cf-492b-vanya-and-lanterns-http-codeforces-com-problemset-problem-492-b"><a href="http://codeforces.com/problemset/problem/492/B">CF 492B Vanya and Lanterns</a></h2>
 
@@ -582,60 +600,66 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 <h3 id="ac-code-3">AC Code</h3>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style="color:#75715e">#define EPS 1e-10
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style="color:#75715e"></span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span><span style="color:#66d9ef">int</span> n, len;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span><span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">check</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>inp, <span style="color:#66d9ef">double</span> mid)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span>    <span style="color:#66d9ef">if</span> (inp[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">-</span> mid <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>EPS)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span>        <span style="color:#66d9ef">return</span> false;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span>    <span style="color:#66d9ef">double</span> farthest <span style="color:#f92672">=</span> inp[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> (<span style="color:#66d9ef">int</span>)inp.size(); i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span>        <span style="color:#66d9ef">if</span> (farthest <span style="color:#f92672">-</span> (inp[i] <span style="color:#f92672">-</span> mid) <span style="color:#f92672">&gt;=</span> <span style="color:#f92672">-</span>EPS)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span>            farthest <span style="color:#f92672">=</span> inp[i] <span style="color:#f92672">+</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>        <span style="color:#66d9ef">else</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>            <span style="color:#66d9ef">return</span> false;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>    <span style="color:#66d9ef">if</span> (farthest <span style="color:#f92672">-</span> len <span style="color:#f92672">&gt;=</span> <span style="color:#f92672">-</span>EPS)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>        <span style="color:#66d9ef">return</span> true;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>    <span style="color:#66d9ef">return</span> false;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span>    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>len);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span>    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> inp;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span>        <span style="color:#66d9ef">int</span> num;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span>        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>num);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span>        inp.push_back(num);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span>    sort(inp.begin(), inp.end());
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span>    <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> unique(inp.begin(), inp.end());
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span>    inp.resize(distance(inp.begin(), it));
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span>    <span style="color:#66d9ef">double</span> l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> len;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">200</span>; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span>        <span style="color:#66d9ef">double</span> mid <span style="color:#f92672">=</span> (l <span style="color:#f92672">+</span> r) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span>        <span style="color:#66d9ef">if</span> (check(inp, mid))
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span>            r <span style="color:#f92672">=</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">47</span>        <span style="color:#66d9ef">else</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">48</span>            l <span style="color:#f92672">=</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">49</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">50</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">51</span>    printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%.15f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, l);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">52</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">53</span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">54</span>}</code></pre></div>
+<div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style=";border-spacing:0;padding:0;margin:0;border:0;width:100%;overflow:auto;display:block;"><tr><td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 1</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 2</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 3</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 4</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 5</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 6</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 7</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 8</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 9</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">10</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">11</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">12</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">13</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">14</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">15</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">16</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">17</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">18</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">19</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">20</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">21</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">22</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">23</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">24</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">25</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">26</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">27</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">28</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">29</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">30</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">31</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">32</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">33</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">34</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">35</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">36</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">37</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">38</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">39</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">40</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">41</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">42</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">43</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">44</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">45</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">46</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">47</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">48</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">49</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">50</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">51</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">52</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">53</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">54</span></code></pre></td>
+<td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#75715e">#define EPS 1e-10
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> n, len;
+<span style="color:#66d9ef">bool</span> <span style="color:#a6e22e">check</span>(vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&amp;</span>inp, <span style="color:#66d9ef">double</span> mid)
+{
+    <span style="color:#66d9ef">if</span> (inp[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">-</span> mid <span style="color:#f92672">&gt;</span> <span style="color:#f92672">-</span>EPS)
+        <span style="color:#66d9ef">return</span> false;
+    <span style="color:#66d9ef">double</span> farthest <span style="color:#f92672">=</span> inp[<span style="color:#ae81ff">0</span>] <span style="color:#f92672">+</span> mid;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>; i <span style="color:#f92672">&lt;</span> (<span style="color:#66d9ef">int</span>)inp.size(); i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">if</span> (farthest <span style="color:#f92672">-</span> (inp[i] <span style="color:#f92672">-</span> mid) <span style="color:#f92672">&gt;=</span> <span style="color:#f92672">-</span>EPS)
+            farthest <span style="color:#f92672">=</span> inp[i] <span style="color:#f92672">+</span> mid;
+        <span style="color:#66d9ef">else</span>
+            <span style="color:#66d9ef">return</span> false;
+    }
+
+    <span style="color:#66d9ef">if</span> (farthest <span style="color:#f92672">-</span> len <span style="color:#f92672">&gt;=</span> <span style="color:#f92672">-</span>EPS)
+        <span style="color:#66d9ef">return</span> true;
+    <span style="color:#66d9ef">return</span> false;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>len);
+
+    vector<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> inp;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">int</span> num;
+        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>num);
+
+        inp.push_back(num);
+    }
+
+    sort(inp.begin(), inp.end());
+    <span style="color:#66d9ef">auto</span> it <span style="color:#f92672">=</span> unique(inp.begin(), inp.end());
+    inp.resize(distance(inp.begin(), it));
+
+    <span style="color:#66d9ef">double</span> l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> len;
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">200</span>; i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">double</span> mid <span style="color:#f92672">=</span> (l <span style="color:#f92672">+</span> r) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+
+        <span style="color:#66d9ef">if</span> (check(inp, mid))
+            r <span style="color:#f92672">=</span> mid;
+        <span style="color:#66d9ef">else</span>
+            l <span style="color:#f92672">=</span> mid;
+    }
+
+    printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%.15f</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, l);
+
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}</code></pre></td></tr></table>
+</div>
+</div>
 
 <h1 id="挑戰題">挑戰題</h1>
 
@@ -645,72 +669,78 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 <h3 id="ac-code-4">AC Code</h3>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 1</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 2</span><span style="color:#75715e"></span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 3</span><span style="color:#75715e">// For every query, binary search for the upper-left corner of the square
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 4</span><span style="color:#75715e">// And then binary search for the lower-left corner &#34;on the diagnal&#34;
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 5</span><span style="color:#75715e"></span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 6</span><span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 7</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 8</span><span style="color:#66d9ef">int</span> n, m;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 9</span><span style="color:#66d9ef">int</span> inp[<span style="color:#ae81ff">555</span>][<span style="color:#ae81ff">555</span>];
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">10</span><span style="color:#66d9ef">int</span> low, high;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">11</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">12</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">search</span>(<span style="color:#66d9ef">int</span> row, <span style="color:#66d9ef">int</span> col)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">13</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">14</span>    <span style="color:#75715e">// printf(&#34;row %d col %d\n&#34;, row, col);
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">15</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> l <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, r <span style="color:#f92672">=</span> min(n <span style="color:#f92672">-</span> row, m <span style="color:#f92672">-</span> col);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">16</span>    <span style="color:#66d9ef">while</span>(r <span style="color:#f92672">-</span> l <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">17</span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (r <span style="color:#f92672">-</span> l) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">18</span>        <span style="color:#75715e">// printf(&#34;l = %d, mid = %d, r = %d\n&#34;, l, mid, r);
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">19</span><span style="color:#75715e"></span>        
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">20</span>        <span style="color:#66d9ef">if</span>(inp[row <span style="color:#f92672">+</span> mid][col <span style="color:#f92672">+</span> mid] <span style="color:#f92672">&lt;=</span> high)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">21</span>            l <span style="color:#f92672">=</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">22</span>        <span style="color:#66d9ef">else</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">23</span>            r <span style="color:#f92672">=</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">24</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">25</span>    <span style="color:#75715e">// printf(&#34;l = %d\n&#34;, l);
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">26</span><span style="color:#75715e"></span>    
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">27</span>    <span style="color:#66d9ef">return</span> l;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">28</span>}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">29</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">30</span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">solve</span>()
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">31</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">32</span>    <span style="color:#66d9ef">int</span> ret <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">33</span>    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">34</span>        <span style="color:#66d9ef">int</span> l <span style="color:#f92672">=</span> lower_bound(inp[i], inp[i] <span style="color:#f92672">+</span> m, low) <span style="color:#f92672">-</span> inp[i];
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">35</span>        <span style="color:#66d9ef">if</span>(l <span style="color:#f92672">==</span> m)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">36</span>            <span style="color:#66d9ef">continue</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">37</span>        <span style="color:#66d9ef">int</span> r <span style="color:#f92672">=</span> search(i, l);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">38</span>        <span style="color:#66d9ef">if</span>(r <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">39</span>            <span style="color:#66d9ef">continue</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">40</span>        <span style="color:#75715e">// printf(&#34;i = %d l = %d r = %d\n&#34;, i, l, r);
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">41</span><span style="color:#75715e"></span>        
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">42</span>        ret <span style="color:#f92672">=</span> max(ret, r <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">43</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">44</span>    
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">45</span>    printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ret);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">46</span>}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">47</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">48</span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">49</span>{
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">50</span>    <span style="color:#66d9ef">while</span>(scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>m) <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> (n <span style="color:#f92672">||</span> m)) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">51</span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">52</span>            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> m; j<span style="color:#f92672">++</span>) 
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">53</span>                scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i][j]);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">54</span>        
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">55</span>        <span style="color:#66d9ef">int</span> q;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">56</span>        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>q);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">57</span>        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> q; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">58</span>            scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>low, <span style="color:#f92672">&amp;</span>high);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">59</span>            
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">60</span>            solve();
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">61</span>        }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">62</span>        printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;-</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">63</span>    }
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">64</span>    
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">65</span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">66</span>}</code></pre></div></p>
+<p><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style=";border-spacing:0;padding:0;margin:0;border:0;width:100%;overflow:auto;display:block;"><tr><td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 1</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 2</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 3</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 4</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 5</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 6</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 7</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 8</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 9</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">10</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">11</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">12</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">13</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">14</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">15</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">16</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">17</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">18</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">19</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">20</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">21</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">22</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">23</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">24</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">25</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">26</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">27</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">28</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">29</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">30</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">31</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">32</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">33</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">34</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">35</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">36</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">37</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">38</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">39</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">40</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">41</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">42</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">43</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">44</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">45</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">46</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">47</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">48</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">49</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">50</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">51</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">52</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">53</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">54</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">55</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">56</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">57</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">58</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">59</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">60</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">61</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">62</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">63</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">64</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">65</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">66</span></code></pre></td>
+<td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;bits/stdc++.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// For every query, binary search for the upper-left corner of the square
+</span><span style="color:#75715e">// And then binary search for the lower-left corner &#34;on the diagnal&#34;
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">using</span> <span style="color:#66d9ef">namespace</span> std;
+
+<span style="color:#66d9ef">int</span> n, m;
+<span style="color:#66d9ef">int</span> inp[<span style="color:#ae81ff">555</span>][<span style="color:#ae81ff">555</span>];
+<span style="color:#66d9ef">int</span> low, high;
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">search</span>(<span style="color:#66d9ef">int</span> row, <span style="color:#66d9ef">int</span> col)
+{
+    <span style="color:#75715e">// printf(&#34;row %d col %d\n&#34;, row, col);
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> l <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, r <span style="color:#f92672">=</span> min(n <span style="color:#f92672">-</span> row, m <span style="color:#f92672">-</span> col);
+    <span style="color:#66d9ef">while</span>(r <span style="color:#f92672">-</span> l <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
+        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> l <span style="color:#f92672">+</span> (r <span style="color:#f92672">-</span> l) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+        <span style="color:#75715e">// printf(&#34;l = %d, mid = %d, r = %d\n&#34;, l, mid, r);
+</span><span style="color:#75715e"></span>        
+        <span style="color:#66d9ef">if</span>(inp[row <span style="color:#f92672">+</span> mid][col <span style="color:#f92672">+</span> mid] <span style="color:#f92672">&lt;=</span> high)
+            l <span style="color:#f92672">=</span> mid;
+        <span style="color:#66d9ef">else</span>
+            r <span style="color:#f92672">=</span> mid;
+    }
+    <span style="color:#75715e">// printf(&#34;l = %d\n&#34;, l);
+</span><span style="color:#75715e"></span>    
+    <span style="color:#66d9ef">return</span> l;
+}
+
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">solve</span>()
+{
+    <span style="color:#66d9ef">int</span> ret <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>) {
+        <span style="color:#66d9ef">int</span> l <span style="color:#f92672">=</span> lower_bound(inp[i], inp[i] <span style="color:#f92672">+</span> m, low) <span style="color:#f92672">-</span> inp[i];
+        <span style="color:#66d9ef">if</span>(l <span style="color:#f92672">==</span> m)
+            <span style="color:#66d9ef">continue</span>;
+        <span style="color:#66d9ef">int</span> r <span style="color:#f92672">=</span> search(i, l);
+        <span style="color:#66d9ef">if</span>(r <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+            <span style="color:#66d9ef">continue</span>;
+        <span style="color:#75715e">// printf(&#34;i = %d l = %d r = %d\n&#34;, i, l, r);
+</span><span style="color:#75715e"></span>        
+        ret <span style="color:#f92672">=</span> max(ret, r <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+    }
+    
+    printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, ret);
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>()
+{
+    <span style="color:#66d9ef">while</span>(scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>n, <span style="color:#f92672">&amp;</span>m) <span style="color:#f92672">==</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">&amp;&amp;</span> (n <span style="color:#f92672">||</span> m)) {
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+            <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> m; j<span style="color:#f92672">++</span>) 
+                scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>inp[i][j]);
+        
+        <span style="color:#66d9ef">int</span> q;
+        scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d&#34;</span>, <span style="color:#f92672">&amp;</span>q);
+        <span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> q; i<span style="color:#f92672">++</span>) {
+            scanf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;%d %d&#34;</span>, <span style="color:#f92672">&amp;</span>low, <span style="color:#f92672">&amp;</span>high);
+            
+            solve();
+        }
+        printf(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;-</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    }
+    
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}</code></pre></td></tr></table>
+</div>
+</div></p>
 
 <h2 id="cf-551c-gukiz-hates-boxes-http-codeforces-com-contest-551-problem-c"><a href="http://codeforces.com/contest/551/problem/C">CF 551C GukiZ hates Boxes</a></h2>
 
@@ -720,118 +750,124 @@ src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-
 
 <h3 id="ac-code-5">AC Code</h3>
 
-<p><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  1</span>import java.io.<span style="color:#f92672">*</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  2</span>import java.util.<span style="color:#f92672">*</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  3</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  4</span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span> {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  5</span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> boolean check(<span style="color:#66d9ef">int</span>[] inp, <span style="color:#66d9ef">long</span> mid, <span style="color:#66d9ef">int</span> k) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  6</span>		<span style="color:#66d9ef">int</span>[] cur <span style="color:#f92672">=</span> Arrays.copyOf(inp, inp.length);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  7</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  8</span>		<span style="color:#66d9ef">int</span> last <span style="color:#f92672">=</span> inp.length <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">  9</span>		<span style="color:#66d9ef">while</span> (last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> cur[last] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 10</span>			last<span style="color:#f92672">--</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 11</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 12</span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> k; i<span style="color:#f92672">++</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 13</span>			<span style="color:#66d9ef">long</span> t <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> last <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 14</span>			<span style="color:#66d9ef">while</span> (t <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 15</span>				<span style="color:#66d9ef">if</span> (t <span style="color:#f92672">-</span> cur[last] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e">// move box
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 16</span><span style="color:#75715e"></span>					t <span style="color:#f92672">-=</span> cur[last];
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 17</span>					cur[last] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 18</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 19</span>					<span style="color:#66d9ef">while</span> (last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> cur[last] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 20</span>						last<span style="color:#f92672">--</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 21</span>				} <span style="color:#66d9ef">else</span> {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 22</span>					cur[last] <span style="color:#f92672">-=</span> t;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 23</span>					t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 24</span>				}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 25</span>				<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(t <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>))
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 26</span>					<span style="color:#66d9ef">break</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 27</span>			}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 28</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 29</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 30</span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> last; i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; i<span style="color:#f92672">--</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 31</span>			<span style="color:#66d9ef">if</span> (cur[i] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 32</span>				<span style="color:#66d9ef">return</span> false;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 33</span>		<span style="color:#66d9ef">return</span> true;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 34</span>	}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 35</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 36</span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> main(String[] args) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 37</span>		MyScanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyScanner();
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 38</span>		out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(<span style="color:#66d9ef">new</span> BufferedOutputStream(System.out));
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 39</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 40</span>		<span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> sc.nextInt(), k <span style="color:#f92672">=</span> sc.nextInt();
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 41</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 42</span>		<span style="color:#66d9ef">int</span>[] inp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[n];
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 43</span>		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 44</span>			inp[i] <span style="color:#f92672">=</span> sc.nextInt();
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 45</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 46</span>		<span style="color:#66d9ef">long</span> l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> (<span style="color:#66d9ef">long</span>) <span style="color:#ae81ff">1e18</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 47</span>		<span style="color:#66d9ef">while</span> (r <span style="color:#f92672">-</span> l <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 48</span>			<span style="color:#66d9ef">long</span> mid <span style="color:#f92672">=</span> (l <span style="color:#f92672">+</span> r) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 49</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 50</span>			<span style="color:#66d9ef">if</span> (check(inp, mid, k) <span style="color:#f92672">==</span> true)
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 51</span>				r <span style="color:#f92672">=</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 52</span>			<span style="color:#66d9ef">else</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 53</span>				l <span style="color:#f92672">=</span> mid;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 54</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 55</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 56</span>		out.println(r);
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 57</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 58</span>		out.close();
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 59</span>	}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 60</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 61</span>	<span style="color:#75715e">// PrintWriter for faster output
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 62</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> PrintWriter out;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 63</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 64</span>	<span style="color:#75715e">// MyScanner class for faster input
-</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 65</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyScanner</span> {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 66</span>		BufferedReader br;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 67</span>		StringTokenizer st;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 68</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 69</span>		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">MyScanner</span>() {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 70</span>			br <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> InputStreamReader(System.in));
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 71</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 72</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 73</span>		boolean <span style="color:#a6e22e">hasNext</span>() {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 74</span>			<span style="color:#66d9ef">while</span> (st <span style="color:#f92672">==</span> null <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>st.hasMoreElements()) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 75</span>				<span style="color:#66d9ef">try</span> {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 76</span>					st <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringTokenizer(br.readLine());
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 77</span>				} <span style="color:#66d9ef">catch</span> (Exception e) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 78</span>					<span style="color:#66d9ef">return</span> false;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 79</span>				}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 80</span>			}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 81</span>			<span style="color:#66d9ef">return</span> true;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 82</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 83</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 84</span>		String <span style="color:#a6e22e">next</span>() {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 85</span>			<span style="color:#66d9ef">if</span> (hasNext())
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 86</span>				<span style="color:#66d9ef">return</span> st.nextToken();
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 87</span>			<span style="color:#66d9ef">return</span> null;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 88</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 89</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 90</span>		<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nextInt</span>() {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 91</span>			<span style="color:#66d9ef">return</span> Integer.parseInt(next());
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 92</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 93</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 94</span>		<span style="color:#66d9ef">long</span> <span style="color:#a6e22e">nextLong</span>() {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 95</span>			<span style="color:#66d9ef">return</span> Long.parseLong(next());
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 96</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 97</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 98</span>		<span style="color:#66d9ef">double</span> <span style="color:#a6e22e">nextDouble</span>() {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;"> 99</span>			<span style="color:#66d9ef">return</span> Double.parseDouble(next());
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">100</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">101</span>
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">102</span>		String <span style="color:#a6e22e">nextLine</span>() {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">103</span>			String str <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;</span>;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">104</span>			<span style="color:#66d9ef">try</span> {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">105</span>				str <span style="color:#f92672">=</span> br.readLine();
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">106</span>			} <span style="color:#66d9ef">catch</span> (IOException e) {
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">107</span>				e.printStackTrace();
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">108</span>			}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">109</span>			<span style="color:#66d9ef">return</span> str;
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">110</span>		}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">111</span>	}
-<span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;">112</span>}</code></pre></div></p>
+<p><div class="highlight"><div style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style=";border-spacing:0;padding:0;margin:0;border:0;width:100%;overflow:auto;display:block;"><tr><td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp"><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  1</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  2</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  3</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  4</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  5</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  6</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  7</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  8</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">  9</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 10</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 11</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 12</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 13</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 14</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 15</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 16</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 17</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 18</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 19</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 20</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 21</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 22</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 23</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 24</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 25</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 26</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 27</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 28</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 29</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 30</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 31</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 32</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 33</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 34</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 35</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 36</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 37</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 38</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 39</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 40</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 41</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 42</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 43</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 44</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 45</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 46</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 47</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 48</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 49</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 50</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 51</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 52</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 53</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 54</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 55</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 56</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 57</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 58</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 59</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 60</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 61</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 62</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 63</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 64</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 65</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 66</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 67</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 68</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 69</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 70</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 71</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 72</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 73</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 74</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 75</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 76</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 77</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 78</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 79</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 80</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 81</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 82</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 83</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 84</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 85</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 86</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 87</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 88</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 89</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 90</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 91</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 92</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 93</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 94</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 95</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 96</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 97</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 98</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;"> 99</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">100</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">101</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">102</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">103</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">104</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">105</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">106</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">107</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">108</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">109</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">110</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">111</span><span style="color:#7c7c79;margin-right:0.4em;padding:00.4em00.4em;display:block;">112</span></code></pre></td>
+<td style=";vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cpp" data-lang="cpp">import java.io.<span style="color:#f92672">*</span>;
+import java.util.<span style="color:#f92672">*</span>;
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span> {
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> boolean check(<span style="color:#66d9ef">int</span>[] inp, <span style="color:#66d9ef">long</span> mid, <span style="color:#66d9ef">int</span> k) {
+		<span style="color:#66d9ef">int</span>[] cur <span style="color:#f92672">=</span> Arrays.copyOf(inp, inp.length);
+
+		<span style="color:#66d9ef">int</span> last <span style="color:#f92672">=</span> inp.length <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+		<span style="color:#66d9ef">while</span> (last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> cur[last] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+			last<span style="color:#f92672">--</span>;
+
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> k; i<span style="color:#f92672">++</span>) {
+			<span style="color:#66d9ef">long</span> t <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> last <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+			<span style="color:#66d9ef">while</span> (t <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) {
+				<span style="color:#66d9ef">if</span> (t <span style="color:#f92672">-</span> cur[last] <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>) { <span style="color:#75715e">// move box
+</span><span style="color:#75715e"></span>					t <span style="color:#f92672">-=</span> cur[last];
+					cur[last] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+					<span style="color:#66d9ef">while</span> (last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> cur[last] <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)
+						last<span style="color:#f92672">--</span>;
+				} <span style="color:#66d9ef">else</span> {
+					cur[last] <span style="color:#f92672">-=</span> t;
+					t <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+				}
+				<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(t <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span> last <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>))
+					<span style="color:#66d9ef">break</span>;
+			}
+		}
+
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> last; i <span style="color:#f92672">&gt;=</span> <span style="color:#ae81ff">0</span>; i<span style="color:#f92672">--</span>)
+			<span style="color:#66d9ef">if</span> (cur[i] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span>)
+				<span style="color:#66d9ef">return</span> false;
+		<span style="color:#66d9ef">return</span> true;
+	}
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> main(String[] args) {
+		MyScanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyScanner();
+		out <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PrintWriter(<span style="color:#66d9ef">new</span> BufferedOutputStream(System.out));
+
+		<span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> sc.nextInt(), k <span style="color:#f92672">=</span> sc.nextInt();
+
+		<span style="color:#66d9ef">int</span>[] inp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>[n];
+		<span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> n; i<span style="color:#f92672">++</span>)
+			inp[i] <span style="color:#f92672">=</span> sc.nextInt();
+
+		<span style="color:#66d9ef">long</span> l <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, r <span style="color:#f92672">=</span> (<span style="color:#66d9ef">long</span>) <span style="color:#ae81ff">1e18</span>;
+		<span style="color:#66d9ef">while</span> (r <span style="color:#f92672">-</span> l <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>) {
+			<span style="color:#66d9ef">long</span> mid <span style="color:#f92672">=</span> (l <span style="color:#f92672">+</span> r) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+
+			<span style="color:#66d9ef">if</span> (check(inp, mid, k) <span style="color:#f92672">==</span> true)
+				r <span style="color:#f92672">=</span> mid;
+			<span style="color:#66d9ef">else</span>
+				l <span style="color:#f92672">=</span> mid;
+		}
+
+		out.println(r);
+
+		out.close();
+	}
+
+	<span style="color:#75715e">// PrintWriter for faster output
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> PrintWriter out;
+
+	<span style="color:#75715e">// MyScanner class for faster input
+</span><span style="color:#75715e"></span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyScanner</span> {
+		BufferedReader br;
+		StringTokenizer st;
+
+		<span style="color:#66d9ef">public</span> <span style="color:#a6e22e">MyScanner</span>() {
+			br <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> BufferedReader(<span style="color:#66d9ef">new</span> InputStreamReader(System.in));
+		}
+
+		boolean <span style="color:#a6e22e">hasNext</span>() {
+			<span style="color:#66d9ef">while</span> (st <span style="color:#f92672">==</span> null <span style="color:#f92672">||</span> <span style="color:#f92672">!</span>st.hasMoreElements()) {
+				<span style="color:#66d9ef">try</span> {
+					st <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> StringTokenizer(br.readLine());
+				} <span style="color:#66d9ef">catch</span> (Exception e) {
+					<span style="color:#66d9ef">return</span> false;
+				}
+			}
+			<span style="color:#66d9ef">return</span> true;
+		}
+
+		String <span style="color:#a6e22e">next</span>() {
+			<span style="color:#66d9ef">if</span> (hasNext())
+				<span style="color:#66d9ef">return</span> st.nextToken();
+			<span style="color:#66d9ef">return</span> null;
+		}
+
+		<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">nextInt</span>() {
+			<span style="color:#66d9ef">return</span> Integer.parseInt(next());
+		}
+
+		<span style="color:#66d9ef">long</span> <span style="color:#a6e22e">nextLong</span>() {
+			<span style="color:#66d9ef">return</span> Long.parseLong(next());
+		}
+
+		<span style="color:#66d9ef">double</span> <span style="color:#a6e22e">nextDouble</span>() {
+			<span style="color:#66d9ef">return</span> Double.parseDouble(next());
+		}
+
+		String <span style="color:#a6e22e">nextLine</span>() {
+			String str <span style="color:#f92672">=</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;&#34;</span>;
+			<span style="color:#66d9ef">try</span> {
+				str <span style="color:#f92672">=</span> br.readLine();
+			} <span style="color:#66d9ef">catch</span> (IOException e) {
+				e.printStackTrace();
+			}
+			<span style="color:#66d9ef">return</span> str;
+		}
+	}
+}</code></pre></td></tr></table>
+</div>
+</div></p>
 
 <footer class=" footline" >
 	

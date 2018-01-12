@@ -32,7 +32,7 @@ weight: 5
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -56,7 +56,7 @@ $x^2 + y^2 = r^2$
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -82,7 +82,7 @@ int main()
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -118,7 +118,7 @@ C++的compare function所利用的性質是如果$a$要在$b$前面就回傳`tru
 
 ### AC Code (using pair)
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -160,7 +160,7 @@ int main()
 
 ### AC Code (using compare function)
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -209,7 +209,7 @@ int main()
 
 謝謝黃鈺程幫忙！
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -263,7 +263,7 @@ int main()
 
 ### AC Code (strtok)
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -303,7 +303,7 @@ int main()
 
 謝謝黃鈺程幫忙！
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -339,7 +339,7 @@ int main()
 
 ### AC Code 
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 

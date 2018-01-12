@@ -27,7 +27,7 @@ prefix sum + lower_bound
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -66,7 +66,7 @@ upper_bound
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -114,7 +114,7 @@ int main()
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <cmath>
 #include <cstdio>
@@ -163,7 +163,7 @@ int main()
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -231,7 +231,7 @@ int main()
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 #include <bits/stdc++.h>
 
@@ -309,7 +309,7 @@ int main()
 
 ### AC Code
 
-{{< highlight cpp "linenos=inline" >}}
+{{< highlight cpp "linenos=table" >}}
 
 import java.io.*;
 import java.util.*;
